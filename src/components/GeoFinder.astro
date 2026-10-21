@@ -260,8 +260,8 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
         </div>
 
         <!-- The Interactive Map -->
-        <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-lg">
-          <div id="map"></div>
+        <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-100 dark:bg-zinc-950">
+          <div id="map" class="w-full h-[380px] rounded-2xl" style="min-height: 380px; width: 100%; z-index: 10;"></div>
           <div class="absolute bottom-2 left-2 z-[400] bg-zinc-900/80 backdrop-blur-md text-[10px] text-zinc-300 px-2 py-1 rounded border border-zinc-700 pointer-events-none">
             🟢 Verde = Più Economico • 📍 Clicca un pin per dettagli e Google Maps
           </div>

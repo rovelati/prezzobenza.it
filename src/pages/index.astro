@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import NationalStatsBar from '../components/NationalStatsBar.astro';
 import GeoFinder from '../components/GeoFinder.astro';
 import HallOfFameSalasso from '../components/HallOfFameSalasso.astro';
+import ShareBar from '../components/ShareBar.astro';
 import FaqSection from '../components/FaqSection.astro';
 import nationalStats from '../data/national-stats.json';
 import provincesSummary from '../data/provinces-summary.json';
@@ -230,6 +231,11 @@ const structuredData = {
       })}
     </div>
   </section>
+
+  <!-- Share Bar for Social Viral Sharing -->
+  <div class="max-w-6xl mx-auto px-4">
+    <ShareBar />
+  </div>
 
   <!-- FAQ Section with Schema.org -->
   <FaqSection />

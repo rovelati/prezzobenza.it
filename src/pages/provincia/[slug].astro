@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import provincesSummary from '../../data/provinces-summary.json';
 import nationalStats from '../../data/national-stats.json';
 import { lastUpdatedFull, lastUpdatedShort } from '../../utils/date.js';
+import ShareBar from '../../components/ShareBar.astro';
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 
@@ -430,6 +431,13 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
         </div>
       </div>
     )}
+
+    <!-- Share Bar -->
+    <ShareBar
+      title={`Prezzi Benzina e Diesel a ${province.name}: scopri dove risparmiare`}
+      url={`https://www.prezzobenza.it/provincia/${province.slug}`}
+      description={`Mappa e prezzi aggiornati dei distributori a ${province.name}. Confronta e risparmia con PrezzoBenza.it!`}
+    />
 
   </div>
 </Layout>

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Come Risparmiare sulla Benzina: 7 Consigli Pratici | PrezzoBenza.it";
+const description = "Scopri come risparmiare fino a 300 euro all'anno sul carburante: trucchi di guida, scelta della pompa bianca, pressione gomme e stile di rifornimento.";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical="/come-risparmiare"
+>
+  <!-- Breadcrumbs -->
+  <div class="border-b border-zinc-900 bg-zinc-950/60 py-3">
+    <div class="max-w-6xl mx-auto px-4 text-xs text-zinc-400 flex items-center gap-2">
+      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white font-medium">Guida al Risparmio</span>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+    <div class="space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        💡 Guida Pratica al Risparmio
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+        Come risparmiare fino a <span class="text-emerald-400">300€ all'anno</span> sul carburante
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+        Con il costo dei carburanti sempre variabile, bastano poche abitudini consolidate per abbattere drasticamente la spesa mensile per gli spostamenti in auto.
+      </p>
+    </div>
+
+    <div class="space-y-6 text-zinc-300 text-sm leading-relaxed">
+      
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 font-black flex items-center justify-center text-xs">1</span>
+          Scegli sempre il Self-Service e confronta i prezzi prima di partire
+        </h2>
+        <p class="text-xs text-zinc-400">
+          La differenza tra servito e self-service può arrivare fino a <strong>30-40 centesimi al litro</strong>. Su un pieno di 50 litri significa regalare da 15 a 20 euro al gestore. Utilizzare un'applicazione come <a href="/" class="text-emerald-400 font-semibold hover:underline">PrezzoBenza.it</a> prima di metterti in marcia ti permette di individuare la stazione più economica lungo il tuo tragitto.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 font-black flex items-center justify-center text-xs">2</span>
+          Fai rifornimento presso le Pompe Bianche (No-Logo)
+        </h2>
+        <p class="text-xs text-zinc-400">
+          I distributori indipendenti offrono carburante certificato conforme alle rigide normative europee, ma privo dei ricarichi commerciali dei marchi più famosi. Consulta la nostra sezione dedicata alle <a href="/pompe-bianche" class="text-emerald-400 font-semibold hover:underline">Pompe Bianche in Italia</a> per trovare quella più vicina.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 font-black flex items-center justify-center text-xs">3</span>
+          Evita i distributori autostradali
+        </h2>
+        <p class="text-xs text-zinc-400">
+          Nelle aree di servizio autostradali i prezzi dei carburanti sono in media più alti del <strong>10-18%</strong> rispetto alla rete ordinaria per via delle pesanti royalty di concessione. Uscire dall'autostrada per 2 km può farti risparmiare fino a 10 euro a rifornimento.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 font-black flex items-center justify-center text-xs">4</span>
+          Controlla regolarmente la pressione degli pneumatici
+        </h2>
+        <p class="text-xs text-zinc-400">
+          Pneumatici sgonfi di appena 0.5 bar aumentano la resistenza al rotolamento e incrementano il consumo di benzina del <strong>3-5%</strong>, oltre a consumare precocemente il battistrada.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 font-black flex items-center justify-center text-xs">5</span>
+          Guida fluida ed eco-driving
+        </h2>
+        <p class="text-xs text-zinc-400">
+          Accelerazioni brusche seguite da frenate repentine sono il principale killer dell'efficienza termica del motore. Anticipa il traffico, scala marcia per sfruttare il freno motore e mantieni una velocità costante.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="text-center pt-6">
+      <a
+        href="/#trova-vicino"
+        class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-black text-sm transition-all shadow-lg shadow-emerald-500/20"
+      >
+        <span>📍 Trova subito la benzina più economica vicino a te</span>
+      </a>
+    </div>
+  </div>
+</Layout>

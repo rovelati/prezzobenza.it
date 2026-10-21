@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import cheapestItaly from '../data/cheapest-italy.json';
+import nationalStats from '../data/national-stats.json';
+
+const pompeBianche = cheapestItaly.pompeBianche || [];
+const natBenzina = nationalStats.averages.benzina_self || 1.78;
+
+const title = "Pompe Bianche e Distributori No-Logo in Italia | PrezzoBenza.it";
+const description = "Mappa e prezzi aggiornati dei distributori no-logo e pompe bianche in Italia. Scopri dove risparmiare fino a 15 centesimi al litro rispetto ai grandi marchi.";
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical="/pompe-bianche"
+>
+  <!-- Breadcrumbs -->
+  <div class="border-b border-zinc-900 bg-zinc-950/60 py-3">
+    <div class="max-w-6xl mx-auto px-4 text-xs text-zinc-400 flex items-center gap-2">
+      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white font-medium">Pompe Bianche No-Logo</span>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+    
+    <!-- Hero -->
+    <div class="space-y-4 max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+        ⚪ Risparmio Massimo Garantito
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+        Pompe Bianche e Distributori <span class="text-amber-400">No-Logo</span>
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
+        Le <strong>pompe bianche</strong> sono stazioni di servizio indipendenti non affiliate ai grandi cartelli petroliferi internazionali. Acquistano carburante direttamente alla fonte e applicano margini ridotti, consentendo un risparmio che va <strong>da 6 a 15 centesimi al litro</strong>, pari a oltre <strong>5-8 euro a pieno</strong>.
+      </p>
+    </div>
+
+    <!-- Educational Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <div class="text-2xl">⛽</div>
+        <h3 class="font-bold text-white text-base">Stessa Qualità del Carburante</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          In Italia la benzina e il gasolio provengono dalle stesse identiche raffinerie certificate (normativa europea EN 228 e EN 590). I controlli qualitativi sono identici a quelli delle grandi multinazionali.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <div class="text-2xl">💰</div>
+        <h3 class="font-bold text-white text-base">Zero Costi di Franchising</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          I gestori indipendenti non devono pagare royalty sui marchi né sostenere campagne pubblicitarie milionarie: il risparmio viene trasferito direttamente al cliente finale alla pompa.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
+        <div class="text-2xl">📍</div>
+        <h3 class="font-bold text-white text-base">Diffusione Capillare</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          Oggi in Italia le pompe bianche rappresentano oltre il 20% della rete distributiva, con una presenza massiccia soprattutto nei raccordi urbani e nelle zone artigianali.
+        </p>
+      </div>
+    </div>
+
+    <!-- Top Pompe Bianche List -->
+    <div class="space-y-4">
+      <div class="flex items-center justify-between pb-2 border-b border-zinc-800">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-white">Le Pompe Bianche più convenienti d'Italia</h2>
+          <p class="text-xs text-zinc-400">Classifica aggiornata con dati MIMIT di oggi</p>
+        </div>
+        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-semibold border border-emerald-500/20">
+          Benzina Self
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {pompeBianche.map((st, i) => {
+          const price = st.prices.benzina_self?.prezzo;
+          const diff = price ? ((price - natBenzina) * 100).toFixed(1) : null;
+          const mapsUrl = st.lat && st.lng
+            ? `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`
+            : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(st.nome + ' ' + st.indirizzo + ' ' + st.comune)}`;
+
+          return (
+            <div class="p-4 rounded-2xl border border-zinc-800/80 bg-zinc-950/60 hover:border-zinc-700 transition-colors flex items-center justify-between gap-4">
+              <div class="space-y-1 min-w-0">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                    No-Logo
+                  </span>
+                  <span class="text-xs text-zinc-400 font-medium truncate">{st.comune} ({st.provincia})</span>
+                </div>
+                <h3 class="font-bold text-white text-sm truncate">{st.nome || 'Distributore Indipendente'}</h3>
+                <p class="text-xs text-zinc-500 truncate">{st.indirizzo}</p>
+              </div>
+
+              <div class="text-right shrink-0 space-y-1.5">
+                <div class="text-xl font-black text-emerald-400">
+                  € {price ? price.toFixed(3) : '—'}
+                </div>
+                {diff && (
+                  <div class="text-[10px] font-semibold text-emerald-400">
+                    {diff} cent/L sotto media
+                  </div>
+                )}
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block px-3 py-1 rounded-lg text-[11px] font-bold bg-zinc-800 hover:bg-zinc-700 text-white transition-colors"
+                >
+                  Naviga →
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+  </div>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Informativa sulla Privacy | PrezzoBenza.it";
+const description = "Informativa sul trattamento dei dati personali e sulla privacy per gli utenti di PrezzoBenza.it.";
+---
+
+<Layout title={title} description={description} canonical="/privacy">
+  <div class="max-w-3xl mx-auto px-4 py-12 space-y-6 text-zinc-300 text-xs sm:text-sm leading-relaxed">
+    <h1 class="text-3xl font-black text-white">Informativa sulla Privacy</h1>
+    <p>Ultimo aggiornamento: 21 Ottobre 2026</p>
+
+    <h2 class="text-lg font-bold text-white pt-4">1. Trattamento dei Dati di Geolocalizzazione</h2>
+    <p>
+      PrezzoBenza.it offre una funzionalità opzionale di geolocalizzazione per individuare le stazioni di servizio più vicine alla posizione dell'utente. Le coordinate GPS sono elaborate <strong>esclusivamente in locale (client-side)</strong> dal browser del dispositivo e <strong>non vengono memorizzate né salvate su server permanenti o condivise con terze parti</strong>.
+    </p>
+
+    <h2 class="text-lg font-bold text-white pt-4">2. Dati di Navigazione</h2>
+    <p>
+      I sistemi informatici e le procedure software preposte al funzionamento di questo sito web acquisiscono, nel corso del loro normale esercizio, alcuni dati la cui trasmissione è implicita nell'uso dei protocolli di comunicazione di Internet (es. indirizzi IP, tipo di browser, orari delle richieste).
+    </p>
+
+    <h2 class="text-lg font-bold text-white pt-4">3. Fonte dei Dati Carburante</h2>
+    <p>
+      I dati sui prezzi dei carburanti sono estratti dal database pubblico Open Data del Ministero delle Imprese e del Made in Italy (MIMIT).
+    </p>
+  </div>
+</Layout>

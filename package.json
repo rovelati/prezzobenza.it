@@ -1,0 +1,22 @@
+{
+  "name": "prezzobenza-it",
+  "version": "1.0.0",
+  "description": "PrezzoBenza.it — Trova il carburante più economico vicino a te. Prezzi benzina, diesel, GPL e metano aggiornati con dati ufficiali MIMIT.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "fetch:data": "node scripts/fetch-mimit-data.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@tailwindcss/vite": "^4.0.9",
+    "astro": "^5.4.2",
+    "tailwindcss": "^4.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0"
+  }
+}

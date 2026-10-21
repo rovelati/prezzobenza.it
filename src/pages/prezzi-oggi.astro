@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import nationalStats from '../data/national-stats.json';
+import provincesSummary from '../data/provinces-summary.json';
+
+const extractionFormatted = new Date(nationalStats.extractionDate).toLocaleDateString('it-IT', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+// Calcola medie regionali
+const regionalAverages = {};
+for (const p of provincesSummary) {
+  if (!regionalAverages[p.region]) {
+    regionalAverages[p.region] = { benzina: [], diesel: [] };
+  }
+  if (p.avgBenzina) regionalAverages[p.region].benzina.push(p.avgBenzina);
+  if (p.avgDiesel) regionalAverages[p.region].diesel.push(p.avgDiesel);
+}
+
+const natBenzina = nationalStats.averages.benzina_self || 1.8;
+
+const regionsList = Object.entries(regionalAverages).map(([region, data]) => {
+  const avgB = data.benzina.length ? data.benzina.reduce((a, b) => a + b, 0) / data.benzina.length : null;
+  const avgD = data.diesel.length ? data.diesel.reduce((a, b) => a + b, 0) / data.diesel.length : null;
+  const diff = avgB ? Number(((avgB - natBenzina) * 100).toFixed(1)) : null;
+  const diffLabel = diff !== null
+    ? (diff <= 0 ? `${diff} cent` : `+${diff} cent`)
+    : null;
+  return {
+    region,
+    avgBenzina: avgB ? Number(avgB.toFixed(3)) : null,
+    avgDiesel: avgD ? Number(avgD.toFixed(3)) : null,
+    diff,
+    diffLabel,
+  };
+}).sort((a, b) => (a.avgBenzina || 99) - (b.avgBenzina || 99));
+
+const title = "Prezzo Benzina e Diesel Oggi in Italia | Osservatorio PrezzoBenza.it";
+const description = `Prezzo benzina e diesel oggi in Italia: medie nazionali self e servito, confronto tra tutte le regioni e statistiche ufficiali MIMIT.`;
+---
+
+<Layout title={title} description={description} canonical="/prezzi-oggi">
+  <div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-1">
+        <div class="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Benzina Self</div>
+        <div class="text-3xl font-black text-emerald-400">
+          € {nationalStats.averages.benzina_self?.toFixed(3)}
+        </div>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl border border-zinc-800 bg-zinc-950/60">
+      <table class="w-full text-left text-xs">
+        <tbody class="divide-y divide-zinc-800">
+          {regionsList.map((r, i) => (
+            <tr class="hover:bg-zinc-900/40 transition-colors">
+              <td class="p-3.5 text-zinc-500 font-bold">{i + 1}</td>
+              <td class="p-3.5 font-bold text-white text-sm">{r.region}</td>
+              <td class="p-3.5 text-right font-black text-emerald-400 text-sm">
+                {r.avgBenzina ? `€ ${r.avgBenzina.toFixed(3)}` : '—'}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Layout>

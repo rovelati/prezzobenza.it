@@ -1,0 +1,521 @@
+---
+import nationalStats from '../data/national-stats.json';
+import provincesSummary from '../data/provinces-summary.json';
+
+const provincesCentroids = provincesSummary.map(p => ({
+  code: p.code,
+  name: p.name,
+  slug: p.slug,
+  lat: p.lat,
+  lng: p.lng,
+  avgBenzina: p.avgBenzina,
+  avgDiesel: p.avgDiesel,
+}));
+---
+
+<section id="trova-vicino" class="relative py-12 md:py-16 overflow-hidden">
+  <!-- Glow effect background -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/10 blur-[120px] pointer-events-none rounded-full"></div>
+
+  <div class="max-w-4xl mx-auto px-4 relative z-10">
+    <!-- Main Card -->
+    <div class="rounded-3xl border border-zinc-800 bg-zinc-900/90 shadow-2xl backdrop-blur-xl p-6 md:p-8 space-y-6">
+      
+      <!-- Card Header -->
+      <div class="text-center space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Dati MIMIT Ufficiali • Aggiornati Oggi
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white">
+          Trova il benzinaio più economico <span class="text-emerald-400">vicino a te</span>
+        </h2>
+        <p class="text-sm md:text-base text-zinc-400 max-w-xl mx-auto">
+          Confronta in tempo reale i prezzi di oltre 23.000 distributori in tutta Italia. Zero registrazione, risparmio immediato.
+        </p>
+      </div>
+
+      <!-- Controls Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
+        
+        <!-- Carburante Selector -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
+            Tipo Carburante
+          </label>
+          <div class="grid grid-cols-2 gap-1.5 p-1 bg-zinc-950 rounded-xl border border-zinc-800" id="fuel-selector">
+            <button
+              type="button"
+              data-fuel="benzina"
+              class="fuel-btn active px-3 py-2 text-xs font-bold rounded-lg transition-all bg-emerald-500 text-zinc-950 shadow-sm"
+            >
+              🟢 Benzina
+            </button>
+            <button
+              type="button"
+              data-fuel="diesel"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+            >
+              ⚫ Diesel
+            </button>
+            <button
+              type="button"
+              data-fuel="gpl"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+            >
+              🔵 GPL
+            </button>
+            <button
+              type="button"
+              data-fuel="metano"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+            >
+              ⚪ Metano
+            </button>
+          </div>
+        </div>
+
+        <!-- Servizio Selector -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
+            Modalità
+          </label>
+          <div class="grid grid-cols-2 gap-1.5 p-1 bg-zinc-950 rounded-xl border border-zinc-800" id="service-selector">
+            <button
+              type="button"
+              data-service="self"
+              class="service-btn active px-3 py-3.5 text-xs font-bold rounded-lg transition-all bg-zinc-800 text-white shadow-sm"
+            >
+              Self-Service
+            </button>
+            <button
+              type="button"
+              data-service="servito"
+              class="service-btn px-3 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+            >
+              Servito
+            </button>
+          </div>
+        </div>
+
+        <!-- Raggio Selector -->
+        <div class="sm:col-span-2 md:col-span-1">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
+            Raggio di Ricerca
+          </label>
+          <div class="grid grid-cols-3 gap-1.5 p-1 bg-zinc-950 rounded-xl border border-zinc-800" id="radius-selector">
+            <button
+              type="button"
+              data-radius="5"
+              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+            >
+              5 km
+            </button>
+            <button
+              type="button"
+              data-radius="10"
+              class="radius-btn active px-2 py-3.5 text-xs font-bold rounded-lg transition-all bg-zinc-800 text-white shadow-sm"
+            >
+              10 km
+            </button>
+            <button
+              type="button"
+              data-radius="25"
+              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+            >
+              25 km
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Button (GPS One-Tap) -->
+      <div class="pt-2">
+        <button
+          id="btn-geolocate"
+          type="button"
+          class="w-full relative group overflow-hidden py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 text-zinc-950 font-black text-base sm:text-lg shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
+        >
+          <div class="w-8 h-8 rounded-full bg-zinc-950/20 flex items-center justify-center text-zinc-950 group-hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+            </svg>
+          </div>
+          <span id="btn-text">Trova la benza più economica vicino a me</span>
+          <span id="spinner" class="hidden w-5 h-5 border-2 border-zinc-950 border-t-transparent rounded-full animate-spin"></span>
+        </button>
+      </div>
+
+      <!-- Manual Province Search Fallback -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-zinc-800/80 text-xs text-zinc-400">
+        <span>Oppure cerca direttamente per provincia:</span>
+        <div class="w-full sm:w-64">
+          <select
+            id="province-select"
+            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3 py-2 text-zinc-200 text-xs focus:outline-none focus:border-emerald-500 transition-colors"
+          >
+            <option value="">-- Seleziona una provincia --</option>
+            {provincesSummary.map((p) => (
+              <option value={p.code}>
+                {p.name} ({p.code}) — da {p.minBenzina ? `€ ${p.minBenzina.toFixed(3)}` : 'N/D'}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      <!-- Status / Alerts Box -->
+      <div id="status-box" class="hidden p-4 rounded-xl text-xs font-medium"></div>
+
+      <!-- Live Results Container -->
+      <div id="results-container" class="hidden space-y-4 pt-4">
+        <div class="flex items-center justify-between">
+          <div class="space-y-0.5">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <span>Distributori trovati</span>
+              <span id="results-count" class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400">0</span>
+            </h3>
+            <p id="results-subtitle" class="text-xs text-zinc-400"></p>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="text-zinc-500">Ordina:</span>
+            <button id="sort-price" class="px-2.5 py-1 rounded-lg bg-zinc-800 text-white font-semibold">Prezzo</button>
+            <button id="sort-distance" class="px-2.5 py-1 rounded-lg text-zinc-400 hover:text-white">Distanza</button>
+          </div>
+        </div>
+
+        <!-- Cards List -->
+        <div id="stations-list" class="space-y-3"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Data for Client script -->
+<script define:vars={{ provincesCentroids, nationalStats }}>
+  window.__PB_PROVINCES = provincesCentroids;
+  window.__PB_STATS = nationalStats;
+</script>
+
+<script>
+  // Client Logic
+  let selectedFuel = 'benzina';
+  let selectedService = 'self';
+  let selectedRadius = 10;
+  let currentStations = [];
+  let userCoords = null;
+  let currentSort = 'price';
+
+  const btnGeolocate = document.getElementById('btn-geolocate');
+  const btnText = document.getElementById('btn-text');
+  const spinner = document.getElementById('spinner');
+  const statusBox = document.getElementById('status-box');
+  const resultsContainer = document.getElementById('results-container');
+  const resultsCount = document.getElementById('results-count');
+  const resultsSubtitle = document.getElementById('results-subtitle');
+  const stationsList = document.getElementById('stations-list');
+  const provinceSelect = document.getElementById('province-select');
+
+  const sortPriceBtn = document.getElementById('sort-price');
+  const sortDistanceBtn = document.getElementById('sort-distance');
+
+  // Fuel selector click
+  document.querySelectorAll('.fuel-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.fuel-btn').forEach(b => {
+        b.classList.remove('active', 'bg-emerald-500', 'text-zinc-950');
+        b.classList.add('text-zinc-400');
+      });
+      btn.classList.add('active', 'bg-emerald-500', 'text-zinc-950');
+      btn.classList.remove('text-zinc-400');
+      selectedFuel = btn.dataset.fuel;
+      if (currentStations.length > 0) renderResults();
+    });
+  });
+
+  // Service selector click
+  document.querySelectorAll('.service-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.service-btn').forEach(b => {
+        b.classList.remove('active', 'bg-zinc-800', 'text-white');
+        b.classList.add('text-zinc-400');
+      });
+      btn.classList.add('active', 'bg-zinc-800', 'text-white');
+      btn.classList.remove('text-zinc-400');
+      selectedService = btn.dataset.service;
+      if (currentStations.length > 0) renderResults();
+    });
+  });
+
+  // Radius selector click
+  document.querySelectorAll('.radius-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.radius-btn').forEach(b => {
+        b.classList.remove('active', 'bg-zinc-800', 'text-white');
+        b.classList.add('text-zinc-400');
+      });
+      btn.classList.add('active', 'bg-zinc-800', 'text-white');
+      btn.classList.remove('text-zinc-400');
+      selectedRadius = Number(btn.dataset.radius);
+      if (userCoords && currentStations.length > 0) renderResults();
+    });
+  });
+
+  // Sort buttons
+  sortPriceBtn?.addEventListener('click', () => {
+    currentSort = 'price';
+    sortPriceBtn.className = 'px-2.5 py-1 rounded-lg bg-zinc-800 text-white font-semibold';
+    sortDistanceBtn.className = 'px-2.5 py-1 rounded-lg text-zinc-400 hover:text-white';
+    renderResults();
+  });
+
+  sortDistanceBtn?.addEventListener('click', () => {
+    currentSort = 'distance';
+    sortDistanceBtn.className = 'px-2.5 py-1 rounded-lg bg-zinc-800 text-white font-semibold';
+    sortPriceBtn.className = 'px-2.5 py-1 rounded-lg text-zinc-400 hover:text-white';
+    renderResults();
+  });
+
+  // Province select change
+  provinceSelect?.addEventListener('change', async (e) => {
+    const code = e.target.value;
+    if (!code) return;
+    await loadProvinceStations(code);
+  });
+
+  // Haversine formula
+  function getDistanceKm(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Radius of the earth in km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+  }
+
+  // Geolocation trigger
+  btnGeolocate?.addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      showStatus('La geolocalizzazione non è supportata dal tuo browser. Seleziona una provincia dal menu.', 'error');
+      return;
+    }
+
+    setLoading(true);
+    showStatus('Rilevamento posizione GPS in corso...', 'info');
+
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        userCoords = {
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude,
+        };
+
+        // Trova le 2 province più vicine alle coordinate dell'utente
+        const sortedProvs = [...window.__PB_PROVINCES]
+          .filter(p => p.lat && p.lng)
+          .map(p => ({
+            ...p,
+            distance: getDistanceKm(userCoords.lat, userCoords.lng, p.lat, p.lng),
+          }))
+          .sort((a, b) => a.distance - b.distance);
+
+        const nearestProvs = sortedProvs.slice(0, 2);
+        showStatus(`Posizione rilevata! Caricamento distributori vicino a te (${nearestProvs[0].name})...`, 'info');
+
+        try {
+          // Scarica dati delle province più vicine
+          const stationPromises = nearestProvs.map(p =>
+            fetch(`/data/provinces/${p.code.toLowerCase()}.json`).then(r => r.json())
+          );
+          const results = await Promise.all(stationPromises);
+          
+          let combined = [];
+          for (const res of results) {
+            combined = combined.concat(res.stations || []);
+          }
+
+          // Aggiungi distanza calcolata
+          currentStations = combined
+            .filter(s => s.lat && s.lng)
+            .map(s => ({
+              ...s,
+              distanceKm: Number(getDistanceKm(userCoords.lat, userCoords.lng, s.lat, s.lng).toFixed(1)),
+            }));
+
+          setLoading(false);
+          statusBox.classList.add('hidden');
+          renderResults();
+        } catch (err) {
+          console.error(err);
+          setLoading(false);
+          showStatus('Errore nel recupero dei dati della tua zona. Riprova o scegli la provincia.', 'error');
+        }
+      },
+      (err) => {
+        setLoading(false);
+        let msg = 'Permesso GPS negato. Seleziona la tua provincia per visualizzare i distributori.';
+        if (err.code === 2) msg = 'Posizione non disponibile. Seleziona la provincia dal menu.';
+        if (err.code === 3) msg = 'Timeout GPS. Seleziona la provincia dal menu.';
+        showStatus(msg, 'error');
+      },
+      { timeout: 10000, enableHighAccuracy: true }
+    );
+  });
+
+  async function loadProvinceStations(code) {
+    setLoading(true);
+    showStatus(`Caricamento distributori per la provincia ${code}...`, 'info');
+    try {
+      const res = await fetch(`/data/provinces/${code.toLowerCase()}.json`);
+      const data = await res.json();
+      currentStations = (data.stations || []).map(s => ({
+        ...s,
+        distanceKm: null,
+      }));
+      userCoords = null;
+      setLoading(false);
+      statusBox.classList.add('hidden');
+      renderResults(data.name);
+    } catch (err) {
+      setLoading(false);
+      showStatus('Impossibile caricare i dati della provincia. Riprova.', 'error');
+    }
+  }
+
+  function getTargetPriceKey() {
+    if (selectedFuel === 'benzina') return selectedService === 'self' ? 'benzina_self' : 'benzina_servito';
+    if (selectedFuel === 'diesel') return selectedService === 'self' ? 'diesel_self' : 'diesel_servito';
+    if (selectedFuel === 'gpl') return 'gpl';
+    if (selectedFuel === 'metano') return 'metano';
+    return 'benzina_self';
+  }
+
+  function renderResults(provName = '') {
+    const priceKey = getTargetPriceKey();
+    const natAvg = window.__PB_STATS?.averages?.[priceKey] || null;
+
+    let filtered = currentStations.filter(s => s.prices && s.prices[priceKey]);
+
+    if (userCoords) {
+      filtered = filtered.filter(s => s.distanceKm <= selectedRadius);
+    }
+
+    if (currentSort === 'distance' && userCoords) {
+      filtered.sort((a, b) => a.distanceKm - b.distanceKm);
+    } else {
+      filtered.sort((a, b) => a.prices[priceKey].prezzo - b.prices[priceKey].prezzo);
+    }
+
+    resultsContainer.classList.remove('hidden');
+    resultsCount.textContent = filtered.length;
+    
+    if (userCoords) {
+      resultsSubtitle.textContent = `Nel raggio di ${selectedRadius} km dalla tua posizione GPS attuale`;
+    } else if (provName) {
+      resultsSubtitle.textContent = `Tutti i distributori attivi nella provincia di ${provName}`;
+    }
+
+    if (filtered.length === 0) {
+      stationsList.innerHTML = `
+        <div class="p-8 text-center bg-zinc-950 rounded-2xl border border-zinc-800">
+          <p class="text-zinc-400 text-sm">Nessun distributore con <strong>${selectedFuel.toUpperCase()} (${selectedService})</strong> trovato nel raggio di ${selectedRadius} km.</p>
+          <p class="text-xs text-zinc-500 mt-2">Prova ad aumentare il raggio di ricerca a 25 km o a cambiare carburante.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const topStations = filtered.slice(0, 30);
+
+    stationsList.innerHTML = topStations.map((st, idx) => {
+      const priceVal = st.prices[priceKey].prezzo;
+      const isTop1 = idx === 0;
+      const diffCent = natAvg ? ((priceVal - natAvg) * 100).toFixed(1) : null;
+      const diffLabel = diffCent !== null
+        ? (Number(diffCent) < 0 ? `${diffCent} cent/L sotto media` : `+${diffCent} cent/L`)
+        : '';
+
+      const badgeColor = Number(diffCent) < -5
+        ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
+        : (Number(diffCent) < 0 ? 'bg-teal-500/10 text-teal-300 border-teal-500/20' : 'bg-zinc-800 text-zinc-400 border-zinc-700');
+
+      const mapsUrl = st.lat && st.lng
+        ? `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(st.nome + ' ' + st.indirizzo + ' ' + st.comune)}`;
+
+      return `
+        <div class="p-4 sm:p-5 rounded-2xl border ${isTop1 ? 'border-emerald-500/50 bg-emerald-950/20 shadow-lg shadow-emerald-500/10' : 'border-zinc-800/80 bg-zinc-950/60 hover:border-zinc-700'} transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          
+          <div class="space-y-1.5 flex-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'bg-zinc-800 text-zinc-300'}">
+                ${st.brand}
+              </span>
+              ${isTop1 ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-black uppercase bg-emerald-500 text-zinc-950">🏆 Più Economico</span>' : ''}
+              ${st.distanceKm !== null ? `<span class="text-xs text-zinc-400 font-semibold">📍 ${st.distanceKm} km da te</span>` : ''}
+            </div>
+
+            <h4 class="font-bold text-white text-base leading-snug">
+              ${st.nome || st.brand}
+            </h4>
+
+            <p class="text-xs text-zinc-400">
+              ${st.indirizzo} — <span class="text-zinc-300 font-medium">${st.comune}</span>
+            </p>
+          </div>
+
+          <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-800/60 pt-3 sm:pt-0 gap-2">
+            <div class="text-left sm:text-right">
+              <div class="text-2xl sm:text-3xl font-black text-emerald-400 tracking-tight">
+                € ${priceVal.toFixed(3)}
+              </div>
+              ${diffLabel ? `<div class="text-[11px] font-semibold px-2 py-0.5 rounded border inline-block ${badgeColor}">${diffLabel}</div>` : ''}
+            </div>
+
+            <a
+              href="${mapsUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-100 hover:bg-white text-zinc-950 transition-colors shadow-sm flex items-center gap-1.5"
+            >
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+              </svg>
+              <span>Portami qui</span>
+            </a>
+          </div>
+
+        </div>
+      `;
+    }).join('');
+
+    resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function setLoading(isLoading) {
+    if (isLoading) {
+      btnGeolocate.disabled = true;
+      btnText.textContent = 'Ricerca in corso...';
+      spinner.classList.remove('hidden');
+    } else {
+      btnGeolocate.disabled = false;
+      btnText.textContent = 'Trova la benza più economica vicino a me';
+      spinner.classList.add('hidden');
+    }
+  }
+
+  function showStatus(message, type = 'info') {
+    statusBox.classList.remove('hidden', 'bg-emerald-950/40', 'border-emerald-500/40', 'text-emerald-300', 'bg-rose-950/40', 'border-rose-500/40', 'text-rose-300');
+    if (type === 'error') {
+      statusBox.classList.add('bg-rose-950/40', 'border', 'border-rose-500/40', 'text-rose-300');
+    } else {
+      statusBox.classList.add('bg-emerald-950/40', 'border', 'border-emerald-500/40', 'text-emerald-300');
+    }
+    statusBox.textContent = message;
+  }
+</script>

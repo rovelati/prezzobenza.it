@@ -1,0 +1,2523 @@
+{
+  "topBenzina": [
+    {
+      "id": "12149",
+      "gestore": "ZAFARANA ADRIANO",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "Stazione di servizio IP di Zafarana Adriano",
+      "indirizzo": "Via F. Lo Jacono 77 95030",
+      "comune": "SANT'AGATA LI BATTIATI",
+      "provincia": "CT",
+      "lat": 37.540701,
+      "lng": 15.081305,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.505,
+          "isSelf": false,
+          "dt": "10/10/2026 20:25:42"
+        },
+        "benzina_self": {
+          "prezzo": 1.505,
+          "isSelf": true,
+          "dt": "10/10/2026 20:25:42"
+        },
+        "diesel_servito": {
+          "prezzo": 2.459,
+          "isSelf": false,
+          "dt": "10/10/2026 20:25:42"
+        },
+        "diesel_self": {
+          "prezzo": 2.219,
+          "isSelf": true,
+          "dt": "10/10/2026 20:25:42"
+        },
+        "gpl": {
+          "prezzo": 0.869,
+          "isSelf": false,
+          "dt": "10/10/2026 20:25:42"
+        }
+      }
+    },
+    {
+      "id": "60316",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "RIETI- SALARIA",
+      "indirizzo": "Via Salaria 68  02100",
+      "comune": "RIETI",
+      "provincia": "RI",
+      "lat": 42.40723,
+      "lng": 12.85918,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.558,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:02"
+        },
+        "diesel_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:02"
+        },
+        "gpl": {
+          "prezzo": 0.569,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:02"
+        }
+      }
+    },
+    {
+      "id": "60401",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - KM 62",
+      "indirizzo": "SS 675 km 62+500 - Viterbo (VT) SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.307856,
+      "lng": 11.990719,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:29"
+        },
+        "diesel_self": {
+          "prezzo": 1.645,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:29"
+        }
+      }
+    },
+    {
+      "id": "60399",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - TUSCANESE",
+      "indirizzo": "STRADA TUSCANESE KM 1+ 840 - Viterbo (VT) SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.428006,
+      "lng": 12.097667,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.565,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:06"
+        },
+        "diesel_self": {
+          "prezzo": 1.606,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:06"
+        }
+      }
+    },
+    {
+      "id": "36845",
+      "gestore": "FGS GAS S.A.S. DI CIVITELLA GIORGIO",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "Via Degli Angeli",
+      "indirizzo": "VIA DEGLI ANGELI 190 00175",
+      "comune": "ROMA",
+      "provincia": "RM",
+      "lat": 41.872398,
+      "lng": 12.547713,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.569,
+          "isSelf": false,
+          "dt": "19/10/2026 13:51:59"
+        },
+        "benzina_self": {
+          "prezzo": 1.569,
+          "isSelf": true,
+          "dt": "19/10/2026 13:51:59"
+        },
+        "diesel_servito": {
+          "prezzo": 2.058,
+          "isSelf": false,
+          "dt": "19/10/2026 13:51:59"
+        },
+        "diesel_self": {
+          "prezzo": 2.058,
+          "isSelf": true,
+          "dt": "19/10/2026 13:51:59"
+        }
+      }
+    },
+    {
+      "id": "60391",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BOMARZO",
+      "indirizzo": "SP Bomarzese snc 01020",
+      "comune": "BOMARZO",
+      "provincia": "VT",
+      "lat": 42.48273,
+      "lng": 12.25037,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.575,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:44"
+        },
+        "diesel_self": {
+          "prezzo": 1.645,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:44"
+        }
+      }
+    },
+    {
+      "id": "60397",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - DANIELLI",
+      "indirizzo": "Via Luigi Rossi Danielli SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.41783,
+      "lng": 12.10856,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.578,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:30"
+        },
+        "diesel_self": {
+          "prezzo": 1.599,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:30"
+        }
+      }
+    },
+    {
+      "id": "60396",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - SQUARANO",
+      "indirizzo": "Via Vico Squarano SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.412275,
+      "lng": 12.097383,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.586,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:28"
+        },
+        "diesel_self": {
+          "prezzo": 1.654,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:28"
+        }
+      }
+    },
+    {
+      "id": "60094",
+      "gestore": "SERVIZI & GESTIONI ITALIA S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "Verona Via Unità d'Italia",
+      "indirizzo": "Via Unità d'Italia 350  37132",
+      "comune": "VERONA",
+      "provincia": "VR",
+      "lat": 45.43006,
+      "lng": 11.058751,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "15/10/2026 23:01:24"
+        },
+        "diesel_self": {
+          "prezzo": 1.638,
+          "isSelf": true,
+          "dt": "15/10/2026 23:01:24"
+        }
+      }
+    },
+    {
+      "id": "60395",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - PIETRARE",
+      "indirizzo": "Via delle Pietrare SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.411972,
+      "lng": 12.110522,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:36"
+        },
+        "diesel_self": {
+          "prezzo": 1.659,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:36"
+        }
+      }
+    },
+    {
+      "id": "60402",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - UMBRO LAZIALE KM 61",
+      "indirizzo": "SS675 SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.492952,
+      "lng": 11.948814,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:58"
+        },
+        "diesel_self": {
+          "prezzo": 1.659,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:58"
+        },
+        "gpl": {
+          "prezzo": 0.599,
+          "isSelf": false,
+          "dt": "02/10/2026 21:55:58"
+        }
+      }
+    },
+    {
+      "id": "60090",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "LUZZARA",
+      "indirizzo": "Via G. Carboni 42  42045",
+      "comune": "LUZZARA",
+      "provincia": "RE",
+      "lat": 44.95925,
+      "lng": 10.68953,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.595,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
+        }
+      }
+    },
+    {
+      "id": "60189",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "LAVELLO",
+      "indirizzo": "S.S. Bradanica -  SNC 85024",
+      "comune": "LAVELLO",
+      "provincia": "PZ",
+      "lat": 41.04769,
+      "lng": 15.78915,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.598,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "gpl": {
+          "prezzo": 0.554,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:27"
+        }
+      }
+    },
+    {
+      "id": "51363",
+      "gestore": "GLOBAL SERVICE S.R.L. O PIU' BREVEMENTE GLOBAL S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "Global Srl",
+      "indirizzo": "VIA RASIA 1077 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.556566,
+      "lng": 10.143739,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.613,
+          "isSelf": false,
+          "dt": "19/10/2026 16:56:28"
+        },
+        "benzina_self": {
+          "prezzo": 1.598,
+          "isSelf": true,
+          "dt": "19/10/2026 16:56:28"
+        },
+        "diesel_servito": {
+          "prezzo": 1.718,
+          "isSelf": false,
+          "dt": "19/10/2026 16:56:28"
+        },
+        "diesel_self": {
+          "prezzo": 1.703,
+          "isSelf": true,
+          "dt": "19/10/2026 16:56:28"
+        }
+      }
+    },
+    {
+      "id": "62020",
+      "gestore": "ALA CARBURANTI S.R.L.",
+      "brand": "Ala",
+      "bandieraRaw": "Ala",
+      "tipo": "Stradale",
+      "nome": "ALA TERRICCIOLA",
+      "indirizzo": "VIA SOLFERINO - LOC. SOIANELLA 1 56030",
+      "comune": "TERRICCIOLA",
+      "provincia": "PI",
+      "lat": 43.555168,
+      "lng": 10.64154,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.599,
+          "isSelf": true,
+          "dt": "19/10/2026 22:10:46"
+        },
+        "diesel_self": {
+          "prezzo": 1.619,
+          "isSelf": true,
+          "dt": "19/10/2026 22:10:46"
+        }
+      }
+    },
+    {
+      "id": "21869",
+      "gestore": "BONDI CARBURANTI DI BORMOLINI LUIGI S.R.L.",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "TOTAL ERG - LIVIGNO",
+      "indirizzo": "VIA BONDI 233/A 23030",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.537901,
+      "lng": 10.138709,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.613,
+          "isSelf": false,
+          "dt": "16/10/2026 15:56:24"
+        },
+        "benzina_self": {
+          "prezzo": 1.613,
+          "isSelf": true,
+          "dt": "16/10/2026 15:56:24"
+        },
+        "diesel_servito": {
+          "prezzo": 1.713,
+          "isSelf": false,
+          "dt": "16/10/2026 15:56:24"
+        },
+        "diesel_self": {
+          "prezzo": 1.713,
+          "isSelf": true,
+          "dt": "16/10/2026 15:56:24"
+        }
+      }
+    },
+    {
+      "id": "21866",
+      "gestore": "BONDI CARBURANTI DI BORMOLINI LUIGI S.R.L.",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "TOTAL ERG - LIVIGNO",
+      "indirizzo": "VIA PEDRANA  200 23030",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.528108,
+      "lng": 10.127919,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.613,
+          "isSelf": false,
+          "dt": "16/10/2026 15:55:22"
+        },
+        "benzina_self": {
+          "prezzo": 1.613,
+          "isSelf": true,
+          "dt": "16/10/2026 15:55:22"
+        },
+        "diesel_servito": {
+          "prezzo": 1.713,
+          "isSelf": false,
+          "dt": "16/10/2026 15:55:22"
+        },
+        "diesel_self": {
+          "prezzo": 1.713,
+          "isSelf": true,
+          "dt": "16/10/2026 15:55:22"
+        }
+      }
+    },
+    {
+      "id": "22687",
+      "gestore": "TRE.CAR. S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "Tre.Car. S.r.l.",
+      "indirizzo": "VIA ARNEIRA 96 23030",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.518005,
+      "lng": 10.187083,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.614,
+          "isSelf": false,
+          "dt": "18/10/2026 13:25:46"
+        },
+        "benzina_self": {
+          "prezzo": 1.614,
+          "isSelf": true,
+          "dt": "18/10/2026 13:25:46"
+        },
+        "diesel_servito": {
+          "prezzo": 1.716,
+          "isSelf": false,
+          "dt": "18/10/2026 13:25:46"
+        },
+        "diesel_self": {
+          "prezzo": 1.716,
+          "isSelf": true,
+          "dt": "18/10/2026 13:25:46"
+        },
+        "gpl": {
+          "prezzo": 0.746,
+          "isSelf": false,
+          "dt": "18/10/2026 13:25:46"
+        }
+      }
+    },
+    {
+      "id": "51364",
+      "gestore": "SILROC S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "Q8 PETROL STATION & DUTY FREE",
+      "indirizzo": "VIA FREITA 104 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.527619,
+      "lng": 10.13517,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.615,
+          "isSelf": false,
+          "dt": "15/10/2026 10:21:08"
+        },
+        "benzina_self": {
+          "prezzo": 1.615,
+          "isSelf": true,
+          "dt": "15/10/2026 10:21:08"
+        },
+        "diesel_servito": {
+          "prezzo": 1.715,
+          "isSelf": false,
+          "dt": "19/10/2026 08:15:05"
+        },
+        "diesel_self": {
+          "prezzo": 1.715,
+          "isSelf": true,
+          "dt": "19/10/2026 08:15:05"
+        }
+      }
+    },
+    {
+      "id": "22670",
+      "gestore": "CU.BA. S.R.L.",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "CU.BA. SRL",
+      "indirizzo": "VIA PEDRANA 500 23030",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.526089,
+      "lng": 10.127824,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.616,
+          "isSelf": false,
+          "dt": "18/10/2026 13:28:41"
+        },
+        "benzina_self": {
+          "prezzo": 1.616,
+          "isSelf": true,
+          "dt": "18/10/2026 13:28:41"
+        },
+        "diesel_servito": {
+          "prezzo": 1.717,
+          "isSelf": false,
+          "dt": "18/10/2026 13:28:41"
+        },
+        "diesel_self": {
+          "prezzo": 1.717,
+          "isSelf": true,
+          "dt": "18/10/2026 13:28:41"
+        }
+      }
+    },
+    {
+      "id": "60873",
+      "gestore": "CUS.CAR. S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "CUS.CAR. S.r.l.",
+      "indirizzo": "TRESENDA 1344 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.489564,
+      "lng": 10.112878,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.617,
+          "isSelf": false,
+          "dt": "18/10/2026 13:40:38"
+        },
+        "benzina_self": {
+          "prezzo": 1.617,
+          "isSelf": true,
+          "dt": "18/10/2026 13:40:38"
+        },
+        "diesel_servito": {
+          "prezzo": 1.719,
+          "isSelf": false,
+          "dt": "18/10/2026 13:40:38"
+        },
+        "diesel_self": {
+          "prezzo": 1.719,
+          "isSelf": true,
+          "dt": "18/10/2026 13:40:38"
+        }
+      }
+    },
+    {
+      "id": "24309",
+      "gestore": "MARKET S. ANTON S.R.L.",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "Market S.Anton di Compagnoni Elena & C. - S.A.S.",
+      "indirizzo": "VIA PEDRANA 100 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.529713,
+      "lng": 10.129013,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.617,
+          "isSelf": false,
+          "dt": "19/10/2026 18:07:27"
+        },
+        "benzina_self": {
+          "prezzo": 1.617,
+          "isSelf": true,
+          "dt": "19/10/2026 18:07:27"
+        },
+        "diesel_servito": {
+          "prezzo": 1.719,
+          "isSelf": false,
+          "dt": "19/10/2026 18:07:27"
+        },
+        "diesel_self": {
+          "prezzo": 1.719,
+          "isSelf": true,
+          "dt": "19/10/2026 18:07:27"
+        }
+      }
+    },
+    {
+      "id": "51253",
+      "gestore": "C-ENERGIA S.R.L.",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "C-ENERGIA",
+      "indirizzo": "VIA RASIA 833 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.554025,
+      "lng": 10.145127,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.618,
+          "isSelf": false,
+          "dt": "16/10/2026 17:31:21"
+        },
+        "benzina_self": {
+          "prezzo": 1.618,
+          "isSelf": true,
+          "dt": "16/10/2026 17:31:21"
+        },
+        "diesel_servito": {
+          "prezzo": 1.719,
+          "isSelf": false,
+          "dt": "16/10/2026 17:31:21"
+        },
+        "diesel_self": {
+          "prezzo": 1.719,
+          "isSelf": true,
+          "dt": "16/10/2026 17:31:21"
+        }
+      }
+    },
+    {
+      "id": "23219",
+      "gestore": "G.M.F. S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PETROL",
+      "indirizzo": "VIA PONTIGLIA N.159 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.53959,
+      "lng": 10.138176,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.619,
+          "isSelf": false,
+          "dt": "12/10/2026 18:59:39"
+        },
+        "benzina_self": {
+          "prezzo": 1.619,
+          "isSelf": true,
+          "dt": "12/10/2026 18:59:39"
+        },
+        "diesel_servito": {
+          "prezzo": 1.726,
+          "isSelf": false,
+          "dt": "12/10/2026 18:59:39"
+        },
+        "diesel_self": {
+          "prezzo": 1.726,
+          "isSelf": true,
+          "dt": "12/10/2026 18:59:39"
+        }
+      }
+    },
+    {
+      "id": "60905",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "ROMA BOCCEA 353",
+      "indirizzo": "Via di Boccea 353  00166",
+      "comune": "ROMA",
+      "provincia": "RM",
+      "lat": 41.908485,
+      "lng": 12.406597,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.623,
+          "isSelf": true,
+          "dt": "05/10/2026 21:50:59"
+        },
+        "diesel_self": {
+          "prezzo": 1.612,
+          "isSelf": true,
+          "dt": "05/10/2026 21:50:59"
+        }
+      }
+    },
+    {
+      "id": "59873",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "AILANO",
+      "indirizzo": "s.p. valle agricola - località Cerquito 9 81010",
+      "comune": "AILANO",
+      "provincia": "CE",
+      "lat": 41.373765,
+      "lng": 14.19278,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:19"
+        },
+        "diesel_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:19"
+        }
+      }
+    },
+    {
+      "id": "60909",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VICALVI",
+      "indirizzo": "SS DELLA VANDRA KM 9+300  SNC 03030",
+      "comune": "VICALVI",
+      "provincia": "FR",
+      "lat": 41.681385,
+      "lng": 13.697058,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:59"
+        },
+        "diesel_self": {
+          "prezzo": 1.544,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:59"
+        }
+      }
+    },
+    {
+      "id": "60244",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VENOSA",
+      "indirizzo": "SS655 snc 85029",
+      "comune": "VENOSA",
+      "provincia": "PZ",
+      "lat": 41.009287,
+      "lng": 15.839659,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.625,
+          "isSelf": true,
+          "dt": "04/10/2026 21:55:36"
+        },
+        "diesel_self": {
+          "prezzo": 1.615,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:20"
+        },
+        "gpl": {
+          "prezzo": 0.554,
+          "isSelf": false,
+          "dt": "04/10/2026 21:55:36"
+        }
+      }
+    },
+    {
+      "id": "60390",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "CORCHIANO",
+      "indirizzo": "Via Civita Castellana 46  01030",
+      "comune": "CORCHIANO",
+      "provincia": "VT",
+      "lat": 42.344926,
+      "lng": 12.355668,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.625,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:56"
+        },
+        "diesel_self": {
+          "prezzo": 1.595,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:56"
+        }
+      }
+    },
+    {
+      "id": "60954",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PORTO VIRO",
+      "indirizzo": "Via Torino 42  45014",
+      "comune": "PORTO VIRO",
+      "provincia": "RO",
+      "lat": 45.038342,
+      "lng": 12.219466,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.627,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:11"
+        },
+        "diesel_self": {
+          "prezzo": 1.552,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:11"
+        }
+      }
+    }
+  ],
+  "topDiesel": [
+    {
+      "id": "19989",
+      "gestore": "GENCHI SABINO",
+      "brand": "Tamoil",
+      "bandieraRaw": "Tamoil",
+      "tipo": "Stradale",
+      "nome": "tamoil",
+      "indirizzo": "strada provinciale torino lanzo km.24.9  10070",
+      "comune": "CAFASSE",
+      "provincia": "TO",
+      "lat": 45.246311,
+      "lng": 7.513705,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.019,
+          "isSelf": false,
+          "dt": "19/10/2026 07:33:46"
+        },
+        "benzina_self": {
+          "prezzo": 2.019,
+          "isSelf": true,
+          "dt": "18/10/2026 18:37:12"
+        },
+        "diesel_servito": {
+          "prezzo": 1.305,
+          "isSelf": false,
+          "dt": "15/01/2016 08:58:05"
+        },
+        "diesel_self": {
+          "prezzo": 1.305,
+          "isSelf": true,
+          "dt": "15/01/2016 08:58:05"
+        }
+      }
+    },
+    {
+      "id": "6391",
+      "gestore": "SERVIZI & GESTIONI ITALIA S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "CAIRO MONTENOTTE CORSO BRIGATE PARTIGIANE",
+      "indirizzo": "CORSO BRIGATE PARTIGIANE SNC 17014",
+      "comune": "CAIRO MONTENOTTE",
+      "provincia": "SV",
+      "lat": 44.388435,
+      "lng": 8.281929,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.989,
+          "isSelf": true,
+          "dt": "13/10/2026 14:12:57"
+        },
+        "diesel_self": {
+          "prezzo": 1.309,
+          "isSelf": true,
+          "dt": "03/12/2016 01:35:21"
+        }
+      }
+    },
+    {
+      "id": "24131",
+      "gestore": "SERVIZI & GESTIONI ITALIA S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "PADOVA-VIA MOZZONI",
+      "indirizzo": "VIA ANNA MARIA MOZZONI SNC 35100",
+      "comune": "PADOVA",
+      "provincia": "PD",
+      "lat": 45.423465,
+      "lng": 11.921504,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.989,
+          "isSelf": true,
+          "dt": "13/10/2026 14:15:20"
+        },
+        "diesel_self": {
+          "prezzo": 1.399,
+          "isSelf": true,
+          "dt": "11/03/2021 01:14:57"
+        }
+      }
+    },
+    {
+      "id": "60909",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VICALVI",
+      "indirizzo": "SS DELLA VANDRA KM 9+300  SNC 03030",
+      "comune": "VICALVI",
+      "provincia": "FR",
+      "lat": 41.681385,
+      "lng": 13.697058,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:59"
+        },
+        "diesel_self": {
+          "prezzo": 1.544,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:59"
+        }
+      }
+    },
+    {
+      "id": "60751",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PERGOLA",
+      "indirizzo": "via Molino del Signore SNC 61045",
+      "comune": "PERGOLA",
+      "provincia": "PU",
+      "lat": 43.570498,
+      "lng": 12.845081,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.646,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:22"
+        },
+        "diesel_self": {
+          "prezzo": 1.549,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:22"
+        }
+      }
+    },
+    {
+      "id": "60954",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PORTO VIRO",
+      "indirizzo": "Via Torino 42  45014",
+      "comune": "PORTO VIRO",
+      "provincia": "RO",
+      "lat": 45.038342,
+      "lng": 12.219466,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.627,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:11"
+        },
+        "diesel_self": {
+          "prezzo": 1.552,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:11"
+        }
+      }
+    },
+    {
+      "id": "60896",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "GUALDO",
+      "indirizzo": "GUALDO - SP SARNANO /GUALDO SNC 62020",
+      "comune": "GUALDO",
+      "provincia": "MC",
+      "lat": 43.065641,
+      "lng": 13.343153,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.649,
+          "isSelf": true,
+          "dt": "04/10/2026 21:56:00"
+        },
+        "diesel_self": {
+          "prezzo": 1.559,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:01"
+        }
+      }
+    },
+    {
+      "id": "59873",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "AILANO",
+      "indirizzo": "s.p. valle agricola - località Cerquito 9 81010",
+      "comune": "AILANO",
+      "provincia": "CE",
+      "lat": 41.373765,
+      "lng": 14.19278,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:19"
+        },
+        "diesel_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:19"
+        }
+      }
+    },
+    {
+      "id": "60610",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PAPOZZE",
+      "indirizzo": "Via Eridania 3985  45010",
+      "comune": "PAPOZZE",
+      "provincia": "RO",
+      "lat": 44.993716,
+      "lng": 12.033218,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.628,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:44"
+        },
+        "diesel_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:44"
+        }
+      }
+    },
+    {
+      "id": "59965",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BASILIANO",
+      "indirizzo": "S.S. 13 Pontebbana KM113+620  snc 33031",
+      "comune": "BASILIANO",
+      "provincia": "UD",
+      "lat": 46.01417,
+      "lng": 13.07,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.633,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:06"
+        },
+        "diesel_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:06"
+        },
+        "gpl": {
+          "prezzo": 0.584,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:06"
+        }
+      }
+    },
+    {
+      "id": "60619",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BOSARO",
+      "indirizzo": "Via Nazionale SNC 45033",
+      "comune": "BOSARO",
+      "provincia": "RO",
+      "lat": 44.988184,
+      "lng": 11.760695,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.639,
+          "isSelf": true,
+          "dt": "05/10/2026 21:51:06"
+        },
+        "diesel_self": {
+          "prezzo": 1.573,
+          "isSelf": true,
+          "dt": "05/10/2026 21:51:06"
+        }
+      }
+    },
+    {
+      "id": "60543",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "FICAROLO",
+      "indirizzo": "Via Eridania 1920  45036",
+      "comune": "FICAROLO",
+      "provincia": "RO",
+      "lat": 44.972926,
+      "lng": 11.427808,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.635,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:05"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:05"
+        }
+      }
+    },
+    {
+      "id": "60561",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "TRECENTA",
+      "indirizzo": "Via A. Manzoni 443 45027",
+      "comune": "TRECENTA",
+      "provincia": "RO",
+      "lat": 45.033428,
+      "lng": 11.459824,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.635,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:02"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:02"
+        }
+      }
+    },
+    {
+      "id": "50172",
+      "gestore": "SYNERGY S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "ATENA LUCANA",
+      "indirizzo": "Strada Statale 598 - Val D'Agri C.da Saracena km 4+0.44  84030",
+      "comune": "ATENA LUCANA",
+      "provincia": "SA",
+      "lat": 40.439275,
+      "lng": 15.567427,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.675,
+          "isSelf": true,
+          "dt": "06/10/2026 21:43:26"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "06/10/2026 21:43:26"
+        }
+      }
+    },
+    {
+      "id": "60009",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "SEGUSINO",
+      "indirizzo": "VIALE ITALIA  SNC 31040",
+      "comune": "SEGUSINO",
+      "provincia": "TV",
+      "lat": 45.917141,
+      "lng": 11.953829,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.644,
+          "isSelf": true,
+          "dt": "04/10/2026 21:55:35"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:43"
+        }
+      }
+    },
+    {
+      "id": "60018",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "ALTISSIMO",
+      "indirizzo": "Via Garavoglia 23  36070",
+      "comune": "ALTISSIMO",
+      "provincia": "VI",
+      "lat": 45.61061,
+      "lng": 11.238082,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.645,
+          "isSelf": true,
+          "dt": "02/10/2026 21:59:04"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "02/10/2026 21:59:04"
+        }
+      }
+    },
+    {
+      "id": "60016",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "MAROSTICA",
+      "indirizzo": "Via Panica 130  36063",
+      "comune": "MAROSTICA",
+      "provincia": "VI",
+      "lat": 45.74121,
+      "lng": 11.644818,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.644,
+          "isSelf": true,
+          "dt": "02/10/2026 21:59:08"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "02/10/2026 21:59:08"
+        }
+      }
+    },
+    {
+      "id": "59906",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BOSSICO",
+      "indirizzo": "Via Vittorio Emanuele 24 24060",
+      "comune": "BOSSICO",
+      "provincia": "BG",
+      "lat": 45.827882,
+      "lng": 10.043294,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.658,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:59"
+        },
+        "diesel_self": {
+          "prezzo": 1.578,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:59"
+        }
+      }
+    },
+    {
+      "id": "55763",
+      "gestore": "SMAF SERVICES S.R.L.",
+      "brand": "Smaf",
+      "bandieraRaw": "Smaf",
+      "tipo": "Stradale",
+      "nome": "SMAF 1031 - PULVILLO",
+      "indirizzo": "gestori.prezzibenzina.it",
+      "comune": "ORAZIO PULVILLO 8 00175",
+      "provincia": "ROMA",
+      "lat": null,
+      "lng": null,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.958,
+          "isSelf": false,
+          "dt": "16/10/2026 07:29:23"
+        },
+        "benzina_self": {
+          "prezzo": 1.658,
+          "isSelf": true,
+          "dt": "16/10/2026 07:29:23"
+        },
+        "diesel_servito": {
+          "prezzo": 1.878,
+          "isSelf": false,
+          "dt": "16/10/2026 07:29:23"
+        },
+        "diesel_self": {
+          "prezzo": 1.578,
+          "isSelf": true,
+          "dt": "16/10/2026 07:29:23"
+        }
+      }
+    },
+    {
+      "id": "32991",
+      "gestore": "PENTA PETROLI SRL",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "EWA POINT MEZZANO",
+      "indirizzo": "VIA FUSCO, FRAZ. MEZZANO 12 81100",
+      "comune": "CASERTA",
+      "provincia": "CE",
+      "lat": 41.096031,
+      "lng": 14.348132,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.666,
+          "isSelf": true,
+          "dt": "19/10/2026 22:01:13"
+        },
+        "diesel_self": {
+          "prezzo": 1.579,
+          "isSelf": true,
+          "dt": "19/10/2026 22:01:13"
+        }
+      }
+    },
+    {
+      "id": "60074",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "ROSOLINA",
+      "indirizzo": "Via Rosolina Mare 11  45010",
+      "comune": "ROSOLINA",
+      "provincia": "RO",
+      "lat": 45.117617,
+      "lng": 12.272113,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.669,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:22"
+        },
+        "diesel_self": {
+          "prezzo": 1.579,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:22"
+        }
+      }
+    },
+    {
+      "id": "60628",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BAGNOLO DI PO",
+      "indirizzo": "Via Stradone Runzi SNC 45022",
+      "comune": "BAGNOLO DI PO",
+      "provincia": "RO",
+      "lat": 44.992743,
+      "lng": 11.507427,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.644,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:16"
+        },
+        "diesel_self": {
+          "prezzo": 1.584,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:16"
+        },
+        "gpl": {
+          "prezzo": 0.619,
+          "isSelf": false,
+          "dt": "02/10/2026 21:57:16"
+        }
+      }
+    },
+    {
+      "id": "60394",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "MONTEFIASCONE - COMMENDA",
+      "indirizzo": "SP7  01027",
+      "comune": "MONTEFIASCONE",
+      "provincia": "VT",
+      "lat": 42.513946,
+      "lng": 11.990681,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.684,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:38"
+        },
+        "diesel_self": {
+          "prezzo": 1.585,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:38"
+        },
+        "gpl": {
+          "prezzo": 0.686,
+          "isSelf": false,
+          "dt": "02/10/2026 21:54:38"
+        }
+      }
+    },
+    {
+      "id": "59833",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "ANAGNI",
+      "indirizzo": "Via Anticolana snc 03012",
+      "comune": "ANAGNI",
+      "provincia": "FR",
+      "lat": 41.745491,
+      "lng": 13.120961,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.659,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:30"
+        },
+        "diesel_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:30"
+        }
+      }
+    },
+    {
+      "id": "50120",
+      "gestore": "S. & F. S.A.S. DI SAVOINI RENATA & C.",
+      "brand": "Tamoil",
+      "bandieraRaw": "Tamoil",
+      "tipo": "Stradale",
+      "nome": "Tamoil Orta",
+      "indirizzo": "229 del Lago d'Orta, Km. 44+165, Omegna - 28016",
+      "comune": "ORTA SAN GIULIO",
+      "provincia": "NO",
+      "lat": 45.797818,
+      "lng": 8.41825,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.629,
+          "isSelf": true,
+          "dt": "19/10/2026 22:00:43"
+        },
+        "diesel_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "19/10/2026 22:00:43"
+        }
+      }
+    },
+    {
+      "id": "60316",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "RIETI- SALARIA",
+      "indirizzo": "Via Salaria 68  02100",
+      "comune": "RIETI",
+      "provincia": "RI",
+      "lat": 42.40723,
+      "lng": 12.85918,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.558,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:02"
+        },
+        "diesel_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:02"
+        },
+        "gpl": {
+          "prezzo": 0.569,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:02"
+        }
+      }
+    },
+    {
+      "id": "45516",
+      "gestore": "EASY SERVICE S.R.L.",
+      "brand": "Energas",
+      "bandieraRaw": "Energas",
+      "tipo": "Stradale",
+      "nome": "EASY SERVICE S.R.L. / PIOSSASCO",
+      "indirizzo": "S.P. 6 PINEROLO KM 20+381  10045",
+      "comune": "PIOSSASCO",
+      "provincia": "TO",
+      "lat": 44.980845,
+      "lng": 7.485427,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.779,
+          "isSelf": false,
+          "dt": "19/10/2026 22:10:06"
+        },
+        "benzina_self": {
+          "prezzo": 1.629,
+          "isSelf": true,
+          "dt": "19/10/2026 22:10:06"
+        },
+        "diesel_servito": {
+          "prezzo": 1.739,
+          "isSelf": false,
+          "dt": "19/10/2026 22:10:06"
+        },
+        "diesel_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "19/10/2026 22:10:06"
+        },
+        "gpl": {
+          "prezzo": 1,
+          "isSelf": false,
+          "dt": "19/10/2026 22:10:06"
+        }
+      }
+    },
+    {
+      "id": "60189",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "LAVELLO",
+      "indirizzo": "S.S. Bradanica -  SNC 85024",
+      "comune": "LAVELLO",
+      "provincia": "PZ",
+      "lat": 41.04769,
+      "lng": 15.78915,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.598,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "gpl": {
+          "prezzo": 0.554,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:27"
+        }
+      }
+    },
+    {
+      "id": "60090",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "LUZZARA",
+      "indirizzo": "Via G. Carboni 42  42045",
+      "comune": "LUZZARA",
+      "provincia": "RE",
+      "lat": 44.95925,
+      "lng": 10.68953,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.595,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
+        }
+      }
+    },
+    {
+      "id": "60611",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "STIENTA",
+      "indirizzo": "Via Eridania 2094  45039",
+      "comune": "STIENTA",
+      "provincia": "RO",
+      "lat": 44.939371,
+      "lng": 11.548216,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.665,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:41"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:41"
+        }
+      }
+    }
+  ],
+  "pompeBianche": [
+    {
+      "id": "60316",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "RIETI- SALARIA",
+      "indirizzo": "Via Salaria 68  02100",
+      "comune": "RIETI",
+      "provincia": "RI",
+      "lat": 42.40723,
+      "lng": 12.85918,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.558,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:02"
+        },
+        "diesel_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:02"
+        },
+        "gpl": {
+          "prezzo": 0.569,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:02"
+        }
+      }
+    },
+    {
+      "id": "60401",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - KM 62",
+      "indirizzo": "SS 675 km 62+500 - Viterbo (VT) SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.307856,
+      "lng": 11.990719,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:29"
+        },
+        "diesel_self": {
+          "prezzo": 1.645,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:29"
+        }
+      }
+    },
+    {
+      "id": "60399",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - TUSCANESE",
+      "indirizzo": "STRADA TUSCANESE KM 1+ 840 - Viterbo (VT) SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.428006,
+      "lng": 12.097667,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.565,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:06"
+        },
+        "diesel_self": {
+          "prezzo": 1.606,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:06"
+        }
+      }
+    },
+    {
+      "id": "36845",
+      "gestore": "FGS GAS S.A.S. DI CIVITELLA GIORGIO",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "Via Degli Angeli",
+      "indirizzo": "VIA DEGLI ANGELI 190 00175",
+      "comune": "ROMA",
+      "provincia": "RM",
+      "lat": 41.872398,
+      "lng": 12.547713,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.569,
+          "isSelf": false,
+          "dt": "19/10/2026 13:51:59"
+        },
+        "benzina_self": {
+          "prezzo": 1.569,
+          "isSelf": true,
+          "dt": "19/10/2026 13:51:59"
+        },
+        "diesel_servito": {
+          "prezzo": 2.058,
+          "isSelf": false,
+          "dt": "19/10/2026 13:51:59"
+        },
+        "diesel_self": {
+          "prezzo": 2.058,
+          "isSelf": true,
+          "dt": "19/10/2026 13:51:59"
+        }
+      }
+    },
+    {
+      "id": "60391",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BOMARZO",
+      "indirizzo": "SP Bomarzese snc 01020",
+      "comune": "BOMARZO",
+      "provincia": "VT",
+      "lat": 42.48273,
+      "lng": 12.25037,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.575,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:44"
+        },
+        "diesel_self": {
+          "prezzo": 1.645,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:44"
+        }
+      }
+    },
+    {
+      "id": "60397",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - DANIELLI",
+      "indirizzo": "Via Luigi Rossi Danielli SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.41783,
+      "lng": 12.10856,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.578,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:30"
+        },
+        "diesel_self": {
+          "prezzo": 1.599,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:30"
+        }
+      }
+    },
+    {
+      "id": "60396",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - SQUARANO",
+      "indirizzo": "Via Vico Squarano SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.412275,
+      "lng": 12.097383,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.586,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:28"
+        },
+        "diesel_self": {
+          "prezzo": 1.654,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:28"
+        }
+      }
+    },
+    {
+      "id": "60395",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - PIETRARE",
+      "indirizzo": "Via delle Pietrare SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.411972,
+      "lng": 12.110522,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:36"
+        },
+        "diesel_self": {
+          "prezzo": 1.659,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:36"
+        }
+      }
+    },
+    {
+      "id": "60402",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VITERBO - UMBRO LAZIALE KM 61",
+      "indirizzo": "SS675 SNC 01100",
+      "comune": "VITERBO",
+      "provincia": "VT",
+      "lat": 42.492952,
+      "lng": 11.948814,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.589,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:58"
+        },
+        "diesel_self": {
+          "prezzo": 1.659,
+          "isSelf": true,
+          "dt": "02/10/2026 21:55:58"
+        },
+        "gpl": {
+          "prezzo": 0.599,
+          "isSelf": false,
+          "dt": "02/10/2026 21:55:58"
+        }
+      }
+    },
+    {
+      "id": "60090",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "LUZZARA",
+      "indirizzo": "Via G. Carboni 42  42045",
+      "comune": "LUZZARA",
+      "provincia": "RE",
+      "lat": 44.95925,
+      "lng": 10.68953,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.595,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
+        }
+      }
+    },
+    {
+      "id": "60189",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "LAVELLO",
+      "indirizzo": "S.S. Bradanica -  SNC 85024",
+      "comune": "LAVELLO",
+      "provincia": "PZ",
+      "lat": 41.04769,
+      "lng": 15.78915,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.598,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "gpl": {
+          "prezzo": 0.554,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:27"
+        }
+      }
+    },
+    {
+      "id": "23219",
+      "gestore": "G.M.F. S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PETROL",
+      "indirizzo": "VIA PONTIGLIA N.159 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.53959,
+      "lng": 10.138176,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.619,
+          "isSelf": false,
+          "dt": "12/10/2026 18:59:39"
+        },
+        "benzina_self": {
+          "prezzo": 1.619,
+          "isSelf": true,
+          "dt": "12/10/2026 18:59:39"
+        },
+        "diesel_servito": {
+          "prezzo": 1.726,
+          "isSelf": false,
+          "dt": "12/10/2026 18:59:39"
+        },
+        "diesel_self": {
+          "prezzo": 1.726,
+          "isSelf": true,
+          "dt": "12/10/2026 18:59:39"
+        }
+      }
+    },
+    {
+      "id": "60905",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "ROMA BOCCEA 353",
+      "indirizzo": "Via di Boccea 353  00166",
+      "comune": "ROMA",
+      "provincia": "RM",
+      "lat": 41.908485,
+      "lng": 12.406597,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.623,
+          "isSelf": true,
+          "dt": "05/10/2026 21:50:59"
+        },
+        "diesel_self": {
+          "prezzo": 1.612,
+          "isSelf": true,
+          "dt": "05/10/2026 21:50:59"
+        }
+      }
+    },
+    {
+      "id": "59873",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "AILANO",
+      "indirizzo": "s.p. valle agricola - località Cerquito 9 81010",
+      "comune": "AILANO",
+      "provincia": "CE",
+      "lat": 41.373765,
+      "lng": 14.19278,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:19"
+        },
+        "diesel_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:19"
+        }
+      }
+    },
+    {
+      "id": "60909",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VICALVI",
+      "indirizzo": "SS DELLA VANDRA KM 9+300  SNC 03030",
+      "comune": "VICALVI",
+      "provincia": "FR",
+      "lat": 41.681385,
+      "lng": 13.697058,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:59"
+        },
+        "diesel_self": {
+          "prezzo": 1.544,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:59"
+        }
+      }
+    },
+    {
+      "id": "60244",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "VENOSA",
+      "indirizzo": "SS655 snc 85029",
+      "comune": "VENOSA",
+      "provincia": "PZ",
+      "lat": 41.009287,
+      "lng": 15.839659,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.625,
+          "isSelf": true,
+          "dt": "04/10/2026 21:55:36"
+        },
+        "diesel_self": {
+          "prezzo": 1.615,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:20"
+        },
+        "gpl": {
+          "prezzo": 0.554,
+          "isSelf": false,
+          "dt": "04/10/2026 21:55:36"
+        }
+      }
+    },
+    {
+      "id": "60390",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "CORCHIANO",
+      "indirizzo": "Via Civita Castellana 46  01030",
+      "comune": "CORCHIANO",
+      "provincia": "VT",
+      "lat": 42.344926,
+      "lng": 12.355668,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.625,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:56"
+        },
+        "diesel_self": {
+          "prezzo": 1.595,
+          "isSelf": true,
+          "dt": "02/10/2026 21:53:56"
+        }
+      }
+    },
+    {
+      "id": "60954",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PORTO VIRO",
+      "indirizzo": "Via Torino 42  45014",
+      "comune": "PORTO VIRO",
+      "provincia": "RO",
+      "lat": 45.038342,
+      "lng": 12.219466,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.627,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:11"
+        },
+        "diesel_self": {
+          "prezzo": 1.552,
+          "isSelf": true,
+          "dt": "02/10/2026 21:57:11"
+        }
+      }
+    },
+    {
+      "id": "59999",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "SAN MASSIMO",
+      "indirizzo": "SS 17 km 201  snc 86027",
+      "comune": "SAN MASSIMO",
+      "provincia": "CB",
+      "lat": 41.510359,
+      "lng": 14.436459,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.628,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:43"
+        },
+        "diesel_self": {
+          "prezzo": 1.605,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:43"
+        }
+      }
+    },
+    {
+      "id": "60610",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PAPOZZE",
+      "indirizzo": "Via Eridania 3985  45010",
+      "comune": "PAPOZZE",
+      "provincia": "RO",
+      "lat": 44.993716,
+      "lng": 12.033218,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.628,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:44"
+        },
+        "diesel_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:44"
+        }
+      }
+    },
+    {
+      "id": "59965",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BASILIANO",
+      "indirizzo": "S.S. 13 Pontebbana KM113+620  snc 33031",
+      "comune": "BASILIANO",
+      "provincia": "UD",
+      "lat": 46.01417,
+      "lng": 13.07,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.633,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:06"
+        },
+        "diesel_self": {
+          "prezzo": 1.564,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:06"
+        },
+        "gpl": {
+          "prezzo": 0.584,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:06"
+        }
+      }
+    },
+    {
+      "id": "60906",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "ROMA DEI GONZAGA",
+      "indirizzo": "Via dei Gonzaga SNC 00163",
+      "comune": "ROMA",
+      "provincia": "RM",
+      "lat": 41.881009,
+      "lng": 12.41994,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.634,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:29"
+        },
+        "diesel_self": {
+          "prezzo": 1.603,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:29"
+        }
+      }
+    },
+    {
+      "id": "60208",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "SANTA SEVERA",
+      "indirizzo": "Via Aurelia KM 49.600 - SANTA SEVERA  00058",
+      "comune": "SANTA MARINELLA",
+      "provincia": "RM",
+      "lat": 42.021759,
+      "lng": 11.953649,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.634,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "diesel_self": {
+          "prezzo": 1.605,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:27"
+        },
+        "gpl": {
+          "prezzo": 0.664,
+          "isSelf": false,
+          "dt": "02/10/2026 21:58:27"
+        }
+      }
+    },
+    {
+      "id": "60276",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "CUNEO",
+      "indirizzo": "Corso IV Novembre 20  12100",
+      "comune": "CUNEO",
+      "provincia": "CN",
+      "lat": 44.389119,
+      "lng": 7.539496,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.635,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:14"
+        },
+        "diesel_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:14"
+        }
+      }
+    },
+    {
+      "id": "20413",
+      "gestore": "C.S.I. CAIRA SERVIZI INTEGRATI S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "AREA SERVIZIO 509 - ATINA",
+      "indirizzo": "Strada Statale 509, Km. 22+586, dir. CASSINO-AVEZZANO  03042",
+      "comune": "ATINA",
+      "provincia": "FR",
+      "lat": 41.614942,
+      "lng": 13.794185,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.635,
+          "isSelf": true,
+          "dt": "25/09/2026 21:52:08"
+        },
+        "diesel_self": {
+          "prezzo": 1.619,
+          "isSelf": true,
+          "dt": "25/09/2026 21:52:08"
+        },
+        "gpl": {
+          "prezzo": 0.599,
+          "isSelf": false,
+          "dt": "25/09/2026 21:52:08"
+        }
+      }
+    },
+    {
+      "id": "60543",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "FICAROLO",
+      "indirizzo": "Via Eridania 1920  45036",
+      "comune": "FICAROLO",
+      "provincia": "RO",
+      "lat": 44.972926,
+      "lng": 11.427808,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.635,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:05"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "02/10/2026 21:54:05"
+        }
+      }
+    },
+    {
+      "id": "60561",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "TRECENTA",
+      "indirizzo": "Via A. Manzoni 443 45027",
+      "comune": "TRECENTA",
+      "provincia": "RO",
+      "lat": 45.033428,
+      "lng": 11.459824,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.635,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:02"
+        },
+        "diesel_self": {
+          "prezzo": 1.574,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:02"
+        }
+      }
+    },
+    {
+      "id": "60907",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "SPOLETO",
+      "indirizzo": "Via Guglielmo Marconi 196  06049",
+      "comune": "SPOLETO",
+      "provincia": "PG",
+      "lat": 42.751118,
+      "lng": 12.730734,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.636,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:47"
+        },
+        "diesel_self": {
+          "prezzo": 1.624,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:47"
+        }
+      }
+    },
+    {
+      "id": "60619",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BOSARO",
+      "indirizzo": "Via Nazionale SNC 45033",
+      "comune": "BOSARO",
+      "provincia": "RO",
+      "lat": 44.988184,
+      "lng": 11.760695,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.639,
+          "isSelf": true,
+          "dt": "05/10/2026 21:51:06"
+        },
+        "diesel_self": {
+          "prezzo": 1.573,
+          "isSelf": true,
+          "dt": "05/10/2026 21:51:06"
+        }
+      }
+    },
+    {
+      "id": "61003",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "CITTADUCALE",
+      "indirizzo": "Via Salaria 84  02015",
+      "comune": "CITTADUCALE",
+      "provincia": "RI",
+      "lat": 42.393908,
+      "lng": 12.92491,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.644,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:35"
+        },
+        "diesel_self": {
+          "prezzo": 1.596,
+          "isSelf": true,
+          "dt": "02/10/2026 21:56:35"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+---
+import nationalStats from '../data/national-stats.json';
+
+const benzinaAvg = nationalStats.averages.benzina_self ? nationalStats.averages.benzina_self.toFixed(3) : '1.78';
+const dieselAvg = nationalStats.averages.diesel_self ? nationalStats.averages.diesel_self.toFixed(3) : '1.68';
+
+const faqs = [
+  {
+    question: "Quanto costa 1 litro di benzina oggi in Italia?",
+    answer: `Oggi in Italia il prezzo medio della benzina in modalità self-service si attesta a circa € ${benzinaAvg} al litro. Nei distributori no-logo e nelle pompe bianche più convenienti è possibile trovare prezzi a partire da circa € ${nationalStats.min.benzina_self?.toFixed(3) || '1.70'} al litro, con un risparmio fino a 8-10 euro su un pieno da 50 litri.`
+  },
+  {
+    question: "Quanto costa 1 litro di diesel (gasolio) oggi?",
+    answer: `Il prezzo medio del gasolio per autotrazione (diesel) in modalità self-service è attualmente pari a circa € ${dieselAvg} al litro. In modalità servito il costo medio può salire di 15-25 centesimi al litro a seconda della compagnia e della tratta.`
+  },
+  {
+    question: "Come trovare il benzinaio dove costa meno la benzina vicino a me?",
+    answer: "Su PrezzoBenza.it basta cliccare sul pulsante 'Trova vicino a me': il sistema rileva la tua posizione GPS attuale tramite il browser e ti mostra istantaneamente la lista ordinata delle stazioni di servizio più vicine e più economiche entro 5, 10 o 25 km, con il pulsante 'Portami qui' che apre direttamente il navigatore."
+  },
+  {
+    question: "Cosa sono le pompe bianche e perché costano meno?",
+    answer: "Le pompe bianche (o distributori 'no logo' o indipendenti) sono stazioni di servizio non legate ai grandi marchi petroliferi (come Eni, Q8, IP o Esso). Possono applicare prezzi inferiori fino a 10-15 centesimi al litro perché acquistano il carburante al prezzo all'ingrosso del mercato libero e non sostengono i costi pubblicitari e di franchising delle multinazionali."
+  },
+  {
+    question: "Che differenza c'è tra rifornimento Self-Service e Servito?",
+    answer: "Nel Self-Service l'automobilista inserisce autonomamente la pistola di erogazione e provvede al pagamento alla cassa automatica o al totem. Nel Servito è l'operatore dell'impianto a occuparsi del rifornimento. La differenza di prezzo tra le due modalità va solitamente da 12 a oltre 30 centesimi al litro."
+  },
+  {
+    question: "I prezzi mostrati su PrezzoBenza.it sono ufficiali e affidabili?",
+    answer: "Sì, tutti i prezzi sono estratti direttamente dal database ufficiale Open Data dell'Osservatorio Prezzi Carburanti del MIMIT (Ministero delle Imprese e del Made in Italy). I gestori degli impianti hanno l'obbligo di legge di comunicare ogni variazione di prezzo al ministero."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.answer
+    }
+  }))
+};
+---
+
+<section id="faq" class="py-16 max-w-4xl mx-auto px-4">
+  <div class="text-center space-y-2 mb-10">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-zinc-800 text-zinc-300">
+      Domande Frequenti
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+      Tutto quello che devi sapere sui <span class="text-emerald-400">prezzi carburanti</span>
+    </h2>
+    <p class="text-sm text-zinc-400">
+      Risposte chiare alle domande più cercate dagli automobilisti italiani
+    </p>
+  </div>
+
+  <div class="space-y-4">
+    {faqs.map((faq, index) => (
+      <details class="group rounded-2xl border border-zinc-800/80 bg-zinc-900/60 p-5 transition-colors open:bg-zinc-900 open:border-zinc-700">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-white text-base hover:text-emerald-400 transition-colors list-none">
+          <span>{faq.question}</span>
+          <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-zinc-400 group-open:rotate-180 group-open:text-emerald-400 transition-transform">
+            ▼
+          </span>
+        </summary>
+        <p class="mt-4 text-sm text-zinc-300 leading-relaxed border-t border-zinc-800/60 pt-3">
+          {faq.answer}
+        </p>
+      </details>
+    ))}
+  </div>
+
+  <!-- Schema.org FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>

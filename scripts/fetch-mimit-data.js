@@ -152,9 +152,17 @@ function normalizeBrand(brandRaw) {
 
 async function fetchCsv(url) {
   console.log(`[MIMIT] Scarico: ${url}...`);
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status} per ${url}`);
-  return await res.text();
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 12000);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeout);
+    if (!res.ok) throw new Error(`HTTP ${res.status} per ${url}`);
+    return await res.text();
+  } catch (err) {
+    clearTimeout(timeout);
+    throw err;
+  }
 }
 
 async function main() {
@@ -459,6 +467,12 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error('[MIMIT] Errore critico:', err);
-  process.exit(1);
+  console.warn('[MIMIT] Download fallito o timeout:', err.message);
+  if (existsSync(path.join(ROOT, 'src', 'data', 'national-stats.json'))) {
+    console.log('[MIMIT] Utilizzo snapshot dati esistente e procedo con la build.');
+    process.exit(0);
+  } else {
+    console.error('[MIMIT] Errore critico: nessun dato precedente disponibile.');
+    process.exit(1);
+  }
 });

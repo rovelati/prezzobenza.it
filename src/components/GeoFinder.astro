@@ -37,9 +37,15 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
       
       <!-- Card Header -->
       <div class="text-center space-y-2">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Dati MIMIT Ufficiali • Algoritmo Prezzo Opportunità
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Dati MIMIT Ufficiali • Algoritmo Prezzo Opportunità
+          </div>
+          <div id="ip-location-pill" class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/25 transition-all">
+            <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+            <span id="ip-location-text">📍 Posizione rilevata da IP...</span>
+          </div>
         </div>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-zinc-900 dark:text-white">
           Trova la benza più economica <span class="text-emerald-500 dark:text-emerald-400">vicino a te</span>
@@ -460,18 +466,20 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
   btnGeolocate?.addEventListener('click', () => {
     hasSearched = true;
     if (!navigator.geolocation) {
-      showStatus('La geolocalizzazione non è supportata dal tuo browser. Seleziona una provincia dal menu.', 'error');
+      showStatus('La geolocalizzazione GPS non è supportata dal tuo browser. Seleziona una provincia dal menu.', 'error');
       return;
     }
 
     setLoading(true);
-    showStatus('Rilevamento posizione GPS in corso...', 'info');
+    showStatus('Rilevamento posizione GPS ad alta precisione in corso...', 'info');
 
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
         userCoords = {
           lat: pos.coords.latitude,
           lng: pos.coords.longitude,
+          isIp: false,
+          cityName: null,
         };
 
         const sortedProvs = [...window.__PB_PROVINCES]
@@ -483,7 +491,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
           .sort((a, b) => a.distance - b.distance);
 
         const nearestProvs = sortedProvs.slice(0, 2);
-        showStatus(`Posizione rilevata! Caricamento distributori vicino a te (${nearestProvs[0].name})...`, 'info');
+        showStatus(`Posizione GPS rilevata! Caricamento distributori (${nearestProvs[0].name})...`, 'info');
 
         try {
           const stationPromises = nearestProvs.map(p =>
@@ -505,6 +513,16 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
 
           setLoading(false);
           statusBox.classList.add('hidden');
+          if (btnText) btnText.textContent = '✅ Posizione GPS Esatta Attiva';
+
+          const ipBadge = document.getElementById('ip-location-pill');
+          const ipText = document.getElementById('ip-location-text');
+          if (ipBadge && ipText) {
+            ipBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20';
+            ipText.innerHTML = `🎯 <strong>Posizione GPS Esatta Attiva</strong>`;
+            ipBadge.classList.remove('hidden');
+          }
+
           renderResults();
         } catch (err) {
           console.error(err);
@@ -514,14 +532,132 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
       },
       (err) => {
         setLoading(false);
-        let msg = 'Permesso GPS negato. Seleziona la tua provincia per visualizzare i distributori.';
-        if (err.code === 2) msg = 'Posizione non disponibile. Seleziona la provincia dal menu.';
-        if (err.code === 3) msg = 'Timeout GPS. Seleziona la provincia dal menu.';
+        let msg = 'Permesso GPS non concesso. Puoi comunque usare la geolocalizzazione da IP o scegliere la provincia.';
+        if (err.code === 2) msg = 'Posizione GPS non disponibile. Usando la stima da IP.';
+        if (err.code === 3) msg = 'Timeout GPS. Seleziona la provincia dal menu o usa la stima IP.';
         showStatus(msg, 'error');
       },
       { timeout: 10000, enableHighAccuracy: true }
     );
   });
+
+  // Fetch IP Location from Cloudflare Functions or fast edge fallback
+  async function fetchIpLocation() {
+    // 1. Cloudflare Pages Function (/api/geo)
+    try {
+      const res = await fetch('/api/geo', { signal: AbortSignal.timeout(2000) });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.latitude && data.longitude) {
+          return {
+            lat: Number(data.latitude),
+            lng: Number(data.longitude),
+            city: data.city || data.region || 'La tua zona',
+          };
+        }
+      }
+    } catch (e) {}
+
+    // 2. GeoJS (Free, fast edge CDN, CORS enabled)
+    try {
+      const res = await fetch('https://get.geojs.io/v1/ip/geo.json', { signal: AbortSignal.timeout(2500) });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.latitude && data.longitude) {
+          return {
+            lat: parseFloat(data.latitude),
+            lng: parseFloat(data.longitude),
+            city: data.city || data.region || 'La tua zona',
+          };
+        }
+      }
+    } catch (e) {}
+
+    // 3. ipwho.is fallback
+    try {
+      const res = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(2500) });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.success && data.latitude && data.longitude) {
+          return {
+            lat: Number(data.latitude),
+            lng: Number(data.longitude),
+            city: data.city || data.region || 'La tua zona',
+          };
+        }
+      }
+    } catch (e) {}
+
+    return null;
+  }
+
+  // Automatic IP Geolocation on Page Load
+  async function autoGeolocateByIp() {
+    try {
+      const geo = await fetchIpLocation();
+      if (!geo || !geo.lat || !geo.lng) return;
+
+      // Se l'utente ha già attivato manualmente il GPS, non sovrascrivere
+      if (userCoords && !userCoords.isIp) return;
+
+      userCoords = {
+        lat: geo.lat,
+        lng: geo.lng,
+        isIp: true,
+        cityName: geo.city,
+      };
+
+      // Trova le province più vicine alle coordinate dell'IP
+      const sortedProvs = [...window.__PB_PROVINCES]
+        .filter(p => p.lat && p.lng)
+        .map(p => ({
+          ...p,
+          distance: getDistanceKm(userCoords.lat, userCoords.lng, p.lat, p.lng),
+        }))
+        .sort((a, b) => a.distance - b.distance);
+
+      const nearestProvs = sortedProvs.slice(0, 2);
+      if (nearestProvs.length === 0) return;
+
+      if (provinceSelect) {
+        provinceSelect.value = nearestProvs[0].code;
+      }
+
+      const stationPromises = nearestProvs.map(p =>
+        fetch(`/data/provinces/${p.code.toLowerCase()}.json`).then(r => r.json())
+      );
+      const results = await Promise.all(stationPromises);
+
+      let combined = [];
+      for (const res of results) {
+        combined = combined.concat(res.stations || []);
+      }
+
+      currentStations = combined
+        .filter(s => s.lat && s.lng)
+        .map(s => ({
+          ...s,
+          distanceKm: Number(getDistanceKm(userCoords.lat, userCoords.lng, s.lat, s.lng).toFixed(1)),
+        }));
+
+      // Aggiorna Badge IP
+      const ipBadge = document.getElementById('ip-location-pill');
+      const ipText = document.getElementById('ip-location-text');
+      if (ipBadge && ipText) {
+        ipText.innerHTML = `📍 Rilevato da IP: <strong class="text-sky-700 dark:text-sky-300">${geo.city}</strong> (${nearestProvs[0].name})`;
+        ipBadge.classList.remove('hidden');
+      }
+
+      // Aggiorna testo pulsante CTA
+      if (btnText && (!userCoords || userCoords.isIp)) {
+        btnText.textContent = `🎯 Affina con GPS (${geo.city} rilevata da IP)`;
+      }
+
+      renderResults();
+    } catch (err) {
+      console.warn('Auto-geolocalizzazione IP non riuscita, mantengo vista nazionale:', err);
+    }
+  }
 
   async function loadProvinceStations(code) {
     setLoading(true);
@@ -614,6 +750,20 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
 
     if (userCoords) {
       filtered = filtered.filter(s => s.distanceKm <= selectedRadius);
+      // Auto-espandi a 25 km se non si trovano pompe nel raggio di 10 km (comune in zone extraurbane/IP)
+      if (filtered.length === 0 && selectedRadius < 25 && userCoords.isIp) {
+        selectedRadius = 25;
+        document.querySelectorAll('.radius-btn').forEach(b => {
+          if (b.dataset.radius === '25') {
+            b.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+            b.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+          } else {
+            b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+            b.classList.add('text-zinc-600', 'dark:text-zinc-400');
+          }
+        });
+        filtered = currentStations.filter(s => s.prices && s.prices[priceKey] && s.distanceKm <= 25);
+      }
     }
 
     // Aggiungi calcolo opportunità ad ogni stazione
@@ -634,7 +784,11 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
     resultsCount.textContent = enriched.length;
     
     if (userCoords) {
-      resultsSubtitle.textContent = `Nel raggio di ${selectedRadius} km dalla tua posizione GPS attuale (calcolo su pieno di ${userLiters}L)`;
+      if (userCoords.isIp) {
+        resultsSubtitle.textContent = `Distributori rilevati vicino a te (Zona ${userCoords.cityName || 'IP'}, raggio ${selectedRadius} km). Clicca "Affina con GPS" per la precisione al civico.`;
+      } else {
+        resultsSubtitle.textContent = `Nel raggio di ${selectedRadius} km dalla tua posizione GPS esatta (calcolo su pieno di ${userLiters}L).`;
+      }
     } else if (provName) {
       resultsSubtitle.textContent = `Tutti i distributori attivi nella provincia di ${provName}`;
     } else {
@@ -655,11 +809,24 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
         if (userCoords && window.L) {
           const userIcon = window.L.divIcon({
             className: 'custom-user-marker',
-            html: '<div style="width:14px; height:14px; background:#3b82f6; border:3px solid #ffffff; border-radius:50%; box-shadow:0 0 10px #3b82f6;"></div>',
-            iconSize: [14, 14],
+            html: userCoords.isIp
+              ? '<div style="width:16px; height:16px; background:#0ea5e9; border:3px solid #ffffff; border-radius:50%; box-shadow:0 0 10px #0ea5e9;"></div>'
+              : '<div style="width:16px; height:16px; background:#10b981; border:3px solid #ffffff; border-radius:50%; box-shadow:0 0 12px #10b981;"></div>',
+            iconSize: [16, 16],
           });
+
+          const popupContent = userCoords.isIp
+            ? `<div style="font-family:system-ui; padding:3px;">
+                 <div style="font-size:12px; font-weight:800; color:#0ea5e9;">📍 Posizione Stimata da IP</div>
+                 <div style="font-size:11px; margin-top:2px;">Zona: <strong>${userCoords.cityName || 'Rilevata'}</strong></div>
+                 <div style="font-size:10px; color:#71717a; margin-top:4px;">Clicca "Affina con GPS" per la massima precisione al civico</div>
+               </div>`
+            : `<div style="font-family:system-ui; padding:3px;">
+                 <div style="font-size:12px; font-weight:800; color:#10b981;">🎯 La tua posizione GPS esatta</div>
+               </div>`;
+
           window.L.marker([userCoords.lat, userCoords.lng], { icon: userIcon })
-            .bindPopup('<b>📍 La tua posizione GPS</b>')
+            .bindPopup(popupContent)
             .addTo(markersLayer);
         }
 
@@ -722,7 +889,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
                   ${st.brand}
                 </span>
                 ${isTop1 ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-black uppercase bg-emerald-500 text-zinc-950">🏆 Più Economico</span>' : ''}
-                ${st.distanceKm !== null ? `<span class="text-xs text-zinc-500 dark:text-zinc-400 font-semibold">📍 ${st.distanceKm} km da te</span>` : ''}
+                ${st.distanceKm !== null ? `<span class="text-xs text-zinc-500 dark:text-zinc-400 font-semibold">📍 ${st.distanceKm} km da te ${userCoords && userCoords.isIp ? '<span class="text-[10px] text-zinc-400 font-normal">(stima IP)</span>' : ''}</span>` : ''}
               </div>
 
               <h4 class="font-bold text-zinc-900 dark:text-white text-base leading-snug truncate">
@@ -787,7 +954,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
       spinner.classList.remove('hidden');
     } else {
       btnGeolocate.disabled = false;
-      btnText.textContent = 'Trova la benza più economica vicino a me';
+      btnText.textContent = userCoords && userCoords.isIp ? `🎯 Affina con GPS (${userCoords.cityName || 'Zona IP'})` : 'Trova la benza più economica vicino a me';
       spinner.classList.add('hidden');
     }
   }
@@ -802,7 +969,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
     statusBox.textContent = message;
   }
 
-  // Avvio automatico immediato mappa con i prezzi migliori d'Italia
+  // Avvio automatico immediato mappa con i prezzi migliori d'Italia e autogeolocalizzazione IP
   function bootMap() {
     if (typeof window.L === 'undefined') {
       setTimeout(bootMap, 60);
@@ -817,6 +984,9 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
     setTimeout(() => {
       if (leafletMap) leafletMap.invalidateSize();
     }, 250);
+
+    // Esegui immediatamente geolocalizzazione automatica da IP
+    autoGeolocateByIp();
   }
 
   if (document.readyState === 'loading') {

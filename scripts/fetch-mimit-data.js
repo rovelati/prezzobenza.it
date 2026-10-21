@@ -462,6 +462,37 @@ async function main() {
     'utf8'
   );
 
+  // Calcola i più cari d'Italia (Hall of Fame del Salasso)
+  const expensiveBenzina = [...allActiveStationsWithPrices]
+    .map(s => {
+      const p = s.prices.benzina_servito?.prezzo || s.prices.benzina_self?.prezzo;
+      const serv = s.prices.benzina_servito?.prezzo ? 'servito' : 'self';
+      return p && p < 3.5 ? { ...s, prezzo: p, service: serv, fuel: 'Benzina', fullTankCost: Number((p * 50).toFixed(2)) } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.prezzo - a.prezzo)
+    .slice(0, 10);
+
+  const expensiveDiesel = [...allActiveStationsWithPrices]
+    .map(s => {
+      const p = s.prices.diesel_servito?.prezzo || s.prices.diesel_self?.prezzo;
+      const serv = s.prices.diesel_servito?.prezzo ? 'servito' : 'self';
+      return p && p < 3.5 ? { ...s, prezzo: p, service: serv, fuel: 'Diesel', fullTankCost: Number((p * 50).toFixed(2)) } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.prezzo - a.prezzo)
+    .slice(0, 10);
+
+  writeFileSync(
+    path.join(ROOT, 'src', 'data', 'most-expensive-italy.json'),
+    JSON.stringify({
+      updatedAt: new Date().toISOString(),
+      topExpensiveBenzina: expensiveBenzina,
+      topExpensiveDiesel: expensiveDiesel,
+    }, null, 2),
+    'utf8'
+  );
+
   const durationSec = Math.round((Date.now() - startTime) / 1000);
   console.log(`[MIMIT] Elaborazione completata in ${durationSec}s!`);
 }

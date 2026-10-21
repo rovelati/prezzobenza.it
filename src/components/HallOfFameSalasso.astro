@@ -1,0 +1,227 @@
+---
+import mostExpensive from '../data/most-expensive-italy.json';
+import nationalStats from '../data/national-stats.json';
+
+const topBenzina = mostExpensive.topExpensiveBenzina || [];
+const topDiesel = mostExpensive.topExpensiveDiesel || [];
+
+const avgBenzina = nationalStats.averages.benzina_self || 1.78;
+const maxBenzinaPrice = topBenzina[0]?.prezzo || 2.79;
+const maxDieselPrice = topDiesel[0]?.prezzo || 2.80;
+
+const tankLitres = 50;
+const expensiveTankCost = (maxBenzinaPrice * tankLitres).toFixed(2);
+const cheapTankCost = (1.505 * tankLitres).toFixed(2);
+const wastedMoney = (Number(expensiveTankCost) - Number(cheapTankCost)).toFixed(2);
+
+const awards = [
+  { icon: '👑', label: 'Trofeo Caviale & Champagne', desc: 'Prezzo per nababbi internazionali' },
+  { icon: '🥂', label: 'Boutique con Sommelier', desc: 'Ogni goccia decantata in botte di rovere' },
+  { icon: '💳', label: 'Accettano l\'Ipoteca sulla Casa', desc: 'Chiedere preventivo prima di svitare il tappo' },
+  { icon: '🦞', label: 'Servita con Astice Blu', desc: 'Forse nel prezzo è inclusa una crociera' },
+  { icon: '💎', label: 'Gocce di Platino Puro', desc: 'Ideale se non sai proprio come spendere l\'eredità' },
+  { icon: '🚁', label: 'Consegna in Elicottero', desc: 'Per chi trova i 2 euro al litro troppo volgari' },
+];
+---
+
+<section id="piu-cari" class="py-14 bg-gradient-to-b from-rose-950/15 via-zinc-100/50 to-zinc-50 dark:from-rose-950/20 dark:via-zinc-950 dark:to-zinc-950 border-t border-rose-500/20 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 space-y-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div class="space-y-2 max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/30">
+          <span>💸 Hall of Fame del Salasso</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping"></span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
+          I distributori <span class="text-rose-600 dark:text-rose-400 underline decoration-rose-500/40 decoration-wavy">più cari d'Italia</span> 😱
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          Dove fare il pieno costa come un weekend a Montecarlo. Dati reali dell'Osservatorio MIMIT comunicati oggi dagli esercenti con il listino più audace e sfacciato della penisola.
+        </p>
+      </div>
+
+      <!-- Comparison Callout Card -->
+      <div class="p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-rose-500/30 shadow-lg text-xs space-y-1 md:text-right shrink-0">
+        <div class="text-[11px] font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+          Lo Shock del Pieno (50 Litri)
+        </div>
+        <div class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white">
+          € {expensiveTankCost} <span class="text-xs font-normal text-zinc-500">qui</span> vs € {cheapTankCost} <span class="text-xs font-normal text-emerald-500">low-cost</span>
+        </div>
+        <div class="text-[11px] font-bold text-rose-500">
+          💥 Stai buttando via +€ {wastedMoney} per la STESSA benzina!
+        </div>
+      </div>
+    </div>
+
+    <!-- Sarcastic Tab Switcher -->
+    <div class="flex items-center gap-2">
+      <button
+        id="btn-expensive-benzina"
+        type="button"
+        class="px-4 py-2 rounded-xl text-xs font-black bg-rose-500 text-white shadow-md shadow-rose-500/20 transition-all cursor-pointer"
+      >
+        🔴 Benzina Salasso (€ {maxBenzinaPrice.toFixed(3)}/L)
+      </button>
+      <button
+        id="btn-expensive-diesel"
+        type="button"
+        class="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-200 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white border border-zinc-300 dark:border-zinc-800 transition-all cursor-pointer"
+      >
+        ⚫ Diesel Salasso (€ {maxDieselPrice.toFixed(3)}/L)
+      </button>
+    </div>
+
+    <!-- Benzina Grid -->
+    <div id="grid-expensive-benzina" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {topBenzina.map((st, idx) => {
+        const award = awards[idx] || awards[awards.length - 1];
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`;
+        return (
+          <div class="p-5 rounded-2xl border border-rose-500/25 bg-white dark:bg-zinc-950/80 shadow-sm hover:border-rose-500/50 transition-all flex flex-col justify-between gap-4 group">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[11px] font-black uppercase bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/25">
+                  <span>{award.icon}</span>
+                  <span>{award.label}</span>
+                </span>
+                <span class="text-[10px] font-bold text-zinc-500 uppercase">{st.service}</span>
+              </div>
+
+              <div>
+                <h3 class="font-black text-zinc-900 dark:text-white text-base group-hover:text-rose-500 transition-colors">
+                  {st.nome || st.brand}
+                </h3>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400">
+                  {st.indirizzo} — <strong class="text-zinc-800 dark:text-zinc-200">{st.comune} ({st.provincia})</strong>
+                </p>
+                <div class="text-[11px] text-zinc-500 dark:text-zinc-500 mt-0.5 italic">
+                  "{award.desc}"
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-zinc-100 dark:border-zinc-900 flex items-center justify-between gap-2">
+              <div>
+                <div class="text-2xl font-black text-rose-600 dark:text-rose-400 tracking-tight">
+                  € {st.prezzo.toFixed(3)}
+                </div>
+                <div class="text-[10px] text-zinc-500">Un pieno: € {st.fullTankCost.toFixed(2)}</div>
+              </div>
+
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-3 py-1.5 rounded-xl text-xs font-bold bg-zinc-100 dark:bg-zinc-900 hover:bg-rose-50 dark:hover:bg-rose-950/40 text-zinc-700 dark:text-zinc-300 hover:text-rose-600 dark:hover:text-rose-400 border border-zinc-200 dark:border-zinc-800 hover:border-rose-500/40 transition-colors flex items-center gap-1"
+              >
+                <span>Vedi su Maps</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Diesel Grid -->
+    <div id="grid-expensive-diesel" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {topDiesel.map((st, idx) => {
+        const award = awards[idx] || awards[awards.length - 1];
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`;
+        return (
+          <div class="p-5 rounded-2xl border border-rose-500/25 bg-white dark:bg-zinc-950/80 shadow-sm hover:border-rose-500/50 transition-all flex flex-col justify-between gap-4 group">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[11px] font-black uppercase bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/25">
+                  <span>{award.icon}</span>
+                  <span>{award.label}</span>
+                </span>
+                <span class="text-[10px] font-bold text-zinc-500 uppercase">{st.service}</span>
+              </div>
+
+              <div>
+                <h3 class="font-black text-zinc-900 dark:text-white text-base group-hover:text-rose-500 transition-colors">
+                  {st.nome || st.brand}
+                </h3>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400">
+                  {st.indirizzo} — <strong class="text-zinc-800 dark:text-zinc-200">{st.comune} ({st.provincia})</strong>
+                </p>
+                <div class="text-[11px] text-zinc-500 dark:text-zinc-500 mt-0.5 italic">
+                  "{award.desc}"
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-zinc-100 dark:border-zinc-900 flex items-center justify-between gap-2">
+              <div>
+                <div class="text-2xl font-black text-rose-600 dark:text-rose-400 tracking-tight">
+                  € {st.prezzo.toFixed(3)}
+                </div>
+                <div class="text-[10px] text-zinc-500">Un pieno: € {st.fullTankCost.toFixed(2)}</div>
+              </div>
+
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-3 py-1.5 rounded-xl text-xs font-bold bg-zinc-100 dark:bg-zinc-900 hover:bg-rose-50 dark:hover:bg-rose-950/40 text-zinc-700 dark:text-zinc-300 hover:text-rose-600 dark:hover:text-rose-400 border border-zinc-200 dark:border-zinc-800 hover:border-rose-500/40 transition-colors flex items-center gap-1"
+              >
+                <span>Vedi su Maps</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Ironic Survival Guide & Call to Action -->
+    <div class="p-6 rounded-3xl bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-1.5 text-center md:text-left">
+        <h4 class="text-base font-black text-zinc-900 dark:text-white flex items-center justify-center md:justify-start gap-2">
+          <span>🛡️ Guida di sopravvivenza al salasso</span>
+        </h4>
+        <p class="text-xs text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed">
+          Se ti trovi per sbaglio davanti a uno di questi distributori, niente panico: inserisci la retromarcia, apri <strong>PrezzoBenza.it</strong> e raggiungi una pompa bianca. Il tuo portafoglio ti ringrazierà con oltre <strong>60€ risparmiati</strong> a pieno!
+        </p>
+      </div>
+
+      <a
+        href="#trova-vicino"
+        class="shrink-0 px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-black text-xs sm:text-sm shadow-lg shadow-emerald-500/20 hover:scale-105 transition-all flex items-center gap-2"
+      >
+        <span>📍 Trova subito quella economica</span>
+        <span>↑</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  const btnB = document.getElementById('btn-expensive-benzina');
+  const btnD = document.getElementById('btn-expensive-diesel');
+  const gridB = document.getElementById('grid-expensive-benzina');
+  const gridD = document.getElementById('grid-expensive-diesel');
+
+  btnB?.addEventListener('click', () => {
+    btnB.classList.add('bg-rose-500', 'text-white', 'shadow-md', 'shadow-rose-500/20');
+    btnB.classList.remove('bg-zinc-200', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-400');
+    btnD.classList.remove('bg-rose-500', 'text-white', 'shadow-md', 'shadow-rose-500/20');
+    btnD.classList.add('bg-zinc-200', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-400');
+    gridB?.classList.remove('hidden');
+    gridD?.classList.add('hidden');
+  });
+
+  btnD?.addEventListener('click', () => {
+    btnD.classList.add('bg-rose-500', 'text-white', 'shadow-md', 'shadow-rose-500/20');
+    btnD.classList.remove('bg-zinc-200', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-400');
+    btnB.classList.remove('bg-rose-500', 'text-white', 'shadow-md', 'shadow-rose-500/20');
+    btnB.classList.add('bg-zinc-200', 'dark:bg-zinc-900', 'text-zinc-700', 'dark:text-zinc-400');
+    gridD?.classList.remove('hidden');
+    gridB?.classList.add('hidden');
+  });
+</script>

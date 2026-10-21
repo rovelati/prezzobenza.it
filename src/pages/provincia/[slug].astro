@@ -108,7 +108,7 @@ const structuredData = {
         }
       ]
     },
-    ...stationsByBenzina.slice(0, 5).map((st) => ({
+    ...stationsByBenzina.slice(0, 10).map((st) => ({
       "@type": "GasStation",
       "name": st.nome || `${st.brand} ${st.comune}`,
       "address": {
@@ -125,7 +125,10 @@ const structuredData = {
           "longitude": st.lng
         }
       } : {}),
-      "priceRange": `€ ${st.prices.benzina_self.prezzo}`
+      "hasMap": st.mapsUrl,
+      "priceRange": `€ ${st.prices.benzina_self.prezzo?.toFixed(3)}`,
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card"
     }))
   ]
 };

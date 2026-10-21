@@ -39,9 +39,33 @@ const regionsList = Object.entries(regionalAverages).map(([region, data]) => {
 
 const title = "Prezzo Benzina e Diesel Oggi in Italia | Osservatorio PrezzoBenza.it";
 const description = `Prezzo benzina e diesel oggi in Italia: medie nazionali self e servito, confronto tra tutte le regioni e statistiche ufficiali MIMIT.`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.prezzobenza.it" },
+        { "@type": "ListItem", "position": 2, "name": "Osservatorio Prezzi", "item": "https://www.prezzobenza.it/prezzi-oggi" }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Prezzi Carburanti Italia Oggi - Osservatorio MIMIT",
+      "description": "Elaborazione statistica ufficiale dei prezzi medi di benzina, diesel, GPL e metano nelle regioni italiane.",
+      "url": "https://www.prezzobenza.it/prezzi-oggi",
+      "creator": {
+        "@type": "Organization",
+        "name": "PrezzoBenza.it"
+      },
+      "temporalCoverage": nationalStats.extractionDate
+    }
+  ]
+};
 ---
 
-<Layout title={title} description={description} canonical="/prezzi-oggi">
+<Layout title={title} description={description} canonical="/prezzi-oggi" structuredData={structuredData}>
   <!-- Breadcrumbs -->
   <div class="border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/60 py-3 transition-colors">
     <div class="max-w-6xl mx-auto px-4 text-xs text-zinc-500 dark:text-zinc-400 flex items-center gap-2">

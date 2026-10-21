@@ -8,12 +8,57 @@ const natBenzina = nationalStats.averages.benzina_self || 1.78;
 
 const title = "Pompe Bianche e Distributori No-Logo in Italia | PrezzoBenza.it";
 const description = "Mappa e prezzi aggiornati dei distributori no-logo e pompe bianche in Italia. Scopri dove risparmiare fino a 15 centesimi al litro rispetto ai grandi marchi.";
+
+// Schema.org Structured Data with Geo Coordinates
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.prezzobenza.it" },
+        { "@type": "ListItem", "position": 2, "name": "Pompe Bianche", "item": "https://www.prezzobenza.it/pompe-bianche" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Distributori Pompe Bianche e No-Logo più economici d'Italia",
+      "itemListElement": pompeBianche.slice(0, 10).map((st, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "item": {
+          "@type": "GasStation",
+          "name": st.nome || `Pompa Bianca ${st.comune}`,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": st.indirizzo,
+            "addressLocality": st.comune,
+            "addressRegion": st.provincia,
+            "addressCountry": "IT"
+          },
+          ...(st.lat && st.lng ? {
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": st.lat,
+              "longitude": st.lng
+            }
+          } : {}),
+          "hasMap": `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`,
+          "priceRange": `€ ${st.prices.benzina_self?.prezzo?.toFixed(3)}`,
+          "currenciesAccepted": "EUR",
+          "paymentAccepted": "Cash, Credit Card"
+        }
+      }))
+    }
+  ]
+};
 ---
 
 <Layout
   title={title}
   description={description}
   canonical="/pompe-bianche"
+  structuredData={structuredData}
 >
   <!-- Breadcrumbs -->
   <div class="border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/60 py-3 transition-colors">

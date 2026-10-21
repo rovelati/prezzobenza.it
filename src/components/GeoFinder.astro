@@ -1,6 +1,7 @@
 ---
 import nationalStats from '../data/national-stats.json';
 import provincesSummary from '../data/provinces-summary.json';
+import cheapestItaly from '../data/cheapest-italy.json';
 
 const provincesCentroids = provincesSummary.map(p => ({
   code: p.code,
@@ -10,6 +11,19 @@ const provincesCentroids = provincesSummary.map(p => ({
   lng: p.lng,
   avgBenzina: p.avgBenzina,
   avgDiesel: p.avgDiesel,
+}));
+
+const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).map(st => ({
+  id: st.id,
+  nome: st.nome,
+  brand: st.brand,
+  indirizzo: st.indirizzo,
+  comune: st.comune,
+  provincia: st.provincia,
+  lat: st.lat,
+  lng: st.lng,
+  tipo: st.tipo,
+  prices: st.prices,
 }));
 ---
 
@@ -223,17 +237,19 @@ const provincesCentroids = provincesSummary.map(p => ({
       <!-- Status / Alerts Box -->
       <div id="status-box" class="hidden p-4 rounded-xl text-xs font-medium"></div>
 
-      <!-- Interactive Map & Live Results Container -->
-      <div id="results-container" class="hidden space-y-5 pt-4">
+      <!-- Interactive Map & Live Results Container (Always Visible) -->
+      <div id="results-container" class="space-y-5 pt-4">
         
         <!-- Results Header -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-zinc-200 dark:border-zinc-800">
           <div class="space-y-0.5">
             <h3 class="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-              <span>Distributori & Mappa</span>
-              <span id="results-count" class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">0</span>
+              <span>Mappa Distributori in Tempo Reale</span>
+              <span id="results-count" class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">15</span>
             </h3>
-            <p id="results-subtitle" class="text-xs text-zinc-500 dark:text-zinc-400"></p>
+            <p id="results-subtitle" class="text-xs text-zinc-500 dark:text-zinc-400">
+              I distributori con il miglior prezzo in Italia. Usa il pulsante GPS o seleziona una provincia per calcolare il risparmio vicino a te.
+            </p>
           </div>
           <div class="flex items-center gap-2 text-xs">
             <span class="text-zinc-500">Ordina:</span>
@@ -247,7 +263,7 @@ const provincesCentroids = provincesSummary.map(p => ({
         <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-lg">
           <div id="map"></div>
           <div class="absolute bottom-2 left-2 z-[400] bg-zinc-900/80 backdrop-blur-md text-[10px] text-zinc-300 px-2 py-1 rounded border border-zinc-700 pointer-events-none">
-            🟢 Verde = Più Economico • 📍 Clicca un pin per dettagli
+            🟢 Verde = Più Economico • 📍 Clicca un pin per dettagli e Google Maps
           </div>
         </div>
 
@@ -260,9 +276,10 @@ const provincesCentroids = provincesSummary.map(p => ({
 </section>
 
 <!-- Data for Client script -->
-<script define:vars={{ provincesCentroids, nationalStats }}>
+<script define:vars={{ provincesCentroids, nationalStats, initialCheapestStations }}>
   window.__PB_PROVINCES = provincesCentroids;
   window.__PB_STATS = nationalStats;
+  window.__PB_INITIAL_STATIONS = initialCheapestStations;
 </script>
 
 <script>
@@ -273,6 +290,7 @@ const provincesCentroids = provincesSummary.map(p => ({
   let currentStations = [];
   let userCoords = null;
   let currentSort = 'price';
+  let hasSearched = false;
 
   // Parametri Prezzo Opportunità
   let userLiters = 50;
@@ -397,6 +415,7 @@ const provincesCentroids = provincesSummary.map(p => ({
   provinceSelect?.addEventListener('change', async (e) => {
     const code = e.target.value;
     if (!code) return;
+    hasSearched = true;
     await loadProvinceStations(code);
   });
 
@@ -447,13 +466,14 @@ const provincesCentroids = provincesSummary.map(p => ({
         }
       });
     } else {
-      leafletMap.setView([centerLat, centerLng], zoom);
+      leafletMap.flyTo([centerLat, centerLng], zoom, { duration: 1.0 });
       setTimeout(() => { leafletMap.invalidateSize(); }, 200);
     }
   }
 
   // Geolocation trigger
   btnGeolocate?.addEventListener('click', () => {
+    hasSearched = true;
     if (!navigator.geolocation) {
       showStatus('La geolocalizzazione non è supportata dal tuo browser. Seleziona una provincia dal menu.', 'error');
       return;
@@ -626,20 +646,22 @@ const provincesCentroids = provincesSummary.map(p => ({
       enriched.sort((a, b) => a.priceVal - b.priceVal);
     }
 
-    resultsContainer.classList.remove('hidden');
     resultsCount.textContent = enriched.length;
     
     if (userCoords) {
       resultsSubtitle.textContent = `Nel raggio di ${selectedRadius} km dalla tua posizione GPS attuale (calcolo su pieno di ${userLiters}L)`;
     } else if (provName) {
       resultsSubtitle.textContent = `Tutti i distributori attivi nella provincia di ${provName}`;
+    } else {
+      resultsSubtitle.textContent = "I distributori con il miglior prezzo in Italia. Usa il pulsante GPS o seleziona una provincia per calcolare il risparmio vicino a te.";
     }
 
     // Aggiorna Mappa Leaflet
     if (enriched.length > 0) {
-      const mapCenterLat = userCoords ? userCoords.lat : enriched[0].lat;
-      const mapCenterLng = userCoords ? userCoords.lng : enriched[0].lng;
-      initOrUpdateMap(mapCenterLat, mapCenterLng, userCoords ? (selectedRadius <= 5 ? 13 : (selectedRadius <= 10 ? 12 : 11)) : 10);
+      const mapCenterLat = userCoords ? userCoords.lat : (provName ? enriched[0].lat : 42.2);
+      const mapCenterLng = userCoords ? userCoords.lng : (provName ? enriched[0].lng : 12.8);
+      const mapZoom = userCoords ? (selectedRadius <= 5 ? 13 : (selectedRadius <= 10 ? 12 : 11)) : (provName ? 10 : 6);
+      initOrUpdateMap(mapCenterLat, mapCenterLng, mapZoom);
 
       if (markersLayer) {
         markersLayer.clearLayers();
@@ -768,7 +790,9 @@ const provincesCentroids = provincesSummary.map(p => ({
       `;
     }).join('');
 
-    resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (hasSearched) {
+      resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   function setLoading(isLoading) {
@@ -791,5 +815,28 @@ const provincesCentroids = provincesSummary.map(p => ({
       statusBox.classList.add('bg-emerald-950/40', 'border', 'border-emerald-500/40', 'text-emerald-300');
     }
     statusBox.textContent = message;
+  }
+
+  // Avvio automatico immediato mappa con i prezzi migliori d'Italia
+  function bootMap() {
+    if (typeof window.L === 'undefined') {
+      setTimeout(bootMap, 60);
+      return;
+    }
+    currentStations = (window.__PB_INITIAL_STATIONS || []).map(s => ({
+      ...s,
+      distanceKm: null,
+    }));
+    initOrUpdateMap(42.2, 12.8, 6);
+    renderResults();
+    setTimeout(() => {
+      if (leafletMap) leafletMap.invalidateSize();
+    }, 250);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootMap);
+  } else {
+    bootMap();
   }
 </script>

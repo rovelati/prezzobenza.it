@@ -13,37 +13,37 @@ const provincesCentroids = provincesSummary.map(p => ({
 }));
 ---
 
-<section id="trova-vicino" class="relative py-12 md:py-16 overflow-hidden">
+<section id="trova-vicino" class="relative py-10 md:py-14 overflow-hidden">
   <!-- Glow effect background -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/10 blur-[120px] pointer-events-none rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/10 dark:bg-emerald-500/10 blur-[120px] pointer-events-none rounded-full"></div>
 
-  <div class="max-w-4xl mx-auto px-4 relative z-10">
+  <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
     <!-- Main Card -->
-    <div class="rounded-3xl border border-zinc-800 bg-zinc-900/90 shadow-2xl backdrop-blur-xl p-6 md:p-8 space-y-6">
+    <div class="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-900/90 shadow-2xl backdrop-blur-xl p-5 sm:p-7 md:p-8 space-y-6 transition-colors">
       
       <!-- Card Header -->
       <div class="text-center space-y-2">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Dati MIMIT Ufficiali • Aggiornati Oggi
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Dati MIMIT Ufficiali • Algoritmo Prezzo Opportunità
         </div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white">
-          Trova il benzinaio più economico <span class="text-emerald-400">vicino a te</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-zinc-900 dark:text-white">
+          Trova la benza più economica <span class="text-emerald-500 dark:text-emerald-400">vicino a te</span>
         </h2>
-        <p class="text-sm md:text-base text-zinc-400 max-w-xl mx-auto">
-          Confronta in tempo reale i prezzi di oltre 23.000 distributori in tutta Italia. Zero registrazione, risparmio immediato.
+        <p class="text-xs sm:text-sm md:text-base text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
+          Calcola il <strong>costo reale</strong> tenendo conto dei litri e del tempo consumati per raggiungere il distributore.
         </p>
       </div>
 
       <!-- Controls Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-1">
         
         <!-- Carburante Selector -->
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-1.5">
             Tipo Carburante
           </label>
-          <div class="grid grid-cols-2 gap-1.5 p-1 bg-zinc-950 rounded-xl border border-zinc-800" id="fuel-selector">
+          <div class="grid grid-cols-2 gap-1.5 p-1 bg-zinc-100 dark:bg-zinc-950 rounded-xl border border-zinc-200 dark:border-zinc-800" id="fuel-selector">
             <button
               type="button"
               data-fuel="benzina"
@@ -54,21 +54,21 @@ const provincesCentroids = provincesSummary.map(p => ({
             <button
               type="button"
               data-fuel="diesel"
-              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               ⚫ Diesel
             </button>
             <button
               type="button"
               data-fuel="gpl"
-              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               🔵 GPL
             </button>
             <button
               type="button"
               data-fuel="metano"
-              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               ⚪ Metano
             </button>
@@ -77,21 +77,21 @@ const provincesCentroids = provincesSummary.map(p => ({
 
         <!-- Servizio Selector -->
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-1.5">
             Modalità
           </label>
-          <div class="grid grid-cols-2 gap-1.5 p-1 bg-zinc-950 rounded-xl border border-zinc-800" id="service-selector">
+          <div class="grid grid-cols-2 gap-1.5 p-1 bg-zinc-100 dark:bg-zinc-950 rounded-xl border border-zinc-200 dark:border-zinc-800" id="service-selector">
             <button
               type="button"
               data-service="self"
-              class="service-btn active px-3 py-3.5 text-xs font-bold rounded-lg transition-all bg-zinc-800 text-white shadow-sm"
+              class="service-btn active px-3 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-sm"
             >
               Self-Service
             </button>
             <button
               type="button"
               data-service="servito"
-              class="service-btn px-3 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+              class="service-btn px-3 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               Servito
             </button>
@@ -100,28 +100,28 @@ const provincesCentroids = provincesSummary.map(p => ({
 
         <!-- Raggio Selector -->
         <div class="sm:col-span-2 md:col-span-1">
-          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1.5">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-1.5">
             Raggio di Ricerca
           </label>
-          <div class="grid grid-cols-3 gap-1.5 p-1 bg-zinc-950 rounded-xl border border-zinc-800" id="radius-selector">
+          <div class="grid grid-cols-3 gap-1.5 p-1 bg-zinc-100 dark:bg-zinc-950 rounded-xl border border-zinc-200 dark:border-zinc-800" id="radius-selector">
             <button
               type="button"
               data-radius="5"
-              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               5 km
             </button>
             <button
               type="button"
               data-radius="10"
-              class="radius-btn active px-2 py-3.5 text-xs font-bold rounded-lg transition-all bg-zinc-800 text-white shadow-sm"
+              class="radius-btn active px-2 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-sm"
             >
               10 km
             </button>
             <button
               type="button"
               data-radius="25"
-              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-400 hover:text-zinc-200"
+              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               25 km
             </button>
@@ -130,8 +130,63 @@ const provincesCentroids = provincesSummary.map(p => ({
 
       </div>
 
+      <!-- Parametri Prezzo Opportunità (Accordion Rapido) -->
+      <details class="group rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/80 dark:bg-zinc-950/40 p-4 transition-all">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-xs font-bold text-zinc-700 dark:text-zinc-300">
+          <div class="flex items-center gap-2">
+            <span>⚙️ Calcolo Costo Spostamento & Pieno</span>
+            <span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold" id="opportunity-summary-badge">
+              50 Litri • 6.5 L/100km
+            </span>
+          </div>
+          <span class="text-zinc-400 group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 mt-2 border-t border-zinc-200 dark:border-zinc-800 text-xs">
+          <div>
+            <label class="block font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+              Litri di Rifornimento: <span id="liters-val" class="text-emerald-600 dark:text-emerald-400 font-black">50 L</span>
+            </label>
+            <input
+              id="liters-range"
+              type="range"
+              min="15"
+              max="90"
+              step="5"
+              value="50"
+              class="w-full accent-emerald-500 cursor-pointer"
+            />
+            <div class="flex justify-between text-[10px] text-zinc-400 mt-1">
+              <span>15 L (Scooter)</span>
+              <span>50 L (Utilitaria)</span>
+              <span>90 L (SUV/Furgone)</span>
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+              Consumo Medio Auto: <span id="consumption-val" class="text-emerald-600 dark:text-emerald-400 font-black">6.5 L / 100 km</span>
+            </label>
+            <input
+              id="consumption-range"
+              type="range"
+              min="4.0"
+              max="12.0"
+              step="0.5"
+              value="6.5"
+              class="w-full accent-emerald-500 cursor-pointer"
+            />
+            <div class="flex justify-between text-[10px] text-zinc-400 mt-1">
+              <span>4.0 (Ibrida)</span>
+              <span>6.5 (Media)</span>
+              <span>12.0 (Benzina sportiva)</span>
+            </div>
+          </div>
+        </div>
+      </details>
+
       <!-- Action Button (GPS One-Tap) -->
-      <div class="pt-2">
+      <div class="pt-1">
         <button
           id="btn-geolocate"
           type="button"
@@ -148,12 +203,12 @@ const provincesCentroids = provincesSummary.map(p => ({
       </div>
 
       <!-- Manual Province Search Fallback -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-zinc-800/80 text-xs text-zinc-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-zinc-200 dark:border-zinc-800 text-xs text-zinc-500 dark:text-zinc-400">
         <span>Oppure cerca direttamente per provincia:</span>
         <div class="w-full sm:w-64">
           <select
             id="province-select"
-            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3 py-2 text-zinc-200 text-xs focus:outline-none focus:border-emerald-500 transition-colors"
+            class="w-full bg-zinc-100 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-800 rounded-xl px-3 py-2 text-zinc-800 dark:text-zinc-200 text-xs focus:outline-none focus:border-emerald-500 transition-colors"
           >
             <option value="">-- Seleziona una provincia --</option>
             {provincesSummary.map((p) => (
@@ -168,25 +223,36 @@ const provincesCentroids = provincesSummary.map(p => ({
       <!-- Status / Alerts Box -->
       <div id="status-box" class="hidden p-4 rounded-xl text-xs font-medium"></div>
 
-      <!-- Live Results Container -->
-      <div id="results-container" class="hidden space-y-4 pt-4">
-        <div class="flex items-center justify-between">
+      <!-- Interactive Map & Live Results Container -->
+      <div id="results-container" class="hidden space-y-5 pt-4">
+        
+        <!-- Results Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-zinc-200 dark:border-zinc-800">
           <div class="space-y-0.5">
-            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-              <span>Distributori trovati</span>
-              <span id="results-count" class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400">0</span>
+            <h3 class="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+              <span>Distributori & Mappa</span>
+              <span id="results-count" class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">0</span>
             </h3>
-            <p id="results-subtitle" class="text-xs text-zinc-400"></p>
+            <p id="results-subtitle" class="text-xs text-zinc-500 dark:text-zinc-400"></p>
           </div>
           <div class="flex items-center gap-2 text-xs">
             <span class="text-zinc-500">Ordina:</span>
-            <button id="sort-price" class="px-2.5 py-1 rounded-lg bg-zinc-800 text-white font-semibold">Prezzo</button>
-            <button id="sort-distance" class="px-2.5 py-1 rounded-lg text-zinc-400 hover:text-white">Distanza</button>
+            <button id="sort-price" class="px-2.5 py-1 rounded-lg bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-white font-semibold">Prezzo</button>
+            <button id="sort-opportunity" class="px-2.5 py-1 rounded-lg text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white">Risparmio Netto</button>
+            <button id="sort-distance" class="px-2.5 py-1 rounded-lg text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white">Distanza</button>
+          </div>
+        </div>
+
+        <!-- The Interactive Map -->
+        <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-lg">
+          <div id="map"></div>
+          <div class="absolute bottom-2 left-2 z-[400] bg-zinc-900/80 backdrop-blur-md text-[10px] text-zinc-300 px-2 py-1 rounded border border-zinc-700 pointer-events-none">
+            🟢 Verde = Più Economico • 📍 Clicca un pin per dettagli
           </div>
         </div>
 
         <!-- Cards List -->
-        <div id="stations-list" class="space-y-3"></div>
+        <div id="stations-list" class="space-y-3 pt-2"></div>
       </div>
 
     </div>
@@ -208,6 +274,14 @@ const provincesCentroids = provincesSummary.map(p => ({
   let userCoords = null;
   let currentSort = 'price';
 
+  // Parametri Prezzo Opportunità
+  let userLiters = 50;
+  let userConsumptionPer100 = 6.5;
+
+  let leafletMap = null;
+  let tileLayer = null;
+  let markersLayer = null;
+
   const btnGeolocate = document.getElementById('btn-geolocate');
   const btnText = document.getElementById('btn-text');
   const spinner = document.getElementById('spinner');
@@ -218,18 +292,46 @@ const provincesCentroids = provincesSummary.map(p => ({
   const stationsList = document.getElementById('stations-list');
   const provinceSelect = document.getElementById('province-select');
 
+  const litersRange = document.getElementById('liters-range');
+  const litersVal = document.getElementById('liters-val');
+  const consumptionRange = document.getElementById('consumption-range');
+  const consumptionVal = document.getElementById('consumption-val');
+  const opportunityBadge = document.getElementById('opportunity-summary-badge');
+
   const sortPriceBtn = document.getElementById('sort-price');
+  const sortOpportunityBtn = document.getElementById('sort-opportunity');
   const sortDistanceBtn = document.getElementById('sort-distance');
+
+  // Sliders
+  litersRange?.addEventListener('input', (e) => {
+    userLiters = Number(e.target.value);
+    litersVal.textContent = `${userLiters} L`;
+    updateOpportunityBadge();
+    if (currentStations.length > 0) renderResults();
+  });
+
+  consumptionRange?.addEventListener('input', (e) => {
+    userConsumptionPer100 = Number(e.target.value);
+    consumptionVal.textContent = `${userConsumptionPer100.toFixed(1)} L / 100 km`;
+    updateOpportunityBadge();
+    if (currentStations.length > 0) renderResults();
+  });
+
+  function updateOpportunityBadge() {
+    if (opportunityBadge) {
+      opportunityBadge.textContent = `${userLiters} Litri • ${userConsumptionPer100.toFixed(1)} L/100km`;
+    }
+  }
 
   // Fuel selector click
   document.querySelectorAll('.fuel-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.fuel-btn').forEach(b => {
         b.classList.remove('active', 'bg-emerald-500', 'text-zinc-950');
-        b.classList.add('text-zinc-400');
+        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
       });
       btn.classList.add('active', 'bg-emerald-500', 'text-zinc-950');
-      btn.classList.remove('text-zinc-400');
+      btn.classList.remove('text-zinc-600', 'dark:text-zinc-400');
       selectedFuel = btn.dataset.fuel;
       if (currentStations.length > 0) renderResults();
     });
@@ -239,11 +341,11 @@ const provincesCentroids = provincesSummary.map(p => ({
   document.querySelectorAll('.service-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.service-btn').forEach(b => {
-        b.classList.remove('active', 'bg-zinc-800', 'text-white');
-        b.classList.add('text-zinc-400');
+        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
       });
-      btn.classList.add('active', 'bg-zinc-800', 'text-white');
-      btn.classList.remove('text-zinc-400');
+      btn.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+      btn.classList.remove('text-zinc-600', 'dark:text-zinc-400');
       selectedService = btn.dataset.service;
       if (currentStations.length > 0) renderResults();
     });
@@ -253,11 +355,11 @@ const provincesCentroids = provincesSummary.map(p => ({
   document.querySelectorAll('.radius-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.radius-btn').forEach(b => {
-        b.classList.remove('active', 'bg-zinc-800', 'text-white');
-        b.classList.add('text-zinc-400');
+        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
       });
-      btn.classList.add('active', 'bg-zinc-800', 'text-white');
-      btn.classList.remove('text-zinc-400');
+      btn.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
+      btn.classList.remove('text-zinc-600', 'dark:text-zinc-400');
       selectedRadius = Number(btn.dataset.radius);
       if (userCoords && currentStations.length > 0) renderResults();
     });
@@ -266,17 +368,30 @@ const provincesCentroids = provincesSummary.map(p => ({
   // Sort buttons
   sortPriceBtn?.addEventListener('click', () => {
     currentSort = 'price';
-    sortPriceBtn.className = 'px-2.5 py-1 rounded-lg bg-zinc-800 text-white font-semibold';
-    sortDistanceBtn.className = 'px-2.5 py-1 rounded-lg text-zinc-400 hover:text-white';
+    updateSortButtons();
+    renderResults();
+  });
+
+  sortOpportunityBtn?.addEventListener('click', () => {
+    currentSort = 'opportunity';
+    updateSortButtons();
     renderResults();
   });
 
   sortDistanceBtn?.addEventListener('click', () => {
     currentSort = 'distance';
-    sortDistanceBtn.className = 'px-2.5 py-1 rounded-lg bg-zinc-800 text-white font-semibold';
-    sortPriceBtn.className = 'px-2.5 py-1 rounded-lg text-zinc-400 hover:text-white';
+    updateSortButtons();
     renderResults();
   });
+
+  function updateSortButtons() {
+    const activeClass = 'px-2.5 py-1 rounded-lg bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-white font-semibold';
+    const inactiveClass = 'px-2.5 py-1 rounded-lg text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white';
+    
+    sortPriceBtn.className = currentSort === 'price' ? activeClass : inactiveClass;
+    sortOpportunityBtn.className = currentSort === 'opportunity' ? activeClass : inactiveClass;
+    sortDistanceBtn.className = currentSort === 'distance' ? activeClass : inactiveClass;
+  }
 
   // Province select change
   provinceSelect?.addEventListener('change', async (e) => {
@@ -287,7 +402,7 @@ const provincesCentroids = provincesSummary.map(p => ({
 
   // Haversine formula
   function getDistanceKm(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Radius of the earth in km
+    const R = 6371;
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
     const a =
@@ -296,6 +411,45 @@ const provincesCentroids = provincesSummary.map(p => ({
       Math.sin(dLon / 2) * Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
+  }
+
+  // Leaflet Map Initialization & Theme Handling
+  function initOrUpdateMap(centerLat, centerLng, zoom = 12) {
+    if (typeof window.L === 'undefined') return;
+
+    const isDark = document.documentElement.classList.contains('dark');
+    const darkTiles = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+    const lightTiles = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+    const currentTiles = isDark ? darkTiles : lightTiles;
+
+    if (!leafletMap) {
+      leafletMap = window.L.map('map', {
+        zoomControl: true,
+        scrollWheelZoom: false,
+      }).setView([centerLat, centerLng], zoom);
+
+      tileLayer = window.L.tileLayer(currentTiles, {
+        attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+        maxZoom: 18,
+      }).addTo(leafletMap);
+
+      markersLayer = window.L.layerGroup().addTo(leafletMap);
+
+      // Listen to theme change to swap tiles
+      window.addEventListener('pb_theme_changed', (evt) => {
+        const dark = evt.detail?.isDark;
+        if (tileLayer && leafletMap) {
+          leafletMap.removeLayer(tileLayer);
+          tileLayer = window.L.tileLayer(dark ? darkTiles : lightTiles, {
+            attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+            maxZoom: 18,
+          }).addTo(leafletMap);
+        }
+      });
+    } else {
+      leafletMap.setView([centerLat, centerLng], zoom);
+      setTimeout(() => { leafletMap.invalidateSize(); }, 200);
+    }
   }
 
   // Geolocation trigger
@@ -315,7 +469,6 @@ const provincesCentroids = provincesSummary.map(p => ({
           lng: pos.coords.longitude,
         };
 
-        // Trova le 2 province più vicine alle coordinate dell'utente
         const sortedProvs = [...window.__PB_PROVINCES]
           .filter(p => p.lat && p.lng)
           .map(p => ({
@@ -328,7 +481,6 @@ const provincesCentroids = provincesSummary.map(p => ({
         showStatus(`Posizione rilevata! Caricamento distributori vicino a te (${nearestProvs[0].name})...`, 'info');
 
         try {
-          // Scarica dati delle province più vicine
           const stationPromises = nearestProvs.map(p =>
             fetch(`/data/provinces/${p.code.toLowerCase()}.json`).then(r => r.json())
           );
@@ -339,7 +491,6 @@ const provincesCentroids = provincesSummary.map(p => ({
             combined = combined.concat(res.stations || []);
           }
 
-          // Aggiungi distanza calcolata
           currentStations = combined
             .filter(s => s.lat && s.lng)
             .map(s => ({
@@ -395,6 +546,61 @@ const provincesCentroids = provincesSummary.map(p => ({
     return 'benzina_self';
   }
 
+  // Prezzo Opportunità: calcolo costi spostamento e convenienza reale
+  function calculateOpportunity(st, priceVal, natAvg) {
+    if (!userCoords || st.distanceKm === null) {
+      return {
+        hasGeo: false,
+        tripCost: 0,
+        tripMinutes: 0,
+        netSavings: 0,
+        isWorthIt: true,
+        verdict: 'Visualizzazione per provincia',
+      };
+    }
+
+    const distOneWay = st.distanceKm;
+    const distRoundTrip = distOneWay * 2; // Andata e ritorno
+    const litersBurned = distRoundTrip * (userConsumptionPer100 / 100);
+    const tripCost = Number((litersBurned * priceVal).toFixed(2));
+    
+    // Stima tempo: velocità media urbana/extraurbana 35 km/h + 2 min sosta
+    const tripMinutes = Math.round((distRoundTrip / 35) * 60);
+
+    // Risparmio lordo rispetto alla media nazionale sul quantitativo di litri scelto
+    const grossSavings = natAvg ? (natAvg - priceVal) * userLiters : 0;
+    const netSavings = Number((grossSavings - tripCost).toFixed(2));
+
+    let verdict = '';
+    let badgeClass = '';
+    let isWorthIt = false;
+
+    if (netSavings >= 1.00) {
+      isWorthIt = true;
+      verdict = `✅ Conviene! Risparmi € ${netSavings.toFixed(2)} netti (già tolta la benza per andarci)`;
+      badgeClass = 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20';
+    } else if (netSavings > 0) {
+      isWorthIt = true;
+      verdict = `⚠️ Marginale: risparmi solo € ${netSavings.toFixed(2)} netti per ${tripMinutes} min di viaggio A/R`;
+      badgeClass = 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20';
+    } else {
+      isWorthIt = false;
+      const loss = Math.abs(netSavings).toFixed(2);
+      verdict = `❌ Non conviene: consumi € ${tripCost.toFixed(2)} di viaggio e perdi € ${loss} sul pieno!`;
+      badgeClass = 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20';
+    }
+
+    return {
+      hasGeo: true,
+      tripCost,
+      tripMinutes,
+      netSavings,
+      isWorthIt,
+      verdict,
+      badgeClass,
+    };
+  }
+
   function renderResults(provName = '') {
     const priceKey = getTargetPriceKey();
     const natAvg = window.__PB_STATS?.averages?.[priceKey] || null;
@@ -405,90 +611,158 @@ const provincesCentroids = provincesSummary.map(p => ({
       filtered = filtered.filter(s => s.distanceKm <= selectedRadius);
     }
 
+    // Aggiungi calcolo opportunità ad ogni stazione
+    const enriched = filtered.map(st => {
+      const priceVal = st.prices[priceKey].prezzo;
+      const opp = calculateOpportunity(st, priceVal, natAvg);
+      return { ...st, priceVal, opp };
+    });
+
     if (currentSort === 'distance' && userCoords) {
-      filtered.sort((a, b) => a.distanceKm - b.distanceKm);
+      enriched.sort((a, b) => a.distanceKm - b.distanceKm);
+    } else if (currentSort === 'opportunity' && userCoords) {
+      enriched.sort((a, b) => b.opp.netSavings - a.opp.netSavings);
     } else {
-      filtered.sort((a, b) => a.prices[priceKey].prezzo - b.prices[priceKey].prezzo);
+      enriched.sort((a, b) => a.priceVal - b.priceVal);
     }
 
     resultsContainer.classList.remove('hidden');
-    resultsCount.textContent = filtered.length;
+    resultsCount.textContent = enriched.length;
     
     if (userCoords) {
-      resultsSubtitle.textContent = `Nel raggio di ${selectedRadius} km dalla tua posizione GPS attuale`;
+      resultsSubtitle.textContent = `Nel raggio di ${selectedRadius} km dalla tua posizione GPS attuale (calcolo su pieno di ${userLiters}L)`;
     } else if (provName) {
       resultsSubtitle.textContent = `Tutti i distributori attivi nella provincia di ${provName}`;
     }
 
-    if (filtered.length === 0) {
+    // Aggiorna Mappa Leaflet
+    if (enriched.length > 0) {
+      const mapCenterLat = userCoords ? userCoords.lat : enriched[0].lat;
+      const mapCenterLng = userCoords ? userCoords.lng : enriched[0].lng;
+      initOrUpdateMap(mapCenterLat, mapCenterLng, userCoords ? (selectedRadius <= 5 ? 13 : (selectedRadius <= 10 ? 12 : 11)) : 10);
+
+      if (markersLayer) {
+        markersLayer.clearLayers();
+
+        // Marker utente
+        if (userCoords && window.L) {
+          const userIcon = window.L.divIcon({
+            className: 'custom-user-marker',
+            html: '<div style="width:14px; height:14px; background:#3b82f6; border:3px solid #ffffff; border-radius:50%; box-shadow:0 0 10px #3b82f6;"></div>',
+            iconSize: [14, 14],
+          });
+          window.L.marker([userCoords.lat, userCoords.lng], { icon: userIcon })
+            .bindPopup('<b>📍 La tua posizione GPS</b>')
+            .addTo(markersLayer);
+        }
+
+        // Marker stazioni
+        enriched.slice(0, 30).forEach((st, idx) => {
+          if (!st.lat || !st.lng || !window.L) return;
+          const isCheapest = idx === 0;
+          const iconClass = isCheapest ? 'pb-marker-cheapest' : 'pb-marker-standard';
+          const icon = window.L.divIcon({
+            className: iconClass,
+            html: `<div style="font-size:10px; padding:2px 5px; text-align:center;">€${st.priceVal.toFixed(2)}</div>`,
+            iconSize: [46, 20],
+          });
+
+          const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`;
+
+          const marker = window.L.marker([st.lat, st.lng], { icon })
+            .bindPopup(`
+              <div style="font-family:system-ui; padding:2px;">
+                <div style="font-size:11px; font-weight:800; color:#10b981;">${st.brand}</div>
+                <div style="font-size:13px; font-weight:bold;">${st.nome || st.brand}</div>
+                <div style="font-size:11px; opacity:0.8;">${st.indirizzo} - ${st.comune}</div>
+                <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${st.priceVal.toFixed(3)}/L</div>
+                ${st.distanceKm !== null ? `<div style="font-size:10px; margin-bottom:6px;">📍 ${st.distanceKm} km da te</div>` : ''}
+                <a href="${mapsUrl}" target="_blank" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:4px 10px; border-radius:6px; text-decoration:none;">Naviga qui →</a>
+              </div>
+            `);
+          markersLayer.addLayer(marker);
+        });
+      }
+    }
+
+    if (enriched.length === 0) {
       stationsList.innerHTML = `
-        <div class="p-8 text-center bg-zinc-950 rounded-2xl border border-zinc-800">
-          <p class="text-zinc-400 text-sm">Nessun distributore con <strong>${selectedFuel.toUpperCase()} (${selectedService})</strong> trovato nel raggio di ${selectedRadius} km.</p>
-          <p class="text-xs text-zinc-500 mt-2">Prova ad aumentare il raggio di ricerca a 25 km o a cambiare carburante.</p>
+        <div class="p-8 text-center bg-zinc-100 dark:bg-zinc-950 rounded-2xl border border-zinc-200 dark:border-zinc-800">
+          <p class="text-zinc-600 dark:text-zinc-400 text-sm">Nessun distributore con <strong>${selectedFuel.toUpperCase()} (${selectedService})</strong> trovato nel raggio di ${selectedRadius} km.</p>
+          <p class="text-xs text-zinc-500 mt-2">Prova ad aumentare il raggio a 25 km o seleziona un altro carburante.</p>
         </div>
       `;
       return;
     }
 
-    const topStations = filtered.slice(0, 30);
+    const topStations = enriched.slice(0, 30);
 
     stationsList.innerHTML = topStations.map((st, idx) => {
-      const priceVal = st.prices[priceKey].prezzo;
       const isTop1 = idx === 0;
-      const diffCent = natAvg ? ((priceVal - natAvg) * 100).toFixed(1) : null;
-      const diffLabel = diffCent !== null
-        ? (Number(diffCent) < 0 ? `${diffCent} cent/L sotto media` : `+${diffCent} cent/L`)
-        : '';
-
-      const badgeColor = Number(diffCent) < -5
-        ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-        : (Number(diffCent) < 0 ? 'bg-teal-500/10 text-teal-300 border-teal-500/20' : 'bg-zinc-800 text-zinc-400 border-zinc-700');
+      const opp = st.opp;
 
       const mapsUrl = st.lat && st.lng
         ? `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`
-        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(st.nome + ' ' + st.indirizzo + ' ' + st.comune)}`;
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((st.nome || st.brand) + ' ' + st.indirizzo + ' ' + st.comune)}`;
 
       return `
-        <div class="p-4 sm:p-5 rounded-2xl border ${isTop1 ? 'border-emerald-500/50 bg-emerald-950/20 shadow-lg shadow-emerald-500/10' : 'border-zinc-800/80 bg-zinc-950/60 hover:border-zinc-700'} transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="p-4 sm:p-5 rounded-2xl border ${isTop1 ? 'border-emerald-500/50 bg-emerald-50/50 dark:bg-emerald-950/20 shadow-lg shadow-emerald-500/10' : 'border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/60 hover:border-zinc-300 dark:hover:border-zinc-700'} transition-all flex flex-col gap-3">
           
-          <div class="space-y-1.5 flex-1">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'bg-zinc-800 text-zinc-300'}">
-                ${st.brand}
-              </span>
-              ${isTop1 ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-black uppercase bg-emerald-500 text-zinc-950">🏆 Più Economico</span>' : ''}
-              ${st.distanceKm !== null ? `<span class="text-xs text-zinc-400 font-semibold">📍 ${st.distanceKm} km da te</span>` : ''}
-            </div>
-
-            <h4 class="font-bold text-white text-base leading-snug">
-              ${st.nome || st.brand}
-            </h4>
-
-            <p class="text-xs text-zinc-400">
-              ${st.indirizzo} — <span class="text-zinc-300 font-medium">${st.comune}</span>
-            </p>
-          </div>
-
-          <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-800/60 pt-3 sm:pt-0 gap-2">
-            <div class="text-left sm:text-right">
-              <div class="text-2xl sm:text-3xl font-black text-emerald-400 tracking-tight">
-                € ${priceVal.toFixed(3)}
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="space-y-1 flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-300'}">
+                  ${st.brand}
+                </span>
+                ${isTop1 ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-black uppercase bg-emerald-500 text-zinc-950">🏆 Più Economico</span>' : ''}
+                ${st.distanceKm !== null ? `<span class="text-xs text-zinc-500 dark:text-zinc-400 font-semibold">📍 ${st.distanceKm} km da te</span>` : ''}
               </div>
-              ${diffLabel ? `<div class="text-[11px] font-semibold px-2 py-0.5 rounded border inline-block ${badgeColor}">${diffLabel}</div>` : ''}
+
+              <h4 class="font-bold text-zinc-900 dark:text-white text-base leading-snug truncate">
+                ${st.nome || st.brand}
+              </h4>
+
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 truncate">
+                ${st.indirizzo} — <strong class="text-zinc-700 dark:text-zinc-300">${st.comune}</strong>
+              </p>
             </div>
 
-            <a
-              href="${mapsUrl}"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-100 hover:bg-white text-zinc-950 transition-colors shadow-sm flex items-center gap-1.5"
-            >
-              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
-              </svg>
-              <span>Portami qui</span>
-            </a>
+            <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-100 dark:border-zinc-800/60 pt-2 sm:pt-0 gap-2 shrink-0">
+              <div class="text-left sm:text-right">
+                <div class="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400 tracking-tight">
+                  € ${st.priceVal.toFixed(3)}
+                </div>
+                <div class="text-[10px] text-zinc-400 font-medium">al litro (${selectedService})</div>
+              </div>
+
+              <a
+                href="${mapsUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-900 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-zinc-950 transition-colors shadow-sm flex items-center gap-1.5"
+              >
+                <svg class="w-4 h-4 text-emerald-400 dark:text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+                </svg>
+                <span>Portami qui</span>
+              </a>
+            </div>
           </div>
+
+          <!-- Prezzo Opportunità & Costo Spostamento Breakdown -->
+          ${opp.hasGeo ? `
+            <div class="pt-2.5 border-t border-zinc-100 dark:border-zinc-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold ${opp.badgeClass}">
+                  ${opp.verdict}
+                </span>
+              </div>
+              <div class="text-[11px] text-zinc-400 flex items-center gap-3">
+                <span>Costo viaggio A/R: <strong>€ ${opp.tripCost.toFixed(2)}</strong></span>
+                <span>Tempo st.: <strong>~${opp.tripMinutes} min</strong></span>
+              </div>
+            </div>
+          ` : ''}
 
         </div>
       `;

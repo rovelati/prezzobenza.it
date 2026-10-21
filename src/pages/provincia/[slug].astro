@@ -140,13 +140,13 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
   structuredData={structuredData}
 >
   <!-- Breadcrumbs -->
-  <div class="border-b border-zinc-900 bg-zinc-950/60 py-3">
-    <div class="max-w-6xl mx-auto px-4 text-xs text-zinc-400 flex items-center gap-2">
-      <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+  <div class="border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/60 py-3 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 text-xs text-zinc-500 dark:text-zinc-400 flex items-center gap-2">
+      <a href="/" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Home</a>
       <span>/</span>
-      <a href="/#province" class="hover:text-emerald-400 transition-colors">Province</a>
+      <a href="/#province" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Province</a>
       <span>/</span>
-      <span class="text-white font-medium">{province.name}</span>
+      <span class="text-zinc-900 dark:text-white font-medium">{province.name}</span>
     </div>
   </div>
 
@@ -154,14 +154,14 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
     
     <!-- Hero Header -->
     <div class="space-y-3">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
         Provincia di {province.name} ({province.code}) • {province.region}
       </div>
-      <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
-        Prezzi Benzina e Carburanti a <span class="text-emerald-400">{province.name}</span>
+      <h1 class="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
+        Prezzi Benzina e Carburanti a <span class="text-emerald-600 dark:text-emerald-400">{province.name}</span>
       </h1>
-      <p class="text-sm sm:text-base text-zinc-400 max-w-2xl leading-relaxed">
+      <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
         Confronto in tempo reale tra tutti i <strong>{stations.length} distributori</strong> attivi nella provincia di {province.name}. Dati ufficiali dell'Osservatorio Prezzi MIMIT aggiornati ad oggi.
       </p>
     </div>
@@ -169,11 +169,11 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
     <!-- Statistiche Medie Provincia vs Italia -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <!-- Media Benzina -->
-      <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
-        <div class="text-xs font-bold text-zinc-400 uppercase tracking-wider">
+      <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <div class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
           Media Benzina Self a {province.name}
         </div>
-        <div class="text-3xl font-black text-emerald-400">
+        <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400">
           € {provBenzinaAvg.toFixed(3)}
         </div>
         <div class="text-[11px] text-zinc-500">
@@ -182,11 +182,11 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
       </div>
 
       <!-- Media Diesel -->
-      <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
-        <div class="text-xs font-bold text-zinc-400 uppercase tracking-wider">
+      <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <div class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
           Media Diesel Self a {province.name}
         </div>
-        <div class="text-3xl font-black text-teal-400">
+        <div class="text-3xl font-black text-teal-600 dark:text-teal-400">
           € {provDieselAvg.toFixed(3)}
         </div>
         <div class="text-[11px] text-zinc-500">
@@ -195,11 +195,11 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
       </div>
 
       <!-- Impianti monitorati -->
-      <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
-        <div class="text-xs font-bold text-zinc-400 uppercase tracking-wider">
+      <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <div class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
           Distributori Censiti
         </div>
-        <div class="text-3xl font-black text-white">
+        <div class="text-3xl font-black text-zinc-900 dark:text-white">
           {stations.length}
         </div>
         <div class="text-[11px] text-zinc-500">
@@ -211,10 +211,10 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
     <!-- I Più Economici della Provincia -->
     <div class="space-y-4">
       <div class="flex items-center justify-between">
-        <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2">
+        <h2 class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white tracking-tight flex items-center gap-2">
           <span>🏆 Dove costa meno a {province.name}</span>
         </h2>
-        <span class="text-xs text-zinc-400">Top distributori per prezzo più basso</span>
+        <span class="text-xs text-zinc-500 dark:text-zinc-400">Top distributori per prezzo più basso</span>
       </div>
 
       <!-- Tab Buttons per Carburante -->
@@ -222,16 +222,16 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
         <button data-prov-tab="benzina" class="prov-tab-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-500 text-zinc-950 transition-colors">
           🟢 Benzina ({stationsByBenzina.length})
         </button>
-        <button data-prov-tab="diesel" class="prov-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition-colors">
+        <button data-prov-tab="diesel" class="prov-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
           ⚫ Diesel ({stationsByDiesel.length})
         </button>
         {stationsByGpl.length > 0 && (
-          <button data-prov-tab="gpl" class="prov-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition-colors">
+          <button data-prov-tab="gpl" class="prov-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
             🔵 GPL ({stationsByGpl.length})
           </button>
         )}
         {stationsByMetano.length > 0 && (
-          <button data-prov-tab="metano" class="prov-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition-colors">
+          <button data-prov-tab="metano" class="prov-tab-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
             ⚪ Metano ({stationsByMetano.length})
           </button>
         )}
@@ -243,10 +243,10 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
         <!-- Benzina List -->
         <div id="tab-benzina" class="prov-tab-content space-y-3">
           {stationsByBenzina.slice(0, 20).map((st) => (
-            <div class="p-4 rounded-2xl border border-zinc-800/80 bg-zinc-950/70 hover:border-zinc-700 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/70 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-sm transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div class="space-y-1 flex-1">
                 <div class="flex items-center gap-2">
-                  <span class={`px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'bg-zinc-800 text-zinc-300'}`}>
+                  <span class={`px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300'}`}>
                     {st.brand}
                   </span>
                   {st.rank === 1 && (
@@ -256,17 +256,17 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
                   )}
                   <span class="text-xs text-zinc-500">{st.tipo}</span>
                 </div>
-                <h3 class="font-bold text-white text-base">
+                <h3 class="font-bold text-zinc-900 dark:text-white text-base">
                   {st.nome || st.brand}
                 </h3>
-                <p class="text-xs text-zinc-400">
-                  {st.indirizzo} — <strong class="text-zinc-200">{st.comune}</strong>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400">
+                  {st.indirizzo} — <strong class="text-zinc-800 dark:text-zinc-200">{st.comune}</strong>
                 </p>
               </div>
 
-              <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-800/60 pt-3 sm:pt-0 gap-2">
+              <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-100 dark:border-zinc-800/60 pt-3 sm:pt-0 gap-2">
                 <div class="text-left sm:text-right">
-                  <div class="text-2xl font-black text-emerald-400">
+                  <div class="text-2xl font-black text-emerald-600 dark:text-emerald-400">
                     € {st.prices.benzina_self.prezzo.toFixed(3)}
                   </div>
                   <div class="text-[10px] text-zinc-500 font-medium">Self-Service</div>
@@ -275,7 +275,7 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
                   href={st.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-100 hover:bg-white text-zinc-950 transition-colors flex items-center gap-1.5 shadow-sm"
+                  class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-colors flex items-center gap-1.5 shadow-sm"
                 >
                   <span>Portami qui</span>
                   <span>→</span>
@@ -288,10 +288,10 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
         <!-- Diesel List -->
         <div id="tab-diesel" class="prov-tab-content hidden space-y-3">
           {stationsByDiesel.slice(0, 20).map((st) => (
-            <div class="p-4 rounded-2xl border border-zinc-800/80 bg-zinc-950/70 hover:border-zinc-700 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/70 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-sm transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div class="space-y-1 flex-1">
                 <div class="flex items-center gap-2">
-                  <span class={`px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'bg-zinc-800 text-zinc-300'}`}>
+                  <span class={`px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300'}`}>
                     {st.brand}
                   </span>
                   {st.rank === 1 && (
@@ -301,17 +301,17 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
                   )}
                   <span class="text-xs text-zinc-500">{st.tipo}</span>
                 </div>
-                <h3 class="font-bold text-white text-base">
+                <h3 class="font-bold text-zinc-900 dark:text-white text-base">
                   {st.nome || st.brand}
                 </h3>
-                <p class="text-xs text-zinc-400">
-                  {st.indirizzo} — <strong class="text-zinc-200">{st.comune}</strong>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400">
+                  {st.indirizzo} — <strong class="text-zinc-800 dark:text-zinc-200">{st.comune}</strong>
                 </p>
               </div>
 
-              <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-800/60 pt-3 sm:pt-0 gap-2">
+              <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-100 dark:border-zinc-800/60 pt-3 sm:pt-0 gap-2">
                 <div class="text-left sm:text-right">
-                  <div class="text-2xl font-black text-teal-400">
+                  <div class="text-2xl font-black text-teal-600 dark:text-teal-400">
                     € {st.prices.diesel_self.prezzo.toFixed(3)}
                   </div>
                   <div class="text-[10px] text-zinc-500 font-medium">Self-Service</div>
@@ -320,7 +320,7 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
                   href={st.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-100 hover:bg-white text-zinc-950 transition-colors flex items-center gap-1.5 shadow-sm"
+                  class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-colors flex items-center gap-1.5 shadow-sm"
                 >
                   <span>Portami qui</span>
                   <span>→</span>
@@ -334,22 +334,22 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
         {stationsByGpl.length > 0 && (
           <div id="tab-gpl" class="prov-tab-content hidden space-y-3">
             {stationsByGpl.slice(0, 20).map((st) => (
-              <div class="p-4 rounded-2xl border border-zinc-800/80 bg-zinc-950/70 hover:border-zinc-700 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/70 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-sm transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="space-y-1 flex-1">
                   <div class="flex items-center gap-2">
-                    <span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-300">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
                       {st.brand}
                     </span>
                     <span class="text-xs text-zinc-500">{st.tipo}</span>
                   </div>
-                  <h3 class="font-bold text-white text-base">{st.nome || st.brand}</h3>
-                  <p class="text-xs text-zinc-400">{st.indirizzo} — <strong class="text-zinc-200">{st.comune}</strong></p>
+                  <h3 class="font-bold text-zinc-900 dark:text-white text-base">{st.nome || st.brand}</h3>
+                  <p class="text-xs text-zinc-600 dark:text-zinc-400">{st.indirizzo} — <strong class="text-zinc-800 dark:text-zinc-200">{st.comune}</strong></p>
                 </div>
-                <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-800/60 pt-3 sm:pt-0 gap-2">
+                <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-100 dark:border-zinc-800/60 pt-3 sm:pt-0 gap-2">
                   <div class="text-left sm:text-right">
-                    <div class="text-2xl font-black text-blue-400">€ {st.prices.gpl.prezzo.toFixed(3)}</div>
+                    <div class="text-2xl font-black text-blue-600 dark:text-blue-400">€ {st.prices.gpl.prezzo.toFixed(3)}</div>
                   </div>
-                  <a href={st.mapsUrl} target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-100 hover:bg-white text-zinc-950 transition-colors">Portami qui</a>
+                  <a href={st.mapsUrl} target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-colors">Portami qui</a>
                 </div>
               </div>
             ))}
@@ -360,22 +360,22 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
         {stationsByMetano.length > 0 && (
           <div id="tab-metano" class="prov-tab-content hidden space-y-3">
             {stationsByMetano.slice(0, 20).map((st) => (
-              <div class="p-4 rounded-2xl border border-zinc-800/80 bg-zinc-950/70 hover:border-zinc-700 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/70 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-sm transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="space-y-1 flex-1">
                   <div class="flex items-center gap-2">
-                    <span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-300">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
                       {st.brand}
                     </span>
                     <span class="text-xs text-zinc-500">{st.tipo}</span>
                   </div>
-                  <h3 class="font-bold text-white text-base">{st.nome || st.brand}</h3>
-                  <p class="text-xs text-zinc-400">{st.indirizzo} — <strong class="text-zinc-200">{st.comune}</strong></p>
+                  <h3 class="font-bold text-zinc-900 dark:text-white text-base">{st.nome || st.brand}</h3>
+                  <p class="text-xs text-zinc-600 dark:text-zinc-400">{st.indirizzo} — <strong class="text-zinc-800 dark:text-zinc-200">{st.comune}</strong></p>
                 </div>
-                <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-800/60 pt-3 sm:pt-0 gap-2">
+                <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-100 dark:border-zinc-800/60 pt-3 sm:pt-0 gap-2">
                   <div class="text-left sm:text-right">
-                    <div class="text-2xl font-black text-zinc-300">€ {st.prices.metano.prezzo.toFixed(3)}</div>
+                    <div class="text-2xl font-black text-zinc-700 dark:text-zinc-300">€ {st.prices.metano.prezzo.toFixed(3)}</div>
                   </div>
-                  <a href={st.mapsUrl} target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-100 hover:bg-white text-zinc-950 transition-colors">Portami qui</a>
+                  <a href={st.mapsUrl} target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-colors">Portami qui</a>
                 </div>
               </div>
             ))}
@@ -386,20 +386,20 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
     </div>
 
     <!-- Local SEO FAQ for the Province -->
-    <div class="rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 space-y-4">
-      <h3 class="text-lg font-bold text-white">Domande frequenti sui prezzi carburante a {province.name}</h3>
-      <div class="space-y-3 text-xs text-zinc-300 leading-relaxed">
+    <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-900/30 p-6 space-y-4">
+      <h3 class="text-lg font-bold text-zinc-900 dark:text-white">Domande frequenti sui prezzi carburante a {province.name}</h3>
+      <div class="space-y-3 text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
         <div>
-          <h4 class="font-bold text-zinc-100 text-sm">Qual è il benzinaio più economico a {province.name} oggi?</h4>
-          <p class="text-zinc-400 mt-1">
+          <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm">Qual è il benzinaio più economico a {province.name} oggi?</h4>
+          <p class="text-zinc-600 dark:text-zinc-400 mt-1">
             {cheapestBenzinaStation 
               ? `Il distributore di benzina con il prezzo più basso a ${province.name} oggi è ${cheapestBenzinaStation.nome || cheapestBenzinaStation.brand} a ${cheapestBenzinaStation.comune} (${cheapestBenzinaStation.indirizzo}), con un prezzo self-service di € ${cheapestBenzinaStation.prices.benzina_self.prezzo.toFixed(3)} al litro.`
               : `I prezzi più economici sono consultabili nella tabella in alto, aggiornati in tempo reale con i dati del MIMIT.`}
           </p>
         </div>
         <div>
-          <h4 class="font-bold text-zinc-100 text-sm">Quanto costa il diesel a {province.name}?</h4>
-          <p class="text-zinc-400 mt-1">
+          <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm">Quanto costa il diesel a {province.name}?</h4>
+          <p class="text-zinc-600 dark:text-zinc-400 mt-1">
             {cheapestDieselStation
               ? `Il gasolio per autotrazione a ${province.name} ha un prezzo medio provinciale di € ${provDieselAvg.toFixed(3)}/L, con la pompa più conveniente a partire da € ${cheapestDieselStation.prices.diesel_self.prezzo.toFixed(3)}/L presso ${cheapestDieselStation.nome || cheapestDieselStation.brand} (${cheapestDieselStation.comune}).`
               : `Il prezzo medio provinciale del diesel è di € ${provDieselAvg.toFixed(3)} al litro.`}
@@ -410,15 +410,15 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
 
     <!-- Other Provinces in the same Region -->
     {otherProvinces.length > 0 && (
-      <div class="pt-6 border-t border-zinc-900">
-        <h3 class="text-sm font-bold text-zinc-400 uppercase tracking-wider mb-3">
+      <div class="pt-6 border-t border-zinc-200 dark:border-zinc-900">
+        <h3 class="text-sm font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3">
           Altre Province in {province.region}
         </h3>
         <div class="flex flex-wrap gap-2 text-xs">
           {otherProvinces.map((p) => (
             <a
               href={`/provincia/${p.slug}`}
-              class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-emerald-400 hover:border-emerald-500/30 transition-colors"
+              class="px-3 py-1.5 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/30 transition-colors shadow-sm"
             >
               {p.name} ({p.code})
             </a>
@@ -436,12 +436,12 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
     btn.addEventListener('click', () => {
       document.querySelectorAll('.prov-tab-btn').forEach(b => {
         b.classList.remove('active', 'bg-emerald-500', 'text-zinc-950');
-        b.classList.add('bg-zinc-900', 'text-zinc-400', 'border', 'border-zinc-800');
+        b.classList.add('bg-white', 'dark:bg-zinc-900', 'text-zinc-600', 'dark:text-zinc-400', 'border', 'border-zinc-200', 'dark:border-zinc-800');
       });
       btn.classList.add('active', 'bg-emerald-500', 'text-zinc-950');
-      btn.classList.remove('bg-zinc-900', 'text-zinc-400', 'border', 'border-zinc-800');
+      btn.classList.remove('bg-white', 'dark:bg-zinc-900', 'text-zinc-600', 'dark:text-zinc-400', 'border', 'border-zinc-200', 'dark:border-zinc-800');
 
-      const target = btn.dataset.provTab;
+      const target = (btn as HTMLElement).dataset.provTab;
       document.querySelectorAll('.prov-tab-content').forEach(c => c.classList.add('hidden'));
       document.getElementById(`tab-${target}`)?.classList.remove('hidden');
     });

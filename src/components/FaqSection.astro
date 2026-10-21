@@ -14,8 +14,12 @@ const faqs = [
     answer: `Il prezzo medio del gasolio per autotrazione (diesel) in modalità self-service è attualmente pari a circa € ${dieselAvg} al litro. In modalità servito il costo medio può salire di 15-25 centesimi al litro a seconda della compagnia e della tratta.`
   },
   {
+    question: "Come calcolare se conviene davvero andare a un distributore più lontano?",
+    answer: "Il 'Prezzo Opportunità' di PrezzoBenza.it calcola automaticamente il costo della benzina consumata per fare il viaggio di andata e ritorno e i minuti di guida. Se per risparmiare 2 centesimi al litro devi percorrere 8 km A/R, il costo dello spostamento supererà il risparmio sul rifornimento: la nostra app ti avvisa istantaneamente con un badge chiaro (Verde: Conviene! / Rosso: Non Conviene)."
+  },
+  {
     question: "Come trovare il benzinaio dove costa meno la benzina vicino a me?",
-    answer: "Su PrezzoBenza.it basta cliccare sul pulsante 'Trova vicino a me': il sistema rileva la tua posizione GPS attuale tramite il browser e ti mostra istantaneamente la lista ordinata delle stazioni di servizio più vicine e più economiche entro 5, 10 o 25 km, con il pulsante 'Portami qui' che apre direttamente il navigatore."
+    answer: "Su PrezzoBenza.it basta cliccare sul pulsante 'Trova vicino a me': il sistema rileva la tua posizione GPS attuale tramite il browser e ti mostra istantaneamente la mappa e la lista ordinata delle stazioni di servizio più vicine entro 5, 10 o 25 km, con il pulsante 'Portami qui' che apre direttamente il navigatore."
   },
   {
     question: "Cosa sono le pompe bianche e perché costano meno?",
@@ -47,27 +51,27 @@ const faqSchema = {
 
 <section id="faq" class="py-16 max-w-4xl mx-auto px-4">
   <div class="text-center space-y-2 mb-10">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-zinc-800 text-zinc-300">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
       Domande Frequenti
     </div>
-    <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
-      Tutto quello che devi sapere sui <span class="text-emerald-400">prezzi carburanti</span>
+    <h2 class="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-white tracking-tight">
+      Tutto quello che devi sapere sui <span class="text-emerald-500 dark:text-emerald-400">prezzi carburanti</span>
     </h2>
-    <p class="text-sm text-zinc-400">
+    <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
       Risposte chiare alle domande più cercate dagli automobilisti italiani
     </p>
   </div>
 
-  <div class="space-y-4">
-    {faqs.map((faq, index) => (
-      <details class="group rounded-2xl border border-zinc-800/80 bg-zinc-900/60 p-5 transition-colors open:bg-zinc-900 open:border-zinc-700">
-        <summary class="flex cursor-pointer items-center justify-between font-bold text-white text-base hover:text-emerald-400 transition-colors list-none">
+  <div class="space-y-3">
+    {faqs.map((faq) => (
+      <details class="group rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-900/60 p-5 transition-colors shadow-sm open:border-emerald-500/30">
+        <summary class="flex cursor-pointer items-center justify-between font-bold text-zinc-900 dark:text-white text-base hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors list-none">
           <span>{faq.question}</span>
-          <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-zinc-400 group-open:rotate-180 group-open:text-emerald-400 transition-transform">
+          <span class="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 group-open:rotate-180 group-open:text-emerald-500 transition-transform">
             ▼
           </span>
         </summary>
-        <p class="mt-4 text-sm text-zinc-300 leading-relaxed border-t border-zinc-800/60 pt-3">
+        <p class="mt-4 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed border-t border-zinc-100 dark:border-zinc-800/60 pt-3">
           {faq.answer}
         </p>
       </details>

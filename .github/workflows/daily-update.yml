@@ -1,0 +1,56 @@
+name: Daily MIMIT Data & Cloudflare Deploy
+
+on:
+  schedule:
+    # Ogni mattina alle 06:15 UTC (07:15 ora italiana solare / 08:15 legale)
+    - cron: '15 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Fetch and Process MIMIT Open Data
+        run: node scripts/fetch-mimit-data.js
+
+      - name: Commit Updated Data Files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/ public/data/
+          if git diff --staged --quiet; then
+            echo "No data changes detected"
+          else
+            git commit -m "chore(data): auto-update MIMIT fuel prices [$(date +'%Y-%m-%d')]"
+            git push origin main
+          fi
+
+      - name: Build Astro SSG
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
+          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx --yes wrangler@4 pages deploy dist --project-name=prezzobenza --commit-dirty=true
+
+      - name: Notify IndexNow (Bing & Search Engines)
+        run: node scripts/notify-indexnow.js
+        continue-on-error: true

@@ -1,11 +1,6 @@
 ---
 import nationalStats from '../data/national-stats.json';
-
-const extractionFormatted = new Date(nationalStats.extractionDate).toLocaleDateString('it-IT', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-});
+import { lastUpdatedFull } from '../utils/date.js';
 ---
 
 <section class="border-y border-zinc-200 dark:border-zinc-800/80 bg-zinc-100/60 dark:bg-zinc-900/40 backdrop-blur-sm py-4 transition-colors">
@@ -21,10 +16,10 @@ const extractionFormatted = new Date(nationalStats.extractionDate).toLocaleDateS
         <div class="text-xs">
           <div class="font-bold text-zinc-900 dark:text-white flex items-center gap-1.5">
             <span>Medie Nazionali Italia</span>
-            <span class="text-[10px] px-1.5 py-0.2 rounded bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-400 font-semibold">Oggi</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">Prezzi Oggi</span>
           </div>
           <div class="text-[11px] text-zinc-500 dark:text-zinc-400">
-            Dati MIMIT al {extractionFormatted} ({nationalStats.totalActiveWithPrices.toLocaleString('it-IT')} impianti)
+            Ultimo aggiornamento: <strong class="text-zinc-700 dark:text-zinc-300">{lastUpdatedFull}</strong> ({nationalStats.totalActiveWithPrices.toLocaleString('it-IT')} impianti attivi)
           </div>
         </div>
       </div>

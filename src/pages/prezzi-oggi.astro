@@ -2,12 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import nationalStats from '../data/national-stats.json';
 import provincesSummary from '../data/provinces-summary.json';
-
-const extractionFormatted = new Date(nationalStats.extractionDate).toLocaleDateString('it-IT', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-});
+import { lastUpdatedFull, lastUpdatedShort } from '../utils/date.js';
 
 // Calcola medie regionali
 const regionalAverages = {};
@@ -78,7 +73,7 @@ const structuredData = {
   <div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
     <div class="space-y-3">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
-        📊 Dati Ufficiali MIMIT • {extractionFormatted}
+        📊 Dati Ufficiali MIMIT • Ultimo aggiornamento: <strong>{lastUpdatedFull}</strong>
       </div>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-zinc-900 dark:text-white tracking-tight">
         Osservatorio Prezzi Carburanti in Italia

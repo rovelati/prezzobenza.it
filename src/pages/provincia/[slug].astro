@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import provincesSummary from '../../data/provinces-summary.json';
 import nationalStats from '../../data/national-stats.json';
+import { lastUpdatedFull, lastUpdatedShort } from '../../utils/date.js';
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 
@@ -159,13 +160,13 @@ const otherProvinces = provincesSummary.filter((p) => p.region === province.regi
     <div class="space-y-3">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
         <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-        Provincia di {province.name} ({province.code}) • {province.region}
+        Provincia di {province.name} ({province.code}) • {province.region} • Aggiornato al {lastUpdatedShort}
       </div>
       <h1 class="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
         Prezzi Benzina e Carburanti a <span class="text-emerald-600 dark:text-emerald-400">{province.name}</span>
       </h1>
       <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
-        Confronto in tempo reale tra tutti i <strong>{stations.length} distributori</strong> attivi nella provincia di {province.name}. Dati ufficiali dell'Osservatorio Prezzi MIMIT aggiornati ad oggi.
+        Confronto in tempo reale tra tutti i <strong>{stations.length} distributori</strong> attivi nella provincia di {province.name}. Dati ufficiali dell'Osservatorio Prezzi MIMIT aggiornati al <strong>{lastUpdatedFull}</strong>.
       </p>
     </div>
 

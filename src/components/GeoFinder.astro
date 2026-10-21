@@ -2,6 +2,7 @@
 import nationalStats from '../data/national-stats.json';
 import provincesSummary from '../data/provinces-summary.json';
 import cheapestItaly from '../data/cheapest-italy.json';
+import { lastUpdatedShort } from '../utils/date.js';
 
 const provincesCentroids = provincesSummary.map(p => ({
   code: p.code,
@@ -40,7 +41,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
         <div class="flex flex-wrap items-center justify-center gap-2">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Dati MIMIT Ufficiali • Algoritmo Prezzo Opportunità
+            Dati MIMIT Ufficiali • Aggiornato al {lastUpdatedShort} • Algoritmo Prezzo Opportunità
           </div>
           <div id="ip-location-pill" class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/25 transition-all">
             <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>

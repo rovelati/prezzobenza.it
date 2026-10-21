@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import cheapestItaly from '../data/cheapest-italy.json';
 import nationalStats from '../data/national-stats.json';
+import { lastUpdatedFull, lastUpdatedShort } from '../utils/date.js';
 
 const pompeBianche = cheapestItaly.pompeBianche || [];
 const natBenzina = nationalStats.averages.benzina_self || 1.78;
@@ -116,7 +117,7 @@ const structuredData = {
       <div class="flex items-center justify-between pb-2 border-b border-zinc-200 dark:border-zinc-800">
         <div>
           <h2 class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white">Le Pompe Bianche più convenienti d'Italia</h2>
-          <p class="text-xs text-zinc-500 dark:text-zinc-400">Classifica aggiornata con dati MIMIT di oggi</p>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">Classifica aggiornata con dati MIMIT al {lastUpdatedFull}</p>
         </div>
         <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-semibold border border-emerald-500/20">
           Benzina Self

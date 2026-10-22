@@ -859,6 +859,21 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
             `);
           markersLayer.addLayer(marker);
         });
+
+        // Auto-adatta lo zoom (fitBounds) per inquadrare TUTTI i 10 marker + utente nello schermo
+        if (window.L && leafletMap) {
+          const points = [];
+          if (userCoords && userCoords.lat && userCoords.lng) {
+            points.push([userCoords.lat, userCoords.lng]);
+          }
+          enriched.slice(0, 10).forEach(st => {
+            if (st.lat && st.lng) points.push([st.lat, st.lng]);
+          });
+          if (points.length > 0) {
+            const bounds = window.L.latLngBounds(points);
+            leafletMap.fitBounds(bounds, { padding: [35, 35], maxZoom: 14 });
+          }
+        }
       }
     }
 

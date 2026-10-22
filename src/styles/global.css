@@ -90,19 +90,20 @@ html:not(.dark) .leaflet-popup-tip {
 }
 
 .pb-marker-standard {
-  background: #18181b;
-  color: #10b981;
+  background: #09090b;
+  color: #34d399;
   font-weight: 800;
-  border: 2px solid #3f3f46;
+  border: 2px solid #ffffff;
   border-radius: 9999px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 html:not(.dark) .pb-marker-standard {
-  background: #ffffff;
-  color: #059669;
-  border: 2px solid #a1a1aa;
+  background: #0f172a;
+  color: #34d399;
+  border: 2px solid #ffffff;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.4);
 }

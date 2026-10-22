@@ -23,6 +23,8 @@ const urls = [
   `${SITE_URL}/prezzi-oggi/`,
   `${SITE_URL}/come-risparmiare/`,
   ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/`),
+  ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/diesel/`),
+  ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/metano-gpl/`),
 ];
 
 async function main() {

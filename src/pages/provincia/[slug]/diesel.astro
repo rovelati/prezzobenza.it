@@ -1,0 +1,15 @@
+---
+import ProvinceDetail from '../../../components/ProvinceDetail.astro';
+import provincesSummary from '../../../data/provinces-summary.json';
+
+export async function getStaticPaths() {
+  return provincesSummary.map((p) => ({
+    params: { slug: p.slug },
+    props: { province: p },
+  }));
+}
+
+const { province } = Astro.props;
+---
+
+<ProvinceDetail province={province} fuelType="diesel" />

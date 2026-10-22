@@ -14,7 +14,7 @@ const provincesCentroids = provincesSummary.map(p => ({
   avgDiesel: p.avgDiesel,
 }));
 
-const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).map(st => ({
+const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).map(st => ({
   id: st.id,
   nome: st.nome,
   brand: st.brand,
@@ -34,20 +34,22 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
 
   <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
     <!-- Main Card -->
-    <div class="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-900/90 shadow-2xl backdrop-blur-xl p-5 sm:p-7 md:p-8 space-y-6 transition-colors">
+    <div class="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-900/90 shadow-2xl backdrop-blur-xl p-5 sm:p-7 md:p-8 space-y-6 transition-colors flex flex-col">
       
-      <!-- Card Header -->
-      <div class="text-center space-y-2">
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Dati MIMIT Ufficiali • Aggiornato al {lastUpdatedShort} • Algoritmo Prezzo Opportunità
-          </div>
-          <div id="ip-location-pill" class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/25 transition-all">
-            <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
-            <span id="ip-location-text">📍 Posizione rilevata da IP...</span>
-          </div>
+      <!-- Badges: Dati MIMIT e IP (in fondo su mobile, in alto su desktop) -->
+      <div id="badges-container" class="order-last md:order-first pt-3 md:pt-0 flex flex-wrap items-center justify-center gap-2 border-t md:border-t-0 border-zinc-100 dark:border-zinc-800/60">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-center">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Dati MIMIT Ufficiali • Aggiornato al {lastUpdatedShort} • Algoritmo Prezzo Opportunità
         </div>
+        <div id="ip-location-pill" class="hidden inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/25 transition-all">
+          <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+          <span id="ip-location-text">📍 Posizione rilevata da IP...</span>
+        </div>
+      </div>
+
+      <!-- Card Header -->
+      <div class="text-center space-y-2 order-1 md:order-none">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-zinc-900 dark:text-white">
           Trova la benza più economica <span class="text-emerald-500 dark:text-emerald-400">vicino a te</span>
         </h2>
@@ -218,7 +220,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
             </svg>
           </div>
-          <span id="btn-text">Trova la benza più economica vicino a me</span>
+          <span id="btn-text">📍 Vicino a Te</span>
           <span id="spinner" class="hidden w-5 h-5 border-2 border-zinc-950 border-t-transparent rounded-full animate-spin"></span>
         </button>
       </div>
@@ -651,7 +653,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
 
       // Aggiorna testo pulsante CTA
       if (btnText && (!userCoords || userCoords.isIp)) {
-        btnText.textContent = `🎯 Affina con GPS (${geo.city} rilevata da IP)`;
+        btnText.textContent = `📍 Vicino a Te (${geo.city})`;
       }
 
       renderResults();
@@ -782,18 +784,18 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
       enriched.sort((a, b) => a.priceVal - b.priceVal);
     }
 
-    resultsCount.textContent = enriched.length;
+    resultsCount.textContent = Math.min(enriched.length, 10);
     
     if (userCoords) {
       if (userCoords.isIp) {
-        resultsSubtitle.textContent = `Distributori rilevati vicino a te (Zona ${userCoords.cityName || 'IP'}, raggio ${selectedRadius} km). Clicca "Affina con GPS" per la precisione al civico.`;
+        resultsSubtitle.textContent = `I 10 distributori più convenienti vicino a te (Zona ${userCoords.cityName || 'IP'}, raggio ${selectedRadius} km). Clicca "Vicino a Te" per la precisione GPS al civico.`;
       } else {
-        resultsSubtitle.textContent = `Nel raggio di ${selectedRadius} km dalla tua posizione GPS esatta (calcolo su pieno di ${userLiters}L).`;
+        resultsSubtitle.textContent = `I 10 distributori più convenienti nel raggio di ${selectedRadius} km dalla tua posizione GPS (calcolo su pieno di ${userLiters}L).`;
       }
     } else if (provName) {
-      resultsSubtitle.textContent = `Tutti i distributori attivi nella provincia di ${provName}`;
+      resultsSubtitle.textContent = `I 10 distributori più convenienti nella provincia di ${provName}`;
     } else {
-      resultsSubtitle.textContent = "I distributori con il miglior prezzo in Italia. Usa il pulsante GPS o seleziona una provincia per calcolare il risparmio vicino a te.";
+      resultsSubtitle.textContent = "I 10 distributori con il miglior prezzo in Italia. Usa il pulsante \"Vicino a Te\" o seleziona una provincia per calcolare il risparmio vicino a te.";
     }
 
     // Aggiorna Mappa Leaflet
@@ -820,7 +822,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
             ? `<div style="font-family:system-ui; padding:3px;">
                  <div style="font-size:12px; font-weight:800; color:#0ea5e9;">📍 Posizione Stimata da IP</div>
                  <div style="font-size:11px; margin-top:2px;">Zona: <strong>${userCoords.cityName || 'Rilevata'}</strong></div>
-                 <div style="font-size:10px; color:#71717a; margin-top:4px;">Clicca "Affina con GPS" per la massima precisione al civico</div>
+                 <div style="font-size:10px; color:#71717a; margin-top:4px;">Clicca "Vicino a Te" per la massima precisione GPS al civico</div>
                </div>`
             : `<div style="font-family:system-ui; padding:3px;">
                  <div style="font-size:12px; font-weight:800; color:#10b981;">🎯 La tua posizione GPS esatta</div>
@@ -831,8 +833,8 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
             .addTo(markersLayer);
         }
 
-        // Marker stazioni
-        enriched.slice(0, 30).forEach((st, idx) => {
+        // Marker stazioni (Top 10)
+        enriched.slice(0, 10).forEach((st, idx) => {
           if (!st.lat || !st.lng || !window.L) return;
           const isCheapest = idx === 0;
           const iconClass = isCheapest ? 'pb-marker-cheapest' : 'pb-marker-standard';
@@ -870,7 +872,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
       return;
     }
 
-    const topStations = enriched.slice(0, 30);
+    const topStations = enriched.slice(0, 10);
 
     stationsList.innerHTML = topStations.map((st, idx) => {
       const isTop1 = idx === 0;
@@ -955,7 +957,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 15).ma
       spinner.classList.remove('hidden');
     } else {
       btnGeolocate.disabled = false;
-      btnText.textContent = userCoords && userCoords.isIp ? `🎯 Affina con GPS (${userCoords.cityName || 'Zona IP'})` : 'Trova la benza più economica vicino a me';
+      btnText.textContent = userCoords && userCoords.isIp ? `📍 Vicino a Te (${userCoords.cityName || 'Zona IP'})` : '📍 Vicino a Te';
       spinner.classList.add('hidden');
     }
   }

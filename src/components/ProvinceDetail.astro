@@ -1,0 +1,553 @@
+---
+import Layout from '../layouts/Layout.astro';
+import provincesSummary from '../data/provinces-summary.json';
+import nationalStats from '../data/national-stats.json';
+import { lastUpdatedFull, lastUpdatedShort } from '../utils/date.js';
+import ShareBar from './ShareBar.astro';
+import { readFileSync, existsSync } from 'fs';
+import path from 'path';
+
+export interface Props {
+  province: {
+    code: string;
+    name: string;
+    region: string;
+    slug: string;
+    avgBenzina?: number;
+    avgDiesel?: number;
+    minBenzina?: number;
+    minDiesel?: number;
+  };
+  fuelType?: 'benzina' | 'diesel';
+}
+
+const { province, fuelType = 'benzina' } = Astro.props;
+const isDiesel = fuelType === 'diesel';
+
+// Carica stazioni della provincia dal JSON generato
+const provFilePath = path.resolve(process.cwd(), 'public', 'data', 'provinces', `${province.code.toLowerCase()}.json`);
+let provData = { stations: [] };
+if (existsSync(provFilePath)) {
+  provData = JSON.parse(readFileSync(provFilePath, 'utf8'));
+}
+
+const stations = provData.stations || [];
+
+// Pre-mappa stazioni con URL navigatore e badge
+function formatStations(list: any[]) {
+  return list.map((st, idx) => ({
+    ...st,
+    rank: idx + 1,
+    mapsUrl: st.lat && st.lng
+      ? `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`
+      : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((st.nome || st.brand) + ' ' + st.indirizzo + ' ' + st.comune)}`,
+  }));
+}
+
+// Ordina per benzina self
+const stationsByBenzina = formatStations(
+  [...stations]
+    .filter((s: any) => s.prices?.benzina_self?.prezzo)
+    .sort((a: any, b: any) => a.prices.benzina_self.prezzo - b.prices.benzina_self.prezzo)
+);
+
+// Ordina per diesel self
+const stationsByDiesel = formatStations(
+  [...stations]
+    .filter((s: any) => s.prices?.diesel_self?.prezzo)
+    .sort((a: any, b: any) => a.prices.diesel_self.prezzo - b.prices.diesel_self.prezzo)
+);
+
+// Ordina per GPL
+const stationsByGpl = formatStations(
+  [...stations]
+    .filter((s: any) => s.prices?.gpl?.prezzo)
+    .sort((a: any, b: any) => a.prices.gpl.prezzo - b.prices.gpl.prezzo)
+);
+
+// Ordina per Metano
+const stationsByMetano = formatStations(
+  [...stations]
+    .filter((s: any) => s.prices?.metano?.prezzo)
+    .sort((a: any, b: any) => a.prices.metano.prezzo - b.prices.metano.prezzo)
+);
+
+const cheapestBenzinaStation = stationsByBenzina[0] || null;
+const cheapestDieselStation = stationsByDiesel[0] || null;
+const activeCheapestStation = isDiesel ? cheapestDieselStation : cheapestBenzinaStation;
+
+const natBenzinaAvg = (nationalStats as any).averages?.benzina_self || 1.78;
+const natDieselAvg = (nationalStats as any).averages?.diesel_self || 1.68;
+
+const provBenzinaAvg = province.avgBenzina || natBenzinaAvg;
+const provDieselAvg = province.avgDiesel || natDieselAvg;
+
+const currentAvg = isDiesel ? provDieselAvg : provBenzinaAvg;
+const currentNatAvg = isDiesel ? natDieselAvg : natBenzinaAvg;
+const currentDiff = (currentAvg - currentNatAvg).toFixed(3);
+const currentDiffNum = Number(currentDiff);
+
+const currentDiffLabel = currentDiffNum <= 0
+  ? `🟢 ${Math.abs(currentDiffNum * 100).toFixed(1)} cent/L più conveniente della media nazionale`
+  : `🔴 +${(currentDiffNum * 100).toFixed(1)} cent/L rispetto alla media nazionale`;
+
+// ── Aggregazione SEO per Marca a Livello Provinciale ────────────────────────
+interface BrandStats {
+  brand: string;
+  count: number;
+  minPrice: number;
+  cheapestStation: any;
+  avgPrice: number;
+}
+
+const currentFuelStations = isDiesel ? stationsByDiesel : stationsByBenzina;
+const brandMap = new Map<string, { brand: string; count: number; minPrice: number; cheapestStation: any; sumPrice: number }>();
+
+for (const st of currentFuelStations) {
+  const brandName = st.brand?.trim() || 'Altro';
+  const price = isDiesel ? st.prices?.diesel_self?.prezzo : st.prices?.benzina_self?.prezzo;
+  if (!price) continue;
+
+  if (!brandMap.has(brandName)) {
+    brandMap.set(brandName, {
+      brand: brandName,
+      count: 0,
+      minPrice: price,
+      cheapestStation: st,
+      sumPrice: 0,
+    });
+  }
+
+  const entry = brandMap.get(brandName)!;
+  entry.count++;
+  entry.sumPrice += price;
+  if (price < entry.minPrice) {
+    entry.minPrice = price;
+    entry.cheapestStation = st;
+  }
+}
+
+const brandsSummary: BrandStats[] = Array.from(brandMap.values())
+  .map(b => ({
+    brand: b.brand,
+    count: b.count,
+    minPrice: b.minPrice,
+    cheapestStation: b.cheapestStation,
+    avgPrice: b.sumPrice / b.count,
+  }))
+  .sort((a, b) => a.minPrice - b.minPrice);
+
+// ── Titoli, Descrizioni e Canonical Specifici per Carburante ────────────────
+const pageTitle = isDiesel
+  ? `Prezzi Diesel a ${province.name} Oggi: Dove Costa Meno il Gasolio | PrezzoBenza.it`
+  : `Prezzi Benzina a ${province.name} Oggi: Dove Costa Meno | PrezzoBenza.it`;
+
+const pageDescription = isDiesel
+  ? `I 10 distributori di diesel e gasolio più economici a ${province.name} aggiornati a oggi con dati ufficiali MIMIT. Confronta i prezzi e risparmia sul pieno di gasolio nella provincia di ${province.name}.`
+  : `I 10 distributori di benzina più economici a ${province.name} aggiornati a oggi con dati ufficiali MIMIT. Trova la pompa di benzina con il prezzo self-service più conveniente nella provincia di ${province.name}.`;
+
+const canonicalPath = isDiesel
+  ? `/provincia/${province.slug}/diesel`
+  : `/provincia/${province.slug}`;
+
+// Schema.org Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.prezzobenza.it"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": `Prezzi Carburanti ${province.name}`,
+          "item": `https://www.prezzobenza.it/provincia/${province.slug}`
+        },
+        ...(isDiesel ? [{
+          "@type": "ListItem",
+          "position": 3,
+          "name": `Diesel ${province.name}`,
+          "item": `https://www.prezzobenza.it/provincia/${province.slug}/diesel`
+        }] : [])
+      ]
+    },
+    ...currentFuelStations.slice(0, 10).map((st: any) => ({
+      "@type": "GasStation",
+      "name": st.nome || `${st.brand} ${st.comune}`,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": st.indirizzo,
+        "addressLocality": st.comune,
+        "addressRegion": province.code,
+        "addressCountry": "IT"
+      },
+      ...(st.lat && st.lng ? {
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": st.lat,
+          "longitude": st.lng
+        }
+      } : {}),
+      "hasMap": st.mapsUrl,
+      "priceRange": isDiesel
+        ? `€ ${st.prices.diesel_self?.prezzo?.toFixed(3)}`
+        : `€ ${st.prices.benzina_self?.prezzo?.toFixed(3)}`,
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card"
+    }))
+  ]
+};
+
+const otherProvinces = provincesSummary.filter((p: any) => p.region === province.region && p.code !== province.code);
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalPath}
+  structuredData={structuredData}
+>
+  <!-- Breadcrumbs -->
+  <div class="border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/60 py-3 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 text-xs text-zinc-500 dark:text-zinc-400 flex items-center gap-2 flex-wrap">
+      <a href="/" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <a href="/#province" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Province</a>
+      <span>/</span>
+      <a href={`/provincia/${province.slug}`} class={`transition-colors ${isDiesel ? 'hover:text-emerald-600 dark:hover:text-emerald-400' : 'text-zinc-900 dark:text-white font-medium'}`}>{province.name}</a>
+      {isDiesel && (
+        <>
+          <span>/</span>
+          <span class="text-zinc-900 dark:text-white font-medium">Diesel</span>
+        </>
+      )}
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 py-8 space-y-8">
+    
+    <!-- Hero Header -->
+    <div class="space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        Provincia di {province.name} ({province.code}) • {province.region} • Aggiornato al {lastUpdatedShort}
+      </div>
+      
+      <h1 class="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
+        {isDiesel ? (
+          <>Prezzi Diesel e Gasolio a <span class="text-teal-600 dark:text-teal-400">{province.name}</span></>
+        ) : (
+          <>Prezzi Benzina a <span class="text-emerald-600 dark:text-emerald-400">{province.name}</span></>
+        )}
+      </h1>
+      
+      <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
+        Confronto in tempo reale tra tutti i <strong>{stations.length} distributori</strong> attivi nella provincia di {province.name}. 
+        {isDiesel 
+          ? `Ecco la classifica dei distributori di gasolio più economici per risparmiare fino a 15€ su un pieno.`
+          : `Ecco la classifica dei distributori di benzina con i prezzi self-service più bassi rilevati dal MIMIT.`}
+      </p>
+    </div>
+
+    <!-- Statistiche Medie Provincia vs Italia -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <!-- Media Carburante Attivo -->
+      <div class={`p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border ${isDiesel ? 'border-teal-500/30' : 'border-emerald-500/30'} shadow-sm space-y-2`}>
+        <div class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
+          Media {isDiesel ? 'Diesel Self' : 'Benzina Self'} a {province.name}
+        </div>
+        <div class={`text-3xl font-black ${isDiesel ? 'text-teal-600 dark:text-teal-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
+          € {currentAvg.toFixed(3)}
+        </div>
+        <div class="text-[11px] text-zinc-500">
+          {currentDiffLabel}
+        </div>
+      </div>
+
+      <!-- Prezzo Più Basso Rilevato -->
+      <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <div class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
+          {isDiesel ? 'Miglior Prezzo Diesel' : 'Miglior Prezzo Benzina'}
+        </div>
+        <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400">
+          {activeCheapestStation ? `€ ${(isDiesel ? activeCheapestStation.prices.diesel_self.prezzo : activeCheapestStation.prices.benzina_self.prezzo).toFixed(3)}` : 'N/D'}
+        </div>
+        <div class="text-[11px] text-zinc-500 truncate">
+          Presso {activeCheapestStation ? `${activeCheapestStation.brand} a ${activeCheapestStation.comune}` : 'i distributori della provincia'}
+        </div>
+      </div>
+
+      <!-- Impianti monitorati -->
+      <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-2">
+        <div class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
+          Distributori Censiti
+        </div>
+        <div class="text-3xl font-black text-zinc-900 dark:text-white">
+          {stations.length}
+        </div>
+        <div class="text-[11px] text-zinc-500">
+          Impianti stradali e autostradali MIMIT
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SEO Selector: Differenziazione Benzina vs Diesel Crawlabile ───────── -->
+    <div class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white tracking-tight flex items-center gap-2">
+            <span>🏆 I 10 Distributori Più Economici a {province.name}</span>
+          </h2>
+          <span class="text-xs text-zinc-500 dark:text-zinc-400">Classifica delle 10 pompe con il prezzo più basso</span>
+        </div>
+
+        <!-- Selettore SEO (link crawlable per Google) -->
+        <div class="flex items-center gap-2 p-1.5 bg-zinc-100 dark:bg-zinc-950 rounded-2xl border border-zinc-200 dark:border-zinc-800 self-start sm:self-auto shadow-xs">
+          <a
+            href={`/provincia/${province.slug}/`}
+            class={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${!isDiesel ? 'bg-emerald-500 text-zinc-950 shadow-sm' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+            title={`Vedi prezzi benzina a ${province.name}`}
+          >
+            <span>🟢 Benzina</span>
+            <span class={`text-[10px] px-1.5 py-0.2 rounded-md ${!isDiesel ? 'bg-zinc-950/20 text-zinc-950' : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'}`}>
+              {stationsByBenzina.length}
+            </span>
+          </a>
+          <a
+            href={`/provincia/${province.slug}/diesel/`}
+            class={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${isDiesel ? 'bg-teal-500 text-zinc-950 shadow-sm' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+            title={`Vedi prezzi diesel a ${province.name}`}
+          >
+            <span>⚫ Diesel</span>
+            <span class={`text-[10px] px-1.5 py-0.2 rounded-md ${isDiesel ? 'bg-zinc-950/20 text-zinc-950' : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'}`}>
+              {stationsByDiesel.length}
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Top 10 Stations List -->
+      <div class="space-y-3">
+        {(isDiesel ? stationsByDiesel : stationsByBenzina).slice(0, 10).map((st: any) => {
+          const isTop1 = st.rank === 1;
+          const priceObj = isDiesel ? st.prices.diesel_self : st.prices.benzina_self;
+          const priceVal = priceObj?.prezzo || 0;
+
+          return (
+            <div class={`p-4 sm:p-5 rounded-2xl border ${isTop1 ? 'border-emerald-500/50 bg-emerald-50/40 dark:bg-emerald-950/20 shadow-lg shadow-emerald-500/10' : 'border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/70 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-xs'} transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4`}>
+              <div class="space-y-1.5 flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="w-6 h-6 rounded-full bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 text-xs font-black flex items-center justify-center shrink-0">
+                    {st.rank}
+                  </span>
+                  <span class={`px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300'}`}>
+                    {st.brand}
+                  </span>
+                  {isTop1 && (
+                    <span class={`px-2 py-0.5 rounded text-[10px] font-black uppercase ${isDiesel ? 'bg-teal-500 text-zinc-950' : 'bg-emerald-500 text-zinc-950'}`}>
+                      🏆 Più Economico della Provincia
+                    </span>
+                  )}
+                  <span class="text-xs text-zinc-500">{st.tipo}</span>
+                </div>
+                
+                <h3 class="font-bold text-zinc-900 dark:text-white text-base truncate">
+                  {st.nome || st.brand}
+                </h3>
+                
+                <p class="text-xs text-zinc-600 dark:text-zinc-400">
+                  {st.indirizzo} — <strong class="text-zinc-800 dark:text-zinc-200">{st.comune}</strong>
+                </p>
+              </div>
+
+              <div class="flex items-center sm:flex-col sm:items-end justify-between border-t sm:border-t-0 border-zinc-100 dark:border-zinc-800/60 pt-3 sm:pt-0 gap-2 shrink-0">
+                <div class="text-left sm:text-right">
+                  <div class={`text-2xl sm:text-3xl font-black ${isDiesel ? 'text-teal-600 dark:text-teal-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
+                    € {priceVal.toFixed(3)}
+                  </div>
+                  <div class="text-[10px] text-zinc-500 font-medium">al litro (Self-Service)</div>
+                </div>
+                <a
+                  href={st.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-colors flex items-center gap-1.5 shadow-xs"
+                >
+                  <span>Portami qui</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- ── SEO per Marca a Livello Provinciale ──────────────────────────────── -->
+    <div class="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 sm:p-7 space-y-6 shadow-sm">
+      <div class="space-y-1">
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+          Analisi Marchi & Compagnie
+        </div>
+        <h2 class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white tracking-tight">
+          Prezzi per Marca a {province.name}: Chi Costa Meno?
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
+          Confronto tra le grandi compagnie (Eni, Q8, IP, Tamoil, Esso) e le <strong>Pompe Bianche (No Logo)</strong> nella provincia di {province.name} per {isDiesel ? 'il diesel' : 'la benzina'}.
+        </p>
+      </div>
+
+      <!-- Griglia Brand -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {brandsSummary.map((b) => {
+          const isPompaBianca = b.brand.toLowerCase().includes('pompa bianca') || b.brand.toLowerCase().includes('no logo');
+          return (
+            <div class={`p-4 rounded-2xl border transition-all ${isPompaBianca ? 'border-amber-500/40 bg-amber-50/30 dark:bg-amber-950/20' : 'border-zinc-200 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-950/40 hover:border-zinc-300 dark:hover:border-zinc-700'}`}>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class={`font-black text-sm ${isPompaBianca ? 'text-amber-700 dark:text-amber-300' : 'text-zinc-900 dark:text-white'}`}>
+                  {b.brand}
+                </span>
+                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-zinc-200/70 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+                  {b.count} {b.count === 1 ? 'pompa' : 'pompe'}
+                </span>
+              </div>
+
+              <div class="space-y-1">
+                <div class="text-xs text-zinc-500 dark:text-zinc-400">Prezzo più basso:</div>
+                <div class="text-xl font-black text-emerald-600 dark:text-emerald-400">
+                  da € {b.minPrice.toFixed(3)}/L
+                </div>
+                <div class="text-[11px] text-zinc-600 dark:text-zinc-400 truncate">
+                  📍 {b.cheapestStation?.comune} ({b.cheapestStation?.indirizzo})
+                </div>
+              </div>
+
+              <div class="mt-3 pt-2.5 border-t border-zinc-200/60 dark:border-zinc-800/60 flex items-center justify-between text-[11px]">
+                <span class="text-zinc-500">Media brand: € {b.avgPrice.toFixed(3)}</span>
+                <a
+                  href={b.cheapestStation?.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline"
+                >
+                  Mappa →
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- GPL & Metano Box (Se presenti) -->
+    {(stationsByGpl.length > 0 || stationsByMetano.length > 0) && (
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {stationsByGpl.length > 0 && (
+          <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-zinc-900 dark:text-white text-sm flex items-center gap-1.5">
+                <span>🔵 GPL a {province.name}</span>
+              </h3>
+              <span class="text-xs text-blue-600 dark:text-blue-400 font-black">
+                da € {stationsByGpl[0].prices.gpl.prezzo.toFixed(3)}/L
+              </span>
+            </div>
+            <p class="text-xs text-zinc-500">
+              {stationsByGpl.length} distributori di GPL censiti. Più economico: {stationsByGpl[0].nome || stationsByGpl[0].brand} a {stationsByGpl[0].comune}.
+            </p>
+          </div>
+        )}
+
+        {stationsByMetano.length > 0 && (
+          <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-zinc-900 dark:text-white text-sm flex items-center gap-1.5">
+                <span>⚪ Metano a {province.name}</span>
+              </h3>
+              <span class="text-xs text-zinc-700 dark:text-zinc-300 font-black">
+                da € {stationsByMetano[0].prices.metano.prezzo.toFixed(3)}/kg
+              </span>
+            </div>
+            <p class="text-xs text-zinc-500">
+              {stationsByMetano.length} impianti a metano censiti. Più economico: {stationsByMetano[0].nome || stationsByMetano[0].brand} a {stationsByMetano[0].comune}.
+            </p>
+          </div>
+        )}
+      </div>
+    )}
+
+    <!-- Local SEO FAQ for the Province -->
+    <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-900/30 p-6 space-y-4">
+      <h3 class="text-lg font-bold text-zinc-900 dark:text-white">
+        Domande frequenti sui prezzi {isDiesel ? 'diesel' : 'benzina'} a {province.name}
+      </h3>
+      <div class="space-y-4 text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+        <div>
+          <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm">
+            {isDiesel 
+              ? `Qual è il distributore di diesel più economico a ${province.name} oggi?`
+              : `Qual è il distributore di benzina più economico a ${province.name} oggi?`}
+          </h4>
+          <p class="text-zinc-600 dark:text-zinc-400 mt-1">
+            {activeCheapestStation 
+              ? `Il distributore con il prezzo più basso a ${province.name} oggi è ${activeCheapestStation.nome || activeCheapestStation.brand} a ${activeCheapestStation.comune} (${activeCheapestStation.indirizzo}), con un prezzo self-service di € ${(isDiesel ? activeCheapestStation.prices.diesel_self.prezzo : activeCheapestStation.prices.benzina_self.prezzo).toFixed(3)} al litro.`
+              : `I prezzi più economici sono consultabili nella tabella in alto, aggiornati in tempo reale con i dati del MIMIT.`}
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm">
+            {isDiesel 
+              ? `Quanto costa in media il diesel a ${province.name}?`
+              : `Quanto costa in media la benzina a ${province.name}?`}
+          </h4>
+          <p class="text-zinc-600 dark:text-zinc-400 mt-1">
+            Il prezzo medio provinciale a {province.name} è di <strong>€ {currentAvg.toFixed(3)}/L</strong>, risultando {currentDiffLabel.toLowerCase()}.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm">
+            Le Pompe Bianche (No Logo) a {province.name} sono davvero più convenienti?
+          </h4>
+          <p class="text-zinc-600 dark:text-zinc-400 mt-1">
+            Sì, nella provincia di {province.name} le Pompe Bianche e i distributori indipendenti offrono spesso prezzi inferiori di 5-10 centesimi al litro rispetto alle grandi compagnie di bandiera, consentendo un risparmio medio di oltre 5€ su ogni rifornimento da 50 litri.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Provinces in the same Region -->
+    {otherProvinces.length > 0 && (
+      <div class="pt-6 border-t border-zinc-200 dark:border-zinc-900">
+        <h3 class="text-sm font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3">
+          Altre Province in {province.region}
+        </h3>
+        <div class="flex flex-wrap gap-2 text-xs">
+          {otherProvinces.map((p: any) => (
+            <a
+              href={isDiesel ? `/provincia/${p.slug}/diesel/` : `/provincia/${p.slug}/`}
+              class="px-3 py-1.5 rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/30 transition-colors shadow-xs"
+            >
+              {p.name} ({p.code})
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Share Bar -->
+    <ShareBar
+      title={isDiesel ? `Prezzi Diesel a ${province.name}: scopri dove risparmiare` : `Prezzi Benzina a ${province.name}: scopri dove risparmiare`}
+      url={`https://www.prezzobenza.it${canonicalPath}`}
+      description={`Mappa e prezzi aggiornati dei distributori a ${province.name}. Confronta e risparmia con PrezzoBenza.it!`}
+    />
+
+  </div>
+</Layout>

@@ -442,6 +442,34 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
     await loadProvinceStations(code);
   });
 
+  // Storage Key per mantenere la posizione locale quando l'utente rientra sulla home
+  const STORAGE_KEY_GEO = 'pb_user_geo_v1';
+
+  function saveLocalGeo(data) {
+    try {
+      localStorage.setItem(STORAGE_KEY_GEO, JSON.stringify({
+        ...data,
+        savedAt: Date.now(),
+      }));
+    } catch (e) {}
+  }
+
+  function getSavedLocalGeo() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY_GEO);
+      if (!raw) return null;
+      const data = JSON.parse(raw);
+      // Validità 7 giorni
+      if (Date.now() - (data.savedAt || 0) > 7 * 24 * 60 * 60 * 1000) {
+        localStorage.removeItem(STORAGE_KEY_GEO);
+        return null;
+      }
+      return data;
+    } catch (e) {
+      return null;
+    }
+  }
+
   // Haversine formula
   function getDistanceKm(lat1, lon1, lat2, lon2) {
     const R = 6371;
@@ -453,6 +481,18 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
       Math.sin(dLon / 2) * Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
+  }
+
+  function getNearestProvinces(lat, lng, count = 2) {
+    if (!window.__PB_PROVINCES) return [];
+    return [...window.__PB_PROVINCES]
+      .filter(p => p.lat && p.lng)
+      .map(p => ({
+        ...p,
+        distance: getDistanceKm(lat, lng, p.lat, p.lng),
+      }))
+      .sort((a, b) => a.distance - b.distance)
+      .slice(0, count);
   }
 
   // Leaflet Map Initialization (100% Free OpenStreetMap - ZERO API Keys & No Watermark)
@@ -474,8 +514,8 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
 
       markersLayer = window.L.layerGroup().addTo(leafletMap);
     } else {
-      leafletMap.flyTo([centerLat, centerLng], zoom, { duration: 1.0 });
-      setTimeout(() => { leafletMap.invalidateSize(); }, 200);
+      leafletMap.invalidateSize();
+      leafletMap.setView([centerLat, centerLng], zoom, { animate: false });
     }
   }
 
@@ -499,16 +539,8 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
           cityName: null,
         };
 
-        const sortedProvs = [...window.__PB_PROVINCES]
-          .filter(p => p.lat && p.lng)
-          .map(p => ({
-            ...p,
-            distance: getDistanceKm(userCoords.lat, userCoords.lng, p.lat, p.lng),
-          }))
-          .sort((a, b) => a.distance - b.distance);
-
-        const nearestProvs = sortedProvs.slice(0, 2);
-        showStatus(`Posizione GPS rilevata! Caricamento distributori (${nearestProvs[0].name})...`, 'info');
+        const nearestProvs = getNearestProvinces(userCoords.lat, userCoords.lng, 2);
+        showStatus(`Posizione GPS rilevata! Caricamento distributori (${nearestProvs[0]?.name || 'tua zona'})...`, 'info');
 
         try {
           const stationPromises = nearestProvs.map(p =>
@@ -541,6 +573,14 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
           } else {
             setRadius(10);
           }
+
+          saveLocalGeo({
+            lat: userCoords.lat,
+            lng: userCoords.lng,
+            isIp: false,
+            cityName: nearestProvs[0]?.name || null,
+            nearestProvs: nearestProvs.map(p => ({ code: p.code, name: p.name })),
+          });
 
           setLoading(false);
           statusBox.classList.add('hidden');
@@ -639,15 +679,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
       };
 
       // Trova le province più vicine alle coordinate dell'IP
-      const sortedProvs = [...window.__PB_PROVINCES]
-        .filter(p => p.lat && p.lng)
-        .map(p => ({
-          ...p,
-          distance: getDistanceKm(userCoords.lat, userCoords.lng, p.lat, p.lng),
-        }))
-        .sort((a, b) => a.distance - b.distance);
-
-      const nearestProvs = sortedProvs.slice(0, 2);
+      const nearestProvs = getNearestProvinces(userCoords.lat, userCoords.lng, 2);
       if (nearestProvs.length === 0) return;
 
       if (provinceSelect) {
@@ -670,6 +702,28 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
           ...s,
           distanceKm: Number(getDistanceKm(userCoords.lat, userCoords.lng, s.lat, s.lng).toFixed(1)),
         }));
+
+      // Adatta il raggio in base alla densità locale urbana
+      const targetKey = getTargetPriceKey();
+      const in1_5km = currentStations.filter(s => s.prices && s.prices[targetKey] && s.distanceKm <= 1.5);
+      const in5km = currentStations.filter(s => s.prices && s.prices[targetKey] && s.distanceKm <= 5);
+
+      if (in1_5km.length >= 2) {
+        setRadius(1.5);
+      } else if (in5km.length >= 2) {
+        setRadius(5);
+      } else {
+        setRadius(10);
+      }
+
+      // Salva localmente per rientri futuri
+      saveLocalGeo({
+        lat: userCoords.lat,
+        lng: userCoords.lng,
+        isIp: true,
+        cityName: geo.city,
+        nearestProvs: nearestProvs.map(p => ({ code: p.code, name: p.name })),
+      });
 
       // Aggiorna Badge IP
       const ipBadge = document.getElementById('ip-location-pill');
@@ -897,8 +951,9 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
             if (st.lat && st.lng) points.push([st.lat, st.lng]);
           });
           if (points.length > 0) {
+            leafletMap.invalidateSize();
             const bounds = window.L.latLngBounds(points);
-            leafletMap.fitBounds(bounds, { padding: [35, 35], maxZoom: selectedRadius <= 1.5 ? 16 : 14 });
+            leafletMap.fitBounds(bounds, { padding: [35, 35], maxZoom: selectedRadius <= 1.5 ? 16 : 14, animate: false });
           }
         }
       }
@@ -1014,25 +1069,165 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
     statusBox.textContent = message;
   }
 
-  // Avvio automatico immediato mappa con i prezzi migliori d'Italia e autogeolocalizzazione IP
-  function bootMap() {
+  // Verifica se il browser ha già accordato i permessi GPS
+  function checkAndRefreshGpsIfGranted() {
+    if (typeof navigator !== 'undefined' && navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: 'geolocation' }).then(res => {
+        if (res.state === 'granted' && navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            async (pos) => {
+              userCoords = {
+                lat: pos.coords.latitude,
+                lng: pos.coords.longitude,
+                isIp: false,
+                cityName: null,
+              };
+              const nearestProvs = getNearestProvinces(userCoords.lat, userCoords.lng, 2);
+              if (btnText) btnText.textContent = '✅ Posizione GPS Esatta Attiva';
+              const ipBadge = document.getElementById('ip-location-pill');
+              const ipText = document.getElementById('ip-location-text');
+              if (ipBadge && ipText) {
+                ipBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20';
+                ipText.innerHTML = `🎯 <strong>Posizione GPS Esatta Attiva</strong>`;
+                ipBadge.classList.remove('hidden');
+              }
+              try {
+                const stationPromises = nearestProvs.map(p =>
+                  fetch(`/data/provinces/${p.code.toLowerCase()}.json`).then(r => r.json())
+                );
+                const results = await Promise.all(stationPromises);
+                let combined = [];
+                for (const r of results) combined = combined.concat(r.stations || []);
+                currentStations = combined
+                  .filter(s => s.lat && s.lng)
+                  .map(s => ({
+                    ...s,
+                    distanceKm: Number(getDistanceKm(userCoords.lat, userCoords.lng, s.lat, s.lng).toFixed(1)),
+                  }));
+                saveLocalGeo({
+                  lat: userCoords.lat,
+                  lng: userCoords.lng,
+                  isIp: false,
+                  cityName: nearestProvs[0]?.name || null,
+                  nearestProvs: nearestProvs.map(p => ({ code: p.code, name: p.name })),
+                });
+                renderResults();
+              } catch (e) {}
+            },
+            () => {},
+            { timeout: 7000, enableHighAccuracy: true }
+          );
+        }
+      }).catch(() => {});
+    }
+  }
+
+  // Avvio automatico mappa: se l'utente rientra sulla home, carica DIRETTAMENTE la mappa locale salvata
+  async function bootMap() {
     if (typeof window.L === 'undefined') {
       setTimeout(bootMap, 60);
       return;
     }
-    currentStations = (window.__PB_INITIAL_STATIONS || []).map(s => ({
-      ...s,
-      distanceKm: null,
-    }));
-    initOrUpdateMap(42.2, 12.8, 6);
-    renderResults();
+
+    const saved = getSavedLocalGeo();
+
+    if (saved && saved.lat && saved.lng) {
+      // 1. Rientro sulla home con posizione locale nota
+      userCoords = {
+        lat: saved.lat,
+        lng: saved.lng,
+        isIp: saved.isIp,
+        cityName: saved.cityName,
+      };
+
+      if (btnText) {
+        btnText.textContent = saved.isIp
+          ? `📍 Vicino a Te (${saved.cityName || 'Zona IP'})`
+          : '✅ Posizione GPS Esatta Attiva';
+      }
+
+      const ipBadge = document.getElementById('ip-location-pill');
+      const ipText = document.getElementById('ip-location-text');
+      if (ipBadge && ipText) {
+        if (saved.isIp) {
+          ipBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/25';
+          ipText.innerHTML = `📍 Rilevato da IP: <strong class="text-sky-700 dark:text-sky-300">${saved.cityName || 'Tua zona'}</strong>`;
+        } else {
+          ipBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20';
+          ipText.innerHTML = `🎯 <strong>Posizione GPS Esatta Attiva</strong>`;
+        }
+        ipBadge.classList.remove('hidden');
+      }
+
+      // Inizializza subito con coordinate locali (zoom 13)
+      initOrUpdateMap(saved.lat, saved.lng, 13);
+
+      const nearestProvs = saved.nearestProvs && saved.nearestProvs.length > 0
+        ? saved.nearestProvs
+        : getNearestProvinces(saved.lat, saved.lng, 2);
+
+      if (provinceSelect && nearestProvs[0]) {
+        provinceSelect.value = nearestProvs[0].code.toUpperCase();
+      }
+
+      try {
+        const promises = nearestProvs.map(p =>
+          fetch(`/data/provinces/${p.code.toLowerCase()}.json`).then(r => r.json())
+        );
+        const results = await Promise.all(promises);
+        let combined = [];
+        for (const res of results) {
+          combined = combined.concat(res.stations || []);
+        }
+        currentStations = combined
+          .filter(s => s.lat && s.lng)
+          .map(s => ({
+            ...s,
+            distanceKm: Number(getDistanceKm(userCoords.lat, userCoords.lng, s.lat, s.lng).toFixed(1)),
+          }));
+
+        // Adatta raggio in base alla densità locale urbana
+        const targetKey = getTargetPriceKey();
+        const in1_5km = currentStations.filter(s => s.prices && s.prices[targetKey] && s.distanceKm <= 1.5);
+        const in5km = currentStations.filter(s => s.prices && s.prices[targetKey] && s.distanceKm <= 5);
+
+        if (in1_5km.length >= 2) {
+          setRadius(1.5);
+        } else if (in5km.length >= 2) {
+          setRadius(5);
+        } else {
+          setRadius(10);
+        }
+
+        renderResults();
+      } catch (e) {
+        console.warn('Errore ripristino stazioni locali salvate:', e);
+      }
+    } else {
+      // 2. Primo accesso senza dati salvati
+      currentStations = (window.__PB_INITIAL_STATIONS || []).map(s => ({
+        ...s,
+        distanceKm: null,
+      }));
+      initOrUpdateMap(42.2, 12.8, 6);
+      renderResults();
+      autoGeolocateByIp();
+    }
+
     setTimeout(() => {
       if (leafletMap) leafletMap.invalidateSize();
     }, 250);
 
-    // Esegui immediatamente geolocalizzazione automatica da IP
-    autoGeolocateByIp();
+    // Se il browser ha già autorizzato il GPS, aggiorna in background
+    checkAndRefreshGpsIfGranted();
   }
+
+  window.addEventListener('pageshow', () => {
+    if (leafletMap) leafletMap.invalidateSize();
+  });
+  window.addEventListener('resize', () => {
+    if (leafletMap) leafletMap.invalidateSize();
+  });
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bootMap);

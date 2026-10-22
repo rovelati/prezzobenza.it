@@ -218,6 +218,7 @@ const structuredData = {
                     href={`/provincia/${p.slug}/`}
                     class="font-bold text-zinc-800 dark:text-zinc-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block truncate"
                     title={`Prezzi carburanti ${p.name}`}
+                    onclick={`window.trackEvent && window.trackEvent('province_directory_click', { province: '${p.name.replace(/'/g, "\\'")}', target: 'province_page', fuel: 'all' })`}
                   >
                     {p.name}
                   </a>
@@ -226,6 +227,7 @@ const structuredData = {
                       href={`/provincia/${p.slug}/`}
                       class="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold"
                       title={`Prezzi Benzina ${p.name}`}
+                      onclick={`window.trackEvent && window.trackEvent('province_directory_click', { province: '${p.name.replace(/'/g, "\\'")}', target: 'benzina', fuel: 'benzina' })`}
                     >
                       Benza {p.minBenzina ? `€${p.minBenzina.toFixed(2)}` : ''}
                     </a>
@@ -234,6 +236,7 @@ const structuredData = {
                       href={`/provincia/${p.slug}/diesel/`}
                       class="text-teal-600 dark:text-teal-400 hover:underline font-semibold"
                       title={`Prezzi Diesel ${p.name}`}
+                      onclick={`window.trackEvent && window.trackEvent('province_directory_click', { province: '${p.name.replace(/'/g, "\\'")}', target: 'diesel', fuel: 'diesel' })`}
                     >
                       Diesel {p.minDiesel ? `€${p.minDiesel.toFixed(2)}` : ''}
                     </a>
@@ -242,6 +245,7 @@ const structuredData = {
                       href={`/provincia/${p.slug}/metano-gpl/`}
                       class="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
                       title={`Prezzi GPL e Metano ${p.name}`}
+                      onclick={`window.trackEvent && window.trackEvent('province_directory_click', { province: '${p.name.replace(/'/g, "\\'")}', target: 'metano_gpl', fuel: 'metano-gpl' })`}
                     >
                       Gas
                     </a>

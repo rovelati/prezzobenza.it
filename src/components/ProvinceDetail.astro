@@ -390,6 +390,7 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
         <div class="flex items-center gap-2 p-1.5 bg-zinc-100 dark:bg-zinc-950 rounded-2xl border border-zinc-200 dark:border-zinc-800 self-start sm:self-auto shadow-xs flex-wrap">
           <a
             href={`/provincia/${province.slug}/`}
+            onclick={`window.trackEvent && window.trackEvent('province_fuel_tab_click', { province: '${province.name}', fuel: 'benzina' })`}
             class={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${!isDiesel && !isGplMetano ? 'bg-emerald-500 text-zinc-950 shadow-sm font-black' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             title={`Vedi prezzi benzina a ${province.name}`}
           >
@@ -400,6 +401,7 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
           </a>
           <a
             href={`/provincia/${province.slug}/diesel/`}
+            onclick={`window.trackEvent && window.trackEvent('province_fuel_tab_click', { province: '${province.name}', fuel: 'diesel' })`}
             class={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${isDiesel ? 'bg-teal-500 text-zinc-950 shadow-sm font-black' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             title={`Vedi prezzi diesel a ${province.name}`}
           >
@@ -410,6 +412,7 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
           </a>
           <a
             href={`/provincia/${province.slug}/metano-gpl/`}
+            onclick={`window.trackEvent && window.trackEvent('province_fuel_tab_click', { province: '${province.name}', fuel: 'metano-gpl' })`}
             class={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${isGplMetano ? 'bg-blue-600 text-white shadow-sm font-black' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
             title={`Vedi prezzi GPL e metano a ${province.name}`}
           >
@@ -442,6 +445,7 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
         <!-- Pulsante Parlante Call to Action SOTTO la mappa -->
         <a
           href="/#trova-vicino"
+          onclick={`window.trackEvent && window.trackEvent('province_cta_vicino_click', { province: '${province.name}', fuel: '${fuelType}' })`}
           class="w-full py-3.5 px-5 rounded-2xl font-black text-sm sm:text-base bg-emerald-500 hover:bg-emerald-400 text-zinc-950 shadow-md shadow-emerald-500/20 hover:shadow-lg hover:shadow-emerald-500/30 transition-all flex items-center justify-center gap-2 border border-emerald-400/80 cursor-pointer active:scale-[0.99]"
         >
           <span>🎯 Trova la pompa più economica vicino a te →</span>
@@ -501,6 +505,7 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
                   href={st.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onclick={`window.trackEvent && window.trackEvent('navigate_click', { destination: '${(st.nome || st.brand).replace(/'/g, "\\'")}', brand: '${(st.brand || '').replace(/'/g, "\\'")}', province: '${province.name}', price: ${priceVal || 0}, rank: ${idx + 1}, source: 'province_list' })`}
                   class="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-colors flex items-center gap-1.5 shadow-xs"
                 >
                   <span>Portami qui</span>
@@ -558,6 +563,7 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
                   href={b.cheapestStation?.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onclick={`window.trackEvent && window.trackEvent('province_brand_map_click', { province: '${province.name}', brand: '${b.brand}' })`}
                   class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline"
                 >
                   Mappa →
@@ -718,6 +724,8 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
         const mapsUrl = st.mapsUrl || `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`;
         const thisFuel = st.fuelLabel || defaultFuelLabel;
         const unit = thisFuel === 'Metano' ? '/kg' : '/L';
+        const safeName = (st.nome || st.brand || '').replace(/'/g, "\\'");
+        const safeBrand = (st.brand || '').replace(/'/g, "\\'");
 
         const marker = window.L.marker([st.lat, st.lng], { icon })
           .bindPopup(`
@@ -727,9 +735,24 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
               <div style="font-size:11px; opacity:0.8; margin-top:2px;">${st.indirizzo} - ${st.comune}</div>
               <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${st.price ? st.price.toFixed(3) : 'N/D'}${unit}</div>
               <div style="font-size:10px; color:#71717a; margin-bottom:8px;">${thisFuel}</div>
-              <a href="${mapsUrl}" target="_blank" rel="noopener" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:5px 12px; border-radius:8px; text-decoration:none;">Naviga qui →</a>
+              <a href="${mapsUrl}" target="_blank" rel="noopener" onclick="window.trackEvent && window.trackEvent('navigate_click', { destination: '${safeName}', brand: '${safeBrand}', price: ${st.price || 0}, rank: ${idx + 1}, source: 'province_map_popup' })" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:5px 12px; border-radius:8px; text-decoration:none;">Naviga qui →</a>
             </div>
           `);
+
+        marker.on('click', () => {
+          if (window.trackEvent) {
+            window.trackEvent('map_marker_click', {
+              brand: st.brand,
+              station_name: st.nome || st.brand,
+              comune: st.comune,
+              price: st.price,
+              fuel: thisFuel,
+              rank: idx + 1,
+              source: 'province_map',
+            });
+          }
+        });
+
         markersLayer.addLayer(marker);
       });
 

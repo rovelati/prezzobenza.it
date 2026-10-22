@@ -40,6 +40,7 @@ const shareUrl = encodeURIComponent(url);
         rel="noopener noreferrer"
         aria-label="Condividi su X"
         class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-950 transition-transform active:scale-95 shadow-sm"
+        onclick="window.trackEvent && window.trackEvent('share_click', { method: 'twitter_x' })"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -54,6 +55,7 @@ const shareUrl = encodeURIComponent(url);
         rel="noopener noreferrer"
         aria-label="Condividi su Facebook"
         class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-[#1877F2] hover:bg-[#0c63d4] text-white transition-transform active:scale-95 shadow-sm"
+        onclick="window.trackEvent && window.trackEvent('share_click', { method: 'facebook' })"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -68,6 +70,7 @@ const shareUrl = encodeURIComponent(url);
         rel="noopener noreferrer"
         aria-label="Condividi su WhatsApp"
         class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-[#25D366] hover:bg-[#20ba59] text-zinc-950 transition-transform active:scale-95 shadow-sm"
+        onclick="window.trackEvent && window.trackEvent('share_click', { method: 'whatsapp' })"
       >
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
           <path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.201.302-.78 1.002-.956 1.203-.176.2-.351.226-.652.075-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.017-2.51-.212-.364-.023-.56.128-.71.135-.136.301-.351.451-.527.151-.176.201-.301.302-.502.1-.2.05-.376-.026-.526-.075-.15-.677-1.631-.928-2.235-.245-.588-.493-.508-.677-.518l-.577-.01c-.2 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512s1.079 2.913 1.23 3.114c.15.201 2.122 3.24 5.141 4.544.718.31 1.278.496 1.716.635.722.23 1.38.197 1.9.12.58-.087 1.78-.727 2.03-1.43.25-.703.25-1.306.175-1.43-.075-.126-.276-.201-.577-.352zM12 21.656a9.605 9.605 0 0 1-4.896-1.334l-.351-.208-3.642.955.972-3.551-.23-.365A9.626 9.626 0 0 1 2.344 12C2.344 6.677 6.677 2.344 12 2.344c2.58 0 5.006 1.004 6.83 2.828A9.604 9.604 0 0 1 21.656 12c0 5.323-4.333 9.656-9.656 9.656zm0-17.656C7.59 4 4 7.59 4 12c0 1.547.442 3.053 1.28 4.364l.198.309-.594 2.168 2.22-.582.298.177A7.962 7.962 0 0 0 12 20c4.41 0 8-3.59 8-8s-3.59-8-8-8z"/>
@@ -80,7 +83,7 @@ const shareUrl = encodeURIComponent(url);
         type="button"
         id="copy-link-btn"
         class="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 transition-transform active:scale-95 cursor-pointer"
-        onclick="navigator.clipboard.writeText('https://www.prezzobenza.it/').then(() => { const el = document.getElementById('copy-label'); el.textContent = 'Copiato!'; setTimeout(() => el.textContent = 'Copia Link', 2000); })"
+        onclick="navigator.clipboard.writeText('https://www.prezzobenza.it/').then(() => { const el = document.getElementById('copy-label'); el.textContent = 'Copiato!'; setTimeout(() => el.textContent = 'Copia Link', 2000); window.trackEvent && window.trackEvent('share_click', { method: 'copy_link' }); })"
       >
         <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>

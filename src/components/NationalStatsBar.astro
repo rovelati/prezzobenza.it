@@ -30,6 +30,7 @@ import { lastUpdatedFull } from '../utils/date.js';
         <a
           id="ticker-benzina"
           href="/prezzi-oggi"
+          onclick="window.trackEvent && window.trackEvent('national_ticker_click', { fuel: 'benzina', target: this.getAttribute('href') })"
           class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-emerald-500 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
           title="Consulta i prezzi medi della benzina"
         >
@@ -46,6 +47,7 @@ import { lastUpdatedFull } from '../utils/date.js';
         <a
           id="ticker-diesel"
           href="/prezzi-oggi"
+          onclick="window.trackEvent && window.trackEvent('national_ticker_click', { fuel: 'diesel', target: this.getAttribute('href') })"
           class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-teal-500 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
           title="Consulta i prezzi medi del diesel"
         >
@@ -62,6 +64,7 @@ import { lastUpdatedFull } from '../utils/date.js';
         <a
           id="ticker-gpl"
           href="/prezzi-oggi"
+          onclick="window.trackEvent && window.trackEvent('national_ticker_click', { fuel: 'gpl', target: this.getAttribute('href') })"
           class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
           title="Consulta i prezzi medi del GPL"
         >
@@ -78,6 +81,7 @@ import { lastUpdatedFull } from '../utils/date.js';
         <a
           id="ticker-metano"
           href="/prezzi-oggi"
+          onclick="window.trackEvent && window.trackEvent('national_ticker_click', { fuel: 'metano', target: this.getAttribute('href') })"
           class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-zinc-400 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
           title="Consulta i prezzi medi del Metano"
         >

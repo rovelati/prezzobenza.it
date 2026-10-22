@@ -34,6 +34,26 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.
     <meta name="description" content={description} />
     <link rel="canonical" href={fullCanonical} />
 
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CWV48MMBDF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CWV48MMBDF');
+
+      window.trackEvent = function(eventName, eventParams) {
+        try {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', eventName, eventParams || {});
+          }
+        } catch (e) {
+          console.debug('[GA4] Event error:', e);
+        }
+      };
+    </script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={fullCanonical} />
@@ -90,6 +110,10 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.
 
         // Dispatch custom event for Leaflet to switch tiles
         window.dispatchEvent(new CustomEvent('pb_theme_changed', { detail: { isDark } }));
+
+        if (window.trackEvent) {
+          window.trackEvent('theme_toggle', { theme: isDark ? 'dark' : 'light' });
+        }
       };
     </script>
 

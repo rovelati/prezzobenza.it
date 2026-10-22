@@ -367,6 +367,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
       btn.classList.add('active', 'bg-emerald-500', 'text-zinc-950', 'border-emerald-400', 'shadow-sm');
       btn.classList.remove('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       selectedFuel = btn.dataset.fuel;
+      if (window.trackEvent) window.trackEvent('filter_fuel_change', { fuel: selectedFuel });
       if (currentStations.length > 0) renderResults();
     });
   });
@@ -381,12 +382,14 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
       btn.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'border-zinc-300', 'dark:border-zinc-700', 'shadow-sm');
       btn.classList.remove('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       selectedService = btn.dataset.service;
+      if (window.trackEvent) window.trackEvent('filter_service_change', { service: selectedService });
       if (currentStations.length > 0) renderResults();
     });
   });
 
   function setRadius(radius) {
     selectedRadius = Number(radius);
+    if (window.trackEvent) window.trackEvent('filter_radius_change', { radius_km: selectedRadius });
     document.querySelectorAll('.radius-btn').forEach(b => {
       if (Number(b.dataset.radius) === selectedRadius) {
         b.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'shadow-sm', 'border-zinc-300', 'dark:border-zinc-700');
@@ -409,18 +412,21 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
   // Sort buttons
   sortPriceBtn?.addEventListener('click', () => {
     currentSort = 'price';
+    if (window.trackEvent) window.trackEvent('sort_change', { sort_by: 'price' });
     updateSortButtons();
     renderResults();
   });
 
   sortOpportunityBtn?.addEventListener('click', () => {
     currentSort = 'opportunity';
+    if (window.trackEvent) window.trackEvent('sort_change', { sort_by: 'opportunity' });
     updateSortButtons();
     renderResults();
   });
 
   sortDistanceBtn?.addEventListener('click', () => {
     currentSort = 'distance';
+    if (window.trackEvent) window.trackEvent('sort_change', { sort_by: 'distance' });
     updateSortButtons();
     renderResults();
   });
@@ -439,6 +445,13 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
     const code = e.target.value;
     if (!code) return;
     hasSearched = true;
+    if (window.trackEvent) {
+      const selectedOption = provinceSelect.options[provinceSelect.selectedIndex];
+      window.trackEvent('province_dropdown_select', {
+        province_code: code,
+        province_name: selectedOption ? selectedOption.text.split('(')[0].trim() : code,
+      });
+    }
     await loadProvinceStations(code);
   });
 
@@ -523,8 +536,14 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
   // Geolocation trigger
   btnGeolocate?.addEventListener('click', () => {
     hasSearched = true;
+    if (window.trackEvent) {
+      window.trackEvent('geolocate_button_click', { fuel: selectedFuel, radius: selectedRadius });
+    }
     if (!navigator.geolocation) {
       showStatus('La geolocalizzazione GPS non è supportata dal tuo browser. Seleziona una provincia dal menu.', 'error');
+      if (window.trackEvent) {
+        window.trackEvent('geolocate_gps_error', { reason: 'not_supported' });
+      }
       return;
     }
 
@@ -542,6 +561,14 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
 
         const nearestProvs = getNearestProvinces(userCoords.lat, userCoords.lng, 2);
         showStatus(`Posizione GPS rilevata! Caricamento distributori (${nearestProvs[0]?.name || 'tua zona'})...`, 'info');
+
+        if (window.trackEvent) {
+          window.trackEvent('geolocate_gps_success', {
+            accuracy_m: Math.round(pos.coords.accuracy),
+            nearest_province: nearestProvs[0]?.name || null,
+            nearest_code: nearestProvs[0]?.code || null,
+          });
+        }
 
         try {
           const stationPromises = nearestProvs.map(p =>
@@ -608,6 +635,12 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
         if (err.code === 2) msg = 'Posizione GPS non disponibile. Usando la stima da IP.';
         if (err.code === 3) msg = 'Timeout GPS. Seleziona la provincia dal menu o usa la stima IP.';
         showStatus(msg, 'error');
+        if (window.trackEvent) {
+          window.trackEvent('geolocate_gps_error', {
+            error_code: err.code,
+            error_message: err.message,
+          });
+        }
       },
       { timeout: 10000, enableHighAccuracy: true }
     );
@@ -725,6 +758,13 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
         cityName: geo.city,
         nearestProvs: nearestProvs.map(p => ({ code: p.code, name: p.name })),
       });
+
+      if (window.trackEvent) {
+        window.trackEvent('geolocate_ip_detected', {
+          city: geo.city,
+          nearest_province: nearestProvs[0]?.name || null,
+        });
+      }
 
       // Aggiorna Badge IP
       const ipBadge = document.getElementById('ip-location-pill');
@@ -934,18 +974,35 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
           });
 
           const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`;
+          const safeName = (st.nome || st.brand).replace(/'/g, "\\'");
+          const safeBrand = (st.brand || '').replace(/'/g, "\\'");
+          const safeComune = (st.comune || '').replace(/'/g, "\\'");
 
           const marker = window.L.marker([st.lat, st.lng], { icon })
             .bindPopup(`
               <div style="font-family:system-ui; padding:2px;">
-                <div style="font-size:11px; font-weight:800; color:#10b981;">${st.brand}</div>
+                <div style="font-size:11px; font-weight:800; color:#10b981;">#${idx + 1} • ${st.brand}</div>
                 <div style="font-size:13px; font-weight:bold;">${st.nome || st.brand}</div>
                 <div style="font-size:11px; opacity:0.8;">${st.indirizzo} - ${st.comune}</div>
                 <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${st.priceVal.toFixed(3)}/L</div>
                 ${st.distanceKm !== null ? `<div style="font-size:10px; margin-bottom:6px;">📍 ${st.distanceKm} km da te</div>` : ''}
-                <a href="${mapsUrl}" target="_blank" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:4px 10px; border-radius:6px; text-decoration:none;">Naviga qui →</a>
+                <a href="${mapsUrl}" target="_blank" onclick="window.trackEvent && window.trackEvent('navigate_click', { destination: '${safeName}', brand: '${safeBrand}', comune: '${safeComune}', price: ${st.priceVal}, rank: ${idx + 1}, source: 'map_popup' })" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:4px 10px; border-radius:6px; text-decoration:none;">Naviga qui →</a>
               </div>
             `);
+
+          marker.on('click', () => {
+            if (window.trackEvent) {
+              window.trackEvent('map_marker_click', {
+                brand: st.brand,
+                station_name: st.nome || st.brand,
+                comune: st.comune,
+                price: st.priceVal,
+                rank: idx + 1,
+                fuel: selectedFuel,
+              });
+            }
+          });
+
           markersLayer.addLayer(marker);
         });
 
@@ -1021,6 +1078,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
                 href="${mapsUrl}"
                 target="_blank"
                 rel="noopener noreferrer"
+                onclick="window.trackEvent && window.trackEvent('navigate_click', { destination: '${(st.nome || st.brand).replace(/'/g, "\\'")}', brand: '${(st.brand || '').replace(/'/g, "\\'")}', comune: '${(st.comune || '').replace(/'/g, "\\'")}', price: ${st.priceVal}, rank: ${idx + 1}, source: 'station_card' })"
                 class="px-4 py-2 rounded-xl text-xs font-bold bg-zinc-900 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-zinc-950 transition-colors shadow-sm flex items-center gap-1.5"
               >
                 <svg class="w-4 h-4 text-emerald-400 dark:text-emerald-600" fill="currentColor" viewBox="0 0 24 24">

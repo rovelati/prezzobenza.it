@@ -13,6 +13,8 @@ export interface Props {
     name: string;
     region: string;
     slug: string;
+    lat?: number;
+    lng?: number;
     avgBenzina?: number;
     avgDiesel?: number;
     minBenzina?: number;
@@ -75,6 +77,22 @@ const stationsByMetano = formatStations(
 const cheapestBenzinaStation = stationsByBenzina[0] || null;
 const cheapestDieselStation = stationsByDiesel[0] || null;
 const activeCheapestStation = isDiesel ? cheapestDieselStation : cheapestBenzinaStation;
+
+// Stazioni per la mappa interattiva provinciale (Top 15 con coordinate)
+const mapStations = (isDiesel ? stationsByDiesel : stationsByBenzina)
+  .slice(0, 15)
+  .filter((s: any) => s.lat && s.lng)
+  .map((s: any) => ({
+    rank: s.rank,
+    nome: s.nome,
+    brand: s.brand,
+    indirizzo: s.indirizzo,
+    comune: s.comune,
+    lat: s.lat,
+    lng: s.lng,
+    price: isDiesel ? s.prices?.diesel_self?.prezzo : s.prices?.benzina_self?.prezzo,
+    mapsUrl: s.mapsUrl,
+  }));
 
 const natBenzinaAvg = (nationalStats as any).averages?.benzina_self || 1.78;
 const natDieselAvg = (nationalStats as any).averages?.diesel_self || 1.68;
@@ -332,6 +350,49 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
         </div>
       </div>
 
+      <!-- Call To Action: Trova la pompa vicino a te più economica -->
+      <div class="relative overflow-hidden rounded-3xl p-5 sm:p-6 bg-gradient-to-br from-emerald-500/15 via-zinc-900/40 to-teal-500/10 border border-emerald-500/30 shadow-xl backdrop-blur-xl flex flex-col md:flex-row md:items-center justify-between gap-5">
+        <div class="space-y-1.5 max-w-xl">
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Geolocalizzazione GPS Attiva
+          </div>
+          <h3 class="text-lg sm:text-xl font-black text-zinc-900 dark:text-white tracking-tight">
+            Vuoi trovare il distributore più economico vicino alla tua posizione?
+          </h3>
+          <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+            Calcola all'istante il risparmio effettivo al netto dei km percorsi. Scopri se conviene fare qualche km in più o fare rifornimento sotto casa.
+          </p>
+        </div>
+
+        <a
+          href="/#trova-vicino"
+          class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl font-black text-xs sm:text-sm bg-emerald-500 hover:bg-emerald-400 text-zinc-950 transition-all shadow-lg shadow-emerald-500/25 active:scale-95 shrink-0 group"
+        >
+          <span>🎯 Trova la pompa vicino a te più economica</span>
+          <span class="transition-transform group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+
+      <!-- ── Mappa Interattiva Distributori con Pin Point ────────────────────── -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between">
+          <h3 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+            <span>🗺️ Mappa Distributori {isDiesel ? 'Diesel' : 'Benzina'} a {province.name}</span>
+          </h3>
+          <span class="text-xs text-zinc-500">I più economici con prezzi ufficiali MIMIT</span>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-lg bg-zinc-100 dark:bg-zinc-950">
+          <div id="province-map" class="w-full h-[360px] sm:h-[420px] rounded-2xl" style="min-height: 360px; width: 100%; z-index: 10;"></div>
+          <div class="absolute bottom-2 left-2 z-[400] bg-zinc-900/85 backdrop-blur-md text-[10px] text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700 pointer-events-none flex items-center gap-2">
+            <span class="text-emerald-400 font-bold">🟢 Verde = Più Economico</span>
+            <span>•</span>
+            <span>📍 Clicca un pin per dettagli e navigatore</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Top 10 Stations List -->
       <div class="space-y-3">
         {(isDiesel ? stationsByDiesel : stationsByBenzina).slice(0, 10).map((st: any) => {
@@ -550,4 +611,77 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
     />
 
   </div>
+
+  <!-- Script Mappa Interattiva della Provincia -->
+  <script define:vars={{ mapStations, provinceCentroid: { lat: province.lat || 40.85, lng: province.lng || 14.26 }, fuelLabel: isDiesel ? 'Diesel' : 'Benzina' }}>
+    function initProvinceMap() {
+      if (typeof window.L === 'undefined') {
+        setTimeout(initProvinceMap, 60);
+        return;
+      }
+      const mapEl = document.getElementById('province-map');
+      if (!mapEl) return;
+
+      const osmTiles = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+      const initialLat = mapStations.length > 0 && mapStations[0].lat ? mapStations[0].lat : provinceCentroid.lat;
+      const initialLng = mapStations.length > 0 && mapStations[0].lng ? mapStations[0].lng : provinceCentroid.lng;
+
+      const map = window.L.map('province-map', {
+        zoomControl: true,
+        scrollWheelZoom: false,
+      }).setView([initialLat, initialLng], 11);
+
+      window.L.tileLayer(osmTiles, {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+        maxZoom: 19,
+      }).addTo(map);
+
+      const markersLayer = window.L.layerGroup().addTo(map);
+      const points = [];
+
+      mapStations.forEach((st, idx) => {
+        if (!st.lat || !st.lng) return;
+        points.push([st.lat, st.lng]);
+        const isCheapest = idx === 0;
+        const iconClass = isCheapest ? 'pb-marker-cheapest' : 'pb-marker-standard';
+        const icon = window.L.divIcon({
+          className: iconClass,
+          html: `<div style="font-size:10px; padding:2px 5px; text-align:center;">€${st.price ? st.price.toFixed(2) : ''}</div>`,
+          iconSize: [46, 20],
+        });
+
+        const mapsUrl = st.mapsUrl || `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}`;
+
+        const marker = window.L.marker([st.lat, st.lng], { icon })
+          .bindPopup(`
+            <div style="font-family:system-ui; padding:3px; max-width:240px;">
+              <div style="font-size:11px; font-weight:800; color:#10b981;">#${st.rank} • ${st.brand}</div>
+              <div style="font-size:13px; font-weight:bold; margin-top:2px;">${st.nome || st.brand}</div>
+              <div style="font-size:11px; opacity:0.8; margin-top:2px;">${st.indirizzo} - ${st.comune}</div>
+              <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${st.price ? st.price.toFixed(3) : 'N/D'}/L</div>
+              <div style="font-size:10px; color:#71717a; margin-bottom:8px;">${fuelLabel} Self-Service</div>
+              <a href="${mapsUrl}" target="_blank" rel="noopener" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:5px 12px; border-radius:8px; text-decoration:none;">Naviga qui →</a>
+            </div>
+          `);
+        markersLayer.addLayer(marker);
+      });
+
+      if (points.length > 0) {
+        setTimeout(() => {
+          map.invalidateSize();
+          const bounds = window.L.latLngBounds(points);
+          map.fitBounds(bounds, { padding: [35, 35], maxZoom: 13, animate: false });
+        }, 150);
+      }
+
+      window.addEventListener('resize', () => { if (map) map.invalidateSize(); });
+      window.addEventListener('pageshow', () => { if (map) map.invalidateSize(); });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initProvinceMap);
+    } else {
+      initProvinceMap();
+    }
+  </script>
 </Layout>

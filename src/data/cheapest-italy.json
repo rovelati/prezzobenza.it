@@ -726,22 +726,22 @@
         "benzina_servito": {
           "prezzo": 1.619,
           "isSelf": false,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         },
         "benzina_self": {
           "prezzo": 1.619,
           "isSelf": true,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         },
         "diesel_servito": {
           "prezzo": 1.726,
           "isSelf": false,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         },
         "diesel_self": {
           "prezzo": 1.726,
           "isSelf": true,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         }
       }
     },
@@ -916,14 +916,14 @@
       "lng": 7.513705,
       "prices": {
         "benzina_servito": {
-          "prezzo": 2.019,
+          "prezzo": 1.999,
           "isSelf": false,
-          "dt": "19/10/2026 07:33:46"
+          "dt": "20/10/2026 14:39:03"
         },
         "benzina_self": {
-          "prezzo": 2.019,
+          "prezzo": 1.999,
           "isSelf": true,
-          "dt": "18/10/2026 18:37:12"
+          "dt": "20/10/2026 14:04:08"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -934,6 +934,31 @@
           "prezzo": 1.305,
           "isSelf": true,
           "dt": "15/01/2016 08:58:05"
+        }
+      }
+    },
+    {
+      "id": "9205",
+      "gestore": "PARROCCHIA S. ANNA DI TREPALLE",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "ENI TREPALLE",
+      "indirizzo": "Statale 301 del Foscagno, Km. 28,400, dir. BORMIO -",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.526547,
+      "lng": 10.175804,
+      "prices": {
+        "diesel_servito": {
+          "prezzo": 1.307,
+          "isSelf": false,
+          "dt": "20/10/2026 18:02:51"
+        },
+        "diesel_self": {
+          "prezzo": 1.307,
+          "isSelf": true,
+          "dt": "20/10/2026 18:02:51"
         }
       }
     },
@@ -953,7 +978,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "13/10/2026 14:12:57"
+          "dt": "20/10/2026 14:33:58"
         },
         "diesel_self": {
           "prezzo": 1.309,
@@ -978,7 +1003,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "13/10/2026 14:15:20"
+          "dt": "20/10/2026 14:39:25"
         },
         "diesel_self": {
           "prezzo": 1.399,
@@ -1686,31 +1711,6 @@
           "dt": "04/10/2026 21:40:40"
         }
       }
-    },
-    {
-      "id": "60611",
-      "gestore": "SPAZIO S.R.L.",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "STIENTA",
-      "indirizzo": "Via Eridania 2094  45039",
-      "comune": "STIENTA",
-      "provincia": "RO",
-      "lat": 44.939371,
-      "lng": 11.548216,
-      "prices": {
-        "benzina_self": {
-          "prezzo": 1.665,
-          "isSelf": true,
-          "dt": "02/10/2026 21:55:41"
-        },
-        "diesel_self": {
-          "prezzo": 1.594,
-          "isSelf": true,
-          "dt": "02/10/2026 21:55:41"
-        }
-      }
     }
   ],
   "pompeBianche": [
@@ -2030,22 +2030,22 @@
         "benzina_servito": {
           "prezzo": 1.619,
           "isSelf": false,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         },
         "benzina_self": {
           "prezzo": 1.619,
           "isSelf": true,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         },
         "diesel_servito": {
           "prezzo": 1.726,
           "isSelf": false,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         },
         "diesel_self": {
           "prezzo": 1.726,
           "isSelf": true,
-          "dt": "12/10/2026 18:59:39"
+          "dt": "20/10/2026 08:03:08"
         }
       }
     },

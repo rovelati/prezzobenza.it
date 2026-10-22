@@ -1,186 +1,761 @@
 {
-  "updatedAt": "2026-10-21T20:39:59.227Z",
+  "updatedAt": "2026-10-22T21:48:00.132Z",
   "topExpensiveBenzina": [
     {
       "id": "46062",
-      "nome": "BAIA POWER",
+      "gestore": "BAIA POWER SRL UNIPERSONALE",
       "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "BAIA POWER",
       "indirizzo": "Viale Europa 8  81034",
       "comune": "MONDRAGONE",
       "provincia": "CE",
       "lat": 41.120574,
       "lng": 13.872699,
-      "tipo": "Stradale",
-      "fuel": "Benzina",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.797,
+          "isSelf": false,
+          "dt": "20/10/2026 22:30:38"
+        },
+        "benzina_self": {
+          "prezzo": 2.497,
+          "isSelf": true,
+          "dt": "20/10/2026 22:30:38"
+        },
+        "diesel_servito": {
+          "prezzo": 2.699,
+          "isSelf": false,
+          "dt": "20/10/2026 22:30:38"
+        },
+        "diesel_self": {
+          "prezzo": 2.399,
+          "isSelf": true,
+          "dt": "20/10/2026 22:30:38"
+        },
+        "gpl": {
+          "prezzo": 0.697,
+          "isSelf": false,
+          "dt": "20/10/2026 22:30:38"
+        }
+      },
       "prezzo": 2.797,
+      "service": "servito",
+      "fuel": "Benzina",
       "fullTankCost": 139.85
     },
     {
       "id": "15315",
-      "nome": "RUBECA MARIO",
+      "gestore": "RUBECA MARIO",
       "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "RUBECA MARIO",
       "indirizzo": "VIA DEI MILLE 5, 06055 - -",
       "comune": "MARSCIANO",
       "provincia": "PG",
       "lat": 42.917358,
       "lng": 12.337636,
-      "tipo": "Stradale",
-      "fuel": "Benzina",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.789,
+          "isSelf": false,
+          "dt": "17/10/2026 08:02:27"
+        },
+        "benzina_self": {
+          "prezzo": 2.789,
+          "isSelf": true,
+          "dt": "17/10/2026 08:02:27"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "17/10/2026 08:02:27"
+        },
+        "diesel_self": {
+          "prezzo": 2.799,
+          "isSelf": true,
+          "dt": "17/10/2026 08:02:27"
+        }
+      },
       "prezzo": 2.789,
+      "service": "servito",
+      "fuel": "Benzina",
       "fullTankCost": 139.45
     },
     {
       "id": "62304",
-      "nome": "DAL ZOTTO S.A.S.",
+      "gestore": "DAL ZOTTO S.A.S. DI DAL ZOTTO ARMANDO E C.",
       "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "DAL ZOTTO S.A.S.",
       "indirizzo": "Via Borgo Italia 83  91017",
       "comune": "PANTELLERIA",
       "provincia": "TP",
       "lat": 36.83101,
       "lng": 11.939799,
-      "tipo": "Stradale",
-      "fuel": "Benzina",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.789,
+          "isSelf": false,
+          "dt": "20/10/2026 18:42:06"
+        }
+      },
       "prezzo": 2.789,
+      "service": "servito",
+      "fuel": "Benzina",
       "fullTankCost": 139.45
     },
     {
       "id": "61340",
-      "nome": "Gestore MBL srl",
+      "gestore": "MBL SRL",
       "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "Gestore MBL srl",
       "indirizzo": "Via Assunzione 75  57032",
       "comune": "CAPRAIA ISOLA",
       "provincia": "LI",
       "lat": 43.051604,
       "lng": 9.832948,
-      "tipo": "Stradale",
-      "fuel": "Benzina",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.763,
+          "isSelf": false,
+          "dt": "13/10/2026 14:23:59"
+        },
+        "benzina_self": {
+          "prezzo": 2.763,
+          "isSelf": true,
+          "dt": "13/10/2026 14:23:59"
+        },
+        "diesel_servito": {
+          "prezzo": 2.613,
+          "isSelf": false,
+          "dt": "13/10/2026 14:23:59"
+        },
+        "diesel_self": {
+          "prezzo": 2.613,
+          "isSelf": true,
+          "dt": "13/10/2026 14:23:59"
+        }
+      },
       "prezzo": 2.763,
+      "service": "servito",
+      "fuel": "Benzina",
       "fullTankCost": 138.15
     },
     {
       "id": "16240",
-      "nome": "ESSO",
+      "gestore": "DE BIASE MARCO",
       "brand": "Esso",
+      "bandieraRaw": "Esso",
+      "tipo": "Stradale",
+      "nome": "ESSO",
       "indirizzo": "MONTAGNA SPACCATA 491 80126",
       "comune": "NAPOLI",
       "provincia": "NA",
       "lat": 40.855179,
       "lng": 14.151977,
-      "tipo": "Stradale",
-      "fuel": "Benzina",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.749,
+          "isSelf": false,
+          "dt": "19/10/2026 12:50:30"
+        },
+        "benzina_self": {
+          "prezzo": 2.049,
+          "isSelf": true,
+          "dt": "19/10/2026 12:50:30"
+        },
+        "diesel_servito": {
+          "prezzo": 2.749,
+          "isSelf": false,
+          "dt": "19/10/2026 12:50:30"
+        },
+        "diesel_self": {
+          "prezzo": 2.299,
+          "isSelf": true,
+          "dt": "19/10/2026 12:50:30"
+        }
+      },
       "prezzo": 2.749,
+      "service": "servito",
+      "fuel": "Benzina",
       "fullTankCost": 137.45
     },
     {
       "id": "59249",
-      "nome": "GAN- SRL ISOLA DI MARETTIMO (TP)",
+      "gestore": "GAN SOCIETA' A RESPONSABILITA' LIMITATA",
       "brand": "GAN",
+      "bandieraRaw": "GAN",
+      "tipo": "Stradale",
+      "nome": "GAN- SRL ISOLA DI MARETTIMO (TP)",
       "indirizzo": "MOLO NUOVO SAN SIMONE SNC 91023",
       "comune": "FAVIGNANA",
       "provincia": "TP",
       "lat": 37.966277,
       "lng": 12.076218,
-      "tipo": "Stradale",
-      "fuel": "Benzina",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.729,
+          "isSelf": false,
+          "dt": "19/10/2026 13:11:33"
+        },
+        "diesel_servito": {
+          "prezzo": 2.759,
+          "isSelf": false,
+          "dt": "19/10/2026 13:11:33"
+        }
+      },
       "prezzo": 2.729,
+      "service": "servito",
+      "fuel": "Benzina",
       "fullTankCost": 136.45
+    },
+    {
+      "id": "40673",
+      "gestore": "COSTANZO CARBURANTI S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "Costanzo Carburanti s.r.l.",
+      "indirizzo": "CONTRADA GUITGIA-LAMPEDUSA SN 92010",
+      "comune": "LAMPEDUSA E LINOSA",
+      "provincia": "AG",
+      "lat": 35.500892,
+      "lng": 12.601554,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.699,
+          "isSelf": false,
+          "dt": "15/10/2026 19:23:40"
+        },
+        "benzina_self": {
+          "prezzo": 2.699,
+          "isSelf": true,
+          "dt": "15/10/2026 19:23:40"
+        },
+        "diesel_servito": {
+          "prezzo": 2.779,
+          "isSelf": false,
+          "dt": "15/10/2026 19:23:40"
+        },
+        "diesel_self": {
+          "prezzo": 2.779,
+          "isSelf": true,
+          "dt": "15/10/2026 19:23:40"
+        }
+      },
+      "prezzo": 2.699,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 134.95
+    },
+    {
+      "id": "57720",
+      "gestore": "FAST EAT ITALY SRL",
+      "brand": "Kerotris",
+      "bandieraRaw": "Kerotris",
+      "tipo": "Autostradale",
+      "nome": "BRUGNERA SUD",
+      "indirizzo": "Autostrada A28 PORTOGRUARO-CONEGLIANO,  Km. 29,4, dir. Conegliano-Portogruaro 33070",
+      "comune": "BRUGNERA",
+      "provincia": "PN",
+      "lat": 45.940745,
+      "lng": 12.561111,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.699,
+          "isSelf": false,
+          "dt": "21/10/2026 07:51:46"
+        },
+        "benzina_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "21/10/2026 07:51:46"
+        },
+        "diesel_self": {
+          "prezzo": 2.699,
+          "isSelf": true,
+          "dt": "21/10/2026 07:51:46"
+        }
+      },
+      "prezzo": 2.699,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 134.95
+    },
+    {
+      "id": "57732",
+      "gestore": "FAST EAT ITALY SRL",
+      "brand": "Kerotris",
+      "bandieraRaw": "Kerotris",
+      "tipo": "Autostradale",
+      "nome": "PORCIA NORD",
+      "indirizzo": "Autostrada A28 PORTOGRUARO-CONEGLIANO,  Km. 29, dir. CONEGLIANO 33080",
+      "comune": "PORCIA",
+      "provincia": "PN",
+      "lat": 45.942151,
+      "lng": 12.562335,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.699,
+          "isSelf": false,
+          "dt": "21/10/2026 07:52:00"
+        },
+        "benzina_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "21/10/2026 07:52:00"
+        },
+        "diesel_self": {
+          "prezzo": 2.699,
+          "isSelf": true,
+          "dt": "21/10/2026 07:52:00"
+        }
+      },
+      "prezzo": 2.699,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 134.95
+    },
+    {
+      "id": "57736",
+      "gestore": "FAST EAT ITALY SRL",
+      "brand": "Kerotris",
+      "bandieraRaw": "Kerotris",
+      "tipo": "Autostradale",
+      "nome": "DUINO NORD",
+      "indirizzo": "Autostrada A4 VENEZIA-TRIESTE, dir. VENEZIA 34011",
+      "comune": "DUINO-AURISINA",
+      "provincia": "TS",
+      "lat": 45.777415,
+      "lng": 13.60786,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.699,
+          "isSelf": false,
+          "dt": "21/10/2026 07:52:11"
+        },
+        "benzina_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "21/10/2026 07:52:11"
+        },
+        "diesel_self": {
+          "prezzo": 2.699,
+          "isSelf": true,
+          "dt": "21/10/2026 07:52:11"
+        }
+      },
+      "prezzo": 2.699,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 134.95
     }
   ],
   "topExpensiveDiesel": [
     {
       "id": "60141",
-      "nome": "NAUTILUS AVIATION SPA LINOSA",
+      "gestore": "NAUTILUS AVIATION S.P.A.",
       "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "NAUTILUS AVIATION SPA LINOSA",
       "indirizzo": "VIA POZZOLANA DI PONENTE SNC 92010",
       "comune": "LAMPEDUSA E LINOSA",
       "provincia": "AG",
       "lat": 35.861987,
       "lng": 12.857395,
-      "tipo": "Stradale",
-      "fuel": "Diesel",
-      "service": "servito",
+      "prices": {
+        "diesel_servito": {
+          "prezzo": 2.8,
+          "isSelf": false,
+          "dt": "19/10/2026 12:42:03"
+        }
+      },
       "prezzo": 2.8,
+      "service": "servito",
+      "fuel": "Diesel",
       "fullTankCost": 140
     },
     {
       "id": "38882",
-      "nome": "STURA OVEST",
+      "gestore": "TIGER S.R.L.",
       "brand": "Esso",
+      "bandieraRaw": "Esso",
+      "tipo": "Autostradale",
+      "nome": "STURA OVEST",
       "indirizzo": "Autostrada A26 (GE) VOLTRI-GRAVELLONA T., Km. 176, dir. GENOVA - 15070",
       "comune": "BELFORTE MONFERRATO",
       "provincia": "AL",
       "lat": 44.591592,
       "lng": 8.664513,
-      "tipo": "Autostradale",
-      "fuel": "Diesel",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.599,
+          "isSelf": false,
+          "dt": "20/10/2026 20:18:24"
+        },
+        "benzina_self": {
+          "prezzo": 2.109,
+          "isSelf": true,
+          "dt": "20/10/2026 20:18:24"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "20/10/2026 20:18:24"
+        },
+        "diesel_self": {
+          "prezzo": 2.349,
+          "isSelf": true,
+          "dt": "20/10/2026 20:18:24"
+        },
+        "gpl": {
+          "prezzo": 0.999,
+          "isSelf": false,
+          "dt": "20/10/2026 20:18:24"
+        }
+      },
       "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "48076",
+      "gestore": "ECONOMY S.R.L.",
+      "brand": "Economysrl",
+      "bandieraRaw": "Economysrl",
+      "tipo": "Stradale",
+      "nome": "Economy - Brusson",
+      "indirizzo": "RUE TROIS VILLAGES 8 11022",
+      "comune": "BRUSSON",
+      "provincia": "AO",
+      "lat": 45.756452,
+      "lng": 7.734475,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.499,
+          "isSelf": false,
+          "dt": "20/10/2026 17:54:58"
+        },
+        "benzina_self": {
+          "prezzo": 2.199,
+          "isSelf": true,
+          "dt": "20/10/2026 17:54:58"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "20/10/2026 17:54:58"
+        },
+        "diesel_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "20/10/2026 17:54:58"
+        },
+        "gpl": {
+          "prezzo": 0.899,
+          "isSelf": false,
+          "dt": "20/10/2026 17:54:58"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
       "fullTankCost": 139.95
     },
     {
       "id": "3537",
-      "nome": "BADIA AL PINO EST",
+      "gestore": "TICABI S.N.C. DI CANNONI VASCO & C.",
       "brand": "Esso",
+      "bandieraRaw": "Esso",
+      "tipo": "Autostradale",
+      "nome": "BADIA AL PINO EST",
       "indirizzo": "Autostrada A1 MILANO-NAPOLI,  Km. 362, dir. nord 52041",
       "comune": "CIVITELLA IN VAL DI CHIANA",
       "provincia": "AR",
       "lat": 43.406412,
       "lng": 11.763894,
-      "tipo": "Autostradale",
-      "fuel": "Diesel",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.589,
+          "isSelf": false,
+          "dt": "01/10/2026 19:00:09"
+        },
+        "benzina_self": {
+          "prezzo": 2.092,
+          "isSelf": true,
+          "dt": "16/10/2026 09:30:14"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "07/10/2026 18:00:05"
+        },
+        "diesel_self": {
+          "prezzo": 2.362,
+          "isSelf": true,
+          "dt": "07/10/2026 18:00:05"
+        },
+        "gpl": {
+          "prezzo": 0.949,
+          "isSelf": false,
+          "dt": "07/10/2026 18:00:06"
+        }
+      },
       "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
       "fullTankCost": 139.95
     },
     {
       "id": "63475",
-      "nome": "BADIA AL PINO EST",
+      "gestore": "TIGER S.R.L.",
       "brand": "Esso",
+      "bandieraRaw": "Esso",
+      "tipo": "Autostradale",
+      "nome": "BADIA AL PINO EST",
       "indirizzo": "Autostrada A1 MILANO-NAPOLI,  Km. 362, dir. nord",
       "comune": "CIVITELLA IN VAL DI CHIANA",
       "provincia": "AR",
       "lat": 43.407165,
       "lng": 11.768668,
-      "tipo": "Autostradale",
-      "fuel": "Diesel",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.529,
+          "isSelf": false,
+          "dt": "19/10/2026 08:43:30"
+        },
+        "benzina_self": {
+          "prezzo": 2.092,
+          "isSelf": true,
+          "dt": "19/10/2026 08:43:30"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "19/10/2026 08:43:30"
+        },
+        "diesel_self": {
+          "prezzo": 2.362,
+          "isSelf": true,
+          "dt": "19/10/2026 08:43:30"
+        },
+        "gpl": {
+          "prezzo": 0.949,
+          "isSelf": false,
+          "dt": "19/10/2026 08:43:30"
+        }
+      },
       "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
       "fullTankCost": 139.95
     },
     {
       "id": "41081",
-      "nome": "LAIMBURG EST",
+      "gestore": "TIGER S.R.L.",
       "brand": "Tamoil",
+      "bandieraRaw": "Tamoil",
+      "tipo": "Autostradale",
+      "nome": "LAIMBURG EST",
       "indirizzo": "A22 BRENNERO-MODENA, Km. 220, NORD - 39051",
       "comune": "VADENA",
       "provincia": "BZ",
       "lat": 46.386691,
       "lng": 11.294112,
-      "tipo": "Autostradale",
-      "fuel": "Diesel",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.529,
+          "isSelf": false,
+          "dt": "21/10/2026 06:09:09"
+        },
+        "benzina_self": {
+          "prezzo": 2.099,
+          "isSelf": true,
+          "dt": "20/10/2026 21:59:01"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "21/10/2026 06:09:09"
+        },
+        "diesel_self": {
+          "prezzo": 2.359,
+          "isSelf": true,
+          "dt": "21/10/2026 06:09:09"
+        }
+      },
       "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
       "fullTankCost": 139.95
     },
     {
       "id": "46748",
-      "nome": "PLOSE EST",
+      "gestore": "TIGER S.R.L.",
       "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Autostradale",
+      "nome": "PLOSE EST",
       "indirizzo": "A22 BRENNERO-MODENA, Km. 271,00, NORD - 39040",
       "comune": "VARNA",
       "provincia": "BZ",
       "lat": 46.732298,
       "lng": 11.641673,
-      "tipo": "Autostradale",
-      "fuel": "Diesel",
-      "service": "servito",
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.529,
+          "isSelf": false,
+          "dt": "19/10/2026 10:39:07"
+        },
+        "benzina_self": {
+          "prezzo": 2.074,
+          "isSelf": true,
+          "dt": "19/10/2026 10:39:07"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "20/10/2026 10:41:05"
+        },
+        "diesel_self": {
+          "prezzo": 2.359,
+          "isSelf": true,
+          "dt": "19/10/2026 10:39:07"
+        }
+      },
       "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "61528",
+      "gestore": "SOPHIA SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "TV carburanti",
+      "indirizzo": "Via fiume busento Snc 88100",
+      "comune": "CATANZARO",
+      "provincia": "CZ",
+      "lat": 38.871448,
+      "lng": 16.604863,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.509,
+          "isSelf": false,
+          "dt": "20/10/2026 08:03:32"
+        },
+        "benzina_self": {
+          "prezzo": 2.199,
+          "isSelf": true,
+          "dt": "20/10/2026 08:03:32"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "20/10/2026 08:03:32"
+        },
+        "diesel_self": {
+          "prezzo": 2.489,
+          "isSelf": true,
+          "dt": "20/10/2026 08:03:32"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "25175",
+      "gestore": "CARUSEL S.A.S. DI RANIERI ALESSANDRO",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "stazione servizio CARUSEL",
+      "indirizzo": "Statale 89 Garganica, Km. 85+800, dir. PESCHICI - 71010",
+      "comune": "PESCHICI",
+      "provincia": "FG",
+      "lat": 41.933536,
+      "lng": 16.014865,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.499,
+          "isSelf": false,
+          "dt": "19/10/2026 20:03:25"
+        },
+        "benzina_self": {
+          "prezzo": 2.199,
+          "isSelf": true,
+          "dt": "19/10/2026 20:03:25"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "19/10/2026 20:03:25"
+        },
+        "diesel_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "19/10/2026 20:03:25"
+        },
+        "gpl": {
+          "prezzo": 0.999,
+          "isSelf": false,
+          "dt": "19/10/2026 20:03:25"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "38843",
+      "gestore": "AMORE S.A.S. DI AMORE ROSA E C.",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "IP PIMONTE",
+      "indirizzo": "VIA MADONNINA S.N.C. SNC 80050",
+      "comune": "PIMONTE",
+      "provincia": "NA",
+      "lat": 40.673311,
+      "lng": 14.514061,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.629,
+          "isSelf": false,
+          "dt": "16/10/2026 09:03:01"
+        },
+        "benzina_self": {
+          "prezzo": 2.629,
+          "isSelf": true,
+          "dt": "16/10/2026 09:03:01"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "16/10/2026 09:03:01"
+        },
+        "diesel_self": {
+          "prezzo": 2.799,
+          "isSelf": true,
+          "dt": "16/10/2026 09:03:01"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
       "fullTankCost": 139.95
     }
   ]

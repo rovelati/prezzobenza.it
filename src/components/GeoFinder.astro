@@ -126,25 +126,32 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
           <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-1.5">
             Raggio di Ricerca
           </label>
-          <div class="grid grid-cols-3 gap-1.5 p-1 bg-zinc-100 dark:bg-zinc-950 rounded-xl border border-zinc-200 dark:border-zinc-800" id="radius-selector">
+          <div class="grid grid-cols-4 gap-1 p-1 bg-zinc-100 dark:bg-zinc-950 rounded-xl border border-zinc-200 dark:border-zinc-800" id="radius-selector">
+            <button
+              type="button"
+              data-radius="2"
+              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+            >
+              2 km
+            </button>
             <button
               type="button"
               data-radius="5"
-              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               5 km
             </button>
             <button
               type="button"
               data-radius="10"
-              class="radius-btn active px-2 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-sm"
+              class="radius-btn active px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-sm"
             >
               10 km
             </button>
             <button
               type="button"
               data-radius="25"
-              class="radius-btn px-2 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
             >
               25 km
             </button>
@@ -378,16 +385,23 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
     });
   });
 
+  function setRadius(radius) {
+    selectedRadius = Number(radius);
+    document.querySelectorAll('.radius-btn').forEach(b => {
+      if (b.dataset.radius === String(selectedRadius)) {
+        b.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white', 'shadow-sm');
+        b.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+      } else {
+        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white', 'shadow-sm');
+        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
+      }
+    });
+  }
+
   // Radius selector click
   document.querySelectorAll('.radius-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.radius-btn').forEach(b => {
-        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
-        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
-      });
-      btn.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
-      btn.classList.remove('text-zinc-600', 'dark:text-zinc-400');
-      selectedRadius = Number(btn.dataset.radius);
+      setRadius(btn.dataset.radius);
       if (userCoords && currentStations.length > 0) renderResults();
     });
   });
@@ -513,6 +527,20 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
               ...s,
               distanceKm: Number(getDistanceKm(userCoords.lat, userCoords.lng, s.lat, s.lng).toFixed(1)),
             }));
+
+          // Se siamo in un centro urbano con buona densità (es. Milano, Roma, Torino dove ci sono distributori entro 2km),
+          // impostiamo automaticamente il raggio su 2 km (o 5 km) per evitare di consigliare pompe lontane nel traffico
+          const targetKey = getTargetPriceKey();
+          const in2km = currentStations.filter(s => s.prices && s.prices[targetKey] && s.distanceKm <= 2);
+          const in5km = currentStations.filter(s => s.prices && s.prices[targetKey] && s.distanceKm <= 5);
+
+          if (in2km.length >= 2) {
+            setRadius(2);
+          } else if (in5km.length >= 2) {
+            setRadius(5);
+          } else {
+            setRadius(10);
+          }
 
           setLoading(false);
           statusBox.classList.add('hidden');
@@ -753,19 +781,18 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
 
     if (userCoords) {
       filtered = filtered.filter(s => s.distanceKm <= selectedRadius);
-      // Auto-espandi a 25 km se non si trovano pompe nel raggio di 10 km (comune in zone extraurbane/IP)
-      if (filtered.length === 0 && selectedRadius < 25 && userCoords.isIp) {
-        selectedRadius = 25;
-        document.querySelectorAll('.radius-btn').forEach(b => {
-          if (b.dataset.radius === '25') {
-            b.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
-            b.classList.remove('text-zinc-600', 'dark:text-zinc-400');
-          } else {
-            b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
-            b.classList.add('text-zinc-600', 'dark:text-zinc-400');
-          }
-        });
-        filtered = currentStations.filter(s => s.prices && s.prices[priceKey] && s.distanceKm <= 25);
+      // Auto-espandi se non si trovano pompe nel raggio (es. zona rurale o IP)
+      if (filtered.length === 0) {
+        if (selectedRadius === 2) {
+          setRadius(5);
+          filtered = currentStations.filter(s => s.prices && s.prices[priceKey] && s.distanceKm <= 5);
+        } else if (selectedRadius === 5 && userCoords.isIp) {
+          setRadius(10);
+          filtered = currentStations.filter(s => s.prices && s.prices[priceKey] && s.distanceKm <= 10);
+        } else if (selectedRadius === 10 && userCoords.isIp) {
+          setRadius(25);
+          filtered = currentStations.filter(s => s.prices && s.prices[priceKey] && s.distanceKm <= 25);
+        }
       }
     }
 
@@ -802,7 +829,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
     if (enriched.length > 0) {
       const mapCenterLat = userCoords ? userCoords.lat : (provName ? enriched[0].lat : 42.2);
       const mapCenterLng = userCoords ? userCoords.lng : (provName ? enriched[0].lng : 12.8);
-      const mapZoom = userCoords ? (selectedRadius <= 5 ? 13 : (selectedRadius <= 10 ? 12 : 11)) : (provName ? 10 : 6);
+      const mapZoom = userCoords ? (selectedRadius <= 2 ? 14 : (selectedRadius <= 5 ? 13 : (selectedRadius <= 10 ? 12 : 11))) : (provName ? 10 : 6);
       initOrUpdateMap(mapCenterLat, mapCenterLng, mapZoom);
 
       if (markersLayer) {
@@ -871,7 +898,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
           });
           if (points.length > 0) {
             const bounds = window.L.latLngBounds(points);
-            leafletMap.fitBounds(bounds, { padding: [35, 35], maxZoom: 14 });
+            leafletMap.fitBounds(bounds, { padding: [35, 35], maxZoom: selectedRadius <= 2 ? 16 : 14 });
           }
         }
       }

@@ -14,51 +14,145 @@ import { lastUpdatedFull } from '../utils/date.js';
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
         </span>
         <div class="text-xs">
-          <div class="font-bold text-zinc-900 dark:text-white flex items-center gap-1.5">
+          <div class="font-bold text-zinc-900 dark:text-white flex items-center gap-1.5" id="stats-bar-title">
             <span>Medie Nazionali Italia</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20">Prezzi Oggi</span>
+            <a href="/prezzi-oggi" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors">Osservatorio Oggi →</a>
           </div>
-          <div class="text-[11px] text-zinc-500 dark:text-zinc-400">
+          <div class="text-[11px] text-zinc-500 dark:text-zinc-400" id="stats-bar-sub">
             Ultimo aggiornamento: <strong class="text-zinc-700 dark:text-zinc-300">{lastUpdatedFull}</strong> ({nationalStats.totalActiveWithPrices.toLocaleString('it-IT')} impianti attivi)
           </div>
         </div>
       </div>
 
-      <!-- Price Tickers -->
+      <!-- Price Tickers with high Click Affordance -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
         <!-- Benzina -->
-        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-950/80 border border-zinc-200 dark:border-zinc-800/80 shadow-sm transition-colors">
-          <div class="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Benzina Self</div>
-          <div class="text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400">
+        <a
+          id="ticker-benzina"
+          href="/prezzi-oggi"
+          class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-emerald-500 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+          title="Consulta i prezzi medi della benzina"
+        >
+          <div class="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors flex items-center justify-center gap-1">
+            <span id="ticker-benzina-label">Benzina Self</span>
+            <span class="text-emerald-500 text-xs transition-transform group-hover:translate-x-0.5">→</span>
+          </div>
+          <div id="ticker-benzina-val" class="text-base sm:text-lg font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
             € {nationalStats.averages.benzina_self ? nationalStats.averages.benzina_self.toFixed(3) : '—'}
           </div>
-        </div>
+        </a>
 
         <!-- Diesel -->
-        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-950/80 border border-zinc-200 dark:border-zinc-800/80 shadow-sm transition-colors">
-          <div class="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Diesel Self</div>
-          <div class="text-base sm:text-lg font-black text-teal-600 dark:text-teal-400">
+        <a
+          id="ticker-diesel"
+          href="/prezzi-oggi"
+          class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-teal-500 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+          title="Consulta i prezzi medi del diesel"
+        >
+          <div class="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors flex items-center justify-center gap-1">
+            <span id="ticker-diesel-label">Diesel Self</span>
+            <span class="text-teal-500 text-xs transition-transform group-hover:translate-x-0.5">→</span>
+          </div>
+          <div id="ticker-diesel-val" class="text-base sm:text-lg font-black text-teal-600 dark:text-teal-400 mt-0.5">
             € {nationalStats.averages.diesel_self ? nationalStats.averages.diesel_self.toFixed(3) : '—'}
           </div>
-        </div>
+        </a>
 
         <!-- GPL -->
-        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-950/80 border border-zinc-200 dark:border-zinc-800/80 shadow-sm transition-colors">
-          <div class="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">GPL</div>
-          <div class="text-base sm:text-lg font-black text-blue-600 dark:text-blue-400">
+        <a
+          id="ticker-gpl"
+          href="/prezzi-oggi"
+          class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+          title="Consulta i prezzi medi del GPL"
+        >
+          <div class="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
+            <span id="ticker-gpl-label">GPL</span>
+            <span class="text-blue-500 text-xs transition-transform group-hover:translate-x-0.5">→</span>
+          </div>
+          <div id="ticker-gpl-val" class="text-base sm:text-lg font-black text-blue-600 dark:text-blue-400 mt-0.5">
             € {nationalStats.averages.gpl ? nationalStats.averages.gpl.toFixed(3) : '—'}
           </div>
-        </div>
+        </a>
 
         <!-- Metano -->
-        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-zinc-950/80 border border-zinc-200 dark:border-zinc-800/80 shadow-sm transition-colors">
-          <div class="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Metano</div>
-          <div class="text-base sm:text-lg font-black text-zinc-700 dark:text-zinc-300">
+        <a
+          id="ticker-metano"
+          href="/prezzi-oggi"
+          class="px-3.5 py-2.5 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 shadow-xs hover:border-zinc-400 hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+          title="Consulta i prezzi medi del Metano"
+        >
+          <div class="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider group-hover:text-zinc-900 dark:group-hover:text-white transition-colors flex items-center justify-center gap-1">
+            <span id="ticker-metano-label">Metano</span>
+            <span class="text-zinc-500 text-xs transition-transform group-hover:translate-x-0.5">→</span>
+          </div>
+          <div id="ticker-metano-val" class="text-base sm:text-lg font-black text-zinc-700 dark:text-zinc-300 mt-0.5">
             € {nationalStats.averages.metano ? nationalStats.averages.metano.toFixed(3) : '—'}
           </div>
-        </div>
+        </a>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- Client script per indirizzare i ticker alla provincia localizzata se disponibile -->
+<script is:inline>
+  (function() {
+    function updateTickersWithLocal() {
+      try {
+        const raw = localStorage.getItem('pb_user_geo_v1');
+        if (!raw) return;
+        const geo = JSON.parse(raw);
+        const prov = geo.nearestProvs && geo.nearestProvs[0] ? geo.nearestProvs[0] : null;
+        if (!prov) return;
+
+        const bCard = document.getElementById('ticker-benzina');
+        const dCard = document.getElementById('ticker-diesel');
+        const gCard = document.getElementById('ticker-gpl');
+        const mCard = document.getElementById('ticker-metano');
+        const bLabel = document.getElementById('ticker-benzina-label');
+        const dLabel = document.getElementById('ticker-diesel-label');
+        const gLabel = document.getElementById('ticker-gpl-label');
+        const mLabel = document.getElementById('ticker-metano-label');
+        const titleEl = document.getElementById('stats-bar-title');
+
+        const provSlug = prov.code.toLowerCase();
+        if (window.__PB_PROVINCES) {
+          const matched = window.__PB_PROVINCES.find(p => p.code.toLowerCase() === provSlug);
+          if (matched && matched.slug) {
+            if (bCard) {
+              bCard.href = '/provincia/' + matched.slug + '/';
+              bCard.title = 'Vedi prezzi benzina a ' + matched.name;
+              if (bLabel) bLabel.textContent = 'Benza ' + matched.code;
+            }
+            if (dCard) {
+              dCard.href = '/provincia/' + matched.slug + '/diesel/';
+              dCard.title = 'Vedi prezzi diesel a ' + matched.name;
+              if (dLabel) dLabel.textContent = 'Diesel ' + matched.code;
+            }
+            if (gCard) {
+              gCard.href = '/provincia/' + matched.slug + '/metano-gpl/';
+              gCard.title = 'Vedi prezzi GPL e metano a ' + matched.name;
+              if (gLabel) gLabel.textContent = 'GPL ' + matched.code;
+            }
+            if (mCard) {
+              mCard.href = '/provincia/' + matched.slug + '/metano-gpl/';
+              mCard.title = 'Vedi prezzi GPL e metano a ' + matched.name;
+              if (mLabel) mLabel.textContent = 'Metano ' + matched.code;
+            }
+            if (titleEl && geo.cityName) {
+              titleEl.innerHTML = '<span>Medie Carburanti • ' + geo.cityName + '</span> <a href="/provincia/' + matched.slug + '/" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors">Vedi ' + matched.name + ' →</a>';
+            }
+          }
+        }
+      } catch (e) {}
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateTickersWithLocal);
+    } else {
+      updateTickersWithLocal();
+    }
+    window.addEventListener('pb:geo-updated', updateTickersWithLocal);
+  })();
+</script>

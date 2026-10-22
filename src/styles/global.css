@@ -107,3 +107,14 @@ html:not(.dark) .pb-marker-standard {
   border: 2px solid #ffffff;
   box-shadow: 0 3px 8px rgba(15, 23, 42, 0.4);
 }
+
+/* User Location Pulsing Beacon Marker */
+@keyframes pb-pulse-ring {
+  0% { transform: scale(0.5); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.custom-user-marker {
+  background: transparent !important;
+  border: none !important;
+}

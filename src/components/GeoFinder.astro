@@ -70,28 +70,28 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
             <button
               type="button"
               data-fuel="benzina"
-              class="fuel-btn active px-3 py-2 text-xs font-bold rounded-lg transition-all bg-emerald-500 text-zinc-950 shadow-sm"
+              class="fuel-btn active px-3 py-2 text-xs font-bold rounded-lg transition-all bg-emerald-500 text-zinc-950 shadow-sm border border-emerald-400 cursor-pointer"
             >
               🟢 Benzina
             </button>
             <button
               type="button"
               data-fuel="diesel"
-              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer shadow-2xs"
             >
               ⚫ Diesel
             </button>
             <button
               type="button"
               data-fuel="gpl"
-              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer shadow-2xs"
             >
               🔵 GPL
             </button>
             <button
               type="button"
               data-fuel="metano"
-              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="fuel-btn px-3 py-2 text-xs font-bold rounded-lg transition-all bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer shadow-2xs"
             >
               ⚪ Metano
             </button>
@@ -107,14 +107,14 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
             <button
               type="button"
               data-service="self"
-              class="service-btn active px-3 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-sm"
+              class="service-btn active px-3 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-950 dark:text-white shadow-sm border border-zinc-300 dark:border-zinc-700 cursor-pointer"
             >
               Self-Service
             </button>
             <button
               type="button"
               data-service="servito"
-              class="service-btn px-3 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="service-btn px-3 py-3.5 text-xs font-bold rounded-lg transition-all bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer shadow-2xs"
             >
               Servito
             </button>
@@ -130,28 +130,28 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
             <button
               type="button"
               data-radius="1.5"
-              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer shadow-2xs"
             >
               1,5 km
             </button>
             <button
               type="button"
               data-radius="5"
-              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer shadow-2xs"
             >
               5 km
             </button>
             <button
               type="button"
               data-radius="10"
-              class="radius-btn active px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white shadow-sm"
+              class="radius-btn active px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all bg-white dark:bg-zinc-800 text-zinc-950 dark:text-white shadow-sm border border-zinc-300 dark:border-zinc-700 cursor-pointer"
             >
               10 km
             </button>
             <button
               type="button"
               data-radius="25"
-              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+              class="radius-btn px-1.5 py-3.5 text-xs font-bold rounded-lg transition-all bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer shadow-2xs"
             >
               25 km
             </button>
@@ -361,11 +361,11 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
   document.querySelectorAll('.fuel-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.fuel-btn').forEach(b => {
-        b.classList.remove('active', 'bg-emerald-500', 'text-zinc-950');
-        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
+        b.classList.remove('active', 'bg-emerald-500', 'text-zinc-950', 'border-emerald-400', 'shadow-sm');
+        b.classList.add('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       });
-      btn.classList.add('active', 'bg-emerald-500', 'text-zinc-950');
-      btn.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+      btn.classList.add('active', 'bg-emerald-500', 'text-zinc-950', 'border-emerald-400', 'shadow-sm');
+      btn.classList.remove('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       selectedFuel = btn.dataset.fuel;
       if (currentStations.length > 0) renderResults();
     });
@@ -375,11 +375,11 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
   document.querySelectorAll('.service-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.service-btn').forEach(b => {
-        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
-        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
+        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'border-zinc-300', 'dark:border-zinc-700', 'shadow-sm');
+        b.classList.add('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       });
-      btn.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white');
-      btn.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+      btn.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'border-zinc-300', 'dark:border-zinc-700', 'shadow-sm');
+      btn.classList.remove('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       selectedService = btn.dataset.service;
       if (currentStations.length > 0) renderResults();
     });
@@ -389,11 +389,11 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
     selectedRadius = Number(radius);
     document.querySelectorAll('.radius-btn').forEach(b => {
       if (Number(b.dataset.radius) === selectedRadius) {
-        b.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white', 'shadow-sm');
-        b.classList.remove('text-zinc-600', 'dark:text-zinc-400');
+        b.classList.add('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'shadow-sm', 'border-zinc-300', 'dark:border-zinc-700');
+        b.classList.remove('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       } else {
-        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-900', 'dark:text-white', 'shadow-sm');
-        b.classList.add('text-zinc-600', 'dark:text-zinc-400');
+        b.classList.remove('active', 'bg-white', 'dark:bg-zinc-800', 'text-zinc-950', 'dark:text-white', 'shadow-sm', 'border-zinc-300', 'dark:border-zinc-700');
+        b.classList.add('bg-white/70', 'dark:bg-zinc-900/60', 'border-zinc-200/80', 'dark:border-zinc-800', 'text-zinc-700', 'dark:text-zinc-300');
       }
     });
   }
@@ -451,6 +451,7 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
         ...data,
         savedAt: Date.now(),
       }));
+      window.dispatchEvent(new CustomEvent('pb:geo-updated', { detail: data }));
     } catch (e) {}
   }
 
@@ -891,12 +892,19 @@ const initialCheapestStations = (cheapestItaly.topBenzina || []).slice(0, 10).ma
 
         // Marker utente
         if (userCoords && window.L) {
+          const ringColor = userCoords.isIp ? '#0ea5e9' : '#10b981';
+          const centerBg = userCoords.isIp ? '#0284c7' : '#059669';
           const userIcon = window.L.divIcon({
             className: 'custom-user-marker',
-            html: userCoords.isIp
-              ? '<div style="width:16px; height:16px; background:#0ea5e9; border:3px solid #ffffff; border-radius:50%; box-shadow:0 0 10px #0ea5e9;"></div>'
-              : '<div style="width:16px; height:16px; background:#10b981; border:3px solid #ffffff; border-radius:50%; box-shadow:0 0 12px #10b981;"></div>',
-            iconSize: [16, 16],
+            html: `
+              <div style="position:relative; width:44px; height:44px; display:flex; align-items:center; justify-content:center; pointer-events:none;">
+                <div style="position:absolute; width:44px; height:44px; border-radius:50%; background:${ringColor}; opacity:0.35; animation:pb-pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;"></div>
+                <div style="position:relative; width:22px; height:22px; background:${centerBg}; border:3px solid #ffffff; border-radius:50%; box-shadow:0 2px 10px rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; font-size:11px; color:#fff;">📍</div>
+                <div style="position:absolute; bottom:-16px; left:50%; transform:translateX(-50%); background:#0f172a; color:#f8fafc; font-size:9px; font-weight:800; padding:1px 5px; border-radius:4px; white-space:nowrap; box-shadow:0 2px 6px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.2);">Tu sei qui</div>
+              </div>
+            `,
+            iconSize: [44, 44],
+            iconAnchor: [22, 22],
           });
 
           const popupContent = userCoords.isIp

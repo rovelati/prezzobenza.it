@@ -221,7 +221,7 @@ const structuredData = {
                   >
                     {p.name}
                   </a>
-                  <div class="flex items-center gap-1.5 mt-2 pt-1.5 border-t border-zinc-100 dark:border-zinc-800/80 text-[10px]">
+                  <div class="flex items-center gap-1.5 mt-2 pt-1.5 border-t border-zinc-100 dark:border-zinc-800/80 text-[10px] flex-wrap">
                     <a
                       href={`/provincia/${p.slug}/`}
                       class="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold"
@@ -236,6 +236,14 @@ const structuredData = {
                       title={`Prezzi Diesel ${p.name}`}
                     >
                       Diesel {p.minDiesel ? `€${p.minDiesel.toFixed(2)}` : ''}
+                    </a>
+                    <span class="text-zinc-300 dark:text-zinc-700">•</span>
+                    <a
+                      href={`/provincia/${p.slug}/metano-gpl/`}
+                      class="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+                      title={`Prezzi GPL e Metano ${p.name}`}
+                    >
+                      Gas
                     </a>
                   </div>
                 </li>

@@ -151,18 +151,41 @@ function normalizeBrand(brandRaw) {
 }
 
 async function fetchCsv(url) {
-  console.log(`[MIMIT] Scarico: ${url}...`);
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 45000);
-  try {
-    const res = await fetch(url, { signal: controller.signal });
-    clearTimeout(timeout);
-    if (!res.ok) throw new Error(`HTTP ${res.status} per ${url}`);
-    return await res.text();
-  } catch (err) {
-    clearTimeout(timeout);
-    throw err;
+  const fileName = url.split('/').pop();
+  const proxyUrl = `https://www.prezzobenza.it/api/mimit-proxy?file=${fileName}`;
+
+  // Tenta prima tramite il proxy Cloudflare edge (che non subisce i blocchi IP di datacenter esteri/Contabo),
+  // e in caso di anomalia prova l'endpoint diretto ministeriale.
+  const urlsToTry = [proxyUrl, url];
+
+  for (const target of urlsToTry) {
+    console.log(`[MIMIT] Scarico da: ${target}...`);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 60000);
+    try {
+      const res = await fetch(target, {
+        signal: controller.signal,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Accept': 'text/csv,text/plain,*/*',
+        },
+      });
+      clearTimeout(timeout);
+      if (res.ok) {
+        const text = await res.text();
+        if (text && text.length > 1000) {
+          console.log(`[MIMIT] Successo: scaricati ${(text.length / 1024 / 1024).toFixed(2)} MB da ${target}`);
+          return text;
+        }
+      }
+      console.warn(`[MIMIT] Risposta non valida da ${target} (HTTP ${res.status})`);
+    } catch (err) {
+      clearTimeout(timeout);
+      console.warn(`[MIMIT] Tentativo fallito su ${target}: ${err.message}`);
+    }
   }
+
+  throw new Error(`Impossibile scaricare ${fileName} da tutte le sorgenti disponibili`);
 }
 
 async function main() {

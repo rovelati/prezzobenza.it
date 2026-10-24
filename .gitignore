@@ -27,3 +27,4 @@ Thumbs.db
 # Cache / Temp
 .cache/
 data/raw/
+src/data/cache-*.csv

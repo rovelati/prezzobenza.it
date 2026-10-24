@@ -9,7 +9,7 @@
  * e file JSON geolocalizzati per ogni provincia.
  */
 
-import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -154,16 +154,14 @@ async function fetchCsv(url) {
   const fileName = url.split('/').pop();
   const proxyUrl = `https://www.prezzobenza.it/api/mimit-proxy?file=${fileName}`;
 
-  // Tenta prima tramite il proxy Cloudflare edge (che non subisce i blocchi IP di datacenter esteri/Contabo),
+  // Tenta prima tramite il proxy Cloudflare edge (con retry fino a 3 volte),
   // e in caso di anomalia prova l'endpoint diretto ministeriale.
-  const urlsToTry = [proxyUrl, url];
-
-  for (const target of urlsToTry) {
-    console.log(`[MIMIT] Scarico da: ${target}...`);
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    console.log(`[MIMIT] Scarico da proxy: ${proxyUrl} (tentativo ${attempt}/3)...`);
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 60000);
     try {
-      const res = await fetch(target, {
+      const res = await fetch(proxyUrl, {
         signal: controller.signal,
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -174,15 +172,30 @@ async function fetchCsv(url) {
       if (res.ok) {
         const text = await res.text();
         if (text && text.length > 1000) {
-          console.log(`[MIMIT] Successo: scaricati ${(text.length / 1024 / 1024).toFixed(2)} MB da ${target}`);
+          console.log(`[MIMIT] Successo: scaricati ${(text.length / 1024 / 1024).toFixed(2)} MB per ${fileName}`);
           return text;
         }
       }
-      console.warn(`[MIMIT] Risposta non valida da ${target} (HTTP ${res.status})`);
+      console.warn(`[MIMIT] Risposta HTTP ${res.status} per ${fileName} al tentativo ${attempt}`);
     } catch (err) {
       clearTimeout(timeout);
-      console.warn(`[MIMIT] Tentativo fallito su ${target}: ${err.message}`);
+      console.warn(`[MIMIT] Errore proxy al tentativo ${attempt}: ${err.message}`);
     }
+    await new Promise((r) => setTimeout(r, 2000));
+  }
+
+  console.log(`[MIMIT] Tentativo fallback diretto: ${url}...`);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 45000);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeout);
+    if (res.ok) {
+      const text = await res.text();
+      if (text && text.length > 1000) return text;
+    }
+  } catch (err) {
+    clearTimeout(timeout);
   }
 
   throw new Error(`Impossibile scaricare ${fileName} da tutte le sorgenti disponibili`);
@@ -195,19 +208,56 @@ async function main() {
   mkdirSync(path.join(ROOT, 'src', 'data'), { recursive: true });
   mkdirSync(path.join(ROOT, 'public', 'data', 'provinces'), { recursive: true });
 
-  const [anagraficaRaw, prezziRaw] = await Promise.all([
-    fetchCsv(ANAGRAFICA_URL),
-    fetchCsv(PREZZI_URL),
-  ]);
+  let anagraficaRaw = '';
+  let prezziRaw = '';
+
+  const cacheAnagraficaPath = path.join(ROOT, 'src', 'data', 'cache-anagrafica.csv');
+  const cachePrezziPath = path.join(ROOT, 'src', 'data', 'cache-prezzi.csv');
+
+  try {
+    prezziRaw = await fetchCsv(PREZZI_URL);
+    if (prezziRaw && prezziRaw.length > 1000) {
+      writeFileSync(cachePrezziPath, prezziRaw, 'utf8');
+    }
+  } catch (err) {
+    if (existsSync(cachePrezziPath)) {
+      console.warn(`[MIMIT] Prezzi non scaricabili, fallback su cache locale: ${err.message}`);
+      prezziRaw = readFileSync(cachePrezziPath, 'utf8');
+    } else {
+      throw err;
+    }
+  }
+
+  try {
+    anagraficaRaw = await fetchCsv(ANAGRAFICA_URL);
+    if (anagraficaRaw && anagraficaRaw.length > 1000) {
+      writeFileSync(cacheAnagraficaPath, anagraficaRaw, 'utf8');
+    }
+  } catch (err) {
+    if (existsSync(cacheAnagraficaPath)) {
+      console.warn(`[MIMIT] Anagrafica non scaricabile, fallback su cache locale: ${err.message}`);
+      anagraficaRaw = readFileSync(cacheAnagraficaPath, 'utf8');
+    } else {
+      throw err;
+    }
+  }
 
   console.log('[MIMIT] CSV scaricati con successo. Avvio elaborazione...');
 
-  // 1. Parsing Anagrafica
+  // 1. Parsing Anagrafica & Estrazione Data
   const anagraficaLines = anagraficaRaw.split(/\r?\n/);
+  const prezziLines = prezziRaw.split(/\r?\n/);
+
   let extractionDate = '';
-  if (anagraficaLines[0]?.startsWith('Estrazione del')) {
+  if (prezziLines[0]?.startsWith('Estrazione del')) {
+    extractionDate = prezziLines[0].replace('Estrazione del', '').trim();
+  } else if (anagraficaLines[0]?.startsWith('Estrazione del')) {
     extractionDate = anagraficaLines[0].replace('Estrazione del', '').trim();
   }
+  if (!extractionDate) {
+    extractionDate = new Date().toISOString().split('T')[0];
+  }
+  console.log(`[MIMIT] Data estrazione rilevata: ${extractionDate}`);
 
   const stations = new Map();
 
@@ -250,7 +300,6 @@ async function main() {
   console.log(`[MIMIT] Impianti mappati: ${stations.size}`);
 
   // 2. Parsing Prezzi
-  const prezziLines = prezziRaw.split(/\r?\n/);
   let totalPricesCount = 0;
 
   for (let i = 2; i < prezziLines.length; i++) {

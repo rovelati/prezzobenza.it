@@ -16,27 +16,27 @@
         "benzina_servito": {
           "prezzo": 1.505,
           "isSelf": false,
-          "dt": "10/10/2026 20:25:42"
+          "dt": "23/10/2026 07:36:48"
         },
         "benzina_self": {
           "prezzo": 1.505,
           "isSelf": true,
-          "dt": "10/10/2026 20:25:42"
+          "dt": "23/10/2026 07:36:48"
         },
         "diesel_servito": {
-          "prezzo": 2.459,
+          "prezzo": 2.509,
           "isSelf": false,
-          "dt": "10/10/2026 20:25:42"
+          "dt": "23/10/2026 07:36:48"
         },
         "diesel_self": {
-          "prezzo": 2.219,
+          "prezzo": 2.269,
           "isSelf": true,
-          "dt": "10/10/2026 20:25:42"
+          "dt": "23/10/2026 07:36:48"
         },
         "gpl": {
           "prezzo": 0.869,
           "isSelf": false,
-          "dt": "10/10/2026 20:25:42"
+          "dt": "23/10/2026 07:36:48"
         }
       }
     },
@@ -136,22 +136,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:10"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:09"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:09"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:09"
         }
       }
     },
@@ -246,12 +246,12 @@
         "benzina_self": {
           "prezzo": 1.589,
           "isSelf": true,
-          "dt": "15/10/2026 23:01:24"
+          "dt": "22/10/2026 23:02:34"
         },
         "diesel_self": {
           "prezzo": 1.638,
           "isSelf": true,
-          "dt": "15/10/2026 23:01:24"
+          "dt": "22/10/2026 23:02:34"
         }
       }
     },
@@ -536,6 +536,41 @@
       }
     },
     {
+      "id": "51253",
+      "gestore": "C-ENERGIA S.R.L.",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "C-ENERGIA",
+      "indirizzo": "VIA RASIA 833 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.554025,
+      "lng": 10.145127,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.615,
+          "isSelf": false,
+          "dt": "21/10/2026 09:31:59"
+        },
+        "benzina_self": {
+          "prezzo": 1.615,
+          "isSelf": true,
+          "dt": "21/10/2026 09:31:59"
+        },
+        "diesel_servito": {
+          "prezzo": 1.717,
+          "isSelf": false,
+          "dt": "21/10/2026 09:31:59"
+        },
+        "diesel_self": {
+          "prezzo": 1.717,
+          "isSelf": true,
+          "dt": "21/10/2026 09:31:59"
+        }
+      }
+    },
+    {
       "id": "51364",
       "gestore": "SILROC S.R.L.",
       "brand": "Q8",
@@ -551,22 +586,22 @@
         "benzina_servito": {
           "prezzo": 1.615,
           "isSelf": false,
-          "dt": "15/10/2026 10:21:08"
+          "dt": "22/10/2026 10:21:05"
         },
         "benzina_self": {
           "prezzo": 1.615,
           "isSelf": true,
-          "dt": "15/10/2026 10:21:08"
+          "dt": "22/10/2026 10:21:05"
         },
         "diesel_servito": {
           "prezzo": 1.715,
           "isSelf": false,
-          "dt": "19/10/2026 08:15:05"
+          "dt": "22/10/2026 10:21:05"
         },
         "diesel_self": {
           "prezzo": 1.715,
           "isSelf": true,
-          "dt": "19/10/2026 08:15:05"
+          "dt": "22/10/2026 10:21:05"
         }
       }
     },
@@ -672,41 +707,6 @@
           "prezzo": 1.719,
           "isSelf": true,
           "dt": "19/10/2026 18:07:27"
-        }
-      }
-    },
-    {
-      "id": "51253",
-      "gestore": "C-ENERGIA S.R.L.",
-      "brand": "Eni",
-      "bandieraRaw": "Agip Eni",
-      "tipo": "Stradale",
-      "nome": "C-ENERGIA",
-      "indirizzo": "VIA RASIA 833 23041",
-      "comune": "LIVIGNO",
-      "provincia": "SO",
-      "lat": 46.554025,
-      "lng": 10.145127,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 1.618,
-          "isSelf": false,
-          "dt": "16/10/2026 17:31:21"
-        },
-        "benzina_self": {
-          "prezzo": 1.618,
-          "isSelf": true,
-          "dt": "16/10/2026 17:31:21"
-        },
-        "diesel_servito": {
-          "prezzo": 1.719,
-          "isSelf": false,
-          "dt": "16/10/2026 17:31:21"
-        },
-        "diesel_self": {
-          "prezzo": 1.719,
-          "isSelf": true,
-          "dt": "16/10/2026 17:31:21"
         }
       }
     },
@@ -918,12 +918,12 @@
         "benzina_servito": {
           "prezzo": 1.999,
           "isSelf": false,
-          "dt": "20/10/2026 14:39:03"
+          "dt": "22/10/2026 14:41:04"
         },
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "20/10/2026 14:04:08"
+          "dt": "22/10/2026 18:59:03"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -959,6 +959,36 @@
           "prezzo": 1.307,
           "isSelf": true,
           "dt": "20/10/2026 18:02:51"
+        }
+      }
+    },
+    {
+      "id": "22628",
+      "gestore": "GES.CAR. S.A.S. DI CUSINI BERNARDO MOSE' E C.",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "GES.CAR. SAS",
+      "indirizzo": "VIA BORCH 770 23030",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.519084,
+      "lng": 10.124914,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.613,
+          "isSelf": false,
+          "dt": "21/10/2026 10:10:19"
+        },
+        "diesel_servito": {
+          "prezzo": 1.719,
+          "isSelf": false,
+          "dt": "21/10/2026 10:10:19"
+        },
+        "diesel_self": {
+          "prezzo": 1.307,
+          "isSelf": true,
+          "dt": "21/10/2026 10:10:19"
         }
       }
     },
@@ -1408,22 +1438,22 @@
         "benzina_servito": {
           "prezzo": 1.958,
           "isSelf": false,
-          "dt": "16/10/2026 07:29:23"
+          "dt": "21/10/2026 19:50:39"
         },
         "benzina_self": {
           "prezzo": 1.658,
           "isSelf": true,
-          "dt": "16/10/2026 07:29:23"
+          "dt": "21/10/2026 19:50:39"
         },
         "diesel_servito": {
           "prezzo": 1.878,
           "isSelf": false,
-          "dt": "16/10/2026 07:29:23"
+          "dt": "21/10/2026 19:50:39"
         },
         "diesel_self": {
           "prezzo": 1.578,
           "isSelf": true,
-          "dt": "16/10/2026 07:29:23"
+          "dt": "21/10/2026 19:50:39"
         }
       }
     },
@@ -1686,31 +1716,6 @@
           "dt": "02/10/2026 21:58:27"
         }
       }
-    },
-    {
-      "id": "60090",
-      "gestore": "SPAZIO S.R.L.",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "LUZZARA",
-      "indirizzo": "Via G. Carboni 42  42045",
-      "comune": "LUZZARA",
-      "provincia": "RE",
-      "lat": 44.95925,
-      "lng": 10.68953,
-      "prices": {
-        "benzina_self": {
-          "prezzo": 1.595,
-          "isSelf": true,
-          "dt": "04/10/2026 21:40:40"
-        },
-        "diesel_self": {
-          "prezzo": 1.594,
-          "isSelf": true,
-          "dt": "04/10/2026 21:40:40"
-        }
-      }
     }
   ],
   "pompeBianche": [
@@ -1810,22 +1815,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:10"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:09"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:09"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "19/10/2026 13:51:59"
+          "dt": "21/10/2026 21:40:09"
         }
       }
     },

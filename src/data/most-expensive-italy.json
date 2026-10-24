@@ -1,50 +1,6 @@
 {
-  "updatedAt": "2026-10-22T21:48:00.132Z",
+  "updatedAt": "2026-10-24T19:29:10.145Z",
   "topExpensiveBenzina": [
-    {
-      "id": "46062",
-      "gestore": "BAIA POWER SRL UNIPERSONALE",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "BAIA POWER",
-      "indirizzo": "Viale Europa 8  81034",
-      "comune": "MONDRAGONE",
-      "provincia": "CE",
-      "lat": 41.120574,
-      "lng": 13.872699,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.797,
-          "isSelf": false,
-          "dt": "20/10/2026 22:30:38"
-        },
-        "benzina_self": {
-          "prezzo": 2.497,
-          "isSelf": true,
-          "dt": "20/10/2026 22:30:38"
-        },
-        "diesel_servito": {
-          "prezzo": 2.699,
-          "isSelf": false,
-          "dt": "20/10/2026 22:30:38"
-        },
-        "diesel_self": {
-          "prezzo": 2.399,
-          "isSelf": true,
-          "dt": "20/10/2026 22:30:38"
-        },
-        "gpl": {
-          "prezzo": 0.697,
-          "isSelf": false,
-          "dt": "20/10/2026 22:30:38"
-        }
-      },
-      "prezzo": 2.797,
-      "service": "servito",
-      "fuel": "Benzina",
-      "fullTankCost": 139.85
-    },
     {
       "id": "15315",
       "gestore": "RUBECA MARIO",
@@ -124,22 +80,22 @@
         "benzina_servito": {
           "prezzo": 2.763,
           "isSelf": false,
-          "dt": "13/10/2026 14:23:59"
+          "dt": "22/10/2026 17:08:36"
         },
         "benzina_self": {
           "prezzo": 2.763,
           "isSelf": true,
-          "dt": "13/10/2026 14:23:59"
+          "dt": "22/10/2026 17:08:36"
         },
         "diesel_servito": {
           "prezzo": 2.613,
           "isSelf": false,
-          "dt": "13/10/2026 14:23:59"
+          "dt": "22/10/2026 17:08:36"
         },
         "diesel_self": {
           "prezzo": 2.613,
           "isSelf": true,
-          "dt": "13/10/2026 14:23:59"
+          "dt": "22/10/2026 17:08:36"
         }
       },
       "prezzo": 2.763,
@@ -231,22 +187,22 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "15/10/2026 19:23:40"
+          "dt": "21/10/2026 17:37:59"
         },
         "benzina_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "15/10/2026 19:23:40"
+          "dt": "21/10/2026 17:37:59"
         },
         "diesel_servito": {
           "prezzo": 2.779,
           "isSelf": false,
-          "dt": "15/10/2026 19:23:40"
+          "dt": "21/10/2026 17:37:59"
         },
         "diesel_self": {
           "prezzo": 2.779,
           "isSelf": true,
-          "dt": "15/10/2026 19:23:40"
+          "dt": "21/10/2026 17:37:59"
         }
       },
       "prezzo": 2.699,
@@ -270,17 +226,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "21/10/2026 07:51:46"
+          "dt": "23/10/2026 07:55:46"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "21/10/2026 07:51:46"
+          "dt": "23/10/2026 07:55:46"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "21/10/2026 07:51:46"
+          "dt": "23/10/2026 07:55:46"
         }
       },
       "prezzo": 2.699,
@@ -304,17 +260,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "21/10/2026 07:52:00"
+          "dt": "23/10/2026 07:55:58"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "21/10/2026 07:52:00"
+          "dt": "23/10/2026 07:55:58"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "21/10/2026 07:52:00"
+          "dt": "23/10/2026 07:55:58"
         }
       },
       "prezzo": 2.699,
@@ -338,21 +294,45 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "21/10/2026 07:52:11"
+          "dt": "23/10/2026 07:56:13"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "21/10/2026 07:52:11"
+          "dt": "23/10/2026 07:56:13"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "21/10/2026 07:52:11"
+          "dt": "23/10/2026 07:56:13"
         }
       },
       "prezzo": 2.699,
       "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 134.95
+    },
+    {
+      "id": "61729",
+      "gestore": "SAN MARCO PETROLI SOCIETA' PER AZIONI",
+      "brand": "San Marco",
+      "bandieraRaw": "San Marco Petroli",
+      "tipo": "Autostradale",
+      "nome": "POSTUMIA NORD",
+      "indirizzo": "Autostrada A31 TRENTO-VALDASTICO-VICENZA-RIVIERA BERICA-ROVIGO,  Km. 10.150, dir. nord 36050",
+      "comune": "BOLZANO VICENTINO",
+      "provincia": "VI",
+      "lat": 45.594892,
+      "lng": 11.599892,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 2.699,
+          "isSelf": true,
+          "dt": "21/10/2026 14:25:23"
+        }
+      },
+      "prezzo": 2.699,
+      "service": "self",
       "fuel": "Benzina",
       "fullTankCost": 134.95
     }
@@ -398,27 +378,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "20/10/2026 20:18:24"
+          "dt": "22/10/2026 20:58:47"
         },
         "benzina_self": {
           "prezzo": 2.109,
           "isSelf": true,
-          "dt": "20/10/2026 20:18:24"
+          "dt": "22/10/2026 20:58:47"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "20/10/2026 20:18:24"
+          "dt": "22/10/2026 20:58:47"
         },
         "diesel_self": {
           "prezzo": 2.349,
           "isSelf": true,
-          "dt": "20/10/2026 20:18:24"
+          "dt": "22/10/2026 20:58:47"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "20/10/2026 20:18:24"
+          "dt": "22/10/2026 20:58:47"
         }
       },
       "prezzo": 2.799,
@@ -530,27 +510,27 @@
         "benzina_servito": {
           "prezzo": 2.529,
           "isSelf": false,
-          "dt": "19/10/2026 08:43:30"
+          "dt": "22/10/2026 09:02:48"
         },
         "benzina_self": {
           "prezzo": 2.092,
           "isSelf": true,
-          "dt": "19/10/2026 08:43:30"
+          "dt": "22/10/2026 09:02:48"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "19/10/2026 08:43:30"
+          "dt": "22/10/2026 09:02:48"
         },
         "diesel_self": {
           "prezzo": 2.362,
           "isSelf": true,
-          "dt": "19/10/2026 08:43:30"
+          "dt": "22/10/2026 09:02:48"
         },
         "gpl": {
           "prezzo": 0.949,
           "isSelf": false,
-          "dt": "19/10/2026 08:43:30"
+          "dt": "22/10/2026 09:02:48"
         }
       },
       "prezzo": 2.799,
@@ -579,7 +559,7 @@
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "20/10/2026 21:59:01"
+          "dt": "22/10/2026 22:01:09"
         },
         "diesel_servito": {
           "prezzo": 2.799,
@@ -613,61 +593,22 @@
         "benzina_servito": {
           "prezzo": 2.529,
           "isSelf": false,
-          "dt": "19/10/2026 10:39:07"
+          "dt": "21/10/2026 10:43:07"
         },
         "benzina_self": {
-          "prezzo": 2.074,
+          "prezzo": 1.988,
           "isSelf": true,
-          "dt": "19/10/2026 10:39:07"
+          "dt": "21/10/2026 14:39:02"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "20/10/2026 10:41:05"
+          "dt": "22/10/2026 14:41:05"
         },
         "diesel_self": {
           "prezzo": 2.359,
           "isSelf": true,
-          "dt": "19/10/2026 10:39:07"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "61528",
-      "gestore": "SOPHIA SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "TV carburanti",
-      "indirizzo": "Via fiume busento Snc 88100",
-      "comune": "CATANZARO",
-      "provincia": "CZ",
-      "lat": 38.871448,
-      "lng": 16.604863,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.509,
-          "isSelf": false,
-          "dt": "20/10/2026 08:03:32"
-        },
-        "benzina_self": {
-          "prezzo": 2.199,
-          "isSelf": true,
-          "dt": "20/10/2026 08:03:32"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "20/10/2026 08:03:32"
-        },
-        "diesel_self": {
-          "prezzo": 2.489,
-          "isSelf": true,
-          "dt": "20/10/2026 08:03:32"
+          "dt": "21/10/2026 10:43:07"
         }
       },
       "prezzo": 2.799,
@@ -735,22 +676,66 @@
         "benzina_servito": {
           "prezzo": 2.629,
           "isSelf": false,
-          "dt": "16/10/2026 09:03:01"
+          "dt": "23/10/2026 07:31:22"
         },
         "benzina_self": {
           "prezzo": 2.629,
           "isSelf": true,
-          "dt": "16/10/2026 09:03:01"
+          "dt": "23/10/2026 07:31:22"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "16/10/2026 09:03:01"
+          "dt": "23/10/2026 07:31:22"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "16/10/2026 09:03:01"
+          "dt": "23/10/2026 07:31:22"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "57027",
+      "gestore": "DIAMOND S.R.L.",
+      "brand": "Energas",
+      "bandieraRaw": "Energas",
+      "tipo": "Stradale",
+      "nome": "ENERGAS",
+      "indirizzo": "CAMPANA 155/C 80010",
+      "comune": "QUARTO",
+      "provincia": "NA",
+      "lat": 40.87928,
+      "lng": 14.121106,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.499,
+          "isSelf": false,
+          "dt": "21/10/2026 09:40:33"
+        },
+        "benzina_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "21/10/2026 09:40:33"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "21/10/2026 09:40:33"
+        },
+        "diesel_self": {
+          "prezzo": 2.799,
+          "isSelf": true,
+          "dt": "21/10/2026 09:40:33"
+        },
+        "gpl": {
+          "prezzo": 0.719,
+          "isSelf": false,
+          "dt": "21/10/2026 09:40:33"
         }
       },
       "prezzo": 2.799,

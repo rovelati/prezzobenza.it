@@ -374,11 +374,18 @@ const structuredData = {
       </div>
 
       <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-md bg-zinc-100 dark:bg-zinc-950">
-        <div id="comune-map" class="w-full h-[360px] sm:h-[400px] rounded-2xl" style="min-height: 360px; width: 100%; z-index: 10;"></div>
-        <div class="absolute bottom-2 left-2 z-[400] bg-zinc-900/85 backdrop-blur-md text-[10px] text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700 pointer-events-none flex items-center gap-2">
+        <div id="comune-map" class="w-full h-[380px] sm:h-[440px] rounded-2xl" style="min-height: 380px; width: 100%; z-index: 10;"></div>
+        
+        <!-- Badge di Stato Viewport Dinamico -->
+        <div class="absolute top-3 left-3 z-[400] bg-zinc-900/90 backdrop-blur-md text-[11px] text-zinc-200 px-3.5 py-1.5 rounded-xl border border-zinc-700/80 shadow-lg flex items-center gap-2 pointer-events-none">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="map-status-pill" class="font-medium">Caricamento mappa...</span>
+        </div>
+
+        <div class="absolute bottom-2 left-2 z-[400] bg-zinc-900/85 backdrop-blur-md text-[10px] text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700 pointer-events-none hidden sm:flex items-center gap-2">
           <span class="text-emerald-400 font-bold">🟢 Verde = Più Economico</span>
           <span>•</span>
-          <span>📍 Clicca un marker per navigatore</span>
+          <span>📍 Ingrandisci o sposta la mappa per esplorare il tuo quartiere</span>
         </div>
       </div>
     </div>
@@ -393,13 +400,14 @@ const structuredData = {
           <p class="text-xs text-zinc-500 dark:text-zinc-400">Classifica ordinata per il prezzo di benzina self-service più economico</p>
         </div>
         <div class="text-xs text-zinc-500">
-          Mostrati <strong>{stations.length}</strong> impianti
+          Totale <strong>{stations.length}</strong> impianti
         </div>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-4" id="stations-list-container">
         {stationsByBenzina.map((st: any, idx: number) => {
           const isTop = idx === 0;
+          const isHiddenInitially = idx >= 30;
           const pBenzinaSelf = st.prices?.benzina_self?.prezzo;
           const pBenzinaServ = st.prices?.benzina_servito?.prezzo;
           const pDieselSelf = st.prices?.diesel_self?.prezzo;
@@ -408,7 +416,7 @@ const structuredData = {
           const pMetano = st.prices?.metano?.prezzo;
 
           return (
-            <div class={`p-5 rounded-2xl border transition-all ${isTop ? 'border-emerald-500/60 bg-emerald-50/30 dark:bg-emerald-950/20 shadow-md shadow-emerald-500/5' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/60 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-xs'}`}>
+            <div class={`p-5 rounded-2xl border transition-all ${isTop ? 'border-emerald-500/60 bg-emerald-50/30 dark:bg-emerald-950/20 shadow-md shadow-emerald-500/5' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/60 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-xs'} ${isHiddenInitially ? 'hidden pb-extra-station' : ''}`}>
               
               <!-- Riga Superiore: Badge e Nome -->
               <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
@@ -499,6 +507,21 @@ const structuredData = {
           );
         })}
       </div>
+
+      <!-- Tasto Mostra Altri per Comuni Grandi (es. Roma, Milano) -->
+      {stationsByBenzina.length > 30 && (
+        <div class="text-center pt-2" id="show-more-stations-wrap">
+          <button
+            type="button"
+            id="btn-show-more-stations"
+            class="px-6 py-3 rounded-2xl font-bold text-sm bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-all shadow-md cursor-pointer active:scale-95 flex items-center justify-center gap-2 mx-auto border border-zinc-700/50"
+          >
+            <span>Mostra altri 30 distributori</span>
+            <span class="text-xs opacity-70 font-normal">({stationsByBenzina.length - 30} rimanenti)</span>
+            <span>↓</span>
+          </button>
+        </div>
+      )}
     </div>
 
     <!-- Sezione Distributori nei Comuni Limitrofi (Anti-Thin Content & Internal Linking) -->
@@ -621,7 +644,7 @@ const structuredData = {
 
   </div>
 
-  <!-- Script Mappa Interattiva del Comune -->
+  <!-- Script Mappa Interattiva del Comune & Paginazione Lista -->
   <script define:vars={{ mapStations, centroid: { lat: centerLat, lng: centerLng } }}>
     function initComuneMap() {
       if (typeof window.L === 'undefined') {
@@ -638,7 +661,7 @@ const structuredData = {
       const map = window.L.map('comune-map', {
         zoomControl: true,
         scrollWheelZoom: false,
-      }).setView([initialLat, initialLng], 13);
+      }).setView([initialLat, initialLng], 12);
 
       window.L.tileLayer(osmTiles, {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
@@ -646,53 +669,141 @@ const structuredData = {
       }).addTo(map);
 
       const markersLayer = window.L.layerGroup().addTo(map);
-      const points = [];
 
-      mapStations.forEach((st, idx) => {
-        if (!st.lat || !st.lng) return;
-        points.push([st.lat, st.lng]);
-        const iconClass = st.isCheapest ? 'pb-marker-cheapest' : 'pb-marker-standard';
-        const displayPrice = st.priceBenzina || st.priceDiesel || st.bestPrice;
-        const icon = window.L.divIcon({
-          className: iconClass,
-          html: `<div style="font-size:10px; padding:2px 5px; text-align:center;">€${displayPrice ? displayPrice.toFixed(2) : ''}</div>`,
-          iconSize: [46, 20],
+      // Ordiniamo tutte le stazioni per prezzo dal più basso al più alto
+      const allStationsSorted = [...mapStations]
+        .filter((st) => st.lat && st.lng)
+        .sort((a, b) => {
+          const pA = a.priceBenzina || a.priceDiesel || a.bestPrice || 99;
+          const pB = b.priceBenzina || b.priceDiesel || b.bestPrice || 99;
+          return pA - pB;
         });
 
-        const mapsUrl = st.mapsUrl;
-        const safeName = (st.nome || st.brand || '').replace(/'/g, "\\'");
-        const safeBrand = (st.brand || '').replace(/'/g, "\\'");
+      const totalCount = allStationsSorted.length;
+      const statusPill = document.getElementById('map-status-pill');
 
-        const marker = window.L.marker([st.lat, st.lng], { icon })
-          .bindPopup(`
-            <div style="font-family:system-ui; padding:3px; max-width:240px;">
-              <div style="font-size:11px; font-weight:800; color:#10b981;">#${idx + 1} • ${st.brand}</div>
-              <div style="font-size:13px; font-weight:bold; margin-top:2px;">${st.nome || st.brand}</div>
-              <div style="font-size:11px; opacity:0.8; margin-top:2px;">${st.indirizzo} - ${st.comune}</div>
-              <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${displayPrice ? displayPrice.toFixed(3) : 'N/D'}/L</div>
-              <a href="${mapsUrl}" target="_blank" rel="noopener" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:5px 12px; border-radius:8px; text-decoration:none; margin-top:4px;">Portami qui →</a>
-            </div>
-          `);
+      // Funzione per aggiornare dinamicamente i pin nel riquadro visibile
+      function updateVisibleMarkers() {
+        if (!map) return;
+        const bounds = map.getBounds();
+        const zoom = map.getZoom();
 
-        markersLayer.addLayer(marker);
-      });
+        // Filtra le stazioni all'interno della finestra geografica visibile
+        const inBounds = allStationsSorted.filter((st) => bounds.contains([st.lat, st.lng]));
 
-      if (points.length > 0) {
-        setTimeout(() => {
-          map.invalidateSize();
-          const bounds = window.L.latLngBounds(points);
-          map.fitBounds(bounds, { padding: [35, 35], maxZoom: 14, animate: false });
-        }, 150);
+        // Limite adattivo di marker in base allo zoom per evitare nuvole di pin
+        let maxPins = 45;
+        if (zoom <= 11) maxPins = 30;
+        else if (zoom <= 13) maxPins = 45;
+        else if (zoom <= 15) maxPins = 65;
+        else maxPins = 90;
+
+        // Se il comune ha poche stazioni (es. <= 40 come Vergiate), mostrale tutte
+        if (totalCount <= 40) {
+          maxPins = totalCount;
+        }
+
+        const toDisplay = inBounds.slice(0, maxPins);
+
+        markersLayer.clearLayers();
+
+        toDisplay.forEach((st, idx) => {
+          const isCheapestInView = idx === 0;
+          const iconClass = isCheapestInView ? 'pb-marker-cheapest' : 'pb-marker-standard';
+          const displayPrice = st.priceBenzina || st.priceDiesel || st.bestPrice;
+          const icon = window.L.divIcon({
+            className: iconClass,
+            html: `<div style="font-size:10px; padding:2px 5px; text-align:center;">€${displayPrice ? displayPrice.toFixed(2) : ''}</div>`,
+            iconSize: [46, 20],
+          });
+
+          const mapsUrl = st.mapsUrl;
+          const safeName = (st.nome || st.brand || '').replace(/'/g, "\\'");
+          const safeBrand = (st.brand || '').replace(/'/g, "\\'");
+
+          const marker = window.L.marker([st.lat, st.lng], { icon })
+            .bindPopup(`
+              <div style="font-family:system-ui; padding:3px; max-width:240px;">
+                <div style="font-size:11px; font-weight:800; color:#10b981;">#${idx + 1} più economico • ${st.brand}</div>
+                <div style="font-size:13px; font-weight:bold; margin-top:2px;">${st.nome || st.brand}</div>
+                <div style="font-size:11px; opacity:0.8; margin-top:2px;">${st.indirizzo} - ${st.comune}</div>
+                <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${displayPrice ? displayPrice.toFixed(3) : 'N/D'}/L</div>
+                <a href="${mapsUrl}" target="_blank" rel="noopener" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:5px 12px; border-radius:8px; text-decoration:none; margin-top:4px;">Portami qui →</a>
+              </div>
+            `);
+
+          markersLayer.addLayer(marker);
+        });
+
+        // Aggiorna indicatore di stato
+        if (statusPill) {
+          if (totalCount <= 40) {
+            statusPill.innerHTML = `Mostrati tutti i <strong>${toDisplay.length}</strong> distributori`;
+          } else if (inBounds.length <= toDisplay.length) {
+            statusPill.innerHTML = `Tutti i <strong>${toDisplay.length}</strong> distributori visibili nel quadrante`;
+          } else {
+            statusPill.innerHTML = `Mostrati i <strong>${toDisplay.length} più economici</strong> su ${inBounds.length} nell'area`;
+          }
+        }
       }
+
+      // Adatta inizialmente la visuale ai punti del comune
+      if (allStationsSorted.length > 0) {
+        const points = allStationsSorted.map((s) => [s.lat, s.lng]);
+        const bounds = window.L.latLngBounds(points);
+        map.fitBounds(bounds, { padding: [35, 35], maxZoom: 13, animate: false });
+      }
+
+      // Disegna i primi marker
+      updateVisibleMarkers();
+
+      // Ricalcola dinamicamente su spostamento o zoom con debounce
+      let debounceTimer = null;
+      function debouncedUpdate() {
+        if (debounceTimer) clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(updateVisibleMarkers, 60);
+      }
+
+      map.on('moveend', debouncedUpdate);
+      map.on('zoomend', debouncedUpdate);
 
       window.addEventListener('resize', () => { if (map) map.invalidateSize(); });
       window.addEventListener('pageshow', () => { if (map) map.invalidateSize(); });
     }
 
+    // Gestione Paginazione "Mostra Altri" nella Lista
+    function initShowMore() {
+      const btnShowMore = document.getElementById('btn-show-more-stations');
+      if (!btnShowMore) return;
+
+      btnShowMore.addEventListener('click', () => {
+        const hiddenStations = document.querySelectorAll('.pb-extra-station.hidden');
+        const batchSize = 30;
+        let revealed = 0;
+        hiddenStations.forEach((el) => {
+          if (revealed < batchSize) {
+            el.classList.remove('hidden');
+            revealed++;
+          }
+        });
+        const remaining = document.querySelectorAll('.pb-extra-station.hidden').length;
+        if (remaining === 0) {
+          const wrap = document.getElementById('show-more-stations-wrap');
+          if (wrap) wrap.style.display = 'none';
+        } else {
+          btnShowMore.innerHTML = `<span>Mostra altri 30 distributori</span> <span class="text-xs opacity-70 font-normal">(${remaining} rimanenti)</span> <span>↓</span>`;
+        }
+      });
+    }
+
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initComuneMap);
+      document.addEventListener('DOMContentLoaded', () => {
+        initComuneMap();
+        initShowMore();
+      });
     } else {
       initComuneMap();
+      initShowMore();
     }
   </script>
 </Layout>

@@ -314,8 +314,10 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.
         </div>
 
         <div class="pt-8 border-t border-zinc-200 dark:border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-500 dark:text-zinc-600 text-[11px]">
-          <div>
-            © {new Date().getFullYear()} PrezzoBenza.it — Tutti i diritti riservati.
+          <div class="flex flex-wrap items-center gap-2">
+            <span>© {new Date().getFullYear()} PrezzoBenza.it — Tutti i diritti riservati.</span>
+            <span class="hidden sm:inline text-zinc-300 dark:text-zinc-700">•</span>
+            <span>Contatto: <a href="mailto:info@prezzobenza.it" class="text-emerald-600 dark:text-emerald-400 font-medium hover:underline">info@prezzobenza.it</a></span>
           </div>
           <div class="flex items-center gap-4">
             <a href="/privacy" class="hover:underline">Privacy Policy</a>

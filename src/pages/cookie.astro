@@ -2,22 +2,114 @@
 import Layout from '../layouts/Layout.astro';
 
 const title = "Informativa sui Cookie | PrezzoBenza.it";
-const description = "Informativa estesa sull'uso dei cookie e delle tecnologie di tracciamento su PrezzoBenza.it.";
+const description = "Informativa estesa sui cookie e tecnologie di tracciamento adottate su PrezzoBenza.it. Gestisci liberamente il tuo consenso tramite la nostra CMP.";
 ---
 
 <Layout title={title} description={description} canonical="/cookie">
-  <div class="max-w-3xl mx-auto px-4 py-12 space-y-6 text-zinc-300 text-xs sm:text-sm leading-relaxed">
-    <h1 class="text-3xl font-black text-white">Informativa sui Cookie</h1>
-    <p>Ultimo aggiornamento: 21 Ottobre 2026</p>
+  <div class="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-zinc-800 dark:text-zinc-200 font-medium">Informativa sui Cookie</span>
+    </nav>
 
-    <h2 class="text-lg font-bold text-white pt-4">Cosa sono i Cookie?</h2>
-    <p>
-      I cookie sono piccoli file di testo che i siti visitati dagli utenti inviano ai loro terminali, dove vengono memorizzati per essere ritrasmessi agli stessi siti alla visita successiva.
-    </p>
+    <!-- Header Card -->
+    <div class="bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-10 shadow-sm space-y-8">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 mb-3">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+          </svg>
+          Cookie Policy & Trasparenza
+        </div>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+          Informativa Estesa sui Cookie
+        </h1>
+        <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-2">
+          Ultimo aggiornamento: 25 Ottobre 2026 • Direttiva ePrivacy e Linee Guida Cookie Garante Privacy
+        </p>
+      </div>
 
-    <h2 class="text-lg font-bold text-white pt-4">Cookie Tecnici e di Sessione</h2>
-    <p>
-      PrezzoBenza.it utilizza esclusivamente cookie tecnici strettamente necessari al corretto funzionamento della piattaforma e alla memorizzazione delle preferenze dell'utente (es. carburante preferito o raggio di ricerca). Non utilizziamo cookie di profilazione invasivi di prima parte.
-    </p>
+      <!-- Legal Body Sections -->
+      <div class="space-y-6 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed divide-y divide-zinc-200 dark:divide-zinc-800">
+        <!-- Section 1 -->
+        <div class="space-y-3 pt-6 first:pt-0">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            1. Cosa sono i Cookie?
+          </h2>
+          <p>
+            I cookie sono stringhe di testo di piccole dimensioni che i siti web visitati inviano al terminale dell'utente (computer, smartphone, tablet), dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla successiva visita del medesimo utente.
+          </p>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            2. Tipologie di Cookie Utilizzati su PrezzoBenza.it
+          </h2>
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60">
+              <h3 class="font-bold text-zinc-900 dark:text-white mb-1">A. Cookie Tecnici e di Funzionalità (Strettamente Necessari)</h3>
+              <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300">
+                Sono essenziali per il regolare funzionamento del sito e per consentire la navigazione (es. memorizzazione del tema chiaro/scuro in <code class="text-xs bg-zinc-200 dark:bg-zinc-700 px-1 py-0.5 rounded">pb_theme</code> o delle preferenze di carburante selezionate). Non richiedono preventivo consenso.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60">
+              <h3 class="font-bold text-zinc-900 dark:text-white mb-1">B. Cookie Analitici e Misurazione del Traffico</h3>
+              <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300">
+                Utilizzati per comprendere in forma anonima e aggregata come gli utenti interagiscono con le pagine del portale. Sono subordinati al consenso dell'utente espresso tramite la nostra Consent Management Platform (CMP).
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60">
+              <h3 class="font-bold text-zinc-900 dark:text-white mb-1">C. Cookie Pubblicitari (Google AdSense)</h3>
+              <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300">
+                PrezzoBenza.it adotta la CMP certificata IAB TCF UniConsent e il protocollo Google Consent Mode v2. Nessun cookie di profilazione o tracciamento pubblicitario viene installato prima dell'esplicita autorizzazione dell'utente.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            3. Come Gestire o Modificare le Preferenze Cookie
+          </h2>
+          <p>
+            Puoi modificare in ogni momento le tue scelte o revocare il consenso con un semplice click:
+          </p>
+          <div class="py-2">
+            <button
+              type="button"
+              onclick="if(window.__unicmp){window.__unicmp('showConsentTool')}else{alert('Il pannello di gestione cookie è in fase di caricamento.');}"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-colors shadow-sm cursor-pointer"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+              <span>Personalizza o Modifica Scelte Cookie (UniConsent CMP)</span>
+            </button>
+          </div>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">
+            In alternativa, puoi gestire e bloccare i cookie direttamente dalle impostazioni del tuo browser (Chrome, Firefox, Safari, Edge).
+          </p>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            4. Informazioni e Contatti
+          </h2>
+          <p>
+            Per qualsiasi richiesta o informazione relativa all'uso dei cookie o alla nostra Privacy Policy, puoi scrivere direttamente a:
+          </p>
+          <p>
+            📧 <a href="mailto:info@prezzobenza.it" class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">info@prezzobenza.it</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>

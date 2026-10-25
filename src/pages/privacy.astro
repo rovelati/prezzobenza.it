@@ -2,27 +2,157 @@
 import Layout from '../layouts/Layout.astro';
 
 const title = "Informativa sulla Privacy | PrezzoBenza.it";
-const description = "Informativa sul trattamento dei dati personali e sulla privacy per gli utenti di PrezzoBenza.it.";
+const description = "Informativa sul trattamento dei dati personali (GDPR) di PrezzoBenza.it. Scopri come proteggiamo la tua privacy e i tuoi dati di geolocalizzazione.";
 ---
 
 <Layout title={title} description={description} canonical="/privacy">
-  <div class="max-w-3xl mx-auto px-4 py-12 space-y-6 text-zinc-300 text-xs sm:text-sm leading-relaxed">
-    <h1 class="text-3xl font-black text-white">Informativa sulla Privacy</h1>
-    <p>Ultimo aggiornamento: 21 Ottobre 2026</p>
+  <div class="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 mb-6" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-zinc-800 dark:text-zinc-200 font-medium">Informativa sulla Privacy</span>
+    </nav>
 
-    <h2 class="text-lg font-bold text-white pt-4">1. Trattamento dei Dati di Geolocalizzazione</h2>
-    <p>
-      PrezzoBenza.it offre una funzionalità opzionale di geolocalizzazione per individuare le stazioni di servizio più vicine alla posizione dell'utente. Le coordinate GPS sono elaborate <strong>esclusivamente in locale (client-side)</strong> dal browser del dispositivo e <strong>non vengono memorizzate né salvate su server permanenti o condivise con terze parti</strong>.
-    </p>
+    <!-- Header Card -->
+    <div class="bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-10 shadow-sm space-y-8">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 mb-3">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          Regolamento UE 2016/679 (GDPR)
+        </div>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
+          Informativa sul Trattamento dei Dati Personali
+        </h1>
+        <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-2">
+          Ultimo aggiornamento: 25 Ottobre 2026 • Conforme a GDPR, Codice Privacy e Direttiva ePrivacy
+        </p>
+      </div>
 
-    <h2 class="text-lg font-bold text-white pt-4">2. Dati di Navigazione</h2>
-    <p>
-      I sistemi informatici e le procedure software preposte al funzionamento di questo sito web acquisiscono, nel corso del loro normale esercizio, alcuni dati la cui trasmissione è implicita nell'uso dei protocolli di comunicazione di Internet (es. indirizzi IP, tipo di browser, orari delle richieste).
-    </p>
+      <!-- Titolare Highlight Box -->
+      <div class="p-5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/60 space-y-2">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.206" />
+          </svg>
+          1. Titolare del Trattamento e Contatti
+        </h2>
+        <p class="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+          Il Titolare del trattamento dei dati per la piattaforma <strong>PrezzoBenza.it</strong> è il team di gestione del portale.
+          Per qualsiasi domanda sul trattamento dei dati personali, chiarimento o per l'esercizio dei diritti previsti dal GDPR, puoi contattarci all'indirizzo email ufficiale dedicato:
+        </p>
+        <div class="pt-2">
+          <a
+            href="mailto:info@prezzobenza.it"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-colors shadow-sm"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>info@prezzobenza.it</span>
+          </a>
+        </div>
+      </div>
 
-    <h2 class="text-lg font-bold text-white pt-4">3. Fonte dei Dati Carburante</h2>
-    <p>
-      I dati sui prezzi dei carburanti sono estratti dal database pubblico Open Data del Ministero delle Imprese e del Made in Italy (MIMIT).
-    </p>
+      <!-- Legal Body Sections -->
+      <div class="space-y-6 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed divide-y divide-zinc-200 dark:divide-zinc-800">
+        <!-- Section 2 -->
+        <div class="space-y-3 pt-6 first:pt-0">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+            <span>2. Trattamento dei Dati di Geolocalizzazione (GPS)</span>
+          </h2>
+          <p>
+            PrezzoBenza.it include una funzione volontaria <strong>"Trova Vicino a Me"</strong> che permette agli automobilisti di individuare le stazioni di rifornimento più vicine e convenienti in tempo reale.
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-zinc-700 dark:text-zinc-300">
+            <li><strong>Elaborazione esclusivamente Client-Side:</strong> le coordinate geografiche (latitudine e longitudine) vengono lette e gestite unicamente all'interno del browser del tuo dispositivo.</li>
+            <li><strong>Nessun salvataggio permanente:</strong> le coordinate non vengono mai inviate, salvate o memorizzate sui nostri server, né abbinate a identificativi univoci o profili personali.</li>
+            <li><strong>Controllo totale:</strong> la geolocalizzazione richiede sempre il consenso esplicito del browser e può essere revocata in qualsiasi momento dalle impostazioni del dispositivo.</li>
+          </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            3. Dati di Navigazione e Log di Sistema
+          </h2>
+          <p>
+            I sistemi informatici e le procedure software preposte al funzionamento di questo sito acquisiscono, nel corso del loro normale esercizio, alcuni dati tecnici la cui trasmissione è implicita nell'uso dei protocolli di comunicazione Internet (es. indirizzo IP, tipo di browser utilizzato, data e ora della richiesta, URL richiesta).
+          </p>
+          <p>
+            Questi dati vengono utilizzati al solo fine di ricavare informazioni statistiche aggregate sull'uso del sito, controllarne il corretto funzionamento, garantire la sicurezza informatica e proteggere l'infrastruttura contro attacchi DDoS tramite la rete Cloudflare.
+          </p>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            4. Cookie, Gestione del Consenso (CMP) e Pubblicità
+          </h2>
+          <p>
+            PrezzoBenza.it adotta una politica di massima trasparenza verso i propri utenti:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-zinc-700 dark:text-zinc-300">
+            <li>
+              <strong>Consent Management Platform (UniConsent):</strong> il sito integra la CMP certificata IAB TCF v2.2 UniConsent per permettere a ciascun visitatore di scegliere in modo granulare e libero quali categorie di cookie e tracciatori autorizzare (cookie tecnici necessari, statistici, marketing o annunci personalizzati).
+            </li>
+            <li>
+              <strong>Google Consent Mode v2:</strong> in assenza di consenso esplicito, tutti i tag di terze parti (inclusi Google Analytics e Google AdSense) operano con impostazioni di default negato (<code class="px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-xs">ad_storage: denied</code>, <code class="px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-xs">analytics_storage: denied</code>), prevenendo qualsiasi profilazione non autorizzata.
+            </li>
+            <li>
+              <strong>Google AdSense:</strong> per coprire i costi di infrastruttura e aggiornamento continuo dei dati dei carburanti, sul sito possono essere mostrati annunci pubblicitari erogati tramite Google AdSense, conformemente alle preferenze privacy espresse nel banner.
+            </li>
+          </ul>
+          <p class="pt-1">
+            Per i dettagli completi su ciascuna tipologia di cookie e per modificare in qualsiasi istante le tue scelte, consulta la nostra <a href="/cookie" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Informativa sui Cookie</a>.
+          </p>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            5. Fonte Ufficiale dei Dati sui Carburanti
+          </h2>
+          <p>
+            Tutti i prezzi dei carburanti (Benzina, Gasolio/Diesel, GPL, Metano, sia in modalità Self che Servito) e le anagrafiche dei distributori visualizzati su PrezzoBenza.it provengono dal portale ufficiale <strong>Open Data del Ministero delle Imprese e del Made in Italy (MIMIT)</strong> - Osservaprezzi Carburanti, comunicati quotidianamente dai gestori ai sensi dell'art. 51 della Legge n. 99/2009. PrezzoBenza.it non altera in alcun modo i prezzi comunicati alla banca dati ministeriale.
+          </p>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            6. Diritti dell'Interessato (Artt. 15-22 del GDPR)
+          </h2>
+          <p>
+            In qualità di interessato, il Regolamento Generale sulla Protezione dei Dati ti riconosce specifici diritti, tra cui:
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-zinc-700 dark:text-zinc-300">
+            <li>Diritto di accesso ai dati personali trattati (art. 15 GDPR);</li>
+            <li>Diritto di rettifica o aggiornamento dei dati inesatti (art. 16 GDPR);</li>
+            <li>Diritto alla cancellazione dei dati ("diritto all'oblio", art. 17 GDPR);</li>
+            <li>Diritto di limitazione del trattamento (art. 18 GDPR);</li>
+            <li>Diritto di opposizione al trattamento e revoca del consenso in qualsiasi momento (art. 21 GDPR);</li>
+            <li>Diritto di proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline">garanteprivacy.it</a>).</li>
+          </ul>
+          <p class="pt-2">
+            Per esercitare qualsiasi dei diritti sopra menzionati, è sufficiente inviare una comunicazione scritta a:
+            <br />
+            📧 <a href="mailto:info@prezzobenza.it" class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">info@prezzobenza.it</a>
+          </p>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="space-y-3 pt-6">
+          <h2 class="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+            7. Modifiche a Questa Informativa
+          </h2>
+          <p>
+            Il Titolare si riserva il diritto di apportare modifiche alla presente Privacy Policy in qualunque momento, dandone informazione agli utenti su questa pagina. Ti invitiamo pertanto a consultare regolarmente questa pagina facendo riferimento alla data di ultimo aggiornamento indicata in alto.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>

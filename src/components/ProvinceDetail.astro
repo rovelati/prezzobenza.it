@@ -19,6 +19,14 @@ export interface Props {
     avgDiesel?: number;
     minBenzina?: number;
     minDiesel?: number;
+    comuniCount?: number;
+    comuni?: Array<{
+      name: string;
+      slug: string;
+      stationsCount: number;
+      minBenzina?: number;
+      minDiesel?: number;
+    }>;
   };
   fuelType?: 'benzina' | 'diesel' | 'metano-gpl' | 'gpl-metano';
 }
@@ -654,6 +662,42 @@ const otherProvinces = provincesSummary.filter((p: any) => p.region === province
         </div>
       </div>
     </div>
+
+    <!-- 📍 Comuni della Provincia (Internal Linking & Local SEO) -->
+    {province.comuni && province.comuni.length > 0 && (
+      <div class="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 sm:p-7 space-y-4 shadow-xs">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+            Copertura Comunale ({province.comuni.length} comuni)
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white tracking-tight">
+            Prezzi Carburanti nei Comuni di {province.name}
+          </h2>
+          <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
+            Seleziona il tuo comune per scoprire i distributori più vicini e confrontare i prezzi alla pompa in tempo reale:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 pt-2">
+          {province.comuni.map((c: any) => (
+            <a
+              href={`/provincia/${province.slug}/${c.slug}/`}
+              class="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/40 hover:border-emerald-500/50 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20 transition-all flex items-center justify-between gap-2 group"
+            >
+              <div class="truncate">
+                <span class="text-xs font-bold text-zinc-800 dark:text-zinc-200 group-hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate block">
+                  {c.name}
+                </span>
+                <span class="text-[10px] text-zinc-500 block truncate">
+                  {c.stationsCount} {c.stationsCount === 1 ? 'pompa' : 'pompe'} {c.minBenzina ? `• da €${c.minBenzina.toFixed(3)}` : ''}
+                </span>
+              </div>
+              <span class="text-xs text-zinc-400 group-hover:text-emerald-500 transition-colors">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
 
     <!-- Other Provinces in the same Region -->
     {otherProvinces.length > 0 && (

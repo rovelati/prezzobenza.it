@@ -38,7 +38,7 @@ log "Fetching latest official fuel prices from MIMIT..."
 node scripts/fetch-mimit-data.js 2>&1 | tee -a "$LOG"
 
 # 4. Build Astro SSG
-log "Building Astro static site (107 programmatic provinces)..."
+log "Building Astro static site (107 provinces + 5,200+ programmatic municipalities)..."
 npm run build 2>&1 | tee -a "$LOG"
 
 # 5. Deploy Cloudflare Pages

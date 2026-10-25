@@ -150,6 +150,49 @@ function normalizeBrand(brandRaw) {
   return brandRaw.trim();
 }
 
+export function slugify(text) {
+  if (!text) return '';
+  return text
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/['’]/g, '-')
+    .replace(/[^a-z0-9 -]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
+export function formatComuneName(raw) {
+  if (!raw) return '';
+  let s = raw.trim();
+  const accentReplacements = {
+    "FORLI'": 'Forlì', "CANTU'": 'Cantù', "SANTHIA'": 'Santhià',
+    "PIEVE D'ALPAGO": "Pieve d'Alpago", "SANT'ANTIOCO": "Sant'Antioco"
+  };
+  if (accentReplacements[s.toUpperCase()]) return accentReplacements[s.toUpperCase()];
+
+  const lowerWords = new Set(['di', 'del', 'della', 'delle', 'degli', 'dei', 'da', 'in', 'con', 'su', 'sul', 'sulla', 'sulle', 'sugli', 'sui', 'per', 'tra', 'fra', 'al', 'alla', 'alle', 'agli', 'ai', 'e', 'ed']);
+
+  const words = s.toLowerCase().split(/\s+/);
+  const formatted = words.map((w, idx) => {
+    if (w.includes("'")) {
+      const parts = w.split("'");
+      return parts.map((p, pIdx) => {
+        if (!p) return '';
+        if (pIdx === 0 && (p === 'd' || p === 'dell' || p === 'nell' || p === 'sull' || p === 'l' || p === 'sant')) {
+          return (idx === 0 && pIdx === 0) ? p.charAt(0).toUpperCase() + p.slice(1) : p;
+        }
+        return p.charAt(0).toUpperCase() + p.slice(1);
+      }).join("'");
+    }
+    if (idx > 0 && lowerWords.has(w)) return w;
+    return w.charAt(0).toUpperCase() + w.slice(1);
+  });
+  return formatted.join(' ');
+}
+
 async function fetchCsv(url) {
   const fileName = url.split('/').pop();
   const proxyUrl = `https://www.prezzobenza.it/api/mimit-proxy?file=${fileName}`;
@@ -415,8 +458,9 @@ async function main() {
 
   console.log('[MIMIT] Statistiche Nazionali calcolate:', nationalStats.averages);
 
-  // 4. Generazione Dati per Ciascuna Provincia
+  // 4. Generazione Dati per Ciascuna Provincia e per Ciascun Comune
   const provincesSummary = [];
+  const allComuniIndex = [];
 
   for (const [code, info] of Object.entries(PROVINCE_MAP)) {
     const provStations = stationsByProv[code] || [];
@@ -441,6 +485,86 @@ async function main() {
     const centerLat = validLats.length ? Number((validLats.reduce((a, b) => a + b, 0) / validLats.length).toFixed(4)) : null;
     const centerLng = validLngs.length ? Number((validLngs.reduce((a, b) => a + b, 0) / validLngs.length).toFixed(4)) : null;
 
+    // Raggruppa distributori per comune
+    const stationsByComune = new Map();
+    for (const st of provStations) {
+      if (!st.comune) continue;
+      const cSlug = slugify(st.comune);
+      if (!cSlug || cSlug === 'diesel' || cSlug === 'metano-gpl' || cSlug === 'gpl-metano') continue;
+      if (!stationsByComune.has(cSlug)) {
+        stationsByComune.set(cSlug, {
+          rawName: st.comune,
+          stations: [],
+        });
+      }
+      stationsByComune.get(cSlug).stations.push(st);
+    }
+
+    const provComuniList = [];
+    for (const [cSlug, cData] of stationsByComune.entries()) {
+      const cStations = cData.stations;
+      const formattedName = formatComuneName(cData.rawName);
+      const cBSelf = cStations.map((s) => s.prices.benzina_self?.prezzo).filter(Boolean);
+      const cDSelf = cStations.map((s) => s.prices.diesel_self?.prezzo).filter(Boolean);
+      const cGpl = cStations.map((s) => s.prices.gpl?.prezzo).filter(Boolean);
+      const cMetano = cStations.map((s) => s.prices.metano?.prezzo).filter(Boolean);
+
+      const cSortedByB = [...cStations].filter((s) => s.prices.benzina_self).sort((a, b) => a.prices.benzina_self.prezzo - b.prices.benzina_self.prezzo);
+      const cSortedByD = [...cStations].filter((s) => s.prices.diesel_self).sort((a, b) => a.prices.diesel_self.prezzo - b.prices.diesel_self.prezzo);
+
+      const cLats = cStations.map((s) => s.lat).filter(Boolean);
+      const cLngs = cStations.map((s) => s.lng).filter(Boolean);
+      const cCenterLat = cLats.length ? Number((cLats.reduce((a, b) => a + b, 0) / cLats.length).toFixed(4)) : centerLat;
+      const cCenterLng = cLngs.length ? Number((cLngs.reduce((a, b) => a + b, 0) / cLngs.length).toFixed(4)) : centerLng;
+
+      const comuneEntry = {
+        name: formattedName,
+        slug: cSlug,
+        provCode: code,
+        provName: info.name,
+        provSlug: info.slug,
+        region: info.region,
+        stationsCount: cStations.length,
+        avgBenzina: calcAvg(cBSelf),
+        avgDiesel: calcAvg(cDSelf),
+        minBenzina: calcMin(cBSelf),
+        minDiesel: calcMin(cDSelf),
+        minGpl: calcMin(cGpl),
+        minMetano: calcMin(cMetano),
+        cheapestBenzina: cSortedByB[0]
+          ? {
+              nome: cSortedByB[0].nome,
+              brand: cSortedByB[0].brand,
+              indirizzo: cSortedByB[0].indirizzo,
+              prezzo: cSortedByB[0].prices.benzina_self.prezzo,
+            }
+          : null,
+        cheapestDiesel: cSortedByD[0]
+          ? {
+              nome: cSortedByD[0].nome,
+              brand: cSortedByD[0].brand,
+              indirizzo: cSortedByD[0].indirizzo,
+              prezzo: cSortedByD[0].prices.diesel_self.prezzo,
+            }
+          : null,
+        lat: cCenterLat,
+        lng: cCenterLng,
+      };
+
+      provComuniList.push({
+        name: formattedName,
+        slug: cSlug,
+        stationsCount: cStations.length,
+        minBenzina: calcMin(cBSelf),
+        minDiesel: calcMin(cDSelf),
+      });
+
+      allComuniIndex.push(comuneEntry);
+    }
+
+    // Ordina comuni della provincia per numero di stazioni decrescente, poi per nome
+    provComuniList.sort((a, b) => b.stationsCount - a.stationsCount || a.name.localeCompare(b.name, 'it'));
+
     provincesSummary.push({
       code,
       name: info.name,
@@ -449,6 +573,8 @@ async function main() {
       lat: centerLat,
       lng: centerLng,
       stationsCount: provStations.length,
+      comuniCount: provComuniList.length,
+      comuni: provComuniList,
       avgBenzina: calcAvg(bSelf),
       avgDiesel: calcAvg(dSelf),
       minBenzina: calcMin(bSelf),
@@ -507,6 +633,16 @@ async function main() {
     JSON.stringify(provincesSummary, null, 2),
     'utf8'
   );
+
+  // Salva indice globale di tutti i comuni per routing e sitemap
+  allComuniIndex.sort((a, b) => a.name.localeCompare(b.name, 'it'));
+
+  writeFileSync(
+    path.join(ROOT, 'src', 'data', 'comuni-index.json'),
+    JSON.stringify(allComuniIndex, null, 2),
+    'utf8'
+  );
+  console.log(`[MIMIT] Comuni mappati e indicizzati: ${allComuniIndex.length}`);
 
   // 5. Top 50 più economici in tutta Italia
   const topBenzinaItaly = [...allActiveStationsWithPrices]

@@ -16,12 +16,14 @@ Piattaforma web ultra-veloce (Astro 5 + Tailwind CSS v4) per il monitoraggio in 
    - Filtro carburante: **Benzina (Verde)**, **Diesel (Gasolio)**, **GPL**, **Metano** (Self vs Servito).
 
 2. **⚡ Performance & PWA**:
-   - Build statica Astro 5: **113 pagine compilate in < 1 secondo**.
+   - Build statica Astro 5: **Oltre 5.700 pagine compilate in soli ~12 secondi**.
    - Bundle client compresso in appena **3 kB gzip**.
    - Lighthouse Score 100/100, Core Web Vitals perfetti.
 
 3. **🏆 Programmatic SEO Dominance**:
-   - **Tutte le 107 Province Italiane** indicizzate con landing page dedicate (`/provincia/[slug]`).
+   - **Tutte le 107 Province Italiane** indicizzate con landing page dedicate (`/provincia/[slug]`) e varianti carburante.
+   - **Oltre 5.200 Comuni Italiani** con pagine iper-locali dedicate (`/provincia/[slug-provincia]/[slug-comune]`, es. `/provincia/varese/vergiate`).
+   - Podio e classifica distributori locali, stazioni nei comuni limitrofi (entro 15 km) per arricchimento contenutistico e link building interno anti-"thin content".
    - Hub nazionale **Pompe Bianche No-Logo** (`/pompe-bianche/`) per i distributori indipendenti.
    - **Osservatorio Prezzi Oggi** (`/prezzi-oggi/`) con medie regionali e composizione accise/IVA.
    - **Guida al Risparmio** (`/come-risparmiare/`).

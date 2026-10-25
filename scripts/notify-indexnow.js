@@ -23,6 +23,12 @@ const ENDPOINTS = [
   'https://yandex.com/indexnow',
 ];
 
+let comuniUrls = [];
+try {
+  const comuniIndex = (await import('../src/data/comuni-index.json', { with: { type: 'json' } })).default;
+  comuniUrls = comuniIndex.map(c => `${SITE_URL}/provincia/${c.provSlug}/${c.slug}/`);
+} catch (e) {}
+
 // Tutte le pagine canoniche del sito
 const allUrls = [
   `${SITE_URL}/`,
@@ -32,6 +38,7 @@ const allUrls = [
   ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/`),
   ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/diesel/`),
   ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/metano-gpl/`),
+  ...comuniUrls,
 ];
 
 // Parsing argomenti CLI o selezione automatica in base all'ora

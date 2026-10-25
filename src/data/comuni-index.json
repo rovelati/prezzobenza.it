@@ -228,8 +228,8 @@
       "indirizzo": "PIAZZA ALDO MORO SNC 71021",
       "prezzo": 2.254
     },
-    "lat": 40.7754,
-    "lng": 14.4752
+    "lat": 41.5503,
+    "lng": 15.5947
   },
   {
     "name": "Accettura",
@@ -518,8 +518,8 @@
       "indirizzo": "Via Brescia  1 25010",
       "prezzo": 2.19
     },
-    "lat": 45.458,
-    "lng": 10.4643
+    "lat": 45.6082,
+    "lng": 10.5112
   },
   {
     "name": "Acqualagna",
@@ -1813,8 +1813,8 @@
       "indirizzo": "S.S. 12 KM 337 + 947  SNC",
       "prezzo": 2.19
     },
-    "lat": 45.936,
-    "lng": 11.1734
+    "lat": 45.7747,
+    "lng": 11.0074
   },
   {
     "name": "Alà dei Sardi",
@@ -2335,8 +2335,8 @@
       "indirizzo": "VIALE BARI S.N. 70011",
       "prezzo": 2.19
     },
-    "lat": 40.9542,
-    "lng": 16.2997
+    "lat": 40.7846,
+    "lng": 17.2394
   },
   {
     "name": "Alberona",
@@ -3050,8 +3050,8 @@
       "indirizzo": "Viale della Regione Siciliana 3616  90121",
       "prezzo": 2.269
     },
-    "lat": 37.9569,
-    "lng": 13.52
+    "lat": 38.0665,
+    "lng": 13.4043
   },
   {
     "name": "Alice Castello",
@@ -6307,8 +6307,8 @@
       "indirizzo": "Strada Statale 679 Loc. Battifolle Km 7 + 480  52100",
       "prezzo": 2.19
     },
-    "lat": 43.4439,
-    "lng": 11.8745
+    "lat": 43.458,
+    "lng": 11.8572
   },
   {
     "name": "Argelato",
@@ -7486,8 +7486,8 @@
       "indirizzo": "S.S. 130/131 ELMAS SESTU",
       "prezzo": 2.19
     },
-    "lat": 39.3603,
-    "lng": 8.99
+    "lat": 39.2836,
+    "lng": 9.0204
   },
   {
     "name": "Assisi",
@@ -8172,8 +8172,8 @@
       "indirizzo": "Via Sandro Pertini snc 67051",
       "prezzo": 2.179
     },
-    "lat": 42.0046,
-    "lng": 13.396
+    "lat": 42.0292,
+    "lng": 13.43
   },
   {
     "name": "Aviano",
@@ -12869,8 +12869,8 @@
       "indirizzo": "Via Marchese 2 89032",
       "prezzo": 2.19
     },
-    "lat": 38.0591,
-    "lng": 15.9929
+    "lat": 38.0865,
+    "lng": 16.1512
   },
   {
     "name": "Biandrate",
@@ -19324,8 +19324,8 @@
       "indirizzo": "VIA ARCONATE 120 20020",
       "prezzo": 2.239
     },
-    "lat": 45.5231,
-    "lng": 8.9859
+    "lat": 45.5502,
+    "lng": 8.8783
   },
   {
     "name": "Butera",
@@ -19904,8 +19904,8 @@
       "indirizzo": "Viale Monastir 241  09122",
       "prezzo": 2.179
     },
-    "lat": 39.2409,
-    "lng": 9.1257
+    "lat": 39.2292,
+    "lng": 9.1179
   },
   {
     "name": "Cagnano Varano",
@@ -22426,8 +22426,8 @@
       "indirizzo": "VIA VALLE AURINA 7 39032",
       "prezzo": 2.189
     },
-    "lat": 46.8845,
-    "lng": 11.7166
+    "lat": 46.8984,
+    "lng": 11.9429
   },
   {
     "name": "Campobasso",
@@ -22619,8 +22619,8 @@
       "indirizzo": "Statale 113 Settentrionale Sicula, Km. 205+0.50, dir. CEFALU'  90010",
       "prezzo": 2.195
     },
-    "lat": 38.0294,
-    "lng": 13.7588
+    "lat": 37.9881,
+    "lng": 13.8676
   },
   {
     "name": "Campofilone",
@@ -23141,8 +23141,8 @@
       "indirizzo": "VIA PROVINCIALE NOLA-CICCIANO  80030",
       "prezzo": 2.254
     },
-    "lat": 40.933,
-    "lng": 14.4365
+    "lat": 40.9547,
+    "lng": 14.5378
   },
   {
     "name": "Camposanto",
@@ -25364,8 +25364,8 @@
       "indirizzo": "VIA PORTA ROMA S.S.7 APPIA * 81043",
       "prezzo": 2.195
     },
-    "lat": 41.0891,
-    "lng": 14.2321
+    "lat": 41.114,
+    "lng": 14.2279
   },
   {
     "name": "Capurso",
@@ -27123,8 +27123,8 @@
       "indirizzo": "Via Provinciale  66050",
       "prezzo": 2.399
     },
-    "lat": 40.8486,
-    "lng": 14.4867
+    "lat": 42.2256,
+    "lng": 14.3675
   },
   {
     "name": "Carvico",
@@ -28892,7 +28892,7 @@
       "indirizzo": "VIA FUSCO, FRAZ. MEZZANO 12 81100",
       "prezzo": 1.579
     },
-    "lat": 41.0597,
+    "lat": 41.073,
     "lng": 14.3413
   },
   {
@@ -31554,8 +31554,8 @@
       "indirizzo": "VIA NAPOLI 298 80053",
       "prezzo": 1.769
     },
-    "lat": 40.7351,
-    "lng": 14.4347
+    "lat": 40.7079,
+    "lng": 14.485
   },
   {
     "name": "Castellamonte",
@@ -36473,8 +36473,8 @@
       "indirizzo": "PESCO CUPO 16 86012",
       "prezzo": 2.299
     },
-    "lat": 41.0861,
-    "lng": 14.7547
+    "lat": 41.4711,
+    "lng": 14.718
   },
   {
     "name": "Cercola",
@@ -37739,8 +37739,8 @@
       "indirizzo": "16 Adriatica, Km. 182, Ravenna - 47042",
       "prezzo": 2.19
     },
-    "lat": 44.2026,
-    "lng": 12.3789
+    "lat": 44.1845,
+    "lng": 12.397
   },
   {
     "name": "Cessalto",
@@ -38580,8 +38580,8 @@
       "indirizzo": "ABBRUZZO 463 66100",
       "prezzo": 2.189
     },
-    "lat": 42.3373,
-    "lng": 14.0953
+    "lat": 42.3505,
+    "lng": 14.1452
   },
   {
     "name": "Chieuti",
@@ -40077,8 +40077,8 @@
       "indirizzo": "VIA FEHR GIA' VIA GIARDINO SNC 89022",
       "prezzo": 2.249
     },
-    "lat": 38.5476,
-    "lng": 16.1203
+    "lat": 38.3573,
+    "lng": 16.0638
   },
   {
     "name": "Cittareale",
@@ -40425,8 +40425,8 @@
       "indirizzo": "VIA XVI SETTEMBRE 21 00053",
       "prezzo": 2.09
     },
-    "lat": 42.1187,
-    "lng": 11.8008
+    "lat": 42.099,
+    "lng": 11.8003
   },
   {
     "name": "Civitella Casanova",
@@ -43769,8 +43769,8 @@
       "indirizzo": "Via dell'Agricoltura 21  87064",
       "prezzo": 2.19
     },
-    "lat": 39.688,
-    "lng": 16.4647
+    "lat": 39.634,
+    "lng": 16.5533
   },
   {
     "name": "Corinaldo",
@@ -44735,8 +44735,8 @@
       "indirizzo": "Via Mazzini SNC 13836",
       "prezzo": 2.19
     },
-    "lat": 45.5362,
-    "lng": 9.1874
+    "lat": 45.5521,
+    "lng": 8.1811
   },
   {
     "name": "Cosseria",
@@ -49480,8 +49480,8 @@
       "indirizzo": "Via Antonio Laghi 42  48018",
       "prezzo": 2.034
     },
-    "lat": 44.3075,
-    "lng": 11.9031
+    "lat": 44.3026,
+    "lng": 11.8888
   },
   {
     "name": "Faeto",
@@ -50369,8 +50369,8 @@
       "indirizzo": "S.S. 16 KM 869+482  72016",
       "prezzo": 1.649
     },
-    "lat": 40.8169,
-    "lng": 17.4181
+    "lat": 40.828,
+    "lng": 17.3891
   },
   {
     "name": "Fauglia",
@@ -51741,8 +51741,8 @@
       "indirizzo": "VIA PER MODENA 54 41034",
       "prezzo": 2.19
     },
-    "lat": 44.9128,
-    "lng": 11.0526
+    "lat": 44.8439,
+    "lng": 11.2854
   },
   {
     "name": "Finale Ligure",
@@ -52775,8 +52775,8 @@
       "indirizzo": "Via Ponte Gagliardo 160 04022",
       "prezzo": 1.605
     },
-    "lat": 41.3226,
-    "lng": 13.4443
+    "lat": 41.337,
+    "lng": 13.4017
   },
   {
     "name": "Fonni",
@@ -57553,8 +57553,8 @@
       "indirizzo": "SP Genzano Cecchina km 2+070 snc",
       "prezzo": 2.229
     },
-    "lat": 41.7148,
-    "lng": 12.6766
+    "lat": 41.6929,
+    "lng": 12.6971
   },
   {
     "name": "Gera Lario",
@@ -59747,8 +59747,8 @@
       "indirizzo": "LOC.MADONNA DELLE GRAZIE 143 80054",
       "prezzo": 2.249
     },
-    "lat": 40.7264,
-    "lng": 14.4564
+    "lat": 40.6989,
+    "lng": 14.5105
   },
   {
     "name": "Gragnano Trebbiense",
@@ -60307,8 +60307,8 @@
       "indirizzo": "GIOVANNI DA VERRAZZANO SNC 50022",
       "prezzo": 2.229
     },
-    "lat": 43.6353,
-    "lng": 11.2478
+    "lat": 43.6144,
+    "lng": 11.3241
   },
   {
     "name": "Grezzago",
@@ -64394,8 +64394,8 @@
       "indirizzo": "Lungomare Luigi Rizzo 25 92010",
       "prezzo": 2.768
     },
-    "lat": 35.6209,
-    "lng": 12.6885
+    "lat": 35.5003,
+    "lng": 12.6041
   },
   {
     "name": "Lamporecchio",
@@ -65505,8 +65505,8 @@
       "indirizzo": "ACCESSO SUPERSTRADA LE/BR - DIREZIONE BR.  SNC",
       "prezzo": 2.19
     },
-    "lat": 40.3512,
-    "lng": 18.174
+    "lat": 40.357,
+    "lng": 18.175
   },
   {
     "name": "Lecce Nei Marsi",
@@ -65563,8 +65563,8 @@
       "indirizzo": "CORSO BERGAMO 20 23900",
       "prezzo": 2.195
     },
-    "lat": 45.8298,
-    "lng": 9.3988
+    "lat": 45.8511,
+    "lng": 9.4004
   },
   {
     "name": "Ledro",
@@ -65940,8 +65940,8 @@
       "indirizzo": "VIA A.DIAZ 37 20823",
       "prezzo": 2.229
     },
-    "lat": 45.5988,
-    "lng": 9.1531
+    "lat": 45.6876,
+    "lng": 9.1127
   },
   {
     "name": "Lentini",
@@ -66964,8 +66964,8 @@
       "indirizzo": "F. CRISPI  98055",
       "prezzo": 2.19
     },
-    "lat": 38.5457,
-    "lng": 14.9384
+    "lat": 38.4571,
+    "lng": 14.9564
   },
   {
     "name": "Lipomo",
@@ -69815,8 +69815,8 @@
       "indirizzo": "Via Crivelli 32 20013",
       "prezzo": 2.229
     },
-    "lat": 45.4643,
-    "lng": 8.9138
+    "lat": 45.4637,
+    "lng": 8.8776
   },
   {
     "name": "Magione",
@@ -70047,8 +70047,8 @@
       "indirizzo": "SS3 FLAMINIA KM 65+762 SNC 02046",
       "prezzo": 2.19
     },
-    "lat": 42.3108,
-    "lng": 12.4731
+    "lat": 42.3706,
+    "lng": 12.4763
   },
   {
     "name": "Maglie",
@@ -74300,8 +74300,8 @@
       "indirizzo": "V. PAULLESE VECCHIA 0 20076",
       "prezzo": 2.19
     },
-    "lat": 45.4487,
-    "lng": 9.3112
+    "lat": 45.4053,
+    "lng": 9.3405
   },
   {
     "name": "Medolago",
@@ -78388,8 +78388,8 @@
       "indirizzo": "VITTORIO EMANUELE 128 40063",
       "prezzo": 2.249
     },
-    "lat": 43.0138,
-    "lng": 11.8273
+    "lat": 44.2168,
+    "lng": 11.3216
   },
   {
     "name": "Mongiuffi Melia",
@@ -85346,8 +85346,8 @@
       "indirizzo": "TINONI 58 53016",
       "prezzo": 2.195
     },
-    "lat": 43.2479,
-    "lng": 11.2401
+    "lat": 43.1608,
+    "lng": 11.3057
   },
   {
     "name": "Muro Leccese",
@@ -86448,8 +86448,8 @@
       "indirizzo": "S.P. 87 BIS KM25,668 00048",
       "prezzo": 2.189
     },
-    "lat": 41.4974,
-    "lng": 12.6574
+    "lat": 41.4703,
+    "lng": 12.6726
   },
   {
     "name": "Neviano degli Arduini",
@@ -87057,8 +87057,8 @@
       "indirizzo": "VIA MADONNA DELLA CROCE SN 70015",
       "prezzo": 2.189
     },
-    "lat": 40.9155,
-    "lng": 16.4627
+    "lat": 40.796,
+    "lng": 17.1164
   },
   {
     "name": "Nociglia",
@@ -87608,8 +87608,8 @@
       "indirizzo": "BORGOMANERO",
       "prezzo": 2.19
     },
-    "lat": 45.4557,
-    "lng": 8.6174
+    "lat": 45.4504,
+    "lng": 8.6207
   },
   {
     "name": "Novara di Sicilia",
@@ -88826,8 +88826,8 @@
       "indirizzo": "Viale Aldo Moro 72 07026",
       "prezzo": 2.189
     },
-    "lat": 40.9148,
-    "lng": 9.5019
+    "lat": 40.9373,
+    "lng": 9.5023
   },
   {
     "name": "Oldenico",
@@ -91900,8 +91900,8 @@
       "indirizzo": "STRADA STATALE 149 98042",
       "prezzo": 1.999
     },
-    "lat": 37.9167,
-    "lng": 15.0796
+    "lat": 38.1993,
+    "lng": 15.3021
   },
   {
     "name": "Paceco",
@@ -93852,8 +93852,8 @@
       "indirizzo": "VIA EMILIA EST 73/A 43123",
       "prezzo": 1.884
     },
-    "lat": 44.7915,
-    "lng": 10.3268
+    "lat": 44.7952,
+    "lng": 10.3316
   },
   {
     "name": "Parona",
@@ -94335,8 +94335,8 @@
       "indirizzo": "MOROLENSE SNC 03010",
       "prezzo": 2.19
     },
-    "lat": 41.5491,
-    "lng": 13.2445
+    "lat": 41.6189,
+    "lng": 13.298
   },
   {
     "name": "Pattada",
@@ -95698,8 +95698,8 @@
       "indirizzo": "BOVIO 414 65123",
       "prezzo": 2.19
     },
-    "lat": 42.4526,
-    "lng": 14.2013
+    "lat": 42.4597,
+    "lng": 14.2065
   },
   {
     "name": "Pescasseroli",
@@ -99139,8 +99139,8 @@
       "indirizzo": "Via Aurelia Nord 6 56122",
       "prezzo": 1.884
     },
-    "lat": 43.6985,
-    "lng": 10.4011
+    "lat": 43.701,
+    "lng": 10.395
   },
   {
     "name": "Pisano",
@@ -102135,8 +102135,8 @@
       "indirizzo": "VIA DELLE GRAZIE  5 33170",
       "prezzo": 2.19
     },
-    "lat": 45.9632,
-    "lng": 12.6793
+    "lat": 45.959,
+    "lng": 12.6548
   },
   {
     "name": "Porlezza",
@@ -103913,8 +103913,8 @@
       "indirizzo": "VIA BOLOGNA 326/Q 59100",
       "prezzo": 2.19
     },
-    "lat": 43.8411,
-    "lng": 11.107
+    "lat": 43.8761,
+    "lng": 11.0817
   },
   {
     "name": "Prato Allo Stelvio",
@@ -106039,8 +106039,8 @@
       "indirizzo": "via del tratturo 24 67068",
       "prezzo": 2.277
     },
-    "lat": 41.9967,
-    "lng": 13.1639
+    "lat": 42.103,
+    "lng": 13.8153
   },
   {
     "name": "Ramacca",
@@ -108358,8 +108358,8 @@
       "indirizzo": "PROV. 195 KM. 18+228 . 15010",
       "prezzo": 2.229
     },
-    "lat": 44.7892,
-    "lng": 8.6881
+    "lat": 44.8735,
+    "lng": 8.8298
   },
   {
     "name": "Rivalta di Torino",
@@ -110445,8 +110445,8 @@
       "indirizzo": "Via dei Gonzaga SNC 00163",
       "prezzo": 1.603
     },
-    "lat": 41.8849,
-    "lng": 12.4926
+    "lat": 41.8854,
+    "lng": 12.4924
   },
   {
     "name": "Romagnano Sesia",
@@ -116012,8 +116012,8 @@
       "indirizzo": "VIALE SPINELLI SNC 82018",
       "prezzo": 2.254
     },
-    "lat": 41.0367,
-    "lng": 14.7848
+    "lat": 41.069,
+    "lng": 14.8528
   },
   {
     "name": "San Giorgio della Richinvelda",
@@ -118278,8 +118278,8 @@
       "indirizzo": "S. P. 13 km 16+450 S. N.  10077",
       "prezzo": 2.19
     },
-    "lat": 45.1487,
-    "lng": 7.6594
+    "lat": 45.1989,
+    "lng": 7.6278
   },
   {
     "name": "San Maurizio d'Opaglio",
@@ -122453,8 +122453,8 @@
       "indirizzo": "Via Scafati  80057",
       "prezzo": 2.19
     },
-    "lat": 40.7746,
-    "lng": 14.4938
+    "lat": 40.7196,
+    "lng": 14.5364
   },
   {
     "name": "Sant'Antonio di Gallura",
@@ -125643,8 +125643,8 @@
       "indirizzo": "CORSO PASCOLI  67  07100",
       "prezzo": 2.19
     },
-    "lat": 40.7413,
-    "lng": 8.543
+    "lat": 40.7299,
+    "lng": 8.5222
   },
   {
     "name": "Sassello",
@@ -129353,8 +129353,8 @@
       "indirizzo": "Via Angelo Siffredi 62r  16167",
       "prezzo": 2.19
     },
-    "lat": 44.2855,
-    "lng": 9.3661
+    "lat": 44.2733,
+    "lng": 9.4122
   },
   {
     "name": "Sestriere",
@@ -131837,8 +131837,8 @@
       "indirizzo": "CORSO ITALIA  No279",
       "prezzo": 2.19
     },
-    "lat": 41.2587,
-    "lng": 13.0282
+    "lat": 40.6262,
+    "lng": 14.3799
   },
   {
     "name": "Sorso",
@@ -139008,8 +139008,8 @@
       "indirizzo": "VIA SANTA GIULIA 24 25039, TRAVAGLIATO (BS) 24 25039",
       "prezzo": 2.254
     },
-    "lat": 45.3072,
-    "lng": 10.2269
+    "lat": 45.5242,
+    "lng": 10.0881
   },
   {
     "name": "Travedona-monate",
@@ -140023,8 +140023,8 @@
       "indirizzo": "Viale G. G. Felissent 118",
       "prezzo": 2.19
     },
-    "lat": 45.6601,
-    "lng": 12.242
+    "lat": 45.6676,
+    "lng": 12.2389
   },
   {
     "name": "Trezzano Rosa",
@@ -141173,8 +141173,8 @@
       "indirizzo": "Via Marsala 29 33100",
       "prezzo": 1.597
     },
-    "lat": 46.0572,
-    "lng": 13.2367
+    "lat": 46.0625,
+    "lng": 13.2345
   },
   {
     "name": "Ugento",
@@ -141202,8 +141202,8 @@
       "indirizzo": "VIA RIPAMONTI 92 73059",
       "prezzo": 2.269
     },
-    "lat": 40.0154,
-    "lng": 18.0814
+    "lat": 39.9264,
+    "lng": 18.1629
   },
   {
     "name": "Uggiano La Chiesa",
@@ -142907,8 +142907,8 @@
       "indirizzo": "Autostrada A16 NAPOLI-CANOSA, Km. 106+500, dir. Est - 83059",
       "prezzo": 2.19
     },
-    "lat": 41.0565,
-    "lng": 15.4205
+    "lat": 41.0581,
+    "lng": 15.2959
   },
   {
     "name": "Valle Aurina",
@@ -144057,8 +144057,8 @@
       "indirizzo": "Viale Luigi Borri 40 21100",
       "prezzo": 2.19
     },
-    "lat": 45.8111,
-    "lng": 8.8312
+    "lat": 45.8182,
+    "lng": 8.8229
   },
   {
     "name": "Varese Ligure",
@@ -144782,8 +144782,8 @@
       "indirizzo": "VIA MORANZANI 92 30176",
       "prezzo": 1.769
     },
-    "lat": 45.4804,
-    "lng": 12.2557
+    "lat": 45.4837,
+    "lng": 12.255
   },
   {
     "name": "Veniano",
@@ -146550,8 +146550,8 @@
       "indirizzo": "DEL PONTE 9 56010",
       "prezzo": 2.229
     },
-    "lat": 43.6138,
-    "lng": 10.6375
+    "lat": 43.7027,
+    "lng": 10.5912
   },
   {
     "name": "Vicovaro",
@@ -148029,8 +148029,8 @@
       "indirizzo": "558 KM 42+487 STAZ. FF.SS - SNC 66047",
       "prezzo": 2.259
     },
-    "lat": 43.0643,
-    "lng": 12.1571
+    "lat": 42.466,
+    "lng": 14.2138
   },
   {
     "name": "Villa Santina",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T14:50:02.178Z",
+  "updatedAt": "2026-10-25T16:15:32.748Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -348,8 +348,8 @@
       "indirizzo": "VIA POZZOLANA DI PONENTE SNC 92010",
       "comune": "LAMPEDUSA E LINOSA",
       "provincia": "AG",
-      "lat": 35.861987,
-      "lng": 12.857395,
+      "lat": null,
+      "lng": null,
       "prices": {
         "diesel_servito": {
           "prezzo": 2.8,

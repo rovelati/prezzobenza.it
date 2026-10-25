@@ -1,0 +1,22 @@
+---
+import ComuneDetail from '../../../../components/ComuneDetail.astro';
+import comuniIndex from '../../../../data/comuni-index.json';
+
+export async function getStaticPaths() {
+  return comuniIndex
+    .filter((c) => c.slug !== 'diesel' && c.slug !== 'metano-gpl' && c.slug !== 'gpl-metano')
+    .map((comune) => ({
+      params: {
+        slug: comune.provSlug,
+        comune: comune.slug,
+      },
+      props: {
+        comune,
+      },
+    }));
+}
+
+const { comune } = Astro.props;
+---
+
+<ComuneDetail comune={comune} fuelType="diesel" />

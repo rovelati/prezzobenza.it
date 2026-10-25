@@ -461,9 +461,33 @@ async function main() {
   // 4. Generazione Dati per Ciascuna Provincia e per Ciascun Comune
   const provincesSummary = [];
   const allComuniIndex = [];
+  const ISLAND_COMUNI = new Set(['lampedusa-e-linosa', 'pantelleria', 'isola-del-giglio', 'capraia-isola', 'ponza', 'ventotene']);
 
   for (const [code, info] of Object.entries(PROVINCE_MAP)) {
     const provStations = stationsByProv[code] || [];
+
+    // Sanificazione coordinate errate comunicate al MIMIT (es. distributori CH con coordinate a Roma)
+    const validCoordsStations = provStations.filter((s) => s.lat && s.lng);
+    if (validCoordsStations.length > 5) {
+      const sortedLats = validCoordsStations.map((s) => s.lat).sort((a, b) => a - b);
+      const sortedLngs = validCoordsStations.map((s) => s.lng).sort((a, b) => a - b);
+      const provMedLat = sortedLats[Math.floor(sortedLats.length / 2)];
+      const provMedLng = sortedLngs[Math.floor(sortedLngs.length / 2)];
+
+      provStations.forEach((s) => {
+        if (!s.lat || !s.lng) return;
+        const cSlug = slugify(s.comune);
+        if (ISLAND_COMUNI.has(cSlug)) return;
+        const dLat = (s.lat - provMedLat) * 111;
+        const dLng = (s.lng - provMedLng) * 111 * Math.cos(provMedLat * Math.PI / 180);
+        const distKm = Math.sqrt(dLat * dLat + dLng * dLng);
+        if (distKm > 95) {
+          console.warn(`[SANIFICAZIONE] Stazione ${s.id} (${s.brand} a ${s.comune}, prov. ${code}) ha coordinate errate MIMIT (${s.lat}, ${s.lng}, dist=${distKm.toFixed(0)}km). Coordinate azzerate.`);
+          s.lat = null;
+          s.lng = null;
+        }
+      });
+    }
 
     const bSelf = provStations.map((s) => s.prices.benzina_self?.prezzo).filter(Boolean);
     const dSelf = provStations.map((s) => s.prices.diesel_self?.prezzo).filter(Boolean);
@@ -503,6 +527,29 @@ async function main() {
     const provComuniList = [];
     for (const [cSlug, cData] of stationsByComune.entries()) {
       const cStations = cData.stations;
+
+      // Sanificazione coordinate al livello di singolo comune
+      const cValidCoords = cStations.filter((s) => s.lat && s.lng);
+      if (cValidCoords.length > 0) {
+        const cSortedLats = cValidCoords.map((s) => s.lat).sort((a, b) => a - b);
+        const cSortedLngs = cValidCoords.map((s) => s.lng).sort((a, b) => a - b);
+        const cMedLat = cSortedLats[Math.floor(cSortedLats.length / 2)];
+        const cMedLng = cSortedLngs[Math.floor(cSortedLngs.length / 2)];
+        const maxComuneDistKm = (cSlug === 'roma' || cSlug === 'milano' || cSlug === 'torino') ? 45 : 25;
+
+        cStations.forEach((s) => {
+          if (!s.lat || !s.lng) return;
+          const dLat = (s.lat - cMedLat) * 111;
+          const dLng = (s.lng - cMedLng) * 111 * Math.cos(cMedLat * Math.PI / 180);
+          const distKm = Math.sqrt(dLat * dLat + dLng * dLng);
+          if (distKm > maxComuneDistKm) {
+            console.warn(`[SANIFICAZIONE COMUNE] Stazione ${s.id} (${s.brand} a ${s.comune}) dist=${distKm.toFixed(0)}km dal baricentro del comune. Coordinate azzerate.`);
+            s.lat = null;
+            s.lng = null;
+          }
+        });
+      }
+
       const formattedName = formatComuneName(cData.rawName);
       const cBSelf = cStations.map((s) => s.prices.benzina_self?.prezzo).filter(Boolean);
       const cDSelf = cStations.map((s) => s.prices.diesel_self?.prezzo).filter(Boolean);

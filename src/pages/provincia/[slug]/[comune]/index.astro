@@ -1,6 +1,6 @@
 ---
-import ComuneDetail from '../../../components/ComuneDetail.astro';
-import comuniIndex from '../../../data/comuni-index.json';
+import ComuneDetail from '../../../../components/ComuneDetail.astro';
+import comuniIndex from '../../../../data/comuni-index.json';
 
 export async function getStaticPaths() {
   return comuniIndex
@@ -19,4 +19,4 @@ export async function getStaticPaths() {
 const { comune } = Astro.props;
 ---
 
-<ComuneDetail comune={comune} />
+<ComuneDetail comune={comune} fuelType="benzina" />

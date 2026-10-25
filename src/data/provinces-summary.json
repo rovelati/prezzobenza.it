@@ -1341,8 +1341,8 @@
     "name": "Arezzo",
     "region": "Toscana",
     "slug": "arezzo",
-    "lat": 43.4782,
-    "lng": 11.829,
+    "lat": 43.4825,
+    "lng": 11.8237,
     "stationsCount": 157,
     "comuniCount": 34,
     "comuni": [
@@ -2769,8 +2769,8 @@
     "name": "Bari",
     "region": "Puglia",
     "slug": "bari",
-    "lat": 41.008,
-    "lng": 16.8269,
+    "lat": 41.0046,
+    "lng": 16.8499,
     "stationsCount": 376,
     "comuniCount": 41,
     "comuni": [
@@ -4981,8 +4981,8 @@
     "name": "Biella",
     "region": "Piemonte",
     "slug": "biella",
-    "lat": 45.5487,
-    "lng": 8.1594,
+    "lat": 45.5496,
+    "lng": 8.1032,
     "stationsCount": 73,
     "comuniCount": 28,
     "comuni": [
@@ -5205,8 +5205,8 @@
     "name": "Bologna",
     "region": "Emilia-Romagna",
     "slug": "bologna",
-    "lat": 44.4763,
-    "lng": 11.364,
+    "lat": 44.4843,
+    "lng": 11.3611,
     "stationsCount": 335,
     "comuniCount": 53,
     "comuni": [
@@ -6178,8 +6178,8 @@
     "name": "Brescia",
     "region": "Lombardia",
     "slug": "brescia",
-    "lat": 45.5572,
-    "lng": 10.2428,
+    "lat": 45.559,
+    "lng": 10.242,
     "stationsCount": 495,
     "comuniCount": 153,
     "comuni": [
@@ -7753,8 +7753,8 @@
     "name": "Campobasso",
     "region": "Molise",
     "slug": "campobasso",
-    "lat": 41.7162,
-    "lng": 14.7801,
+    "lat": 41.7256,
+    "lng": 14.78,
     "stationsCount": 109,
     "comuniCount": 45,
     "comuni": [
@@ -9482,8 +9482,8 @@
     "name": "Chieti",
     "region": "Abruzzo",
     "slug": "chieti",
-    "lat": 42.23,
-    "lng": 14.3243,
+    "lat": 42.2256,
+    "lng": 14.3675,
     "stationsCount": 191,
     "comuniCount": 62,
     "comuni": [
@@ -10364,8 +10364,8 @@
     "name": "Cosenza",
     "region": "Calabria",
     "slug": "cosenza",
-    "lat": 39.5292,
-    "lng": 16.2686,
+    "lat": 39.5244,
+    "lng": 16.2747,
     "stationsCount": 261,
     "comuniCount": 100,
     "comuni": [
@@ -13388,8 +13388,8 @@
     "name": "Foggia",
     "region": "Puglia",
     "slug": "foggia",
-    "lat": 41.5467,
-    "lng": 15.5895,
+    "lat": 41.5503,
+    "lng": 15.5947,
     "stationsCount": 217,
     "comuniCount": 52,
     "comuni": [
@@ -16020,8 +16020,8 @@
     "name": "Latina",
     "region": "Lazio",
     "slug": "latina",
-    "lat": 41.4186,
-    "lng": 13.0915,
+    "lat": 41.4202,
+    "lng": 13.0867,
     "stationsCount": 252,
     "comuniCount": 30,
     "comuni": [
@@ -16258,8 +16258,8 @@
     "name": "Lecce",
     "region": "Puglia",
     "slug": "lecce",
-    "lat": 40.1683,
-    "lng": 18.1724,
+    "lat": 40.1664,
+    "lng": 18.1747,
     "stationsCount": 391,
     "comuniCount": 94,
     "comuni": [
@@ -19508,7 +19508,7 @@
     "avgBenzina": 2.03,
     "avgDiesel": 2.268,
     "minBenzina": 1.889,
-    "minDiesel": 1.999,
+    "minDiesel": 1.959,
     "cheapestBenzina": {
       "nome": "GIAMBO RICCARDO",
       "brand": "Eni",
@@ -19516,10 +19516,10 @@
       "prezzo": 1.889
     },
     "cheapestDiesel": {
-      "nome": "GIAMBO RICCARDO",
-      "brand": "Eni",
-      "comune": "PACE DEL MELA",
-      "prezzo": 1.999
+      "nome": "Rifornimento carburanti di Denis Prepeleag",
+      "brand": "IP",
+      "comune": "SANTA MARINA SALINA",
+      "prezzo": 1.959
     }
   },
   {
@@ -20339,8 +20339,8 @@
     "name": "Modena",
     "region": "Emilia-Romagna",
     "slug": "modena",
-    "lat": 44.623,
-    "lng": 10.9212,
+    "lat": 44.6198,
+    "lng": 10.9278,
     "stationsCount": 266,
     "comuniCount": 46,
     "comuni": [
@@ -21018,8 +21018,8 @@
     "name": "Napoli",
     "region": "Campania",
     "slug": "napoli",
-    "lat": 40.8624,
-    "lng": 14.3069,
+    "lat": 40.8586,
+    "lng": 14.3156,
     "stationsCount": 767,
     "comuniCount": 88,
     "comuni": [
@@ -27136,8 +27136,8 @@
     "name": "Prato",
     "region": "Toscana",
     "slug": "prato",
-    "lat": 43.8546,
-    "lng": 11.0992,
+    "lat": 43.8835,
+    "lng": 11.0782,
     "stationsCount": 68,
     "comuniCount": 6,
     "comuni": [
@@ -27472,8 +27472,8 @@
     "name": "Reggio Calabria",
     "region": "Calabria",
     "slug": "reggio-calabria",
-    "lat": 38.2413,
-    "lng": 15.9387,
+    "lat": 38.2359,
+    "lng": 15.9366,
     "stationsCount": 196,
     "comuniCount": 52,
     "comuni": [
@@ -28620,8 +28620,8 @@
     "name": "Roma",
     "region": "Lazio",
     "slug": "roma",
-    "lat": 41.8749,
-    "lng": 12.5151,
+    "lat": 41.8742,
+    "lng": 12.5162,
     "stationsCount": 1289,
     "comuniCount": 78,
     "comuni": [
@@ -36614,7 +36614,7 @@
     "name": "Varese",
     "region": "Lombardia",
     "slug": "varese",
-    "lat": 45.7156,
+    "lat": 45.7158,
     "lng": 8.8193,
     "stationsCount": 242,
     "comuniCount": 76,

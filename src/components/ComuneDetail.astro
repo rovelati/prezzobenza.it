@@ -24,9 +24,11 @@ export interface Props {
     lat?: number;
     lng?: number;
   };
+  fuelType?: 'benzina' | 'diesel';
 }
 
-const { comune } = Astro.props;
+const { comune, fuelType = 'benzina' } = Astro.props;
+const isDiesel = fuelType === 'diesel';
 
 // Carica tutte le stazioni della provincia per estrarre quelle del comune e i distributori limitrofi
 const provFilePath = path.resolve(process.cwd(), 'public', 'data', 'provinces', `${comune.provCode.toLowerCase()}.json`);
@@ -107,18 +109,28 @@ const cheapestBenzina = stationsByBenzina[0] || null;
 const cheapestDiesel = stationsByDiesel[0] || null;
 const cheapestGpl = stationsWithGpl[0] || null;
 const cheapestMetano = stationsWithMetano[0] || null;
+const activeCheapestStation = isDiesel ? cheapestDiesel : cheapestBenzina;
 
-// Calcola baricentro del comune
-const validLats = stations.map((s: any) => s.lat).filter(Boolean);
-const validLngs = stations.map((s: any) => s.lng).filter(Boolean);
-const centerLat = validLats.length
-  ? validLats.reduce((a: number, b: number) => a + b, 0) / validLats.length
-  : comune.lat || 45.0;
-const centerLng = validLngs.length
-  ? validLngs.reduce((a: number, b: number) => a + b, 0) / validLngs.length
-  : comune.lng || 9.0;
+// Lista attiva per la visualizzazione
+const activeStationsList = isDiesel
+  ? (stationsByDiesel.length > 0 ? stationsByDiesel : stationsByBenzina)
+  : (stationsByBenzina.length > 0 ? stationsByBenzina : stationsByDiesel);
 
-// Distributori nei comuni limitrofi (entro 15 km) per arricchire la pagina e prevenire thin content
+// Calcolo robusto del baricentro (mediana delle stazioni con coordinate)
+const validCoordsStations = stations.filter((s: any) => s.lat && s.lng);
+let centerLat = comune.lat || 42.0;
+let centerLng = comune.lng || 12.0;
+
+if (validCoordsStations.length > 0) {
+  const sortedLats = validCoordsStations.map((s: any) => s.lat).sort((a: number, b: number) => a - b);
+  const sortedLngs = validCoordsStations.map((s: any) => s.lng).sort((a: number, b: number) => a - b);
+  centerLat = sortedLats[Math.floor(sortedLats.length / 2)];
+  centerLng = sortedLngs[Math.floor(sortedLngs.length / 2)];
+}
+
+const maxComuneRadiusKm = (comune.slug === 'roma' || comune.slug === 'milano' || comune.slug === 'torino') ? 45 : 25;
+
+// Distributori nei comuni limitrofi (entro 18 km)
 const nearbyStations = allProvStations
   .filter((s: any) => slugify(s.comune) !== comune.slug && s.lat && s.lng)
   .map((s: any) => {
@@ -134,17 +146,24 @@ const nearbyStations = allProvStations
   .sort((a: any, b: any) => a.distKm - b.distKm)
   .slice(0, 5);
 
-// Dati mappa Leaflet per le stazioni del comune
+// Dati mappa Leaflet per le stazioni del comune (escludendo outlier con coordinate distanti dal comune)
 const mapStations = stations
-  .filter((s: any) => s.lat && s.lng)
+  .filter((s: any) => {
+    if (!s.lat || !s.lng) return false;
+    const dist = haversine(centerLat, centerLng, s.lat, s.lng);
+    return dist <= maxComuneRadiusKm;
+  })
   .map((s: any, idx: number) => {
-    const bestPrice =
-      s.prices?.benzina_self?.prezzo ||
-      s.prices?.diesel_self?.prezzo ||
-      s.prices?.gpl?.prezzo ||
-      s.prices?.metano?.prezzo;
-    const isCheapest =
-      cheapestBenzina && s.id === cheapestBenzina.id;
+    const priceBenzina = s.prices?.benzina_self?.prezzo;
+    const priceDiesel = s.prices?.diesel_self?.prezzo;
+    const priceGpl = s.prices?.gpl?.prezzo;
+    const priceMetano = s.prices?.metano?.prezzo;
+    const targetPrice = isDiesel ? (priceDiesel || priceBenzina) : (priceBenzina || priceDiesel);
+    const bestPrice = targetPrice || priceGpl || priceMetano;
+    const isCheapest = isDiesel
+      ? (cheapestDiesel && s.id === cheapestDiesel.id)
+      : (cheapestBenzina && s.id === cheapestBenzina.id);
+
     return {
       id: s.id,
       rank: idx + 1,
@@ -155,11 +174,12 @@ const mapStations = stations
       lat: s.lat,
       lng: s.lng,
       isCheapest,
-      priceBenzina: s.prices?.benzina_self?.prezzo,
-      priceDiesel: s.prices?.diesel_self?.prezzo,
-      priceGpl: s.prices?.gpl?.prezzo,
-      priceMetano: s.prices?.metano?.prezzo,
+      priceBenzina,
+      priceDiesel,
+      priceGpl,
+      priceMetano,
       bestPrice,
+      targetPrice,
       mapsUrl: `https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}`,
     };
   });
@@ -168,9 +188,17 @@ const natBenzinaAvg = (nationalStats as any).averages?.benzina_self || 1.82;
 const natDieselAvg = (nationalStats as any).averages?.diesel_self || 1.72;
 
 // SEO Titoli e Meta Description
-const pageTitle = `Prezzi Benzina e Diesel a ${comune.name} (${comune.provCode}) Oggi: Dove Costa Meno | PrezzoBenza.it`;
-const pageDescription = `Confronto prezzi carburanti in tempo reale a ${comune.name} (${comune.provCode}). Scopri i ${comune.stationsCount} distributori di benzina, diesel, GPL e metano più economici aggiornati a oggi con dati ufficiali MIMIT.`;
-const canonicalPath = `/provincia/${comune.provSlug}/${comune.slug}/`;
+const canonicalPath = isDiesel
+  ? `/provincia/${comune.provSlug}/${comune.slug}/diesel/`
+  : `/provincia/${comune.provSlug}/${comune.slug}/`;
+
+const pageTitle = isDiesel
+  ? `Prezzi Diesel a ${comune.name} (${comune.provCode}) Oggi: Gasolio più Economico | PrezzoBenza.it`
+  : `Prezzi Benzina a ${comune.name} (${comune.provCode}) Oggi: Dove Costa Meno | PrezzoBenza.it`;
+
+const pageDescription = isDiesel
+  ? `Confronto prezzi gasolio diesel in tempo reale a ${comune.name} (${comune.provCode}). Scopri i ${comune.stationsCount} distributori e le pompe bianche con il diesel più economico comunicati al MIMIT.`
+  : `Confronto prezzi benzina in tempo reale a ${comune.name} (${comune.provCode}). Scopri i ${comune.stationsCount} distributori e le pompe bianche più economiche aggiornate a oggi con dati ufficiali MIMIT.`;
 
 // Schema.org Structured Data
 const structuredData = {
@@ -189,7 +217,7 @@ const structuredData = {
           '@type': 'ListItem',
           position: 2,
           name: `Provincia di ${comune.provName}`,
-          item: `https://www.prezzobenza.it/provincia/${comune.provSlug}/`,
+          item: `https://www.prezzobenza.it/provincia/${comune.provSlug}/${isDiesel ? 'diesel/' : ''}`,
         },
         {
           '@type': 'ListItem',
@@ -197,6 +225,16 @@ const structuredData = {
           name: comune.name,
           item: `https://www.prezzobenza.it/provincia/${comune.provSlug}/${comune.slug}/`,
         },
+        ...(isDiesel
+          ? [
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'Diesel',
+                item: `https://www.prezzobenza.it/provincia/${comune.provSlug}/${comune.slug}/diesel/`,
+              },
+            ]
+          : []),
       ],
     },
     ...stations.map((st: any) => ({
@@ -219,9 +257,9 @@ const structuredData = {
           }
         : {}),
       hasMap: st.lat && st.lng ? `https://www.google.com/maps/dir/?api=1&destination=${st.lat},${st.lng}` : undefined,
-      priceRange: st.prices?.benzina_self?.prezzo
-        ? `€ ${st.prices.benzina_self.prezzo.toFixed(3)}/L`
-        : (st.prices?.diesel_self?.prezzo ? `€ ${st.prices.diesel_self.prezzo.toFixed(3)}/L` : 'N/D'),
+      priceRange: isDiesel
+        ? (st.prices?.diesel_self?.prezzo ? `€ ${st.prices.diesel_self.prezzo.toFixed(3)}/L` : 'N/D')
+        : (st.prices?.benzina_self?.prezzo ? `€ ${st.prices.benzina_self.prezzo.toFixed(3)}/L` : 'N/D'),
       currenciesAccepted: 'EUR',
       paymentAccepted: 'Cash, Credit Card',
     })),
@@ -230,17 +268,25 @@ const structuredData = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: `Qual è il benzinaio più economico a ${comune.name} oggi?`,
+          name: isDiesel
+            ? `Qual è il distributore di diesel più economico a ${comune.name} oggi?`
+            : `Qual è il benzinaio più economico a ${comune.name} oggi?`,
           acceptedAnswer: {
             '@type': 'Answer',
-            text: cheapestBenzina
-              ? `Il distributore di benzina più economico a ${comune.name} oggi è ${cheapestBenzina.nome || cheapestBenzina.brand} in ${cheapestBenzina.indirizzo}, con un prezzo self-service di € ${cheapestBenzina.prices.benzina_self.prezzo.toFixed(3)} al litro.`
-              : `A ${comune.name} sono presenti ${comune.stationsCount} distributori. Consulta la classifica in tempo reale su PrezzoBenza.it.`,
+            text: isDiesel
+              ? (cheapestDiesel
+                  ? `Il distributore di diesel più economico a ${comune.name} oggi è ${cheapestDiesel.nome || cheapestDiesel.brand} in ${cheapestDiesel.indirizzo}, con un prezzo self-service di € ${cheapestDiesel.prices.diesel_self.prezzo.toFixed(3)} al litro.`
+                  : `A ${comune.name} sono presenti ${comune.stationsCount} distributori. Consulta la classifica diesel in tempo reale su PrezzoBenza.it.`)
+              : (cheapestBenzina
+                  ? `Il distributore di benzina più economico a ${comune.name} oggi è ${cheapestBenzina.nome || cheapestBenzina.brand} in ${cheapestBenzina.indirizzo}, con un prezzo self-service di € ${cheapestBenzina.prices.benzina_self.prezzo.toFixed(3)} al litro.`
+                  : `A ${comune.name} sono presenti ${comune.stationsCount} distributori. Consulta la classifica in tempo reale su PrezzoBenza.it.`),
           },
         },
         {
           '@type': 'Question',
-          name: `Quanto costa il diesel a ${comune.name}?`,
+          name: isDiesel
+            ? `Quanto costa in media il gasolio a ${comune.name}?`
+            : `Quanto costa il diesel a ${comune.name}?`,
           acceptedAnswer: {
             '@type': 'Answer',
             text: cheapestDiesel
@@ -275,9 +321,17 @@ const structuredData = {
       <span>/</span>
       <a href="/#province" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Province</a>
       <span>/</span>
-      <a href={`/provincia/${comune.provSlug}/`} class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Provincia di {comune.provName}</a>
+      <a href={isDiesel ? `/provincia/${comune.provSlug}/diesel/` : `/provincia/${comune.provSlug}/`} class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Provincia di {comune.provName}</a>
       <span>/</span>
-      <span class="text-zinc-900 dark:text-white font-semibold">{comune.name}</span>
+      {isDiesel ? (
+        <>
+          <a href={`/provincia/${comune.provSlug}/${comune.slug}/`} class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">{comune.name}</a>
+          <span>/</span>
+          <span class="text-zinc-900 dark:text-white font-semibold">Diesel</span>
+        </>
+      ) : (
+        <span class="text-zinc-900 dark:text-white font-semibold">{comune.name}</span>
+      )}
     </div>
   </div>
 
@@ -287,28 +341,62 @@ const structuredData = {
     <div class="space-y-3">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        Comune di {comune.name} ({comune.provCode}) • {comune.region} • Aggiornato al {lastUpdatedShort}
+        Comune di {comune.name} ({comune.provCode}) • {comune.region} • Prezzi {isDiesel ? 'Diesel' : 'Benzina'} al {lastUpdatedShort}
       </div>
 
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 dark:text-white tracking-tight">
-        Prezzi Benzina e Diesel a <span class="text-emerald-600 dark:text-emerald-400">{comune.name}</span>
+        {isDiesel ? (
+          <>Prezzi Diesel a <span class="text-teal-600 dark:text-teal-400">{comune.name}</span></>
+        ) : (
+          <>Prezzi Benzina a <span class="text-emerald-600 dark:text-emerald-400">{comune.name}</span></>
+        )}
       </h1>
 
       <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
-        Confronto ufficiale in tempo reale dei prezzi comunicati al <strong>MIMIT</strong> presso tutti i <strong>{comune.stationsCount} distributori</strong> attivi nel comune di {comune.name}. Scopri dove fare il pieno spendendo meno e calcola il risparmio.
+        {isDiesel ? (
+          <>Confronto ufficiale in tempo reale dei prezzi del <strong>gasolio diesel self-service</strong> comunicati al <strong>MIMIT</strong> presso tutti i <strong>{comune.stationsCount} distributori</strong> attivi nel comune di {comune.name}. Scopri dove fare il pieno spendendo meno e calcola il risparmio.</>
+        ) : (
+          <>Confronto ufficiale in tempo reale dei prezzi della <strong>benzina self-service</strong> comunicati al <strong>MIMIT</strong> presso tutti i <strong>{comune.stationsCount} distributori</strong> attivi nel comune di {comune.name}. Scopri dove fare il pieno spendendo meno e calcola il risparmio.</>
+        )}
       </p>
+    </div>
+
+    <!-- Selettore Carburante Benzina / Diesel -->
+    <div class="flex items-center gap-2">
+      <div class="inline-flex p-1 bg-zinc-200/80 dark:bg-zinc-800/80 rounded-2xl border border-zinc-300 dark:border-zinc-700/60 shadow-xs">
+        <a
+          href={`/provincia/${comune.provSlug}/${comune.slug}/`}
+          class={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 ${!isDiesel ? 'bg-emerald-500 text-zinc-950 shadow-sm font-black' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+          title={`Prezzi benzina a ${comune.name}`}
+        >
+          <span>🟢 Benzina</span>
+          <span class={`text-[10px] px-1.5 py-0.5 rounded-md ${!isDiesel ? 'bg-zinc-950/20 text-zinc-950' : 'bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300'}`}>
+            {stationsByBenzina.length}
+          </span>
+        </a>
+        <a
+          href={`/provincia/${comune.provSlug}/${comune.slug}/diesel/`}
+          class={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 ${isDiesel ? 'bg-teal-500 text-zinc-950 shadow-sm font-black' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'}`}
+          title={`Prezzi diesel a ${comune.name}`}
+        >
+          <span>⚫ Diesel</span>
+          <span class={`text-[10px] px-1.5 py-0.5 rounded-md ${isDiesel ? 'bg-zinc-950/20 text-zinc-950' : 'bg-zinc-300 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300'}`}>
+            {stationsByDiesel.length}
+          </span>
+        </a>
+      </div>
     </div>
 
     <!-- KPI Cards: Migliori Prezzi Rilevati a Comune -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       
       <!-- Miglior Benzina -->
-      <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-emerald-500/30 shadow-xs space-y-2 relative overflow-hidden">
+      <div class={`p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border ${!isDiesel ? 'border-emerald-500/40 shadow-sm ring-1 ring-emerald-500/20' : 'border-zinc-200 dark:border-zinc-800 shadow-xs'} space-y-2 relative overflow-hidden`}>
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">🟢 Benzina Più Economica</span>
+          <span class={`text-xs font-bold ${!isDiesel ? 'text-emerald-700 dark:text-emerald-400' : 'text-zinc-500 dark:text-zinc-400'} uppercase tracking-wider`}>🟢 Benzina Più Economica</span>
           <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold">Self</span>
         </div>
-        <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400">
+        <div class={`text-3xl font-black ${!isDiesel ? 'text-emerald-600 dark:text-emerald-400' : 'text-zinc-900 dark:text-white'}`}>
           {cheapestBenzina ? `€ ${cheapestBenzina.prices.benzina_self.prezzo.toFixed(3)}` : 'N/D'}
         </div>
         <p class="text-xs text-zinc-600 dark:text-zinc-400 truncate">
@@ -317,12 +405,12 @@ const structuredData = {
       </div>
 
       <!-- Miglior Diesel -->
-      <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-teal-500/30 shadow-xs space-y-2 relative overflow-hidden">
+      <div class={`p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border ${isDiesel ? 'border-teal-500/40 shadow-sm ring-1 ring-teal-500/20' : 'border-zinc-200 dark:border-zinc-800 shadow-xs'} space-y-2 relative overflow-hidden`}>
         <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-teal-700 dark:text-teal-400 uppercase tracking-wider">⚫ Diesel Più Economico</span>
+          <span class={`text-xs font-bold ${isDiesel ? 'text-teal-700 dark:text-teal-400' : 'text-zinc-500 dark:text-zinc-400'} uppercase tracking-wider`}>⚫ Diesel Più Economico</span>
           <span class="text-[10px] px-2 py-0.5 rounded-full bg-teal-500/15 text-teal-700 dark:text-teal-300 font-bold">Self</span>
         </div>
-        <div class="text-3xl font-black text-teal-600 dark:text-teal-400">
+        <div class={`text-3xl font-black ${isDiesel ? 'text-teal-600 dark:text-teal-400' : 'text-zinc-900 dark:text-white'}`}>
           {cheapestDiesel ? `€ ${cheapestDiesel.prices.diesel_self.prezzo.toFixed(3)}` : 'N/D'}
         </div>
         <p class="text-xs text-zinc-600 dark:text-zinc-400 truncate">
@@ -346,14 +434,16 @@ const structuredData = {
       <!-- GPL / Metano o Media Comunale -->
       <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-xs space-y-2">
         <div class="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
-          {cheapestGpl ? '🔵 Miglior Prezzo GPL' : (cheapestMetano ? '⚪ Miglior Prezzo Metano' : '⛽ Media Comunale Benzina')}
+          {cheapestGpl ? '🔵 Miglior Prezzo GPL' : (cheapestMetano ? '⚪ Miglior Prezzo Metano' : (isDiesel ? '⛽ Media Comunale Diesel' : '⛽ Media Comunale Benzina'))}
         </div>
         <div class="text-3xl font-black text-zinc-900 dark:text-white">
           {cheapestGpl 
             ? `€ ${cheapestGpl.prices.gpl.prezzo.toFixed(3)}`
             : (cheapestMetano 
                 ? `€ ${cheapestMetano.prices.metano.prezzo.toFixed(3)}`
-                : (comune.avgBenzina ? `€ ${comune.avgBenzina.toFixed(3)}` : 'N/D'))}
+                : (isDiesel 
+                    ? (comune.avgDiesel ? `€ ${comune.avgDiesel.toFixed(3)}` : 'N/D') 
+                    : (comune.avgBenzina ? `€ ${comune.avgBenzina.toFixed(3)}` : 'N/D')))}
         </div>
         <p class="text-xs text-zinc-500 truncate">
           {cheapestGpl 
@@ -368,7 +458,7 @@ const structuredData = {
     <div class="space-y-3">
       <div class="flex items-center justify-between">
         <h2 class="text-lg sm:text-xl font-black text-zinc-900 dark:text-white flex items-center gap-2">
-          <span>🗺️ Mappa Distributori a {comune.name}</span>
+          <span>🗺️ Mappa Distributori {isDiesel ? 'Diesel' : 'Benzina'} a {comune.name}</span>
         </h2>
         <span class="text-xs text-zinc-500">Coordinate GPS ufficiali MIMIT</span>
       </div>
@@ -376,7 +466,7 @@ const structuredData = {
       <div class="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-md bg-zinc-100 dark:bg-zinc-950">
         <div id="comune-map" class="w-full h-[380px] sm:h-[440px] rounded-2xl" style="min-height: 380px; width: 100%; z-index: 10;"></div>
         
-        <!-- Badge di Stato Viewport Dinamico -->
+        <!-- Badge di Stato Viewport Dinamico (Posizionato in alto a sinistra, mentre zoom Leaflet è in alto a destra) -->
         <div class="absolute top-3 left-3 z-[400] bg-zinc-900/90 backdrop-blur-md text-[11px] text-zinc-200 px-3.5 py-1.5 rounded-xl border border-zinc-700/80 shadow-lg flex items-center gap-2 pointer-events-none">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span id="map-status-pill" class="font-medium">Caricamento mappa...</span>
@@ -395,17 +485,21 @@ const structuredData = {
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-200 dark:border-zinc-800 pb-3">
         <div>
           <h2 class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white tracking-tight flex items-center gap-2">
-            <span>🏆 Tutti i Distributori di {comune.name}</span>
+            <span>🏆 Tutti i Distributori {isDiesel ? 'Diesel' : 'di Carburante'} a {comune.name}</span>
           </h2>
-          <p class="text-xs text-zinc-500 dark:text-zinc-400">Classifica ordinata per il prezzo di benzina self-service più economico</p>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">
+            {isDiesel 
+              ? 'Classifica ordinata per il prezzo di gasolio diesel self-service più economico' 
+              : 'Classifica ordinata per il prezzo di benzina self-service più economico'}
+          </p>
         </div>
         <div class="text-xs text-zinc-500">
-          Totale <strong>{stations.length}</strong> impianti
+          Totale <strong>{stations.length}</strong> impianti censiti
         </div>
       </div>
 
       <div class="space-y-4" id="stations-list-container">
-        {stationsByBenzina.map((st: any, idx: number) => {
+        {activeStationsList.map((st: any, idx: number) => {
           const isTop = idx === 0;
           const isHiddenInitially = idx >= 30;
           const pBenzinaSelf = st.prices?.benzina_self?.prezzo;
@@ -416,21 +510,21 @@ const structuredData = {
           const pMetano = st.prices?.metano?.prezzo;
 
           return (
-            <div class={`p-5 rounded-2xl border transition-all ${isTop ? 'border-emerald-500/60 bg-emerald-50/30 dark:bg-emerald-950/20 shadow-md shadow-emerald-500/5' : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/60 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-xs'} ${isHiddenInitially ? 'hidden pb-extra-station' : ''}`}>
+            <div class={`p-5 rounded-2xl border transition-all ${isTop ? (isDiesel ? 'border-teal-500/60 bg-teal-50/30 dark:bg-teal-950/20 shadow-md shadow-teal-500/5' : 'border-emerald-500/60 bg-emerald-50/30 dark:bg-emerald-950/20 shadow-md shadow-emerald-500/5') : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/60 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-xs'} ${isHiddenInitially ? 'hidden pb-extra-station' : ''}`}>
               
               <!-- Riga Superiore: Badge e Nome -->
               <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
                 <div class="space-y-1">
                   <div class="flex items-center gap-2 flex-wrap">
-                    <span class={`w-6 h-6 rounded-full text-xs font-black flex items-center justify-center shrink-0 ${isTop ? 'bg-emerald-500 text-zinc-950' : 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950'}`}>
+                    <span class={`w-6 h-6 rounded-full text-xs font-black flex items-center justify-center shrink-0 ${isTop ? (isDiesel ? 'bg-teal-500 text-zinc-950' : 'bg-emerald-500 text-zinc-950') : 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950'}`}>
                       {idx + 1}
                     </span>
                     <span class={`px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider ${st.brand === 'Pompa Bianca' ? 'bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200'}`}>
                       {st.brand}
                     </span>
                     {isTop && (
-                      <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase bg-emerald-500 text-zinc-950 shadow-xs">
-                        🏆 Più Economico di {comune.name}
+                      <span class={`px-2 py-0.5 rounded text-[10px] font-black uppercase ${isDiesel ? 'bg-teal-500 text-zinc-950' : 'bg-emerald-500 text-zinc-950'} shadow-xs`}>
+                        🏆 {isDiesel ? 'Diesel' : 'Benzina'} Più Economico di {comune.name}
                       </span>
                     )}
                     <span class="text-xs text-zinc-500">{st.tipo}</span>
@@ -450,7 +544,7 @@ const structuredData = {
                   href={st.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onclick={`window.trackEvent && window.trackEvent('navigate_click', { destination: '${(st.nome || st.brand).replace(/'/g, "\\'")}', brand: '${(st.brand || '').replace(/'/g, "\\'")}', comune: '${comune.name}', rank: ${idx + 1}, source: 'comune_list' })`}
+                  onclick={`window.trackEvent && window.trackEvent('navigate_click', { destination: '${(st.nome || st.brand).replace(/'/g, "\\'")}', brand: '${(st.brand || '').replace(/'/g, "\\'")}', comune: '${comune.name}', rank: ${idx + 1}, fuel: '${isDiesel ? 'diesel' : 'benzina'}', source: 'comune_list' })`}
                   class="px-4 py-2.5 rounded-xl text-xs font-bold bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-colors flex items-center justify-center gap-2 shadow-xs shrink-0 self-start sm:self-auto"
                 >
                   <span>Portami qui</span>
@@ -462,9 +556,9 @@ const structuredData = {
               <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800/60">
                 
                 <!-- Benzina Self -->
-                <div class="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200/60 dark:border-zinc-800/60">
+                <div class={`p-2.5 rounded-xl border ${!isDiesel ? 'bg-emerald-500/10 border-emerald-500/30' : 'bg-zinc-50 dark:bg-zinc-900/40 border-zinc-200/60 dark:border-zinc-800/60'}`}>
                   <div class="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 uppercase">Benzina Self</div>
-                  <div class="text-lg font-black text-emerald-600 dark:text-emerald-400">
+                  <div class={`text-lg font-black ${!isDiesel ? 'text-emerald-600 dark:text-emerald-400' : 'text-zinc-800 dark:text-zinc-200'}`}>
                     {pBenzinaSelf ? `€ ${pBenzinaSelf.toFixed(3)}` : 'N/D'}
                   </div>
                   {pBenzinaServ && (
@@ -473,9 +567,9 @@ const structuredData = {
                 </div>
 
                 <!-- Diesel Self -->
-                <div class="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200/60 dark:border-zinc-800/60">
+                <div class={`p-2.5 rounded-xl border ${isDiesel ? 'bg-teal-500/10 border-teal-500/30' : 'bg-zinc-50 dark:bg-zinc-900/40 border-zinc-200/60 dark:border-zinc-800/60'}`}>
                   <div class="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 uppercase">Diesel Self</div>
-                  <div class="text-lg font-black text-teal-600 dark:text-teal-400">
+                  <div class={`text-lg font-black ${isDiesel ? 'text-teal-600 dark:text-teal-400' : 'text-zinc-800 dark:text-zinc-200'}`}>
                     {pDieselSelf ? `€ ${pDieselSelf.toFixed(3)}` : 'N/D'}
                   </div>
                   {pDieselServ && (
@@ -509,7 +603,7 @@ const structuredData = {
       </div>
 
       <!-- Tasto Mostra Altri per Comuni Grandi (es. Roma, Milano) -->
-      {stationsByBenzina.length > 30 && (
+      {activeStationsList.length > 30 && (
         <div class="text-center pt-2" id="show-more-stations-wrap">
           <button
             type="button"
@@ -517,7 +611,7 @@ const structuredData = {
             class="px-6 py-3 rounded-2xl font-bold text-sm bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-white dark:text-zinc-950 transition-all shadow-md cursor-pointer active:scale-95 flex items-center justify-center gap-2 mx-auto border border-zinc-700/50"
           >
             <span>Mostra altri 30 distributori</span>
-            <span class="text-xs opacity-70 font-normal">({stationsByBenzina.length - 30} rimanenti)</span>
+            <span class="text-xs opacity-70 font-normal">({activeStationsList.length - 30} rimanenti)</span>
             <span>↓</span>
           </button>
         </div>
@@ -535,7 +629,7 @@ const structuredData = {
             Distributori nei Comuni Vicini a {comune.name}
           </h2>
           <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
-            Se sei in viaggio o cerchi un'alternativa a pochi minuti da {comune.name}, ecco le pompe più vicine entro 15 km:
+            Se sei in viaggio o cerchi un'alternativa a pochi minuti da {comune.name}, ecco le pompe più vicine entro 18 km:
           </p>
         </div>
 
@@ -556,13 +650,13 @@ const structuredData = {
                 </div>
 
                 <div class="text-xs text-zinc-600 dark:text-zinc-400 truncate">
-                  📍 {nb.indirizzo} — <a href={`/provincia/${comune.provSlug}/${nb.comuneSlug}/`} class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">{nb.comune}</a>
+                  📍 {nb.indirizzo} — <a href={isDiesel ? `/provincia/${comune.provSlug}/${nb.comuneSlug}/diesel/` : `/provincia/${comune.provSlug}/${nb.comuneSlug}/`} class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">{nb.comune}</a>
                 </div>
 
                 <div class="flex items-center justify-between pt-2 border-t border-zinc-200/60 dark:border-zinc-800/60 text-xs">
                   <div>
-                    {priceB && <span class="font-bold text-emerald-600 dark:text-emerald-400">B: €{priceB.toFixed(3)}</span>}
-                    {priceD && <span class="text-zinc-500 ml-2 font-medium">D: €{priceD.toFixed(3)}</span>}
+                    {priceB && <span class={`font-bold ${!isDiesel ? 'text-emerald-600 dark:text-emerald-400' : 'text-zinc-500'}`}>B: €{priceB.toFixed(3)}</span>}
+                    {priceD && <span class={`ml-2 font-bold ${isDiesel ? 'text-teal-600 dark:text-teal-400' : 'text-zinc-500'}`}>D: €{priceD.toFixed(3)}</span>}
                   </div>
                   <a
                     href={nb.mapsUrl}
@@ -583,23 +677,29 @@ const structuredData = {
     <!-- FAQ Locali sul Comune -->
     <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-900/30 p-6 space-y-4">
       <h3 class="text-lg font-bold text-zinc-900 dark:text-white">
-        Domande Frequenti sui Prezzi Benzina e Diesel a {comune.name}
+        Domande Frequenti sui Prezzi {isDiesel ? 'Diesel' : 'Benzina'} a {comune.name}
       </h3>
       <div class="space-y-4 text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
         <div>
           <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm">
-            Qual è il benzinaio più conveniente a {comune.name} oggi?
+            {isDiesel ? `Qual è il distributore di diesel più conveniente a ${comune.name} oggi?` : `Qual è il benzinaio più conveniente a ${comune.name} oggi?`}
           </h4>
           <p class="text-zinc-600 dark:text-zinc-400 mt-1">
-            {cheapestBenzina
-              ? `Il distributore di benzina con il miglior prezzo a ${comune.name} è ${cheapestBenzina.nome || cheapestBenzina.brand} in ${cheapestBenzina.indirizzo}, con una tariffa self-service di € ${cheapestBenzina.prices.benzina_self.prezzo.toFixed(3)} al litro.`
-              : `I prezzi comunicati sono consultabili nella tabella superiore, sincronizzata in tempo reale.`}
+            {isDiesel ? (
+              cheapestDiesel
+                ? `Il distributore di diesel con il miglior prezzo a ${comune.name} è ${cheapestDiesel.nome || cheapestDiesel.brand} in ${cheapestDiesel.indirizzo}, con una tariffa self-service di € ${cheapestDiesel.prices.diesel_self.prezzo.toFixed(3)} al litro.`
+                : `I prezzi comunicati sono consultabili nella tabella superiore, sincronizzata in tempo reale con i dati del MIMIT.`
+            ) : (
+              cheapestBenzina
+                ? `Il distributore di benzina con il miglior prezzo a ${comune.name} è ${cheapestBenzina.nome || cheapestBenzina.brand} in ${cheapestBenzina.indirizzo}, con una tariffa self-service di € ${cheapestBenzina.prices.benzina_self.prezzo.toFixed(3)} al litro.`
+                : `I prezzi comunicati sono consultabili nella tabella superiore, sincronizzata in tempo reale con i dati del MIMIT.`
+            )}
           </p>
         </div>
 
         <div>
           <h4 class="font-bold text-zinc-900 dark:text-zinc-100 text-sm">
-            Quanto si risparmia facendo rifornimento a {comune.name}?
+            Quanto si risparmia facendo rifornimento di {isDiesel ? 'diesel' : 'benzina'} a {comune.name}?
           </h4>
           <p class="text-zinc-600 dark:text-zinc-400 mt-1">
             Confrontando la pompa più economica con il distributore più caro dello stesso comune o dell'area limitrofa, il risparmio medio stimato è di oltre 5-8€ su ogni pieno da 50 litri.
@@ -624,28 +724,28 @@ const structuredData = {
           Vuoi vedere tutti i distributori della Provincia di {comune.provName}?
         </h4>
         <p class="text-xs text-zinc-500">
-          Consulta la panoramica provinciale completa con medie, grafici e pompe bianche.
+          Consulta la panoramica provinciale completa per {isDiesel ? 'il diesel' : 'la benzina'} con medie, grafici e pompe bianche.
         </p>
       </div>
       <a
-        href={`/provincia/${comune.provSlug}/`}
+        href={isDiesel ? `/provincia/${comune.provSlug}/diesel/` : `/provincia/${comune.provSlug}/`}
         class="px-4 py-2.5 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-zinc-950 transition-all shrink-0 text-center shadow-xs"
       >
-        Tutta la Provincia di {comune.provName} →
+        Tutta la Provincia di {comune.provName} ({isDiesel ? 'Diesel' : 'Benzina'}) →
       </a>
     </div>
 
     <!-- Share Bar -->
     <ShareBar
-      title={`Prezzi Benzina e Diesel a ${comune.name}: scopri dove risparmiare`}
+      title={`Prezzi ${isDiesel ? 'Diesel' : 'Benzina'} a ${comune.name}: scopri dove risparmiare`}
       url={`https://www.prezzobenza.it${canonicalPath}`}
-      description={`Mappa e prezzi aggiornati dei distributori a ${comune.name}. Confronta e risparmia con PrezzoBenza.it!`}
+      description={`Mappa e prezzi aggiornati dei distributori ${isDiesel ? 'diesel' : 'benzina'} a ${comune.name}. Confronta e risparmia con PrezzoBenza.it!`}
     />
 
   </div>
 
   <!-- Script Mappa Interattiva del Comune & Paginazione Lista -->
-  <script define:vars={{ mapStations, centroid: { lat: centerLat, lng: centerLng } }}>
+  <script define:vars={{ mapStations, centroid: { lat: centerLat, lng: centerLng }, isDiesel }}>
     function initComuneMap() {
       if (typeof window.L === 'undefined') {
         setTimeout(initComuneMap, 60);
@@ -658,10 +758,13 @@ const structuredData = {
       const initialLat = mapStations.length > 0 && mapStations[0].lat ? mapStations[0].lat : centroid.lat;
       const initialLng = mapStations.length > 0 && mapStations[0].lng ? mapStations[0].lng : centroid.lng;
 
+      // Disabilita zoomControl default (in topleft) e aggiungilo esplicitamente in topright
       const map = window.L.map('comune-map', {
-        zoomControl: true,
+        zoomControl: false,
         scrollWheelZoom: false,
       }).setView([initialLat, initialLng], 12);
+
+      window.L.control.zoom({ position: 'topright' }).addTo(map);
 
       window.L.tileLayer(osmTiles, {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
@@ -674,8 +777,8 @@ const structuredData = {
       const allStationsSorted = [...mapStations]
         .filter((st) => st.lat && st.lng)
         .sort((a, b) => {
-          const pA = a.priceBenzina || a.priceDiesel || a.bestPrice || 99;
-          const pB = b.priceBenzina || b.priceDiesel || b.bestPrice || 99;
+          const pA = a.targetPrice || a.bestPrice || 99;
+          const pB = b.targetPrice || b.bestPrice || 99;
           return pA - pB;
         });
 
@@ -698,7 +801,7 @@ const structuredData = {
         else if (zoom <= 15) maxPins = 65;
         else maxPins = 90;
 
-        // Se il comune ha poche stazioni (es. <= 40 come Vergiate), mostrale tutte
+        // Se il comune ha poche stazioni (es. <= 40 come Vergiate o Chieti), mostrale tutte
         if (totalCount <= 40) {
           maxPins = totalCount;
         }
@@ -710,7 +813,7 @@ const structuredData = {
         toDisplay.forEach((st, idx) => {
           const isCheapestInView = idx === 0;
           const iconClass = isCheapestInView ? 'pb-marker-cheapest' : 'pb-marker-standard';
-          const displayPrice = st.priceBenzina || st.priceDiesel || st.bestPrice;
+          const displayPrice = st.targetPrice || st.bestPrice;
           const icon = window.L.divIcon({
             className: iconClass,
             html: `<div style="font-size:10px; padding:2px 5px; text-align:center;">€${displayPrice ? displayPrice.toFixed(2) : ''}</div>`,
@@ -718,8 +821,7 @@ const structuredData = {
           });
 
           const mapsUrl = st.mapsUrl;
-          const safeName = (st.nome || st.brand || '').replace(/'/g, "\\'");
-          const safeBrand = (st.brand || '').replace(/'/g, "\\'");
+          const fuelLabel = isDiesel ? 'Diesel' : 'Benzina';
 
           const marker = window.L.marker([st.lat, st.lng], { icon })
             .bindPopup(`
@@ -727,7 +829,7 @@ const structuredData = {
                 <div style="font-size:11px; font-weight:800; color:#10b981;">#${idx + 1} più economico • ${st.brand}</div>
                 <div style="font-size:13px; font-weight:bold; margin-top:2px;">${st.nome || st.brand}</div>
                 <div style="font-size:11px; opacity:0.8; margin-top:2px;">${st.indirizzo} - ${st.comune}</div>
-                <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${displayPrice ? displayPrice.toFixed(3) : 'N/D'}/L</div>
+                <div style="font-size:16px; font-weight:900; color:#10b981; margin:4px 0;">€ ${displayPrice ? displayPrice.toFixed(3) : 'N/D'}/L <span style="font-size:11px; font-weight:normal; color:#a1a1aa;">(${fuelLabel})</span></div>
                 <a href="${mapsUrl}" target="_blank" rel="noopener" style="display:inline-block; font-size:11px; font-weight:bold; background:#10b981; color:#09090b; padding:5px 12px; border-radius:8px; text-decoration:none; margin-top:4px;">Portami qui →</a>
               </div>
             `);

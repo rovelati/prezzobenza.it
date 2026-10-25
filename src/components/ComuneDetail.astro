@@ -193,12 +193,12 @@ const canonicalPath = isDiesel
   : `/provincia/${comune.provSlug}/${comune.slug}/`;
 
 const pageTitle = isDiesel
-  ? `Prezzi Diesel a ${comune.name} (${comune.provCode}) Oggi: Gasolio più Economico | PrezzoBenza.it`
-  : `Prezzi Benzina a ${comune.name} (${comune.provCode}) Oggi: Dove Costa Meno | PrezzoBenza.it`;
+  ? `Prezzo Gasolio e Diesel a ${comune.name} (${comune.provCode}) Oggi: Costi al Litro | PrezzoBenza.it`
+  : `Prezzo Benzina a ${comune.name} (${comune.provCode}) Oggi: Costi al Litro e Distributori | PrezzoBenza.it`;
 
 const pageDescription = isDiesel
-  ? `Confronto prezzi gasolio diesel in tempo reale a ${comune.name} (${comune.provCode}). Scopri i ${comune.stationsCount} distributori e le pompe bianche con il diesel più economico comunicati al MIMIT.`
-  : `Confronto prezzi benzina in tempo reale a ${comune.name} (${comune.provCode}). Scopri i ${comune.stationsCount} distributori e le pompe bianche più economiche aggiornate a oggi con dati ufficiali MIMIT.`;
+  ? `Scopri il prezzo di gasolio e diesel oggi a ${comune.name} (${comune.provCode}). Confronta i costi al litro dei ${comune.stationsCount} distributori e pompe bianche no logo con i dati ufficiali MIMIT.`
+  : `Scopri il costo della benzina oggi a ${comune.name} (${comune.provCode}). Confronta i prezzi al litro dei ${comune.stationsCount} distributori e pompe bianche più economiche comunicati al MIMIT.`;
 
 // Schema.org Structured Data
 const structuredData = {

@@ -200,16 +200,16 @@ const brandsSummary: BrandStats[] = Array.from(brandMap.values())
 
 // ── Titoli, Descrizioni e Canonical Specifici per Carburante ────────────────
 const pageTitle = isDiesel
-  ? `Prezzi Diesel a ${province.name} Oggi: Dove Costa Meno il Gasolio | PrezzoBenza.it`
+  ? `Prezzo Gasolio e Costi Diesel a ${province.name} Oggi: Distributori più Economici | PrezzoBenza.it`
   : (isGplMetano
-      ? `Prezzi GPL e Metano a ${province.name} Oggi: Distributori Gas Auto | PrezzoBenza.it`
-      : `Prezzi Benzina a ${province.name} Oggi: Dove Costa Meno | PrezzoBenza.it`);
+      ? `Prezzi GPL e Metano a ${province.name} Oggi: Costi al Litro e Distributori | PrezzoBenza.it`
+      : `Prezzo Benzina e Costi al Litro a ${province.name} Oggi: Dove Risparmiare | PrezzoBenza.it`);
 
 const pageDescription = isDiesel
-  ? `I 10 distributori di diesel e gasolio più economici a ${province.name} aggiornati a oggi con dati ufficiali MIMIT. Confronta i prezzi e risparmia sul pieno di gasolio nella provincia di ${province.name}.`
+  ? `Scopri il prezzo del gasolio e i costi del diesel oggi in provincia di ${province.name}. Classifica aggiornata MIMIT dei distributori e pompe bianche no logo più economiche per risparmiare sul pieno.`
   : (isGplMetano
-      ? `Mappa e prezzi di GPL e Metano a ${province.name} aggiornati a oggi con dati ufficiali MIMIT. Trova la pompa di gas auto con il prezzo più basso nella provincia di ${province.name}.`
-      : `I 10 distributori di benzina più economici a ${province.name} aggiornati a oggi con dati ufficiali MIMIT. Trova la pompa di benzina con il prezzo self-service più conveniente nella provincia di ${province.name}.`);
+      ? `Mappa e costi di GPL e Metano a ${province.name} aggiornati a oggi con dati ufficiali MIMIT. Trova la pompa di gas auto con il prezzo più basso nella provincia di ${province.name}.`
+      : `Scopri il costo della benzina oggi in provincia di ${province.name}. Classifica dei distributori e pompe bianche con il prezzo self-service più conveniente con dati ufficiali MIMIT.`);
 
 const canonicalPath = isDiesel
   ? `/provincia/${province.slug}/diesel`

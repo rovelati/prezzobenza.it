@@ -34,11 +34,18 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.
     <meta name="description" content={description} />
     <link rel="canonical" href={fullCanonical} />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) con Google Consent Mode v2 per CMP -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CWV48MMBDF"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
       gtag('js', new Date());
 
       gtag('config', 'G-CWV48MMBDF');
@@ -137,6 +144,10 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
+
+    <!-- UniConsent CMP (Consent Management Platform) — Asincrono con fetchpriority="low" e dns-prefetch per tutelare FCP/LCP e performance -->
+    <link rel="dns-prefetch" href="https://cmp.uniconsent.com" />
+    <script is:inline async fetchpriority="low" src="https://cmp.uniconsent.com/v2/cmp.js" data-license="e538d9903a"></script>
   </head>
   <body class="min-h-screen flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
     <!-- Header -->

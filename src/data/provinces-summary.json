@@ -19508,7 +19508,7 @@
     "avgBenzina": 2.03,
     "avgDiesel": 2.268,
     "minBenzina": 1.889,
-    "minDiesel": 1.959,
+    "minDiesel": 1.999,
     "cheapestBenzina": {
       "nome": "GIAMBO RICCARDO",
       "brand": "Eni",
@@ -19516,10 +19516,10 @@
       "prezzo": 1.889
     },
     "cheapestDiesel": {
-      "nome": "Rifornimento carburanti di Denis Prepeleag",
-      "brand": "IP",
-      "comune": "SANTA MARINA SALINA",
-      "prezzo": 1.959
+      "nome": "GIAMBO RICCARDO",
+      "brand": "Eni",
+      "comune": "PACE DEL MELA",
+      "prezzo": 1.999
     }
   },
   {
@@ -36614,7 +36614,7 @@
     "name": "Varese",
     "region": "Lombardia",
     "slug": "varese",
-    "lat": 45.7158,
+    "lat": 45.7156,
     "lng": 8.8193,
     "stationsCount": 242,
     "comuniCount": 76,

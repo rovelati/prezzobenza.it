@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T18:54:31.594Z",
+  "updatedAt": "2026-10-26T14:13:38.198Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -17,22 +17,22 @@
         "benzina_servito": {
           "prezzo": 2.789,
           "isSelf": false,
-          "dt": "17/10/2026 08:02:27"
+          "dt": "24/10/2026 10:34:13"
         },
         "benzina_self": {
           "prezzo": 2.789,
           "isSelf": true,
-          "dt": "17/10/2026 08:02:27"
+          "dt": "24/10/2026 10:34:13"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "17/10/2026 08:02:27"
+          "dt": "24/10/2026 10:34:13"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "17/10/2026 08:02:27"
+          "dt": "24/10/2026 10:34:13"
         }
       },
       "prezzo": 2.789,
@@ -119,22 +119,22 @@
         "benzina_servito": {
           "prezzo": 2.749,
           "isSelf": false,
-          "dt": "23/10/2026 19:43:39"
+          "dt": "24/10/2026 09:23:50"
         },
         "benzina_self": {
-          "prezzo": 2.349,
+          "prezzo": 2.099,
           "isSelf": true,
-          "dt": "23/10/2026 19:43:39"
+          "dt": "24/10/2026 09:23:50"
         },
         "diesel_servito": {
           "prezzo": 2.749,
           "isSelf": false,
-          "dt": "23/10/2026 19:43:39"
+          "dt": "24/10/2026 09:23:50"
         },
         "diesel_self": {
           "prezzo": 2.399,
           "isSelf": true,
-          "dt": "23/10/2026 19:43:39"
+          "dt": "24/10/2026 09:23:50"
         }
       },
       "prezzo": 2.749,
@@ -226,17 +226,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "23/10/2026 07:55:46"
+          "dt": "24/10/2026 08:06:14"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "23/10/2026 07:55:46"
+          "dt": "24/10/2026 08:06:14"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "23/10/2026 07:55:46"
+          "dt": "24/10/2026 08:06:14"
         }
       },
       "prezzo": 2.699,
@@ -260,17 +260,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "23/10/2026 07:55:58"
+          "dt": "24/10/2026 08:06:30"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "23/10/2026 07:55:58"
+          "dt": "24/10/2026 08:06:30"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "23/10/2026 07:55:58"
+          "dt": "24/10/2026 08:06:30"
         }
       },
       "prezzo": 2.699,
@@ -294,17 +294,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "23/10/2026 07:56:13"
+          "dt": "24/10/2026 08:06:44"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "23/10/2026 07:56:13"
+          "dt": "24/10/2026 08:06:44"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "23/10/2026 07:56:13"
+          "dt": "24/10/2026 08:06:44"
         }
       },
       "prezzo": 2.699,
@@ -378,27 +378,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "23/10/2026 18:44:05"
+          "dt": "24/10/2026 11:34:38"
         },
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "23/10/2026 18:44:05"
+          "dt": "24/10/2026 11:34:38"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "23/10/2026 18:44:05"
+          "dt": "24/10/2026 11:34:38"
         },
         "diesel_self": {
           "prezzo": 2.349,
           "isSelf": true,
-          "dt": "23/10/2026 18:44:05"
+          "dt": "24/10/2026 11:34:38"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "23/10/2026 18:44:05"
+          "dt": "24/10/2026 11:34:38"
         }
       },
       "prezzo": 2.799,
@@ -510,27 +510,27 @@
         "benzina_servito": {
           "prezzo": 2.529,
           "isSelf": false,
-          "dt": "23/10/2026 10:21:26"
+          "dt": "24/10/2026 09:11:01"
         },
         "benzina_self": {
           "prezzo": 2.092,
           "isSelf": true,
-          "dt": "23/10/2026 10:21:26"
+          "dt": "24/10/2026 09:11:01"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "23/10/2026 10:21:26"
+          "dt": "24/10/2026 09:11:01"
         },
         "diesel_self": {
           "prezzo": 2.362,
           "isSelf": true,
-          "dt": "23/10/2026 10:21:26"
+          "dt": "24/10/2026 09:11:01"
         },
         "gpl": {
           "prezzo": 0.949,
           "isSelf": false,
-          "dt": "23/10/2026 10:21:26"
+          "dt": "24/10/2026 09:11:01"
         }
       },
       "prezzo": 2.799,
@@ -559,7 +559,7 @@
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "22/10/2026 22:01:09"
+          "dt": "25/10/2026 06:09:10"
         },
         "diesel_servito": {
           "prezzo": 2.799,
@@ -606,9 +606,9 @@
           "dt": "22/10/2026 14:41:05"
         },
         "diesel_self": {
-          "prezzo": 2.359,
+          "prezzo": 2.379,
           "isSelf": true,
-          "dt": "23/10/2026 14:43:20"
+          "dt": "24/10/2026 11:37:02"
         }
       },
       "prezzo": 2.799,
@@ -720,7 +720,7 @@
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "21/10/2026 21:37:08"
+          "dt": "24/10/2026 21:42:51"
         },
         "diesel_servito": {
           "prezzo": 2.799,
@@ -730,12 +730,12 @@
         "diesel_self": {
           "prezzo": 2.359,
           "isSelf": true,
-          "dt": "21/10/2026 08:31:04"
+          "dt": "24/10/2026 21:42:51"
         },
         "gpl": {
           "prezzo": 0.889,
           "isSelf": false,
-          "dt": "22/10/2026 06:07:10"
+          "dt": "24/10/2026 23:46:09"
         }
       },
       "prezzo": 2.799,

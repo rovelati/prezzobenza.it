@@ -228,8 +228,8 @@
       "indirizzo": "PIAZZA ALDO MORO SNC 71021",
       "prezzo": 2.254
     },
-    "lat": 41.5503,
-    "lng": 15.5947
+    "lat": 41.552,
+    "lng": 15.5937
   },
   {
     "name": "Accettura",
@@ -326,8 +326,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 11,
-    "avgBenzina": 2.029,
-    "avgDiesel": 2.287,
+    "avgBenzina": 2.007,
+    "avgDiesel": 2.282,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.695,
@@ -1080,8 +1080,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 14,
-    "avgBenzina": 2.079,
-    "avgDiesel": 2.362,
+    "avgBenzina": 2.058,
+    "avgDiesel": 2.351,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.719,
@@ -1226,10 +1226,10 @@
     "region": "Toscana",
     "stationsCount": 4,
     "avgBenzina": 2.056,
-    "avgDiesel": 2.272,
+    "avgDiesel": 2.281,
     "minBenzina": 2.039,
-    "minDiesel": 2.259,
-    "minGpl": 0.699,
+    "minDiesel": 2.269,
+    "minGpl": 0.715,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "DISTRIBUTORE ALA AGLIANA VIA LAVAGNINI",
@@ -1238,10 +1238,10 @@
       "prezzo": 2.039
     },
     "cheapestDiesel": {
-      "nome": "DISTRIBUTORE ESSO AGLIANA SETTOLA",
-      "brand": "Esso",
-      "indirizzo": "NUOVA PRATESE SNC 51031",
-      "prezzo": 2.259
+      "nome": "DISTRIBUTORE AGLIANA C. MARX",
+      "brand": "IP",
+      "indirizzo": "VIA VIA CARLO MARX SNC 51031, AGLIANA (PT) NCM 51031",
+      "prezzo": 2.269
     },
     "lat": 43.8987,
     "lng": 11.004
@@ -1486,9 +1486,9 @@
     "provSlug": "monza-e-brianza",
     "region": "Lombardia",
     "stationsCount": 5,
-    "avgBenzina": 1.988,
+    "avgBenzina": 1.994,
     "avgDiesel": 2.231,
-    "minBenzina": 1.966,
+    "minBenzina": 1.988,
     "minDiesel": 2.19,
     "minGpl": 0.769,
     "minMetano": null,
@@ -1496,7 +1496,7 @@
       "nome": "EKOPOINT",
       "brand": "EKOpoint",
       "indirizzo": "Via delle industrie  16 20864",
-      "prezzo": 1.966
+      "prezzo": 1.988
     },
     "cheapestDiesel": {
       "nome": "2151 Agrate Brianza",
@@ -1515,7 +1515,7 @@
     "provSlug": "agrigento",
     "region": "Sicilia",
     "stationsCount": 23,
-    "avgBenzina": 2.004,
+    "avgBenzina": 1.999,
     "avgDiesel": 2.251,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
@@ -1795,17 +1795,17 @@
     "provSlug": "trento",
     "region": "Trentino-Alto Adige",
     "stationsCount": 4,
-    "avgBenzina": 2,
-    "avgDiesel": 2.241,
-    "minBenzina": 1.99,
+    "avgBenzina": 1.997,
+    "avgDiesel": 2.231,
+    "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.769,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "3465 ALA",
-      "brand": "Eni",
-      "indirizzo": "S.S. 12 KM 337 + 947  SNC",
-      "prezzo": 1.99
+      "nome": "ESSO",
+      "brand": "Esso",
+      "indirizzo": "STRADA STAT. 12 KM 342 SNC 38061, ALA (TN)  38061",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "3465 ALA",
@@ -2114,17 +2114,17 @@
     "provSlug": "roma",
     "region": "Lazio",
     "stationsCount": 8,
-    "avgBenzina": 1.996,
+    "avgBenzina": 1.998,
     "avgDiesel": 2.263,
-    "minBenzina": 1.969,
+    "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.749,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "VIA VIRGILIO SNC",
-      "brand": "Pompa Bianca",
-      "indirizzo": "VIA VIRGILIO  00041",
-      "prezzo": 1.969
+      "nome": "KEROPETROL SPA PAVONA - ALBANO LAZIALE",
+      "brand": "KEROPETROL",
+      "indirizzo": "DEL MARE 192 00041",
+      "prezzo": 1.979
     },
     "cheapestDiesel": {
       "nome": "TOIL ALBANO LAZIALE",
@@ -2231,11 +2231,11 @@
     "region": "Emilia-Romagna",
     "stationsCount": 3,
     "avgBenzina": 2.024,
-    "avgDiesel": 2.271,
+    "avgDiesel": 2.291,
     "minBenzina": 1.975,
     "minDiesel": 2.239,
     "minGpl": 0.899,
-    "minMetano": 1.995,
+    "minMetano": 2.035,
     "cheapestBenzina": {
       "nome": "Contini Petroli S.R.L",
       "brand": "Pompa Bianca",
@@ -2433,10 +2433,10 @@
     "provSlug": "torino",
     "region": "Piemonte",
     "stationsCount": 2,
-    "avgBenzina": 1.994,
-    "avgDiesel": 2.258,
+    "avgBenzina": 1.989,
+    "avgDiesel": 2.253,
     "minBenzina": 1.988,
-    "minDiesel": 2.249,
+    "minDiesel": 2.239,
     "minGpl": 0.749,
     "minMetano": null,
     "cheapestBenzina": {
@@ -2449,7 +2449,7 @@
       "nome": "ITALIANA PETROLI",
       "brand": "IP",
       "indirizzo": "STRADA PROVINCIALE IVREA/CIGLIANO  KM 5 10010",
-      "prezzo": 2.249
+      "prezzo": 2.239
     },
     "lat": 45.436,
     "lng": 7.935
@@ -2743,7 +2743,7 @@
     "region": "Piemonte",
     "stationsCount": 40,
     "avgBenzina": 1.993,
-    "avgDiesel": 2.243,
+    "avgDiesel": 2.245,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.687,
@@ -2801,7 +2801,7 @@
     "region": "Puglia",
     "stationsCount": 4,
     "avgBenzina": 2.095,
-    "avgDiesel": 2.313,
+    "avgDiesel": 2.338,
     "minBenzina": 1.994,
     "minDiesel": 2.254,
     "minGpl": null,
@@ -4182,17 +4182,17 @@
     "provSlug": "bergamo",
     "region": "Lombardia",
     "stationsCount": 2,
-    "avgBenzina": 1.986,
+    "avgBenzina": 1.985,
     "avgDiesel": 2.224,
-    "minBenzina": 1.985,
+    "minBenzina": 1.984,
     "minDiesel": 2.224,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "Ambivere SS 342",
-      "brand": "Pompa Bianca",
-      "indirizzo": "Statale 342 Briantea, Km. 11,633, dir. bergamo - 24030",
-      "prezzo": 1.985
+      "nome": "COIL AMBIVERE",
+      "brand": "COIL",
+      "indirizzo": "Via Briantea 19  24030",
+      "prezzo": 1.984
     },
     "cheapestDiesel": {
       "nome": "Ambivere SS 342",
@@ -4646,17 +4646,17 @@
     "provSlug": "barletta-andria-trani",
     "region": "Puglia",
     "stationsCount": 21,
-    "avgBenzina": 2.02,
+    "avgBenzina": 2.019,
     "avgDiesel": 2.272,
-    "minBenzina": 1.989,
+    "minBenzina": 1.967,
     "minDiesel": 2.19,
     "minGpl": 0.719,
     "minMetano": 1.699,
     "cheapestBenzina": {
-      "nome": "ANDRIA  VIA TOGLIATTI",
-      "brand": "Q8",
-      "indirizzo": "VIA TOGLIATTI  76123",
-      "prezzo": 1.989
+      "nome": "VR PETROLI ANDRIA",
+      "brand": "Pompa Bianca",
+      "indirizzo": "Via Marcello Malpighi SNC 76123",
+      "prezzo": 1.967
     },
     "cheapestDiesel": {
       "nome": "AGIP",
@@ -4791,7 +4791,7 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 11,
-    "avgBenzina": 2.113,
+    "avgBenzina": 2.111,
     "avgDiesel": 2.358,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
@@ -5506,8 +5506,8 @@
     "provSlug": "latina",
     "region": "Lazio",
     "stationsCount": 35,
-    "avgBenzina": 1.997,
-    "avgDiesel": 2.222,
+    "avgBenzina": 1.994,
+    "avgDiesel": 2.22,
     "minBenzina": 1.729,
     "minDiesel": 1.829,
     "minGpl": 0.689,
@@ -5535,23 +5535,23 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.136,
-    "avgDiesel": 2.468,
-    "minBenzina": 2.136,
-    "minDiesel": 2.468,
+    "avgBenzina": 2.072,
+    "avgDiesel": 2.399,
+    "minBenzina": 2.072,
+    "minDiesel": 2.399,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "AMENDOLA GIOVANNI",
       "brand": "IP",
       "indirizzo": "SP44  84020",
-      "prezzo": 2.136
+      "prezzo": 2.072
     },
     "cheapestDiesel": {
       "nome": "AMENDOLA GIOVANNI",
       "brand": "IP",
       "indirizzo": "SP44  84020",
-      "prezzo": 2.468
+      "prezzo": 2.399
     },
     "lat": 40.4427,
     "lng": 15.2562
@@ -6293,7 +6293,7 @@
     "avgDiesel": 2.239,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
-    "minGpl": 0.789,
+    "minGpl": 0.779,
     "minMetano": 1.847,
     "cheapestBenzina": {
       "nome": "AREZZO VIA DANTE - P.V. Q8",
@@ -6638,9 +6638,9 @@
     "region": "Piemonte",
     "stationsCount": 3,
     "avgBenzina": 2.009,
-    "avgDiesel": 2.276,
+    "avgDiesel": 2.279,
     "minBenzina": 1.98,
-    "minDiesel": 2.23,
+    "minDiesel": 2.24,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -6653,7 +6653,7 @@
       "nome": "(2)PREALPINA DISTRIBUZIONE CARBURANTI SRL - ARONA",
       "brand": "Pompa Bianca",
       "indirizzo": "VIALE BARACCA 40/A 28041",
-      "prezzo": 2.23
+      "prezzo": 2.24
     },
     "lat": 45.7576,
     "lng": 8.5556
@@ -6841,7 +6841,7 @@
     "region": "Piemonte",
     "stationsCount": 4,
     "avgBenzina": 1.996,
-    "avgDiesel": 2.231,
+    "avgDiesel": 2.236,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.819,
@@ -7179,7 +7179,7 @@
     "region": "Campania",
     "stationsCount": 10,
     "avgBenzina": 2.022,
-    "avgDiesel": 2.296,
+    "avgDiesel": 2.283,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.749,
@@ -7295,7 +7295,7 @@
     "region": "Marche",
     "stationsCount": 28,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.235,
+    "avgDiesel": 2.234,
     "minBenzina": 1.957,
     "minDiesel": 2.158,
     "minGpl": 0.769,
@@ -7468,8 +7468,8 @@
     "provSlug": "cagliari",
     "region": "Sardegna",
     "stationsCount": 7,
-    "avgBenzina": 2.001,
-    "avgDiesel": 2.25,
+    "avgBenzina": 2,
+    "avgDiesel": 2.243,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.769,
@@ -7584,17 +7584,17 @@
     "provSlug": "asti",
     "region": "Piemonte",
     "stationsCount": 41,
-    "avgBenzina": 1.994,
-    "avgDiesel": 2.228,
-    "minBenzina": 1.889,
+    "avgBenzina": 1.996,
+    "avgDiesel": 2.231,
+    "minBenzina": 1.984,
     "minDiesel": 1.789,
     "minGpl": 0.729,
     "minMetano": 1.852,
     "cheapestBenzina": {
-      "nome": "11418 ASTI",
-      "brand": "Eni",
-      "indirizzo": "Corso Alessandria 494  14100",
-      "prezzo": 1.889
+      "nome": "IPERSTAROIL ASTI",
+      "brand": "Pompa Bianca",
+      "indirizzo": "PIAZZA LEONARDO DA VINCI SNC 14100",
+      "prezzo": 1.984
     },
     "cheapestDiesel": {
       "nome": "Inzirillo Salvatore Roberto",
@@ -8038,8 +8038,8 @@
     "provSlug": "avellino",
     "region": "Campania",
     "stationsCount": 3,
-    "avgBenzina": 2.025,
-    "avgDiesel": 2.28,
+    "avgBenzina": 1.994,
+    "avgDiesel": 2.255,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.709,
@@ -8096,8 +8096,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 15,
-    "avgBenzina": 2.054,
-    "avgDiesel": 2.317,
+    "avgBenzina": 2.049,
+    "avgDiesel": 2.314,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.709,
@@ -8328,8 +8328,8 @@
     "provSlug": "siracusa",
     "region": "Sicilia",
     "stationsCount": 12,
-    "avgBenzina": 2.02,
-    "avgDiesel": 2.236,
+    "avgBenzina": 2.011,
+    "avgDiesel": 2.233,
     "minBenzina": 1.899,
     "minDiesel": 1.799,
     "minGpl": 0.789,
@@ -8619,9 +8619,9 @@
     "region": "Veneto",
     "stationsCount": 2,
     "avgBenzina": 2.079,
-    "avgDiesel": 2.349,
+    "avgDiesel": 2.364,
     "minBenzina": 1.999,
-    "minDiesel": 2.329,
+    "minDiesel": 2.359,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -8634,7 +8634,7 @@
       "nome": "ANSELMI LUCA",
       "brand": "Pompa Bianca",
       "indirizzo": "TRIGA 29 37030",
-      "prezzo": 2.329
+      "prezzo": 2.359
     },
     "lat": 45.5822,
     "lng": 11.1507
@@ -8648,7 +8648,7 @@
     "region": "Veneto",
     "stationsCount": 3,
     "avgBenzina": 1.99,
-    "avgDiesel": 2.21,
+    "avgDiesel": 2.22,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.767,
@@ -9025,7 +9025,7 @@
     "region": "Emilia-Romagna",
     "stationsCount": 3,
     "avgBenzina": 1.993,
-    "avgDiesel": 2.197,
+    "avgDiesel": 2.206,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -9604,22 +9604,22 @@
     "provSlug": "laquila",
     "region": "Abruzzo",
     "stationsCount": 3,
-    "avgBenzina": 2.098,
-    "avgDiesel": 2.281,
+    "avgBenzina": 2.096,
+    "avgDiesel": 2.246,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
     "minGpl": 0.699,
     "minMetano": 1.789,
     "cheapestBenzina": {
-      "nome": "Stazione di Servizio ENI",
-      "brand": "Eni",
-      "indirizzo": "SS 690 KM 39,310 SNC 67052",
+      "nome": "Easy service Balsorano",
+      "brand": "Esso",
+      "indirizzo": "SSV AVEZZANO-SORA KM 38+594  snc 67052",
       "prezzo": 1.995
     },
     "cheapestDiesel": {
-      "nome": "Stazione di Servizio ENI",
-      "brand": "Eni",
-      "indirizzo": "SS 690 KM 39,310 SNC 67052",
+      "nome": "Easy service Balsorano",
+      "brand": "Esso",
+      "indirizzo": "SSV AVEZZANO-SORA KM 38+594  snc 67052",
       "prezzo": 2.195
     },
     "lat": 41.7848,
@@ -9807,23 +9807,23 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.29,
-    "avgDiesel": 2.5,
-    "minBenzina": 2.29,
-    "minDiesel": 2.5,
+    "avgBenzina": 2.27,
+    "avgDiesel": 2.49,
+    "minBenzina": 2.27,
+    "minDiesel": 2.49,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "AMBROSINO",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA L. CATTOLICA SN 80070",
-      "prezzo": 2.29
+      "prezzo": 2.27
     },
     "cheapestDiesel": {
       "nome": "AMBROSINO",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA L. CATTOLICA SN 80070",
-      "prezzo": 2.5
+      "prezzo": 2.49
     },
     "lat": 40.7152,
     "lng": 13.9261
@@ -10475,7 +10475,7 @@
     "region": "Puglia",
     "stationsCount": 83,
     "avgBenzina": 2.014,
-    "avgDiesel": 2.254,
+    "avgDiesel": 2.253,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.744,
@@ -10638,7 +10638,7 @@
     "provSlug": "barletta-andria-trani",
     "region": "Puglia",
     "stationsCount": 23,
-    "avgBenzina": 2.012,
+    "avgBenzina": 2.01,
     "avgDiesel": 2.268,
     "minBenzina": 1.939,
     "minDiesel": 2.19,
@@ -10784,9 +10784,9 @@
     "region": "Lombardia",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.229,
+    "avgDiesel": 2.239,
     "minBenzina": 1.999,
-    "minDiesel": 2.229,
+    "minDiesel": 2.239,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -10799,7 +10799,7 @@
       "nome": "MOLTENI MARIO ENRICO",
       "brand": "IP",
       "indirizzo": "VIA MILANO 78 23816",
-      "prezzo": 2.229
+      "prezzo": 2.239
     },
     "lat": 45.943,
     "lng": 9.463
@@ -10981,7 +10981,7 @@
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.789,
-    "minMetano": 1.999,
+    "minMetano": 2.089,
     "cheapestBenzina": {
       "nome": "REZZONICO BASSANO",
       "brand": "Esso",
@@ -11150,8 +11150,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 20,
-    "avgBenzina": 2.066,
-    "avgDiesel": 2.297,
+    "avgBenzina": 2.061,
+    "avgDiesel": 2.294,
     "minBenzina": 1.979,
     "minDiesel": 2.079,
     "minGpl": 0.709,
@@ -11720,7 +11720,7 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 3,
-    "avgBenzina": 2.029,
+    "avgBenzina": 2.006,
     "avgDiesel": 2.286,
     "minBenzina": 1.989,
     "minDiesel": 2.249,
@@ -11779,9 +11779,9 @@
     "region": "Campania",
     "stationsCount": 1,
     "avgBenzina": 2.099,
-    "avgDiesel": 2.319,
+    "avgDiesel": 2.349,
     "minBenzina": 2.099,
-    "minDiesel": 2.319,
+    "minDiesel": 2.349,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -11794,7 +11794,7 @@
       "nome": "R.CARBURANTI S.R.L.-BELLOSGUARDO",
       "brand": "Pompa Bianca",
       "indirizzo": "TUFOLO SNC 84020",
-      "prezzo": 2.319
+      "prezzo": 2.349
     },
     "lat": 40.4189,
     "lng": 15.31
@@ -11924,7 +11924,7 @@
     "region": "Sicilia",
     "stationsCount": 18,
     "avgBenzina": 2.013,
-    "avgDiesel": 2.272,
+    "avgDiesel": 2.269,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.664,
@@ -12039,23 +12039,23 @@
     "provSlug": "nuoro",
     "region": "Sardegna",
     "stationsCount": 1,
-    "avgBenzina": 1.994,
-    "avgDiesel": 2.254,
-    "minBenzina": 1.994,
-    "minDiesel": 2.254,
+    "avgBenzina": 1.999,
+    "avgDiesel": 2.259,
+    "minBenzina": 1.999,
+    "minDiesel": 2.259,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "belvì",
       "brand": "Q8",
       "indirizzo": "Statale 295 di Aritzo, Km. 15, dir. sud - 08030",
-      "prezzo": 1.994
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "belvì",
       "brand": "Q8",
       "indirizzo": "Statale 295 di Aritzo, Km. 15, dir. sud - 08030",
-      "prezzo": 2.254
+      "prezzo": 2.259
     },
     "lat": 39.9612,
     "lng": 9.1846
@@ -12358,8 +12358,8 @@
     "provSlug": "bergamo",
     "region": "Lombardia",
     "stationsCount": 45,
-    "avgBenzina": 2.001,
-    "avgDiesel": 2.238,
+    "avgBenzina": 2,
+    "avgDiesel": 2.237,
     "minBenzina": 1.668,
     "minDiesel": 1.649,
     "minGpl": 0.669,
@@ -12473,9 +12473,9 @@
     "provName": "Forlì-Cesena",
     "provSlug": "forli-cesena",
     "region": "Emilia-Romagna",
-    "stationsCount": 3,
-    "avgBenzina": 2.012,
-    "avgDiesel": 2.276,
+    "stationsCount": 2,
+    "avgBenzina": 1.984,
+    "avgDiesel": 2.239,
     "minBenzina": 1.978,
     "minDiesel": 2.19,
     "minGpl": 0.869,
@@ -12492,8 +12492,8 @@
       "indirizzo": "Autostrada A14 BOLOGNA-BARI-TARANTO,  Km. 89,500, dir. BOLOGNA 47032",
       "prezzo": 2.19
     },
-    "lat": 44.2104,
-    "lng": 12.1753
+    "lat": 44.2074,
+    "lng": 12.1744
   },
   {
     "name": "Bertiolo",
@@ -12503,8 +12503,8 @@
     "provSlug": "udine",
     "region": "Friuli Venezia Giulia",
     "stationsCount": 3,
-    "avgBenzina": 2.013,
-    "avgDiesel": 2.253,
+    "avgBenzina": 2.003,
+    "avgDiesel": 2.236,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -12794,7 +12794,7 @@
     "region": "Sicilia",
     "stationsCount": 6,
     "avgBenzina": 2.046,
-    "avgDiesel": 2.293,
+    "avgDiesel": 2.286,
     "minBenzina": 1.999,
     "minDiesel": 2.259,
     "minGpl": 0.869,
@@ -13344,8 +13344,8 @@
     "provSlug": "barletta-andria-trani",
     "region": "Puglia",
     "stationsCount": 17,
-    "avgBenzina": 2.057,
-    "avgDiesel": 2.322,
+    "avgBenzina": 2.055,
+    "avgDiesel": 2.321,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.769,
@@ -14668,7 +14668,7 @@
     "region": "Piemonte",
     "stationsCount": 7,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.245,
+    "avgDiesel": 2.246,
     "minBenzina": 1.989,
     "minDiesel": 2.219,
     "minGpl": 0.759,
@@ -14987,7 +14987,7 @@
     "region": "Lombardia",
     "stationsCount": 3,
     "avgBenzina": 1.993,
-    "avgDiesel": 2.233,
+    "avgDiesel": 2.213,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.744,
@@ -16088,10 +16088,10 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 5,
-    "avgBenzina": 1.999,
-    "avgDiesel": 2.309,
+    "avgBenzina": 2.009,
+    "avgDiesel": 2.319,
     "minBenzina": 1.987,
-    "minDiesel": 2.259,
+    "minDiesel": 2.239,
     "minGpl": 0.739,
     "minMetano": null,
     "cheapestBenzina": {
@@ -16104,7 +16104,7 @@
       "nome": "Energas",
       "brand": "Pompa Bianca",
       "indirizzo": "via nazionale  80042",
-      "prezzo": 2.259
+      "prezzo": 2.239
     },
     "lat": 40.7682,
     "lng": 14.462
@@ -16204,8 +16204,8 @@
     "provSlug": "catanzaro",
     "region": "Calabria",
     "stationsCount": 5,
-    "avgBenzina": 2.049,
-    "avgDiesel": 2.249,
+    "avgBenzina": 2.017,
+    "avgDiesel": 2.237,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.809,
@@ -16291,23 +16291,23 @@
     "provSlug": "sassari",
     "region": "Sardegna",
     "stationsCount": 1,
-    "avgBenzina": 2.189,
-    "avgDiesel": 2.379,
-    "minBenzina": 2.189,
-    "minDiesel": 2.379,
+    "avgBenzina": 2.179,
+    "avgDiesel": 2.349,
+    "minBenzina": 2.179,
+    "minDiesel": 2.349,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "GS di Solinas Gianpiero & C",
       "brand": "Pompa Bianca",
       "indirizzo": "strada provinciale 10m Km 48 01 07010",
-      "prezzo": 2.189
+      "prezzo": 2.179
     },
     "cheapestDiesel": {
       "nome": "GS di Solinas Gianpiero & C",
       "brand": "Pompa Bianca",
       "indirizzo": "strada provinciale 10m Km 48 01 07010",
-      "prezzo": 2.379
+      "prezzo": 2.349
     },
     "lat": 40.3728,
     "lng": 9.0497
@@ -16609,9 +16609,9 @@
     "provName": "Cuneo",
     "provSlug": "cuneo",
     "region": "Piemonte",
-    "stationsCount": 11,
+    "stationsCount": 12,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.246,
+    "avgDiesel": 2.25,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.739,
@@ -16628,8 +16628,8 @@
       "indirizzo": "VIA CUNEO  ANG. VIA ROSSELLI  136",
       "prezzo": 2.19
     },
-    "lat": 44.7004,
-    "lng": 7.8274
+    "lat": 44.6992,
+    "lng": 7.8329
   },
   {
     "name": "Bracciano",
@@ -16929,17 +16929,17 @@
     "provSlug": "bergamo",
     "region": "Lombardia",
     "stationsCount": 3,
-    "avgBenzina": 2.05,
+    "avgBenzina": 2.054,
     "avgDiesel": 2.3,
-    "minBenzina": 1.988,
+    "minBenzina": 1.994,
     "minDiesel": 2.248,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "IPER STATION BREMBATE",
-      "brand": "IP",
-      "indirizzo": "VIA VITTORIO VENETO 100 24041",
-      "prezzo": 1.988
+      "nome": "Q8 stazione di Servizio di Acanfora Giovanni",
+      "brand": "Q8",
+      "indirizzo": "via vittorio veneto  184 24041",
+      "prezzo": 1.994
     },
     "cheapestDiesel": {
       "nome": "IPER STATION BREMBATE",
@@ -18010,9 +18010,9 @@
     "provName": "Bolzano",
     "provSlug": "bolzano",
     "region": "Trentino-Alto Adige",
-    "stationsCount": 3,
-    "avgBenzina": 1.995,
-    "avgDiesel": 2.195,
+    "stationsCount": 4,
+    "avgBenzina": 1.996,
+    "avgDiesel": 2.211,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -18029,8 +18029,8 @@
       "indirizzo": "ANELLO NORD 3 39031",
       "prezzo": 2.19
     },
-    "lat": 46.794,
-    "lng": 11.9276
+    "lat": 46.795,
+    "lng": 11.9324
   },
   {
     "name": "Brusaporto",
@@ -18669,7 +18669,7 @@
     "region": "Friuli Venezia Giulia",
     "stationsCount": 4,
     "avgBenzina": 2.032,
-    "avgDiesel": 2.274,
+    "avgDiesel": 2.279,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -19278,7 +19278,7 @@
     "region": "Lombardia",
     "stationsCount": 23,
     "avgBenzina": 1.998,
-    "avgDiesel": 2.244,
+    "avgDiesel": 2.246,
     "minBenzina": 1.969,
     "minDiesel": 2.19,
     "minGpl": 0.779,
@@ -19973,16 +19973,16 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 2,
-    "avgBenzina": 2.109,
+    "avgBenzina": 2.098,
     "avgDiesel": 2.399,
     "minBenzina": 2.098,
     "minDiesel": 2.399,
     "minGpl": 0.689,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "TAMOIL",
-      "brand": "Tamoil",
-      "indirizzo": "SP330 KM 95+295 SNC 81013",
+      "nome": "FUEL Caiazzo",
+      "brand": "Pompa Bianca",
+      "indirizzo": "Via Roma 86 81013",
       "prezzo": 2.098
     },
     "cheapestDiesel": {
@@ -20301,16 +20301,16 @@
     "provSlug": "trapani",
     "region": "Sicilia",
     "stationsCount": 3,
-    "avgBenzina": 2.049,
+    "avgBenzina": 2.016,
     "avgDiesel": 2.286,
     "minBenzina": 1.999,
     "minDiesel": 2.259,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "TP038",
-      "brand": "Q8",
-      "indirizzo": "VIA SEGESTA SNC 91013",
+      "nome": "Tenergy",
+      "brand": "TEnergy",
+      "indirizzo": "STRADA COMUNALE CDA GRANATELLO SNC 91013",
       "prezzo": 1.999
     },
     "cheapestDiesel": {
@@ -20360,7 +20360,7 @@
     "region": "Toscana",
     "stationsCount": 2,
     "avgBenzina": 1.997,
-    "avgDiesel": 2.227,
+    "avgDiesel": 2.232,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
     "minGpl": null,
@@ -20417,8 +20417,8 @@
     "provSlug": "bergamo",
     "region": "Lombardia",
     "stationsCount": 6,
-    "avgBenzina": 2.005,
-    "avgDiesel": 2.247,
+    "avgBenzina": 2.003,
+    "avgDiesel": 2.243,
     "minBenzina": 1.979,
     "minDiesel": 2.195,
     "minGpl": 0.738,
@@ -20533,7 +20533,7 @@
     "provSlug": "bolzano",
     "region": "Trentino-Alto Adige",
     "stationsCount": 3,
-    "avgBenzina": 2.043,
+    "avgBenzina": 2.029,
     "avgDiesel": 2.26,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
@@ -20679,7 +20679,7 @@
     "region": "Toscana",
     "stationsCount": 7,
     "avgBenzina": 2.01,
-    "avgDiesel": 2.236,
+    "avgDiesel": 2.238,
     "minBenzina": 1.959,
     "minDiesel": 2.195,
     "minGpl": 0.729,
@@ -20853,9 +20853,9 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 2,
     "avgBenzina": 2.079,
-    "avgDiesel": 2.284,
+    "avgDiesel": 2.288,
     "minBenzina": 1.999,
-    "minDiesel": 2.229,
+    "minDiesel": 2.239,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -20868,7 +20868,7 @@
       "nome": "AREA DI SERVIZIO IP - CALLIANO",
       "brand": "IP",
       "indirizzo": "VIA DEI MOLINI 2 38060",
-      "prezzo": 2.229
+      "prezzo": 2.239
     },
     "lat": 45.9308,
     "lng": 11.0947
@@ -21394,10 +21394,10 @@
     "region": "Lombardia",
     "stationsCount": 2,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.279,
+    "avgDiesel": 2.244,
     "minBenzina": 1.999,
-    "minDiesel": 2.259,
-    "minGpl": 0.729,
+    "minDiesel": 2.189,
+    "minGpl": 0.734,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "B-PETROL CALVISANO",
@@ -21409,7 +21409,7 @@
       "nome": "GH&SANS 2 SAS CALVISANO",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA BRESCIA 113 25012",
-      "prezzo": 2.259
+      "prezzo": 2.189
     },
     "lat": 45.3741,
     "lng": 10.3387
@@ -21452,9 +21452,9 @@
     "region": "Toscana",
     "stationsCount": 11,
     "avgBenzina": 2.052,
-    "avgDiesel": 2.292,
+    "avgDiesel": 2.293,
     "minBenzina": 1.994,
-    "minDiesel": 2.229,
+    "minDiesel": 2.239,
     "minGpl": 0.779,
     "minMetano": 2.079,
     "cheapestBenzina": {
@@ -21464,10 +21464,10 @@
       "prezzo": 1.994
     },
     "cheapestDiesel": {
-      "nome": "STAZIONE DI SERVIZIO IP VITALI LUCA E C SNC",
+      "nome": "stazione di servizio api di vitali luca e e c snc vitali",
       "brand": "IP",
-      "indirizzo": "Via dello Stadio 1 55041",
-      "prezzo": 2.229
+      "indirizzo": "1 Via Aurelia, Km. 361+750, massa - 55041",
+      "prezzo": 2.239
     },
     "lat": 43.9097,
     "lng": 10.2721
@@ -21800,7 +21800,7 @@
     "region": "Veneto",
     "stationsCount": 6,
     "avgBenzina": 2.029,
-    "avgDiesel": 2.242,
+    "avgDiesel": 2.252,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.774,
@@ -22322,7 +22322,7 @@
     "region": "Liguria",
     "stationsCount": 2,
     "avgBenzina": 2.014,
-    "avgDiesel": 2.254,
+    "avgDiesel": 2.259,
     "minBenzina": 1.999,
     "minDiesel": 2.239,
     "minGpl": 0.959,
@@ -23326,8 +23326,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 6,
-    "avgBenzina": 2.127,
-    "avgDiesel": 2.362,
+    "avgBenzina": 2.119,
+    "avgDiesel": 2.341,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -24287,7 +24287,7 @@
     "avgDiesel": 2.387,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
-    "minGpl": 0.769,
+    "minGpl": 0.759,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "ENI Service Station",
@@ -24776,23 +24776,23 @@
     "provSlug": "cagliari",
     "region": "Sardegna",
     "stationsCount": 3,
-    "avgBenzina": 1.991,
-    "avgDiesel": 2.231,
-    "minBenzina": 1.985,
-    "minDiesel": 2.185,
+    "avgBenzina": 1.994,
+    "avgDiesel": 2.234,
+    "minBenzina": 1.989,
+    "minDiesel": 2.195,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "CAPOTERRA-ISOLA GAS",
-      "brand": "ISOLA GAS",
-      "indirizzo": "PROLUNGAMENTO VIA TRENTO SNC 09012",
-      "prezzo": 1.985
+      "nome": "8442",
+      "brand": "Tamoil",
+      "indirizzo": "STR.PROV.COLLEGAMENTO S.S. 195 SN 09012",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "CAPOTERRA-ISOLA GAS",
       "brand": "ISOLA GAS",
       "indirizzo": "PROLUNGAMENTO VIA TRENTO SNC 09012",
-      "prezzo": 2.185
+      "prezzo": 2.195
     },
     "lat": 39.1732,
     "lng": 8.9828
@@ -25027,9 +25027,9 @@
     "provSlug": "viterbo",
     "region": "Lazio",
     "stationsCount": 2,
-    "avgBenzina": 2.059,
+    "avgBenzina": 2.029,
     "avgDiesel": 2.239,
-    "minBenzina": 2.059,
+    "minBenzina": 1.999,
     "minDiesel": 2.199,
     "minGpl": 0.789,
     "minMetano": null,
@@ -25037,7 +25037,7 @@
       "nome": "ESSO CAPRANICA",
       "brand": "Esso",
       "indirizzo": "NARDINI 19 01012",
-      "prezzo": 2.059
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "Zgas",
@@ -25347,7 +25347,7 @@
     "region": "Campania",
     "stationsCount": 10,
     "avgBenzina": 2.04,
-    "avgDiesel": 2.275,
+    "avgDiesel": 2.277,
     "minBenzina": 1.994,
     "minDiesel": 2.195,
     "minGpl": 0.739,
@@ -25984,7 +25984,7 @@
     "provSlug": "torino",
     "region": "Piemonte",
     "stationsCount": 5,
-    "avgBenzina": 1.99,
+    "avgBenzina": 1.993,
     "avgDiesel": 2.294,
     "minBenzina": 1.985,
     "minDiesel": 2.195,
@@ -26042,7 +26042,7 @@
     "provSlug": "palermo",
     "region": "Sicilia",
     "stationsCount": 12,
-    "avgBenzina": 2.03,
+    "avgBenzina": 2.022,
     "avgDiesel": 2.294,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
@@ -26217,7 +26217,7 @@
     "region": "Piemonte",
     "stationsCount": 11,
     "avgBenzina": 2.001,
-    "avgDiesel": 2.26,
+    "avgDiesel": 2.261,
     "minBenzina": 1.984,
     "minDiesel": 2.19,
     "minGpl": 0.798,
@@ -26680,9 +26680,9 @@
     "provSlug": "milano",
     "region": "Lombardia",
     "stationsCount": 4,
-    "avgBenzina": 2.003,
+    "avgBenzina": 2.007,
     "avgDiesel": 2.259,
-    "minBenzina": 1.977,
+    "minBenzina": 1.988,
     "minDiesel": 2.249,
     "minGpl": 0.749,
     "minMetano": 1.999,
@@ -26690,7 +26690,7 @@
       "nome": "EKOPOINT",
       "brand": "EKOpoint",
       "indirizzo": "SP 40 Melegnano Binasco 3 20074",
-      "prezzo": 1.977
+      "prezzo": 1.988
     },
     "cheapestDiesel": {
       "nome": "EKOPOINT",
@@ -27123,8 +27123,8 @@
       "indirizzo": "Via Provinciale  66050",
       "prezzo": 2.399
     },
-    "lat": 42.2256,
-    "lng": 14.3675
+    "lat": 42.2257,
+    "lng": 14.3681
   },
   {
     "name": "Carvico",
@@ -27254,7 +27254,7 @@
     "avgDiesel": 2.324,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
-    "minGpl": 0.725,
+    "minGpl": 0.789,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "8456  CASAGIOVE",
@@ -27337,7 +27337,7 @@
     "provSlug": "chieti",
     "region": "Abruzzo",
     "stationsCount": 3,
-    "avgBenzina": 2.006,
+    "avgBenzina": 1.996,
     "avgDiesel": 2.274,
     "minBenzina": 1.989,
     "minDiesel": 2.265,
@@ -27510,9 +27510,9 @@
     "provName": "Alessandria",
     "provSlug": "alessandria",
     "region": "Piemonte",
-    "stationsCount": 20,
+    "stationsCount": 19,
     "avgBenzina": 2.005,
-    "avgDiesel": 2.252,
+    "avgDiesel": 2.25,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.707,
@@ -27529,8 +27529,8 @@
       "indirizzo": "S.P. PER VALENZA KM.1+360   snc",
       "prezzo": 2.19
     },
-    "lat": 45.1307,
-    "lng": 8.4526
+    "lat": 45.1298,
+    "lng": 8.453
   },
   {
     "name": "Casale sul Sile",
@@ -28149,9 +28149,9 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 2,
-    "avgBenzina": 2.127,
+    "avgBenzina": 2.077,
     "avgDiesel": 2.392,
-    "minBenzina": 2.095,
+    "minBenzina": 1.995,
     "minDiesel": 2.335,
     "minGpl": 0.699,
     "minMetano": null,
@@ -28159,7 +28159,7 @@
       "nome": "IPERFUEL",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA CIRCUMVALLAZIONE  81 81030",
-      "prezzo": 2.095
+      "prezzo": 1.995
     },
     "cheapestDiesel": {
       "nome": "IPERFUEL",
@@ -28642,9 +28642,9 @@
     "provSlug": "pisa",
     "region": "Toscana",
     "stationsCount": 7,
-    "avgBenzina": 1.993,
-    "avgDiesel": 2.233,
-    "minBenzina": 1.979,
+    "avgBenzina": 1.987,
+    "avgDiesel": 2.234,
+    "minBenzina": 1.939,
     "minDiesel": 2.19,
     "minGpl": null,
     "minMetano": null,
@@ -28652,7 +28652,7 @@
       "nome": "QUATTROPETROLI",
       "brand": "Quattro Petroli",
       "indirizzo": "VIA XVI LUGLIO , LARI (PI) 2 56035",
-      "prezzo": 1.979
+      "prezzo": 1.939
     },
     "cheapestDiesel": {
       "nome": "GIRASOLE S.R.L. CONAD",
@@ -28874,7 +28874,7 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 24,
-    "avgBenzina": 2.031,
+    "avgBenzina": 2.032,
     "avgDiesel": 2.275,
     "minBenzina": 1.666,
     "minDiesel": 1.579,
@@ -29202,8 +29202,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 18,
-    "avgBenzina": 2.024,
-    "avgDiesel": 2.289,
+    "avgBenzina": 2.021,
+    "avgDiesel": 2.272,
     "minBenzina": 1.989,
     "minDiesel": 2.139,
     "minGpl": 0.749,
@@ -29493,7 +29493,7 @@
     "region": "Lazio",
     "stationsCount": 17,
     "avgBenzina": 2.032,
-    "avgDiesel": 2.265,
+    "avgDiesel": 2.255,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -29725,9 +29725,9 @@
     "region": "Lombardia",
     "stationsCount": 5,
     "avgBenzina": 1.996,
-    "avgDiesel": 2.244,
+    "avgDiesel": 2.246,
     "minBenzina": 1.989,
-    "minDiesel": 2.229,
+    "minDiesel": 2.239,
     "minGpl": 0.769,
     "minMetano": null,
     "cheapestBenzina": {
@@ -29737,10 +29737,10 @@
       "prezzo": 1.989
     },
     "cheapestDiesel": {
-      "nome": "ITALIANA PETROLI",
-      "brand": "IP",
-      "indirizzo": "35 dei Giovi, Km. 70+716, Casteggio - 27045",
-      "prezzo": 2.229
+      "nome": "ESSO EXPRESS CASTEGGIO",
+      "brand": "Esso",
+      "indirizzo": "VIA TORINO 115 27045",
+      "prezzo": 2.239
     },
     "lat": 45.0227,
     "lng": 9.1254
@@ -29928,9 +29928,9 @@
     "region": "Lombardia",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.299,
+    "avgDiesel": 2.259,
     "minBenzina": 1.999,
-    "minDiesel": 2.299,
+    "minDiesel": 2.259,
     "minGpl": 0.749,
     "minMetano": null,
     "cheapestBenzina": {
@@ -29943,7 +29943,7 @@
       "nome": "TAMOIL",
       "brand": "Tamoil",
       "indirizzo": "TRIESTE 7 46033",
-      "prezzo": 2.299
+      "prezzo": 2.259
     },
     "lat": 45.1862,
     "lng": 10.9824
@@ -30502,10 +30502,10 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 2,
-    "avgBenzina": 2.219,
-    "avgDiesel": 2.549,
+    "avgBenzina": 2.169,
+    "avgDiesel": 2.444,
     "minBenzina": 2.149,
-    "minDiesel": 2.499,
+    "minDiesel": 2.389,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -30518,7 +30518,7 @@
       "nome": "SP FUEL",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA TAVERNA SNC 81020",
-      "prezzo": 2.499
+      "prezzo": 2.389
     },
     "lat": 41.1193,
     "lng": 14.3629
@@ -30590,7 +30590,7 @@
     "region": "Emilia-Romagna",
     "stationsCount": 7,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.219,
+    "avgDiesel": 2.22,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -31537,7 +31537,7 @@
     "region": "Campania",
     "stationsCount": 5,
     "avgBenzina": 1.953,
-    "avgDiesel": 2.128,
+    "avgDiesel": 2.135,
     "minBenzina": 1.779,
     "minDiesel": 1.769,
     "minGpl": null,
@@ -32233,9 +32233,9 @@
     "region": "Lombardia",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.229,
+    "avgDiesel": 2.239,
     "minBenzina": 1.999,
-    "minDiesel": 2.229,
+    "minDiesel": 2.239,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -32248,7 +32248,7 @@
       "nome": "STAZIONE IP",
       "brand": "IP",
       "indirizzo": "S.P 51 DELLA SANTA 02 23884",
-      "prezzo": 2.229
+      "prezzo": 2.239
     },
     "lat": 45.7614,
     "lng": 9.3377
@@ -33227,23 +33227,23 @@
     "provSlug": "benevento",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.12,
-    "avgDiesel": 2.399,
-    "minBenzina": 2.12,
-    "minDiesel": 2.399,
+    "avgBenzina": 2.085,
+    "avgDiesel": 2.376,
+    "minBenzina": 2.085,
+    "minDiesel": 2.376,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Rainbow_Castelvenere",
       "brand": "357",
       "indirizzo": "Via S. Tommaso  82037",
-      "prezzo": 2.12
+      "prezzo": 2.085
     },
     "cheapestDiesel": {
       "nome": "Rainbow_Castelvenere",
       "brand": "357",
       "indirizzo": "Via S. Tommaso  82037",
-      "prezzo": 2.399
+      "prezzo": 2.376
     },
     "lat": 41.2364,
     "lng": 14.5336
@@ -33372,9 +33372,9 @@
     "provSlug": "modena",
     "region": "Emilia-Romagna",
     "stationsCount": 2,
-    "avgBenzina": 2.032,
+    "avgBenzina": 2.039,
     "avgDiesel": 2.284,
-    "minBenzina": 1.985,
+    "minBenzina": 1.999,
     "minDiesel": 2.269,
     "minGpl": null,
     "minMetano": null,
@@ -33382,7 +33382,7 @@
       "nome": "NEW RETE CASTELVETRO DI MODENA",
       "brand": "Esso",
       "indirizzo": "Via Modena 8 41014",
-      "prezzo": 1.985
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "EGO CA' DI SOLA",
@@ -34649,7 +34649,7 @@
     "region": "Calabria",
     "stationsCount": 29,
     "avgBenzina": 2.044,
-    "avgDiesel": 2.279,
+    "avgDiesel": 2.28,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.725,
@@ -35219,10 +35219,10 @@
     "region": "Lazio",
     "stationsCount": 4,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.229,
+    "avgDiesel": 2.234,
     "minBenzina": 1.999,
     "minDiesel": 2.229,
-    "minGpl": 0.729,
+    "minGpl": 0.759,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "IP",
@@ -36763,9 +36763,9 @@
     "provName": "Foggia",
     "provSlug": "foggia",
     "region": "Puglia",
-    "stationsCount": 24,
-    "avgBenzina": 2.008,
-    "avgDiesel": 2.292,
+    "stationsCount": 23,
+    "avgBenzina": 2.004,
+    "avgDiesel": 2.287,
     "minBenzina": 1.97,
     "minDiesel": 2.189,
     "minGpl": 0.769,
@@ -36782,8 +36782,8 @@
       "indirizzo": "corso scuola agraria 25 71042",
       "prezzo": 2.189
     },
-    "lat": 41.2661,
-    "lng": 15.8844
+    "lat": 41.2693,
+    "lng": 15.8875
   },
   {
     "name": "Cermenate",
@@ -37083,8 +37083,8 @@
     "provSlug": "milano",
     "region": "Lombardia",
     "stationsCount": 2,
-    "avgBenzina": 2.063,
-    "avgDiesel": 2.293,
+    "avgBenzina": 1.994,
+    "avgDiesel": 2.22,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -37431,7 +37431,7 @@
     "provSlug": "avellino",
     "region": "Campania",
     "stationsCount": 4,
-    "avgBenzina": 2.021,
+    "avgBenzina": 1.997,
     "avgDiesel": 2.281,
     "minBenzina": 1.994,
     "minDiesel": 2.249,
@@ -37489,23 +37489,23 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.149,
-    "avgDiesel": 2.399,
-    "minBenzina": 2.149,
-    "minDiesel": 2.399,
+    "avgBenzina": 2.079,
+    "avgDiesel": 2.359,
+    "minBenzina": 2.079,
+    "minDiesel": 2.359,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Ap Stazione di servizio CESA",
       "brand": "AP Stazioni di Servizio",
       "indirizzo": "Via M. Atellani 18 - 20 81030",
-      "prezzo": 2.149
+      "prezzo": 2.079
     },
     "cheapestDiesel": {
       "nome": "Ap Stazione di servizio CESA",
       "brand": "AP Stazioni di Servizio",
       "indirizzo": "Via M. Atellani 18 - 20 81030",
-      "prezzo": 2.399
+      "prezzo": 2.359
     },
     "lat": 40.9683,
     "lng": 14.2314
@@ -37983,7 +37983,7 @@
     "region": "Valle d'Aosta",
     "stationsCount": 4,
     "avgBenzina": 1.992,
-    "avgDiesel": 2.241,
+    "avgDiesel": 2.239,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -40146,7 +40146,7 @@
     "provSlug": "lecco",
     "region": "Lombardia",
     "stationsCount": 2,
-    "avgBenzina": 2.022,
+    "avgBenzina": 1.997,
     "avgDiesel": 2.296,
     "minBenzina": 1.994,
     "minDiesel": 2.254,
@@ -40889,9 +40889,9 @@
     "provName": "Treviso",
     "provSlug": "treviso",
     "region": "Veneto",
-    "stationsCount": 2,
+    "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.269,
+    "avgDiesel": 2.239,
     "minBenzina": 1.999,
     "minDiesel": 2.239,
     "minGpl": 0.759,
@@ -40908,8 +40908,8 @@
       "indirizzo": "VIA CADORE MARE 10 31013,  CODOGNE' (TV) 10 31013",
       "prezzo": 2.239
     },
-    "lat": 45.8611,
-    "lng": 12.4309
+    "lat": 45.8562,
+    "lng": 12.4185
   },
   {
     "name": "Codogno",
@@ -41954,9 +41954,9 @@
     "region": "Lombardia",
     "stationsCount": 3,
     "avgBenzina": 1.989,
-    "avgDiesel": 2.219,
+    "avgDiesel": 2.206,
     "minBenzina": 1.989,
-    "minDiesel": 2.199,
+    "minDiesel": 2.189,
     "minGpl": 0.748,
     "minMetano": 2.099,
     "cheapestBenzina": {
@@ -41966,10 +41966,10 @@
       "prezzo": 1.989
     },
     "cheapestDiesel": {
-      "nome": "ADS Esso Flli Pezzoni S.n.c",
-      "brand": "Esso",
-      "indirizzo": "Via Brescia   25033",
-      "prezzo": 2.199
+      "nome": "TOTAL ERG COLOGNE",
+      "brand": "IP",
+      "indirizzo": "VIA BRESCIA 38/1 25033",
+      "prezzo": 2.189
     },
     "lat": 45.5792,
     "lng": 9.9341
@@ -42417,23 +42417,23 @@
     "provSlug": "brescia",
     "region": "Lombardia",
     "stationsCount": 1,
-    "avgBenzina": 1.999,
-    "avgDiesel": 2.239,
-    "minBenzina": 1.999,
-    "minDiesel": 2.239,
+    "avgBenzina": 1.989,
+    "avgDiesel": 2.189,
+    "minBenzina": 1.989,
+    "minDiesel": 2.189,
     "minGpl": 0.749,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "RBN CARSERVICES SNC",
       "brand": "Tamoil",
       "indirizzo": "Strada Provinciale 20 km 6.500l.s. snc 25030",
-      "prezzo": 1.999
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "RBN CARSERVICES SNC",
       "brand": "Tamoil",
       "indirizzo": "Strada Provinciale 20 km 6.500l.s. snc 25030",
-      "prezzo": 2.239
+      "prezzo": 2.189
     },
     "lat": 45.475,
     "lng": 9.9635
@@ -42880,9 +42880,9 @@
     "provName": "Treviso",
     "provSlug": "treviso",
     "region": "Veneto",
-    "stationsCount": 15,
-    "avgBenzina": 2.023,
-    "avgDiesel": 2.265,
+    "stationsCount": 14,
+    "avgBenzina": 2.017,
+    "avgDiesel": 2.255,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -42899,8 +42899,8 @@
       "indirizzo": "SS51 via menare' 181",
       "prezzo": 2.19
     },
-    "lat": 45.8924,
-    "lng": 12.2994
+    "lat": 45.8888,
+    "lng": 12.299
   },
   {
     "name": "Configni",
@@ -43176,7 +43176,7 @@
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.759,
-    "minMetano": 1.997,
+    "minMetano": 2.097,
     "cheapestBenzina": {
       "nome": "09009 Conversano",
       "brand": "Eni",
@@ -43287,7 +43287,7 @@
     "provSlug": "ferrara",
     "region": "Emilia-Romagna",
     "stationsCount": 9,
-    "avgBenzina": 2.001,
+    "avgBenzina": 1.994,
     "avgDiesel": 2.255,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
@@ -45329,7 +45329,7 @@
     "avgBenzina": 2.002,
     "avgDiesel": 2.242,
     "minBenzina": 1.989,
-    "minDiesel": 2.19,
+    "minDiesel": 2.189,
     "minGpl": 0.699,
     "minMetano": 1.999,
     "cheapestBenzina": {
@@ -45339,10 +45339,10 @@
       "prezzo": 1.989
     },
     "cheapestDiesel": {
-      "nome": "2021 CREMONA",
-      "brand": "Eni",
-      "indirizzo": "Viale Po 139  26100",
-      "prezzo": 2.19
+      "nome": "TAMOIL GHULAM CREMONA",
+      "brand": "Tamoil",
+      "indirizzo": "MILANO 7/B 26100",
+      "prezzo": 2.189
     },
     "lat": 45.1405,
     "lng": 10.0253
@@ -45617,7 +45617,7 @@
     "region": "Campania",
     "stationsCount": 2,
     "avgBenzina": 2.162,
-    "avgDiesel": 2.379,
+    "avgDiesel": 2.346,
     "minBenzina": 2.029,
     "minDiesel": 2.299,
     "minGpl": null,
@@ -46109,7 +46109,7 @@
     "provSlug": "cuneo",
     "region": "Piemonte",
     "stationsCount": 31,
-    "avgBenzina": 1.978,
+    "avgBenzina": 1.982,
     "avgDiesel": 2.213,
     "minBenzina": 1.635,
     "minDiesel": 1.624,
@@ -46399,8 +46399,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 3,
-    "avgBenzina": 2.067,
-    "avgDiesel": 2.33,
+    "avgBenzina": 2.025,
+    "avgDiesel": 2.348,
     "minBenzina": 1.997,
     "minDiesel": 2.299,
     "minGpl": null,
@@ -46516,7 +46516,7 @@
     "region": "Sicilia",
     "stationsCount": 5,
     "avgBenzina": 2.014,
-    "avgDiesel": 2.263,
+    "avgDiesel": 2.265,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.9,
@@ -48033,22 +48033,22 @@
     "region": "Piemonte",
     "stationsCount": 5,
     "avgBenzina": 2.013,
-    "avgDiesel": 2.253,
-    "minBenzina": 1.988,
-    "minDiesel": 2.238,
+    "avgDiesel": 2.265,
+    "minBenzina": 1.987,
+    "minDiesel": 2.239,
     "minGpl": 0.759,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Tamoil",
       "brand": "Tamoil",
       "indirizzo": "STRADA STAT. SS33 DEL SEMPIONE KM61+240 SN 28040, DORMELLETTO (NO) 41 28040",
-      "prezzo": 1.988
+      "prezzo": 1.987
     },
     "cheapestDiesel": {
-      "nome": "Tamoil",
-      "brand": "Tamoil",
-      "indirizzo": "STRADA STAT. SS33 DEL SEMPIONE KM61+240 SN 28040, DORMELLETTO (NO) 41 28040",
-      "prezzo": 2.238
+      "nome": "IP",
+      "brand": "IP",
+      "indirizzo": "Statale 33 del Sempione, Km. 62+550, dir. Novara - 28040",
+      "prezzo": 2.239
     },
     "lat": 45.7386,
     "lng": 8.5706
@@ -48728,16 +48728,16 @@
     "provSlug": "firenze",
     "region": "Toscana",
     "stationsCount": 18,
-    "avgBenzina": 1.999,
-    "avgDiesel": 2.249,
+    "avgBenzina": 2.004,
+    "avgDiesel": 2.252,
     "minBenzina": 1.987,
     "minDiesel": 2.195,
     "minGpl": 0.735,
     "minMetano": 1.999,
     "cheapestBenzina": {
-      "nome": "ADS EMPOLI",
-      "brand": "Esso",
-      "indirizzo": "VIA CHERUBINI 58 50053, EMPOLI (FI) 58 50053",
+      "nome": "ALA EMPOLI CHERUBINI 2",
+      "brand": "Ala",
+      "indirizzo": "VIA LUIGI CHERUBINI 38 50053",
       "prezzo": 1.987
     },
     "cheapestDiesel": {
@@ -48979,17 +48979,17 @@
     "provSlug": "brindisi",
     "region": "Puglia",
     "stationsCount": 3,
-    "avgBenzina": 2.099,
+    "avgBenzina": 2.086,
     "avgDiesel": 2.319,
-    "minBenzina": 2.099,
+    "minBenzina": 2.059,
     "minDiesel": 2.299,
     "minGpl": 0.779,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "Gestione FLY di Itta Vittorio Erchie",
-      "brand": "IP",
-      "indirizzo": "Via Principe Di Napoli 24 72020",
-      "prezzo": 2.099
+      "nome": "TOIL 215",
+      "brand": "Toil",
+      "indirizzo": "S.P. SAN VITO-LATIANO-ERCHIE SNC 72020",
+      "prezzo": 2.059
     },
     "cheapestDiesel": {
       "nome": "TOIL",
@@ -49212,7 +49212,7 @@
     "region": "Veneto",
     "stationsCount": 9,
     "avgBenzina": 1.99,
-    "avgDiesel": 2.241,
+    "avgDiesel": 2.242,
     "minBenzina": 1.986,
     "minDiesel": 2.19,
     "minGpl": 0.789,
@@ -49434,6 +49434,25 @@
     },
     "lat": 42.8772,
     "lng": 12.0293
+  },
+  {
+    "name": "Faedis",
+    "slug": "faedis",
+    "provCode": "UD",
+    "provName": "Udine",
+    "provSlug": "udine",
+    "region": "Friuli Venezia Giulia",
+    "stationsCount": 1,
+    "avgBenzina": null,
+    "avgDiesel": null,
+    "minBenzina": null,
+    "minDiesel": null,
+    "minGpl": null,
+    "minMetano": null,
+    "cheapestBenzina": null,
+    "cheapestDiesel": null,
+    "lat": 46.1495,
+    "lng": 13.3432
   },
   {
     "name": "Faenza",
@@ -49897,23 +49916,23 @@
     "provSlug": "bolzano",
     "region": "Trentino-Alto Adige",
     "stationsCount": 1,
-    "avgBenzina": 1.999,
-    "avgDiesel": 2.199,
-    "minBenzina": 1.999,
-    "minDiesel": 2.199,
+    "avgBenzina": 1.989,
+    "avgDiesel": 2.189,
+    "minBenzina": 1.989,
+    "minDiesel": 2.189,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "ESSO",
       "brand": "Esso",
       "indirizzo": "Via Falzes  39030",
-      "prezzo": 1.999
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "ESSO",
       "brand": "Esso",
       "indirizzo": "Via Falzes  39030",
-      "prezzo": 2.199
+      "prezzo": 2.189
     },
     "lat": 46.8103,
     "lng": 11.882
@@ -50333,7 +50352,7 @@
     "region": "Puglia",
     "stationsCount": 19,
     "avgBenzina": 2.022,
-    "avgDiesel": 2.242,
+    "avgDiesel": 2.248,
     "minBenzina": 1.769,
     "minDiesel": 1.649,
     "minGpl": 0.769,
@@ -51192,23 +51211,23 @@
     "provSlug": "messina",
     "region": "Sicilia",
     "stationsCount": 1,
-    "avgBenzina": 2.159,
-    "avgDiesel": 2.319,
-    "minBenzina": 2.159,
-    "minDiesel": 2.319,
+    "avgBenzina": 2.139,
+    "avgDiesel": 2.299,
+    "minBenzina": 2.139,
+    "minDiesel": 2.299,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Area di Servizio Ficarra",
       "brand": "Q8",
       "indirizzo": "Via Logge 3 98062",
-      "prezzo": 2.159
+      "prezzo": 2.139
     },
     "cheapestDiesel": {
       "nome": "Area di Servizio Ficarra",
       "brand": "Q8",
       "indirizzo": "Via Logge 3 98062",
-      "prezzo": 2.319
+      "prezzo": 2.299
     },
     "lat": 38.1108,
     "lng": 14.8264
@@ -52429,7 +52448,7 @@
     "provSlug": "foggia",
     "region": "Puglia",
     "stationsCount": 44,
-    "avgBenzina": 2.021,
+    "avgBenzina": 2.023,
     "avgDiesel": 2.271,
     "minBenzina": 1.959,
     "minDiesel": 1.989,
@@ -52826,9 +52845,9 @@
     "region": "Campania",
     "stationsCount": 1,
     "avgBenzina": 2.158,
-    "avgDiesel": 2.358,
+    "avgDiesel": 2.258,
     "minBenzina": 2.158,
-    "minDiesel": 2.358,
+    "minDiesel": 2.258,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -52841,7 +52860,7 @@
       "nome": "Agos Fuel",
       "brand": "Pompa Bianca",
       "indirizzo": "Località Filette, 83040 Fontanarosa AV SNC 83040",
-      "prezzo": 2.358
+      "prezzo": 2.258
     },
     "lat": 41.0345,
     "lng": 15.0301
@@ -53086,9 +53105,9 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.075,
+    "avgBenzina": 2.029,
     "avgDiesel": 2.339,
-    "minBenzina": 2.075,
+    "minBenzina": 2.029,
     "minDiesel": 2.339,
     "minGpl": null,
     "minMetano": null,
@@ -53096,7 +53115,7 @@
       "nome": "Flli Russo srl",
       "brand": "Pompa Bianca",
       "indirizzo": "TORRE 10 81010",
-      "prezzo": 2.075
+      "prezzo": 2.029
     },
     "cheapestDiesel": {
       "nome": "Flli Russo srl",
@@ -53521,7 +53540,7 @@
     "provSlug": "latina",
     "region": "Lazio",
     "stationsCount": 13,
-    "avgBenzina": 1.991,
+    "avgBenzina": 1.984,
     "avgDiesel": 2.197,
     "minBenzina": 1.659,
     "minDiesel": 1.599,
@@ -53638,9 +53657,9 @@
     "region": "Molise",
     "stationsCount": 1,
     "avgBenzina": 2.097,
-    "avgDiesel": 2.349,
+    "avgDiesel": 2.298,
     "minBenzina": 2.097,
-    "minDiesel": 2.349,
+    "minDiesel": 2.298,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -53653,7 +53672,7 @@
       "nome": "TEDESCHI CARBURANTI",
       "brand": "Pompa Bianca",
       "indirizzo": "via bivio  14 86070",
-      "prezzo": 2.349
+      "prezzo": 2.298
     },
     "lat": 41.5948,
     "lng": 14.1441
@@ -54004,13 +54023,18 @@
     "provSlug": "perugia",
     "region": "Umbria",
     "stationsCount": 1,
-    "avgBenzina": null,
+    "avgBenzina": 1.99,
     "avgDiesel": 2.19,
-    "minBenzina": null,
+    "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
     "minMetano": null,
-    "cheapestBenzina": null,
+    "cheapestBenzina": {
+      "nome": "stazione servizio eni",
+      "brand": "Eni",
+      "indirizzo": "LOC.OSTERIA DEL GATTO  06022",
+      "prezzo": 1.99
+    },
     "cheapestDiesel": {
       "nome": "stazione servizio eni",
       "brand": "Eni",
@@ -54298,8 +54322,8 @@
     "provSlug": "brindisi",
     "region": "Puglia",
     "stationsCount": 14,
-    "avgBenzina": 2.036,
-    "avgDiesel": 2.272,
+    "avgBenzina": 2.033,
+    "avgDiesel": 2.271,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.739,
@@ -54579,9 +54603,9 @@
     "region": "Veneto",
     "stationsCount": 1,
     "avgBenzina": 1.989,
-    "avgDiesel": 2.229,
+    "avgDiesel": 2.249,
     "minBenzina": 1.989,
-    "minDiesel": 2.229,
+    "minDiesel": 2.249,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -54594,7 +54618,7 @@
       "nome": "ESSO",
       "brand": "Esso",
       "indirizzo": "GIOVANNI MONTI 241 45025",
-      "prezzo": 2.229
+      "prezzo": 2.249
     },
     "lat": 45.029,
     "lng": 11.6481
@@ -54666,7 +54690,7 @@
     "region": "Campania",
     "stationsCount": 2,
     "avgBenzina": 2.182,
-    "avgDiesel": 2.364,
+    "avgDiesel": 2.331,
     "minBenzina": 2.069,
     "minDiesel": 2.269,
     "minGpl": null,
@@ -54898,7 +54922,7 @@
     "region": "Lazio",
     "stationsCount": 35,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.223,
+    "avgDiesel": 2.221,
     "minBenzina": 1.789,
     "minDiesel": 1.669,
     "minGpl": 0.778,
@@ -55096,9 +55120,9 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 1,
     "avgBenzina": 2.099,
-    "avgDiesel": 2.399,
+    "avgDiesel": 2.299,
     "minBenzina": 2.099,
-    "minDiesel": 2.399,
+    "minDiesel": 2.299,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -55111,7 +55135,7 @@
       "nome": "Firmin - OSCARS",
       "brand": "Firmin",
       "indirizzo": "Pizack 5 39040",
-      "prezzo": 2.399
+      "prezzo": 2.299
     },
     "lat": 46.6404,
     "lng": 11.675
@@ -55125,9 +55149,9 @@
     "region": "Abruzzo",
     "stationsCount": 1,
     "avgBenzina": 2.068,
-    "avgDiesel": 2.398,
+    "avgDiesel": 2.348,
     "minBenzina": 2.068,
-    "minDiesel": 2.398,
+    "minDiesel": 2.348,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -55140,7 +55164,7 @@
       "nome": "marcovecchio falco carburanti",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA BEATO ANGELO 56 66050",
-      "prezzo": 2.398
+      "prezzo": 2.348
     },
     "lat": 42.0077,
     "lng": 14.5859
@@ -55443,9 +55467,9 @@
     "provSlug": "milano",
     "region": "Lombardia",
     "stationsCount": 4,
-    "avgBenzina": 1.989,
+    "avgBenzina": 1.99,
     "avgDiesel": 2.237,
-    "minBenzina": 1.969,
+    "minBenzina": 1.974,
     "minDiesel": 2.19,
     "minGpl": null,
     "minMetano": null,
@@ -55453,7 +55477,7 @@
       "nome": "La Rosa del Naviglio",
       "brand": "Tamoil",
       "indirizzo": "494 VIGEVANESE KM 10300 SNC 20083",
-      "prezzo": 1.969
+      "prezzo": 1.974
     },
     "cheapestDiesel": {
       "nome": "2412 Gaggiano",
@@ -55762,7 +55786,7 @@
     "provSlug": "lecce",
     "region": "Puglia",
     "stationsCount": 16,
-    "avgBenzina": 2.022,
+    "avgBenzina": 2.023,
     "avgDiesel": 2.278,
     "minBenzina": 1.984,
     "minDiesel": 2.19,
@@ -56652,9 +56676,9 @@
     "region": "Lombardia",
     "stationsCount": 3,
     "avgBenzina": 1.997,
-    "avgDiesel": 2.264,
+    "avgDiesel": 2.257,
     "minBenzina": 1.994,
-    "minDiesel": 2.254,
+    "minDiesel": 2.249,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -56664,10 +56688,10 @@
       "prezzo": 1.994
     },
     "cheapestDiesel": {
-      "nome": "Stazione diServizio Q8",
-      "brand": "Q8",
-      "indirizzo": "TROMELLO 8 27026",
-      "prezzo": 2.254
+      "nome": "STAZIONE DI SERVIZIO ESSO DI BISCUOLA THOMAS",
+      "brand": "Esso",
+      "indirizzo": "STATALE 596 DEI CAIROLI SNC 27026",
+      "prezzo": 2.249
     },
     "lat": 45.1942,
     "lng": 8.9284
@@ -57454,11 +57478,11 @@
     "region": "Liguria",
     "stationsCount": 131,
     "avgBenzina": 1.997,
-    "avgDiesel": 2.235,
+    "avgDiesel": 2.234,
     "minBenzina": 1.979,
     "minDiesel": 2.187,
     "minGpl": 0.937,
-    "minMetano": 1.899,
+    "minMetano": 1.949,
     "cheapestBenzina": {
       "nome": "4324",
       "brand": "Tamoil",
@@ -57511,16 +57535,16 @@
     "provSlug": "roma",
     "region": "Lazio",
     "stationsCount": 10,
-    "avgBenzina": 1.981,
+    "avgBenzina": 1.986,
     "avgDiesel": 2.277,
     "minBenzina": 1.959,
     "minDiesel": 2.229,
     "minGpl": 0.769,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "VIA APPIA",
+      "nome": "VIA APPIA VECCHIA",
       "brand": "Pompa Bianca",
-      "indirizzo": "VIA APPIA  KM.29,900 00045",
+      "indirizzo": "Via Appia Vecchia Km 4.00  00045",
       "prezzo": 1.959
     },
     "cheapestDiesel": {
@@ -57975,8 +57999,8 @@
     "provSlug": "catania",
     "region": "Sicilia",
     "stationsCount": 12,
-    "avgBenzina": 2.003,
-    "avgDiesel": 2.255,
+    "avgBenzina": 2,
+    "avgDiesel": 2.252,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -58178,8 +58202,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 3,
-    "avgBenzina": 2.076,
-    "avgDiesel": 2.348,
+    "avgBenzina": 2.05,
+    "avgDiesel": 2.325,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
     "minGpl": 0.829,
@@ -58294,23 +58318,23 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.199,
-    "avgDiesel": 2.399,
-    "minBenzina": 2.199,
-    "minDiesel": 2.399,
+    "avgBenzina": 2.189,
+    "avgDiesel": 2.449,
+    "minBenzina": 2.189,
+    "minDiesel": 2.449,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "RIZZOPETROLI",
       "brand": "Economy",
       "indirizzo": "PROVINCIALE 47 84056",
-      "prezzo": 2.199
+      "prezzo": 2.189
     },
     "cheapestDiesel": {
       "nome": "RIZZOPETROLI",
       "brand": "Economy",
       "indirizzo": "PROVINCIALE 47 84056",
-      "prezzo": 2.399
+      "prezzo": 2.449
     },
     "lat": 40.2686,
     "lng": 15.0536
@@ -58497,8 +58521,8 @@
     "provSlug": "terni",
     "region": "Umbria",
     "stationsCount": 4,
-    "avgBenzina": 2.045,
-    "avgDiesel": 2.282,
+    "avgBenzina": 2.03,
+    "avgDiesel": 2.277,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.779,
@@ -58671,8 +58695,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 38,
-    "avgBenzina": 2.056,
-    "avgDiesel": 2.313,
+    "avgBenzina": 2.046,
+    "avgDiesel": 2.301,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.669,
@@ -58846,7 +58870,7 @@
     "region": "Lombardia",
     "stationsCount": 7,
     "avgBenzina": 1.994,
-    "avgDiesel": 2.23,
+    "avgDiesel": 2.231,
     "minBenzina": 1.984,
     "minDiesel": 2.189,
     "minGpl": null,
@@ -60352,8 +60376,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 5,
-    "avgBenzina": 2.067,
-    "avgDiesel": 2.337,
+    "avgBenzina": 2.057,
+    "avgDiesel": 2.317,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.779,
@@ -60617,7 +60641,7 @@
     "avgDiesel": 2.242,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
-    "minGpl": 0.739,
+    "minGpl": 0.729,
     "minMetano": 1.547,
     "cheapestBenzina": {
       "nome": "CANESTRELLI ENERGY IN MOTION",
@@ -60672,7 +60696,7 @@
     "region": "Puglia",
     "stationsCount": 9,
     "avgBenzina": 2.022,
-    "avgDiesel": 2.245,
+    "avgDiesel": 2.25,
     "minBenzina": 1.979,
     "minDiesel": 2.149,
     "minGpl": 0.75,
@@ -60932,7 +60956,7 @@
     "provSlug": "torino",
     "region": "Piemonte",
     "stationsCount": 11,
-    "avgBenzina": 1.992,
+    "avgBenzina": 1.998,
     "avgDiesel": 2.261,
     "minBenzina": 1.979,
     "minDiesel": 2.199,
@@ -61111,7 +61135,7 @@
     "minBenzina": 1.99,
     "minDiesel": 2.359,
     "minGpl": 0.799,
-    "minMetano": 1.999,
+    "minMetano": 2.199,
     "cheapestBenzina": {
       "nome": "TAP GRUMOLO DELLE ABBADESSE",
       "brand": "Pompa Bianca",
@@ -61530,9 +61554,9 @@
     "provName": "Chieti",
     "provSlug": "chieti",
     "region": "Abruzzo",
-    "stationsCount": 3,
-    "avgBenzina": 2.051,
-    "avgDiesel": 2.235,
+    "stationsCount": 2,
+    "avgBenzina": 1.998,
+    "avgDiesel": 2.197,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.779,
@@ -61549,8 +61573,8 @@
       "indirizzo": "Via Andrea Bafile 1/3 66016",
       "prezzo": 2.19
     },
-    "lat": 42.1953,
-    "lng": 14.2324
+    "lat": 42.1974,
+    "lng": 14.2194
   },
   {
     "name": "Guardistallo",
@@ -61793,7 +61817,7 @@
     "region": "Lazio",
     "stationsCount": 26,
     "avgBenzina": 2,
-    "avgDiesel": 2.247,
+    "avgDiesel": 2.246,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.709,
@@ -62140,7 +62164,7 @@
     "provSlug": "bologna",
     "region": "Emilia-Romagna",
     "stationsCount": 22,
-    "avgBenzina": 1.99,
+    "avgBenzina": 1.985,
     "avgDiesel": 2.229,
     "minBenzina": 1.786,
     "minDiesel": 1.785,
@@ -62488,7 +62512,7 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 4,
-    "avgBenzina": 2.152,
+    "avgBenzina": 2.147,
     "avgDiesel": 2.407,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
@@ -63173,7 +63197,7 @@
     "provSlug": "torino",
     "region": "Piemonte",
     "stationsCount": 10,
-    "avgBenzina": 1.993,
+    "avgBenzina": 1.99,
     "avgDiesel": 2.233,
     "minBenzina": 1.968,
     "minDiesel": 2.19,
@@ -63289,17 +63313,17 @@
     "provSlug": "ancona",
     "region": "Marche",
     "stationsCount": 20,
-    "avgBenzina": 2.029,
-    "avgDiesel": 2.254,
-    "minBenzina": 1.97,
+    "avgBenzina": 2.03,
+    "avgDiesel": 2.259,
+    "minBenzina": 1.979,
     "minDiesel": 2.179,
     "minGpl": 0.799,
     "minMetano": 2.099,
     "cheapestBenzina": {
-      "nome": "STAZIONE M3",
-      "brand": "Pompa Bianca",
-      "indirizzo": "VIA ROMA 210 60035",
-      "prezzo": 1.97
+      "nome": "petrolitalia jesi",
+      "brand": "PETROLITALIA",
+      "indirizzo": "Viale Papa Giovanni XXIII sic 60035",
+      "prezzo": 1.979
     },
     "cheapestDiesel": {
       "nome": "petrolitalia jesi",
@@ -64382,7 +64406,7 @@
     "region": "Toscana",
     "stationsCount": 4,
     "avgBenzina": 2.039,
-    "avgDiesel": 2.294,
+    "avgDiesel": 2.304,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -64411,7 +64435,7 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 3,
     "avgBenzina": 2.031,
-    "avgDiesel": 2.311,
+    "avgDiesel": 2.314,
     "minBenzina": 1.994,
     "minDiesel": 2.254,
     "minGpl": null,
@@ -65463,8 +65487,8 @@
     "provSlug": "lecce",
     "region": "Puglia",
     "stationsCount": 53,
-    "avgBenzina": 2.014,
-    "avgDiesel": 2.245,
+    "avgBenzina": 2.011,
+    "avgDiesel": 2.246,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.679,
@@ -65754,7 +65778,7 @@
     "region": "Veneto",
     "stationsCount": 4,
     "avgBenzina": 1.984,
-    "avgDiesel": 2.139,
+    "avgDiesel": 2.144,
     "minBenzina": 1.969,
     "minDiesel": 1.889,
     "minGpl": 0.747,
@@ -66043,7 +66067,7 @@
     "provSlug": "lecce",
     "region": "Puglia",
     "stationsCount": 5,
-    "avgBenzina": 1.989,
+    "avgBenzina": 1.991,
     "avgDiesel": 2.253,
     "minBenzina": 1.984,
     "minDiesel": 2.25,
@@ -67068,7 +67092,7 @@
     "region": "Lombardia",
     "stationsCount": 12,
     "avgBenzina": 1.614,
-    "avgDiesel": 1.648,
+    "avgDiesel": 1.646,
     "minBenzina": 1.598,
     "minDiesel": 1.307,
     "minGpl": 0.746,
@@ -67909,7 +67933,7 @@
     "region": "Lombardia",
     "stationsCount": 8,
     "avgBenzina": 1.99,
-    "avgDiesel": 2.225,
+    "avgDiesel": 2.224,
     "minBenzina": 1.984,
     "minDiesel": 2.129,
     "minGpl": 0.738,
@@ -68141,11 +68165,11 @@
     "region": "Marche",
     "stationsCount": 6,
     "avgBenzina": 2.019,
-    "avgDiesel": 2.215,
+    "avgDiesel": 2.213,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.759,
-    "minMetano": 1.999,
+    "minMetano": 2.099,
     "cheapestBenzina": {
       "nome": "ESSO LORETO SS.77 Km.122+538",
       "brand": "Esso",
@@ -68797,17 +68821,17 @@
     "provSlug": "brescia",
     "region": "Lombardia",
     "stationsCount": 9,
-    "avgBenzina": 2.04,
-    "avgDiesel": 2.269,
-    "minBenzina": 1.994,
+    "avgBenzina": 2.039,
+    "avgDiesel": 2.27,
+    "minBenzina": 1.989,
     "minDiesel": 2.195,
     "minGpl": 0.839,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "LUMEZZANE DI ROSAGHE-VIA MONTESUELLO",
-      "brand": "Q8",
-      "indirizzo": "VIA MONTESUELLO - LUMEZZANE DI ROSAGHE S/N 25065",
-      "prezzo": 1.994
+      "nome": "TAMOIL GHULAM LUMEZZANE",
+      "brand": "Tamoil",
+      "indirizzo": "VIA BRESCIA 36 25065",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "DISTRIBUTORE DA TASSO DI TASSONE ANTONIO",
@@ -69541,23 +69565,23 @@
     "provSlug": "brescia",
     "region": "Lombardia",
     "stationsCount": 1,
-    "avgBenzina": 1.989,
-    "avgDiesel": 2.199,
-    "minBenzina": 1.989,
-    "minDiesel": 2.199,
+    "avgBenzina": 1.979,
+    "avgDiesel": 2.189,
+    "minBenzina": 1.979,
+    "minDiesel": 2.189,
     "minGpl": 0.739,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "DHILLON DI SINGH JATINDER",
       "brand": "Tamoil",
       "indirizzo": "VIA ROMA 1 25030",
-      "prezzo": 1.989
+      "prezzo": 1.979
     },
     "cheapestDiesel": {
       "nome": "DHILLON DI SINGH JATINDER",
       "brand": "Tamoil",
       "indirizzo": "VIA ROMA 1 25030",
-      "prezzo": 2.199
+      "prezzo": 2.189
     },
     "lat": 45.4789,
     "lng": 10.0464
@@ -70605,9 +70629,9 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 1,
     "avgBenzina": 2.099,
-    "avgDiesel": 2.419,
+    "avgDiesel": 2.429,
     "minBenzina": 2.099,
-    "minDiesel": 2.419,
+    "minDiesel": 2.429,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -70620,7 +70644,7 @@
       "nome": "Kostner - Malles Venosta",
       "brand": "Kostner",
       "indirizzo": "Staatsstraße 50 39024",
-      "prezzo": 2.419
+      "prezzo": 2.429
     },
     "lat": 46.695,
     "lng": 10.5394
@@ -71184,8 +71208,8 @@
     "provSlug": "avellino",
     "region": "Campania",
     "stationsCount": 5,
-    "avgBenzina": 2.061,
-    "avgDiesel": 2.309,
+    "avgBenzina": 2.049,
+    "avgDiesel": 2.295,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.749,
@@ -71503,17 +71527,17 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 10,
-    "avgBenzina": 2.011,
-    "avgDiesel": 2.261,
-    "minBenzina": 1.99,
+    "avgBenzina": 2,
+    "avgDiesel": 2.25,
+    "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.669,
     "minMetano": 1.985,
     "cheapestBenzina": {
-      "nome": "eni live station 08003",
-      "brand": "Eni",
-      "indirizzo": "MEDITERRANEO SNC 80016",
-      "prezzo": 1.99
+      "nome": "MIGLIACCIO CARBURANTI - P.V.MARANO(NA)",
+      "brand": "Pompa Bianca",
+      "indirizzo": "VIA CASTEL BELVEDERE 251/A 80016",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "eni live station 08003",
@@ -73041,7 +73065,7 @@
     "region": "Puglia",
     "stationsCount": 2,
     "avgBenzina": 1.994,
-    "avgDiesel": 2.234,
+    "avgDiesel": 2.244,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -73417,8 +73441,8 @@
     "provSlug": "massa-carrara",
     "region": "Toscana",
     "stationsCount": 23,
-    "avgBenzina": 2.011,
-    "avgDiesel": 2.245,
+    "avgBenzina": 2.014,
+    "avgDiesel": 2.247,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.789,
@@ -73592,22 +73616,22 @@
     "region": "Umbria",
     "stationsCount": 2,
     "avgBenzina": 1.998,
-    "avgDiesel": 2.232,
-    "minBenzina": 1.996,
-    "minDiesel": 2.225,
+    "avgDiesel": 2.239,
+    "minBenzina": 1.998,
+    "minDiesel": 2.238,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "MASSA MARTANA",
       "brand": "Pompa Bianca",
       "indirizzo": "Viale Roma 37a  06056",
-      "prezzo": 1.996
+      "prezzo": 1.998
     },
     "cheapestDiesel": {
       "nome": "MASSA MARTANA",
       "brand": "Pompa Bianca",
       "indirizzo": "Viale Roma 37a  06056",
-      "prezzo": 2.225
+      "prezzo": 2.238
     },
     "lat": 42.7667,
     "lng": 12.5241
@@ -73852,17 +73876,17 @@
     "provSlug": "torino",
     "region": "Piemonte",
     "stationsCount": 2,
-    "avgBenzina": 2.017,
+    "avgBenzina": 2.049,
     "avgDiesel": 2.274,
-    "minBenzina": 1.985,
+    "minBenzina": 2.049,
     "minDiesel": 2.269,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "SOCOGAS RETE MATHI PV 43039",
-      "brand": "Socogas",
-      "indirizzo": "Via Piave 19 10075",
-      "prezzo": 1.985
+      "nome": "3383",
+      "brand": "Tamoil",
+      "indirizzo": "SP. 2  KM. 26+230 AL KM. 26+260  10075",
+      "prezzo": 2.049
     },
     "cheapestDiesel": {
       "nome": "3383",
@@ -73973,7 +73997,7 @@
     "minBenzina": 1.989,
     "minDiesel": 2.249,
     "minGpl": 0.739,
-    "minMetano": 1.459,
+    "minMetano": 1.625,
     "cheapestBenzina": {
       "nome": "DISTRIBUTORE G-STATION MOLINETTO DI MAZZANO",
       "brand": "Pompa Bianca",
@@ -74143,7 +74167,7 @@
     "region": "Lombardia",
     "stationsCount": 5,
     "avgBenzina": 1.991,
-    "avgDiesel": 2.247,
+    "avgDiesel": 2.241,
     "minBenzina": 1.987,
     "minDiesel": 2.195,
     "minGpl": 0.759,
@@ -75094,7 +75118,7 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 8,
-    "avgBenzina": 2.062,
+    "avgBenzina": 2.036,
     "avgDiesel": 2.302,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
@@ -75931,7 +75955,7 @@
     "region": "Sicilia",
     "stationsCount": 2,
     "avgBenzina": 2.199,
-    "avgDiesel": 2.394,
+    "avgDiesel": 2.389,
     "minBenzina": 2.199,
     "minDiesel": 2.389,
     "minGpl": null,
@@ -75943,9 +75967,9 @@
       "prezzo": 2.199
     },
     "cheapestDiesel": {
-      "nome": "VIA CALTANISSETTA, MILENA",
-      "brand": "Giap",
-      "indirizzo": "VIA CALTANISSETTA 70 93010",
+      "nome": "Tona Mario Salvatore",
+      "brand": "Sicilpetroli",
+      "indirizzo": "VIA N. NASI 8 93010",
       "prezzo": 2.389
     },
     "lat": 37.4719,
@@ -76559,7 +76583,7 @@
     "region": "Emilia-Romagna",
     "stationsCount": 6,
     "avgBenzina": 2.061,
-    "avgDiesel": 2.229,
+    "avgDiesel": 2.231,
     "minBenzina": 1.988,
     "minDiesel": 2.19,
     "minGpl": 0.778,
@@ -76733,7 +76757,7 @@
     "region": "Sicilia",
     "stationsCount": 21,
     "avgBenzina": 2.011,
-    "avgDiesel": 2.262,
+    "avgDiesel": 2.261,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.829,
@@ -76849,7 +76873,7 @@
     "region": "Emilia-Romagna",
     "stationsCount": 69,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.248,
+    "avgDiesel": 2.247,
     "minBenzina": 1.975,
     "minDiesel": 2.179,
     "minGpl": 0.659,
@@ -77230,7 +77254,7 @@
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.799,
-    "minMetano": 1.997,
+    "minMetano": 2.097,
     "cheapestBenzina": {
       "nome": "D & F SRL - PV ENI MOLA",
       "brand": "Eni",
@@ -77360,17 +77384,17 @@
     "provSlug": "bologna",
     "region": "Emilia-Romagna",
     "stationsCount": 7,
-    "avgBenzina": 2.023,
+    "avgBenzina": 2.024,
     "avgDiesel": 2.236,
-    "minBenzina": 1.989,
+    "minBenzina": 1.99,
     "minDiesel": 2.195,
     "minGpl": 0.759,
     "minMetano": 1.949,
     "cheapestBenzina": {
-      "nome": "ENI di ONGARO MAURO & C",
-      "brand": "Eni",
-      "indirizzo": "PROVINCIALE SUPERIORE 34 40062",
-      "prezzo": 1.989
+      "nome": "Coop Molinella Reno Energia",
+      "brand": "Enercoop",
+      "indirizzo": "DEGLI ALPINI 1 40062",
+      "prezzo": 1.99
     },
     "cheapestDiesel": {
       "nome": "ENI di ONGARO MAURO & C",
@@ -77882,9 +77906,9 @@
     "provSlug": "sud-sardegna",
     "region": "Sardegna",
     "stationsCount": 4,
-    "avgBenzina": 1.989,
+    "avgBenzina": 1.986,
     "avgDiesel": 2.196,
-    "minBenzina": 1.989,
+    "minBenzina": 1.979,
     "minDiesel": 2.179,
     "minGpl": 0.859,
     "minMetano": null,
@@ -77892,7 +77916,7 @@
       "nome": "ESSO F.lli Mura snc",
       "brand": "Esso",
       "indirizzo": "131 Carlo Felice, Km. 18.600, Cagliari - 09023",
-      "prezzo": 1.989
+      "prezzo": 1.979
     },
     "cheapestDiesel": {
       "nome": "ESSO F.lli Mura snc",
@@ -78554,7 +78578,7 @@
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.769,
-    "minMetano": 1.897,
+    "minMetano": 1.997,
     "cheapestBenzina": {
       "nome": "9016 monopoli",
       "brand": "Eni",
@@ -79449,7 +79473,7 @@
     "region": "Toscana",
     "stationsCount": 5,
     "avgBenzina": 2.015,
-    "avgDiesel": 2.249,
+    "avgDiesel": 2.251,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -80974,23 +80998,23 @@
     "provSlug": "ascoli-piceno",
     "region": "Marche",
     "stationsCount": 2,
-    "avgBenzina": 2.114,
-    "avgDiesel": 2.339,
-    "minBenzina": 2.059,
-    "minDiesel": 2.279,
+    "avgBenzina": 2.104,
+    "avgDiesel": 2.344,
+    "minBenzina": 2.039,
+    "minDiesel": 2.289,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "ALIMENTARI RICCI ITALO SAS DI IACOPONI LUCIA & C.",
       "brand": "Pompa Bianca",
       "indirizzo": "MENOCCHIA 197 63062",
-      "prezzo": 2.059
+      "prezzo": 2.039
     },
     "cheapestDiesel": {
       "nome": "ALIMENTARI RICCI ITALO SAS DI IACOPONI LUCIA & C.",
       "brand": "Pompa Bianca",
       "indirizzo": "MENOCCHIA 197 63062",
-      "prezzo": 2.279
+      "prezzo": 2.289
     },
     "lat": 43.0379,
     "lng": 13.7388
@@ -81003,9 +81027,9 @@
     "provSlug": "modena",
     "region": "Emilia-Romagna",
     "stationsCount": 1,
-    "avgBenzina": 2.099,
+    "avgBenzina": 2.059,
     "avgDiesel": 2.299,
-    "minBenzina": 2.099,
+    "minBenzina": 2.059,
     "minDiesel": 2.299,
     "minGpl": null,
     "minMetano": null,
@@ -81013,7 +81037,7 @@
       "nome": "Stazione di Servizio EGO",
       "brand": "EG Italia",
       "indirizzo": "MAZZINI 31 41045",
-      "prezzo": 2.099
+      "prezzo": 2.059
     },
     "cheapestDiesel": {
       "nome": "Stazione di Servizio EGO",
@@ -82492,7 +82516,7 @@
     "region": "Lazio",
     "stationsCount": 10,
     "avgBenzina": 2.039,
-    "avgDiesel": 2.251,
+    "avgDiesel": 2.252,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.779,
@@ -82897,17 +82921,17 @@
     "provSlug": "arezzo",
     "region": "Toscana",
     "stationsCount": 10,
-    "avgBenzina": 2.01,
+    "avgBenzina": 2.006,
     "avgDiesel": 2.247,
-    "minBenzina": 1.99,
+    "minBenzina": 1.987,
     "minDiesel": 2.19,
     "minGpl": 0.739,
     "minMetano": 2.23,
     "cheapestBenzina": {
-      "nome": "53540 Montevarchi",
-      "brand": "Eni",
-      "indirizzo": "S.S.69 KM.38+847, LOC.LEVANELLA",
-      "prezzo": 1.99
+      "nome": "ALA MONTEVARCHI",
+      "brand": "Ala",
+      "indirizzo": "SP408  52025",
+      "prezzo": 1.987
     },
     "cheapestDiesel": {
       "nome": "53540 Montevarchi",
@@ -83275,9 +83299,9 @@
     "region": "Valle d'Aosta",
     "stationsCount": 1,
     "avgBenzina": 2.017,
-    "avgDiesel": 2.283,
+    "avgDiesel": 2.273,
     "minBenzina": 2.017,
-    "minDiesel": 2.283,
+    "minDiesel": 2.273,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -83290,7 +83314,7 @@
       "nome": "SVP BENZ",
       "brand": "Pompa Bianca",
       "indirizzo": "Frazione Lillaz-S.S.26-KM.68+800 SNC 11020",
-      "prezzo": 2.283
+      "prezzo": 2.273
     },
     "lat": 45.7082,
     "lng": 7.6742
@@ -84057,7 +84081,7 @@
     "provSlug": "aosta",
     "region": "Valle d'Aosta",
     "stationsCount": 3,
-    "avgBenzina": 2.096,
+    "avgBenzina": 2.086,
     "avgDiesel": 2.276,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
@@ -84202,9 +84226,9 @@
     "provSlug": "varese",
     "region": "Lombardia",
     "stationsCount": 1,
-    "avgBenzina": 1.988,
+    "avgBenzina": 1.987,
     "avgDiesel": 2.269,
-    "minBenzina": 1.988,
+    "minBenzina": 1.987,
     "minDiesel": 2.269,
     "minGpl": null,
     "minMetano": null,
@@ -84212,7 +84236,7 @@
       "nome": "RETITALIA MORNAGO",
       "brand": "Retitalia",
       "indirizzo": "STAZIONE - S.P. 17 49 21020",
-      "prezzo": 1.988
+      "prezzo": 1.987
     },
     "cheapestDiesel": {
       "nome": "RETITALIA MORNAGO",
@@ -85130,11 +85154,11 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 7,
-    "avgBenzina": 2.023,
-    "avgDiesel": 2.273,
+    "avgBenzina": 2.008,
+    "avgDiesel": 2.267,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
-    "minGpl": 0.759,
+    "minGpl": 0.749,
     "minMetano": 1.699,
     "cheapestBenzina": {
       "nome": "MUGNANO - S.P. MELITO-MUGNANO SNC",
@@ -85477,9 +85501,9 @@
     "provName": "Vicenza",
     "provSlug": "vicenza",
     "region": "Veneto",
-    "stationsCount": 3,
-    "avgBenzina": 1.996,
-    "avgDiesel": 2.255,
+    "stationsCount": 2,
+    "avgBenzina": 1.994,
+    "avgDiesel": 2.239,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -85496,8 +85520,8 @@
       "indirizzo": "VIA DANTE ALIGHIERI  8",
       "prezzo": 2.19
     },
-    "lat": 45.7615,
-    "lng": 11.8076
+    "lat": 45.7681,
+    "lng": 11.8059
   },
   {
     "name": "Mussomeli",
@@ -85595,9 +85619,9 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 1,
     "avgBenzina": 2.099,
-    "avgDiesel": 2.419,
+    "avgDiesel": 2.429,
     "minBenzina": 2.099,
-    "minDiesel": 2.419,
+    "minDiesel": 2.429,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -85610,7 +85634,7 @@
       "nome": "Kostner - Nals",
       "brand": "Kostner",
       "indirizzo": "Vilpianerstraße 26 39010",
-      "prezzo": 2.419
+      "prezzo": 2.429
     },
     "lat": 46.5521,
     "lng": 11.2127
@@ -85653,7 +85677,7 @@
     "region": "Campania",
     "stationsCount": 211,
     "avgBenzina": 2.049,
-    "avgDiesel": 2.289,
+    "avgDiesel": 2.29,
     "minBenzina": 1.699,
     "minDiesel": 1.719,
     "minGpl": 0.699,
@@ -85740,7 +85764,7 @@
     "region": "Puglia",
     "stationsCount": 14,
     "avgBenzina": 2.018,
-    "avgDiesel": 2.271,
+    "avgDiesel": 2.27,
     "minBenzina": 1.994,
     "minDiesel": 2.195,
     "minGpl": 0.729,
@@ -86899,8 +86923,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 10,
-    "avgBenzina": 2.066,
-    "avgDiesel": 2.314,
+    "avgBenzina": 2.067,
+    "avgDiesel": 2.322,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.749,
@@ -87189,7 +87213,7 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 24,
-    "avgBenzina": 2.059,
+    "avgBenzina": 2.051,
     "avgDiesel": 2.335,
     "minBenzina": 1.994,
     "minDiesel": 2.219,
@@ -87451,7 +87475,7 @@
     "region": "Lombardia",
     "stationsCount": 6,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.268,
+    "avgDiesel": 2.275,
     "minBenzina": 1.989,
     "minDiesel": 2.229,
     "minGpl": 0.799,
@@ -87480,7 +87504,7 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 2,
     "avgBenzina": 2.098,
-    "avgDiesel": 2.408,
+    "avgDiesel": 2.413,
     "minBenzina": 2.097,
     "minDiesel": 2.397,
     "minGpl": null,
@@ -87769,7 +87793,7 @@
     "provSlug": "reggio-emilia",
     "region": "Emilia-Romagna",
     "stationsCount": 7,
-    "avgBenzina": 1.996,
+    "avgBenzina": 1.995,
     "avgDiesel": 2.261,
     "minBenzina": 1.989,
     "minDiesel": 2.239,
@@ -87915,9 +87939,9 @@
     "region": "Emilia-Romagna",
     "stationsCount": 3,
     "avgBenzina": 2.027,
-    "avgDiesel": 2.271,
+    "avgDiesel": 2.257,
     "minBenzina": 1.989,
-    "minDiesel": 2.254,
+    "minDiesel": 2.219,
     "minGpl": 0.749,
     "minMetano": null,
     "cheapestBenzina": {
@@ -87927,10 +87951,10 @@
       "prezzo": 1.989
     },
     "cheapestDiesel": {
-      "nome": "SOCOGAS RETE NOVI DI MODENA PV 3320",
-      "brand": "Q8",
-      "indirizzo": "S.S. 468 km 33+859 Via Provinciale Motta  52 41016",
-      "prezzo": 2.254
+      "nome": "NOVI DI MODENA TOTALERG",
+      "brand": "IP",
+      "indirizzo": "via Serragli S.P. 8  41016",
+      "prezzo": 2.219
     },
     "lat": 44.864,
     "lng": 10.913
@@ -87944,7 +87968,7 @@
     "region": "Piemonte",
     "stationsCount": 18,
     "avgBenzina": 1.996,
-    "avgDiesel": 2.258,
+    "avgDiesel": 2.262,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.739,
@@ -89364,23 +89388,23 @@
     "provSlug": "verona",
     "region": "Veneto",
     "stationsCount": 4,
-    "avgBenzina": 2.062,
-    "avgDiesel": 2.296,
-    "minBenzina": 1.989,
-    "minDiesel": 2.289,
+    "avgBenzina": 2.066,
+    "avgDiesel": 2.299,
+    "minBenzina": 1.999,
+    "minDiesel": 2.299,
     "minGpl": 0.749,
     "minMetano": 2.297,
     "cheapestBenzina": {
       "nome": "LORO F.LLI SPA - OPPEANO",
       "brand": "Loro",
       "indirizzo": "VIA ROMA 114 37050",
-      "prezzo": 1.989
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
-      "nome": "LORO F.LLI SPA - OPPEANO",
-      "brand": "Loro",
-      "indirizzo": "VIA ROMA 114 37050",
-      "prezzo": 2.289
+      "nome": "FIRST SRL - Fraz. Cadeglioppi",
+      "brand": "Pompa Bianca",
+      "indirizzo": "Via del Lupo - Fraz. Cadeglioppi di Oppeano 9 37050",
+      "prezzo": 2.299
     },
     "lat": 45.311,
     "lng": 11.1165
@@ -90326,7 +90350,7 @@
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.799,
-    "minMetano": 1.899,
+    "minMetano": 1.999,
     "cheapestBenzina": {
       "nome": "ORTA NOVA S.P. PER CARAPELLE",
       "brand": "Q8",
@@ -91510,9 +91534,9 @@
     "provSlug": "torino",
     "region": "Piemonte",
     "stationsCount": 2,
-    "avgBenzina": 1.995,
+    "avgBenzina": 2.002,
     "avgDiesel": 2.303,
-    "minBenzina": 1.985,
+    "minBenzina": 1.999,
     "minDiesel": 2.299,
     "minGpl": null,
     "minMetano": null,
@@ -91520,7 +91544,7 @@
       "nome": "SOCOGAS RETE OULX PV 43032",
       "brand": "Socogas",
       "indirizzo": "VIA S.S.24 KM 79+628 VIA MONGINEVRO, 80 80 10056, OULX (TO) 80 10056",
-      "prezzo": 1.985
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "SOCOGAS RETE OULX PV 43032",
@@ -92206,8 +92230,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 12,
-    "avgBenzina": 2.053,
-    "avgDiesel": 2.301,
+    "avgBenzina": 2.052,
+    "avgDiesel": 2.291,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.749,
@@ -92467,8 +92491,8 @@
     "provSlug": "taranto",
     "region": "Puglia",
     "stationsCount": 11,
-    "avgBenzina": 2.025,
-    "avgDiesel": 2.22,
+    "avgBenzina": 2.019,
+    "avgDiesel": 2.216,
     "minBenzina": 1.829,
     "minDiesel": 1.729,
     "minGpl": 0.764,
@@ -92758,9 +92782,9 @@
     "region": "Friuli Venezia Giulia",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.219,
+    "avgDiesel": 2.199,
     "minBenzina": 1.999,
-    "minDiesel": 2.219,
+    "minDiesel": 2.199,
     "minGpl": 0.758,
     "minMetano": null,
     "cheapestBenzina": {
@@ -92773,7 +92797,7 @@
       "nome": "IP",
       "brand": "IP",
       "indirizzo": "Statale 14 della Venezia Giulia, Km. 88, dir. venezia - trieste - 33056",
-      "prezzo": 2.219
+      "prezzo": 2.199
     },
     "lat": 45.8078,
     "lng": 13.0944
@@ -92787,7 +92811,7 @@
     "region": "Lombardia",
     "stationsCount": 7,
     "avgBenzina": 1.993,
-    "avgDiesel": 2.234,
+    "avgDiesel": 2.232,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.748,
@@ -92873,7 +92897,7 @@
     "provSlug": "palermo",
     "region": "Sicilia",
     "stationsCount": 198,
-    "avgBenzina": 1.995,
+    "avgBenzina": 1.994,
     "avgDiesel": 2.25,
     "minBenzina": 1.976,
     "minDiesel": 2.179,
@@ -94264,23 +94288,23 @@
     "provSlug": "avellino",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.139,
-    "avgDiesel": 2.368,
-    "minBenzina": 2.139,
-    "minDiesel": 2.368,
+    "avgBenzina": 2.069,
+    "avgDiesel": 2.348,
+    "minBenzina": 2.069,
+    "minDiesel": 2.348,
     "minGpl": 0.739,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "MORSA S. CARBURANTI DI MORSA STEFANO",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA PIANO SNC 83052",
-      "prezzo": 2.139
+      "prezzo": 2.069
     },
     "cheapestDiesel": {
       "nome": "MORSA S. CARBURANTI DI MORSA STEFANO",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA PIANO SNC 83052",
-      "prezzo": 2.368
+      "prezzo": 2.348
     },
     "lat": 40.9736,
     "lng": 15.0296
@@ -94671,9 +94695,9 @@
     "region": "Toscana",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.279,
+    "avgDiesel": 2.259,
     "minBenzina": 1.999,
-    "minDiesel": 2.279,
+    "minDiesel": 2.259,
     "minGpl": 0.774,
     "minMetano": null,
     "cheapestBenzina": {
@@ -94686,7 +94710,7 @@
       "nome": "beyfin",
       "brand": "Beyfin",
       "indirizzo": "STRADA PROV.LE DELLA FILA 36 56037",
-      "prezzo": 2.279
+      "prezzo": 2.259
     },
     "lat": 43.5655,
     "lng": 10.7108
@@ -96400,17 +96424,17 @@
     "provSlug": "trapani",
     "region": "Sicilia",
     "stationsCount": 4,
-    "avgBenzina": 2.036,
+    "avgBenzina": 2.054,
     "avgDiesel": 2.341,
-    "minBenzina": 1.919,
+    "minBenzina": 1.989,
     "minDiesel": 2.299,
-    "minGpl": 0.774,
+    "minGpl": 0.874,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "mmgroup",
       "brand": "Pompa Bianca",
       "indirizzo": "VIALE REGIONE SICILIANA SNC 91020",
-      "prezzo": 1.919
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "NOBILEOIL PETROSINO",
@@ -96487,23 +96511,23 @@
     "provSlug": "isernia",
     "region": "Molise",
     "stationsCount": 1,
-    "avgBenzina": 2.015,
-    "avgDiesel": 2.259,
-    "minBenzina": 2.015,
-    "minDiesel": 2.259,
+    "avgBenzina": 2.029,
+    "avgDiesel": 2.329,
+    "minBenzina": 2.029,
+    "minDiesel": 2.329,
     "minGpl": 0.799,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "ENERGAS PETTORANELLO",
       "brand": "Energas",
       "indirizzo": "17 dell'Appennino Abruzzese e Appulo Sannitica, Km. 182+797, Campobasso  86090",
-      "prezzo": 2.015
+      "prezzo": 2.029
     },
     "cheapestDiesel": {
       "nome": "ENERGAS PETTORANELLO",
       "brand": "Energas",
       "indirizzo": "17 dell'Appennino Abruzzese e Appulo Sannitica, Km. 182+797, Campobasso  86090",
-      "prezzo": 2.259
+      "prezzo": 2.329
     },
     "lat": 41.5844,
     "lng": 14.2766
@@ -96662,9 +96686,9 @@
     "region": "Campania",
     "stationsCount": 1,
     "avgBenzina": 2.149,
-    "avgDiesel": 2.369,
+    "avgDiesel": 2.399,
     "minBenzina": 2.149,
-    "minDiesel": 2.369,
+    "minDiesel": 2.399,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -96677,7 +96701,7 @@
       "nome": "R-CARBURANTI S.R.L.-PIAGGINE",
       "brand": "Pompa Bianca",
       "indirizzo": "MADONNA DELLE GRAZIE SNC 84065",
-      "prezzo": 2.369
+      "prezzo": 2.399
     },
     "lat": 40.3499,
     "lng": 15.3742
@@ -97477,7 +97501,7 @@
     "avgDiesel": 2.241,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
-    "minGpl": 0.73,
+    "minGpl": 0.795,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "8438 PIEDIMONTE MATESE",
@@ -99242,16 +99266,16 @@
     "provSlug": "pistoia",
     "region": "Toscana",
     "stationsCount": 32,
-    "avgBenzina": 2.007,
-    "avgDiesel": 2.25,
+    "avgBenzina": 2.01,
+    "avgDiesel": 2.251,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
-    "minGpl": 0.699,
+    "minGpl": 0.719,
     "minMetano": 1.999,
     "cheapestBenzina": {
-      "nome": "ALA VIA SESTINI",
-      "brand": "Esso",
-      "indirizzo": "BARTOLOMEO SESTINI SNC 51100",
+      "nome": "IP FM PETROL RACCORDO",
+      "brand": "IP",
+      "indirizzo": "raccordo autostradale pistoia",
       "prezzo": 1.989
     },
     "cheapestDiesel": {
@@ -99678,7 +99702,7 @@
     "region": "Puglia",
     "stationsCount": 3,
     "avgBenzina": 2.034,
-    "avgDiesel": 2.245,
+    "avgDiesel": 2.244,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
     "minGpl": 0.749,
@@ -100084,9 +100108,9 @@
     "region": "Lombardia",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.299,
+    "avgDiesel": 2.349,
     "minBenzina": 1.999,
-    "minDiesel": 2.299,
+    "minDiesel": 2.349,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -100099,7 +100123,7 @@
       "nome": "Commerciale Paganoni Poggiridenti",
       "brand": "Pompa Bianca",
       "indirizzo": "Via Panoramica 25  23020",
-      "prezzo": 2.299
+      "prezzo": 2.349
     },
     "lat": 46.1753,
     "lng": 9.9246
@@ -100479,8 +100503,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 5,
-    "avgBenzina": 2.077,
-    "avgDiesel": 2.335,
+    "avgBenzina": 2.067,
+    "avgDiesel": 2.329,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.749,
@@ -100711,9 +100735,9 @@
     "provSlug": "matera",
     "region": "Basilicata",
     "stationsCount": 1,
-    "avgBenzina": 2.399,
+    "avgBenzina": 2.249,
     "avgDiesel": 2.499,
-    "minBenzina": 2.399,
+    "minBenzina": 2.249,
     "minDiesel": 2.499,
     "minGpl": null,
     "minMetano": null,
@@ -100721,7 +100745,7 @@
       "nome": "DISTRIBUTORE TOTALERG NI008612",
       "brand": "Pompa Bianca",
       "indirizzo": "VIALE KENNEDY SNC 75016",
-      "prezzo": 2.399
+      "prezzo": 2.249
     },
     "cheapestDiesel": {
       "nome": "DISTRIBUTORE TOTALERG NI008612",
@@ -100798,8 +100822,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 15,
-    "avgBenzina": 2.059,
-    "avgDiesel": 2.28,
+    "avgBenzina": 2.055,
+    "avgDiesel": 2.279,
     "minBenzina": 1.989,
     "minDiesel": 1.849,
     "minGpl": 0.759,
@@ -100942,18 +100966,18 @@
     "provName": "Pisa",
     "provSlug": "pisa",
     "region": "Toscana",
-    "stationsCount": 6,
-    "avgBenzina": 1.996,
-    "avgDiesel": 2.238,
-    "minBenzina": 1.958,
+    "stationsCount": 5,
+    "avgBenzina": 2.004,
+    "avgDiesel": 2.244,
+    "minBenzina": 1.994,
     "minDiesel": 2.199,
-    "minGpl": 0.698,
+    "minGpl": 0.699,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "QUATTROPETROLI - PONSACCO",
-      "brand": "Quattro Petroli",
-      "indirizzo": "VIA NUOVA CIRCONVALLAZIONE, S.R. 439 SNC 56038",
-      "prezzo": 1.958
+      "nome": "Aquila Drive - Ponsacco Val di Cava",
+      "brand": "Q8",
+      "indirizzo": "Via delle Colline 1/L 56038",
+      "prezzo": 1.994
     },
     "cheapestDiesel": {
       "nome": "Aquila Drive - Ponsacco",
@@ -100961,8 +100985,8 @@
       "indirizzo": "Via Fossa nuova SRT439 - sp 67",
       "prezzo": 2.199
     },
-    "lat": 43.624,
-    "lng": 10.6258
+    "lat": 43.6229,
+    "lng": 10.6303
   },
   {
     "name": "Ponso",
@@ -101668,9 +101692,9 @@
     "provSlug": "brescia",
     "region": "Lombardia",
     "stationsCount": 2,
-    "avgBenzina": 1.99,
-    "avgDiesel": 2.215,
-    "minBenzina": 1.989,
+    "avgBenzina": 1.985,
+    "avgDiesel": 2.194,
+    "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.749,
     "minMetano": null,
@@ -101678,7 +101702,7 @@
       "nome": "IP-AIMAX.PONTEVICO",
       "brand": "IP",
       "indirizzo": "EX S.S.45 BIS GARDESANA OCCIDENTALE KM 17  25026",
-      "prezzo": 1.989
+      "prezzo": 1.979
     },
     "cheapestDiesel": {
       "nome": "Eni - Pontevico",
@@ -101726,17 +101750,17 @@
     "provSlug": "latina",
     "region": "Lazio",
     "stationsCount": 9,
-    "avgBenzina": 2.021,
+    "avgBenzina": 2.017,
     "avgDiesel": 2.267,
-    "minBenzina": 1.995,
+    "minBenzina": 1.989,
     "minDiesel": 2.195,
     "minGpl": 0.774,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "Appia Carburanti di Trulli Paolo",
-      "brand": "Eni",
-      "indirizzo": "s.s.7 Via Appia, Km. 84,233, Pontinia (LT) sc 04014",
-      "prezzo": 1.995
+      "nome": "PONTINIA",
+      "brand": "IP",
+      "indirizzo": "VIA TRIESTE 100 04014",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "Appia Carburanti di Trulli Paolo",
@@ -101814,9 +101838,9 @@
     "region": "Lombardia",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.229,
+    "avgDiesel": 2.239,
     "minBenzina": 1.999,
-    "minDiesel": 2.229,
+    "minDiesel": 2.239,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -101829,7 +101853,7 @@
       "nome": "TotalErg",
       "brand": "IP",
       "indirizzo": "Statale 469 Sebina Occidentale, Km. 40+345, dir. Palazzolo  - 25037",
-      "prezzo": 2.229
+      "prezzo": 2.239
     },
     "lat": 45.5779,
     "lng": 9.8583
@@ -102092,12 +102116,12 @@
     "provName": "Pordenone",
     "provSlug": "pordenone",
     "region": "Friuli Venezia Giulia",
-    "stationsCount": 23,
-    "avgBenzina": 2.003,
-    "avgDiesel": 2.246,
+    "stationsCount": 24,
+    "avgBenzina": 2.002,
+    "avgDiesel": 2.247,
     "minBenzina": 1.968,
     "minDiesel": 2.19,
-    "minGpl": 0.759,
+    "minGpl": 0.754,
     "minMetano": 2.099,
     "cheapestBenzina": {
       "nome": "welna srl",
@@ -102111,8 +102135,8 @@
       "indirizzo": "VIA DELLE GRAZIE  5 33170",
       "prezzo": 2.19
     },
-    "lat": 45.9593,
-    "lng": 12.6528
+    "lat": 45.959,
+    "lng": 12.6548
   },
   {
     "name": "Porlezza",
@@ -102411,9 +102435,9 @@
     "provName": "Macerata",
     "provSlug": "macerata",
     "region": "Marche",
-    "stationsCount": 5,
-    "avgBenzina": 2.047,
-    "avgDiesel": 2.255,
+    "stationsCount": 4,
+    "avgBenzina": 2.059,
+    "avgDiesel": 2.244,
     "minBenzina": 1.999,
     "minDiesel": 2.219,
     "minGpl": null,
@@ -102430,8 +102454,8 @@
       "indirizzo": "16 Adriatica, Km. 328+270, Ancona - 62017",
       "prezzo": 2.219
     },
-    "lat": 43.4306,
-    "lng": 13.6626
+    "lat": 43.4286,
+    "lng": 13.6638
   },
   {
     "name": "Porto San Giorgio",
@@ -102504,7 +102528,7 @@
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.798,
-    "minMetano": 1.949,
+    "minMetano": 2.099,
     "cheapestBenzina": {
       "nome": "ANNA MANCIN",
       "brand": "Eni",
@@ -102528,8 +102552,8 @@
     "provSlug": "sassari",
     "region": "Sardegna",
     "stationsCount": 8,
-    "avgBenzina": 2.045,
-    "avgDiesel": 2.256,
+    "avgBenzina": 2.04,
+    "avgDiesel": 2.244,
     "minBenzina": 1.979,
     "minDiesel": 2.189,
     "minGpl": 0.899,
@@ -102760,22 +102784,22 @@
     "provSlug": "siracusa",
     "region": "Sicilia",
     "stationsCount": 2,
-    "avgBenzina": 2.099,
-    "avgDiesel": 2.399,
+    "avgBenzina": 2.109,
+    "avgDiesel": 2.409,
     "minBenzina": 2.099,
     "minDiesel": 2.399,
     "minGpl": 0.819,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "GRECO PAOLINO PETROLI",
-      "brand": "Pompa Bianca",
-      "indirizzo": "Via Maucini  96026",
+      "nome": "SP PACH-PORTOPAL",
+      "brand": "Giap",
+      "indirizzo": "VIA PACHINO ANGOLO VIA TASCA  96010",
       "prezzo": 2.099
     },
     "cheapestDiesel": {
-      "nome": "GRECO PAOLINO PETROLI",
-      "brand": "Pompa Bianca",
-      "indirizzo": "Via Maucini  96026",
+      "nome": "SP PACH-PORTOPAL",
+      "brand": "Giap",
+      "indirizzo": "VIA PACHINO ANGOLO VIA TASCA  96010",
       "prezzo": 2.399
     },
     "lat": 36.6822,
@@ -103089,7 +103113,7 @@
     "region": "Marche",
     "stationsCount": 8,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.234,
+    "avgDiesel": 2.236,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -103813,9 +103837,9 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 2,
-    "avgBenzina": 2.087,
+    "avgBenzina": 2.064,
     "avgDiesel": 2.349,
-    "minBenzina": 2.075,
+    "minBenzina": 2.029,
     "minDiesel": 2.339,
     "minGpl": null,
     "minMetano": null,
@@ -103823,7 +103847,7 @@
       "nome": "PRATA SANNITA",
       "brand": "Pompa Bianca",
       "indirizzo": "STATALE 158 KM.54 SNC SNC 81010",
-      "prezzo": 2.075
+      "prezzo": 2.029
     },
     "cheapestDiesel": {
       "nome": "PRATA SANNITA",
@@ -103872,7 +103896,7 @@
     "region": "Toscana",
     "stationsCount": 56,
     "avgBenzina": 2.002,
-    "avgDiesel": 2.238,
+    "avgDiesel": 2.239,
     "minBenzina": 1.975,
     "minDiesel": 2.19,
     "minGpl": 0.676,
@@ -103987,23 +104011,23 @@
     "provSlug": "avellino",
     "region": "Campania",
     "stationsCount": 4,
-    "avgBenzina": 1.999,
-    "avgDiesel": 2.261,
-    "minBenzina": 1.999,
-    "minDiesel": 2.259,
+    "avgBenzina": 1.997,
+    "avgDiesel": 2.256,
+    "minBenzina": 1.994,
+    "minDiesel": 2.254,
     "minGpl": 0.759,
     "minMetano": 1.799,
     "cheapestBenzina": {
-      "nome": "Pratola Serra",
-      "brand": "IP",
-      "indirizzo": "Strada Statale 7 Km. 302+100   83039",
-      "prezzo": 1.999
+      "nome": "staz.carburanti est",
+      "brand": "Q8",
+      "indirizzo": "Statale 7 Via Appia, Km. 304, dir. sud",
+      "prezzo": 1.994
     },
     "cheapestDiesel": {
-      "nome": "Pratola Serra",
-      "brand": "IP",
-      "indirizzo": "Strada Statale 7 Km. 302+100   83039",
-      "prezzo": 2.259
+      "nome": "staz.carburanti est",
+      "brand": "Q8",
+      "indirizzo": "Statale 7 Via Appia, Km. 304, dir. sud",
+      "prezzo": 2.254
     },
     "lat": 40.9687,
     "lng": 14.8393
@@ -104104,9 +104128,9 @@
     "region": "Piemonte",
     "stationsCount": 1,
     "avgBenzina": 2.13,
-    "avgDiesel": 2.39,
+    "avgDiesel": 2.33,
     "minBenzina": 2.13,
-    "minDiesel": 2.39,
+    "minDiesel": 2.33,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -104119,7 +104143,7 @@
       "nome": "IP",
       "brand": "IP",
       "indirizzo": "VIA NAZIONALE 24 12028",
-      "prezzo": 2.39
+      "prezzo": 2.33
     },
     "lat": 44.4848,
     "lng": 7.0664
@@ -104335,23 +104359,23 @@
     "provSlug": "milano",
     "region": "Lombardia",
     "stationsCount": 3,
-    "avgBenzina": 1.995,
-    "avgDiesel": 2.299,
-    "minBenzina": 1.987,
-    "minDiesel": 2.298,
+    "avgBenzina": 2.005,
+    "avgDiesel": 2.309,
+    "minBenzina": 1.999,
+    "minDiesel": 2.299,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "LEONE",
-      "brand": "LEONE",
-      "indirizzo": "VIA GUGLIEIMO MARCONI 32/34/36 20010",
-      "prezzo": 1.987
+      "nome": "8492",
+      "brand": "Tamoil",
+      "indirizzo": "PAPA GIOVANNI XXIII 12 20006",
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
-      "nome": "LEONE",
-      "brand": "LEONE",
-      "indirizzo": "VIA GUGLIEIMO MARCONI 32/34/36 20010",
-      "prezzo": 2.298
+      "nome": "8492",
+      "brand": "Tamoil",
+      "indirizzo": "PAPA GIOVANNI XXIII 12 20006",
+      "prezzo": 2.299
     },
     "lat": 45.5134,
     "lng": 9.0087
@@ -105137,7 +105161,7 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 8,
-    "avgBenzina": 2.067,
+    "avgBenzina": 2.04,
     "avgDiesel": 2.312,
     "minBenzina": 1.994,
     "minDiesel": 2.195,
@@ -105224,8 +105248,8 @@
     "provSlug": "pistoia",
     "region": "Toscana",
     "stationsCount": 10,
-    "avgBenzina": 2.021,
-    "avgDiesel": 2.284,
+    "avgBenzina": 2.025,
+    "avgDiesel": 2.286,
     "minBenzina": 1.975,
     "minDiesel": 2.239,
     "minGpl": 0.799,
@@ -105254,9 +105278,9 @@
     "region": "Valle d'Aosta",
     "stationsCount": 3,
     "avgBenzina": 1.991,
-    "avgDiesel": 2.249,
+    "avgDiesel": 2.246,
     "minBenzina": 1.979,
-    "minDiesel": 2.245,
+    "minDiesel": 2.235,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -105269,7 +105293,7 @@
       "nome": "SVP BENZ",
       "brand": "Pompa Bianca",
       "indirizzo": "LOCALITA' VILLEFRANCHE S.S. 26 KM93+400  SNC 11020",
-      "prezzo": 2.245
+      "prezzo": 2.235
     },
     "lat": 45.7404,
     "lng": 7.3973
@@ -105283,7 +105307,7 @@
     "region": "Campania",
     "stationsCount": 12,
     "avgBenzina": 2.069,
-    "avgDiesel": 2.332,
+    "avgDiesel": 2.327,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.687,
@@ -105427,17 +105451,17 @@
     "provSlug": "reggio-emilia",
     "region": "Emilia-Romagna",
     "stationsCount": 4,
-    "avgBenzina": 1.999,
+    "avgBenzina": 1.997,
     "avgDiesel": 2.237,
-    "minBenzina": 1.99,
+    "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.759,
     "minMetano": 1.999,
     "cheapestBenzina": {
-      "nome": "56554 QUATTRO CASTELLA",
-      "brand": "Eni",
-      "indirizzo": "VIA P. TOGLIATTI   LOC. MONTECAVOLO   26/A",
-      "prezzo": 1.99
+      "nome": "FERRETTI GIULIANO EGO",
+      "brand": "EG Italia",
+      "indirizzo": "CIRCONVALLAZIONE 1 42020",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "56554 QUATTRO CASTELLA",
@@ -105660,7 +105684,7 @@
     "region": "Lombardia",
     "stationsCount": 3,
     "avgBenzina": 2.049,
-    "avgDiesel": 2.302,
+    "avgDiesel": 2.312,
     "minBenzina": 2.049,
     "minDiesel": 2.289,
     "minGpl": null,
@@ -105765,17 +105789,17 @@
     "provSlug": "cuneo",
     "region": "Piemonte",
     "stationsCount": 5,
-    "avgBenzina": 1.995,
+    "avgBenzina": 1.998,
     "avgDiesel": 2.242,
-    "minBenzina": 1.985,
+    "minBenzina": 1.994,
     "minDiesel": 2.219,
     "minGpl": 0.769,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "SOCOGAS RETE RACCONIGI PV 210545",
-      "brand": "Socogas",
-      "indirizzo": "S.S. 20 KM 24  12035",
-      "prezzo": 1.985
+      "nome": "Stazione Servizio Q8",
+      "brand": "Q8",
+      "indirizzo": "Statale 20 del Colle di Tenda e di Valle Roja, Km. 20, dir. cuneo - 12035",
+      "prezzo": 1.994
     },
     "cheapestDiesel": {
       "nome": "RACCONIGI - PRINCIPE DI PIEMONTE",
@@ -106026,8 +106050,8 @@
     "provSlug": "catania",
     "region": "Sicilia",
     "stationsCount": 6,
-    "avgBenzina": 2.036,
-    "avgDiesel": 2.261,
+    "avgBenzina": 2.03,
+    "avgDiesel": 2.268,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -106374,7 +106398,7 @@
     "provSlug": "ravenna",
     "region": "Emilia-Romagna",
     "stationsCount": 53,
-    "avgBenzina": 1.998,
+    "avgBenzina": 1.997,
     "avgDiesel": 2.237,
     "minBenzina": 1.924,
     "minDiesel": 2.104,
@@ -106684,7 +106708,7 @@
     "region": "Toscana",
     "stationsCount": 6,
     "avgBenzina": 1.998,
-    "avgDiesel": 2.234,
+    "avgDiesel": 2.238,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.819,
@@ -106712,7 +106736,7 @@
     "provSlug": "reggio-calabria",
     "region": "Calabria",
     "stationsCount": 53,
-    "avgBenzina": 2.029,
+    "avgBenzina": 2.028,
     "avgDiesel": 2.269,
     "minBenzina": 1.989,
     "minDiesel": 2.179,
@@ -106799,23 +106823,23 @@
     "provSlug": "benevento",
     "region": "Campania",
     "stationsCount": 1,
-    "avgBenzina": 2.089,
-    "avgDiesel": 2.379,
-    "minBenzina": 2.089,
-    "minDiesel": 2.379,
+    "avgBenzina": 1.999,
+    "avgDiesel": 2.359,
+    "minBenzina": 1.999,
+    "minDiesel": 2.359,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "calzone carburanti",
       "brand": "Pompa Bianca",
       "indirizzo": "via crocelle 22 82020",
-      "prezzo": 2.089
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "calzone carburanti",
       "brand": "Pompa Bianca",
       "indirizzo": "via crocelle 22 82020",
-      "prezzo": 2.379
+      "prezzo": 2.359
     },
     "lat": 41.2905,
     "lng": 14.819
@@ -106906,7 +106930,7 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 3,
     "avgBenzina": 2.029,
-    "avgDiesel": 2.296,
+    "avgDiesel": 2.299,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -107312,7 +107336,7 @@
     "region": "Emilia-Romagna",
     "stationsCount": 18,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.246,
+    "avgDiesel": 2.247,
     "minBenzina": 1.967,
     "minDiesel": 2.19,
     "minGpl": 0.719,
@@ -107620,7 +107644,7 @@
     "provSlug": "rimini",
     "region": "Emilia-Romagna",
     "stationsCount": 52,
-    "avgBenzina": 2.002,
+    "avgBenzina": 2.001,
     "avgDiesel": 2.246,
     "minBenzina": 1.967,
     "minDiesel": 2.19,
@@ -108199,9 +108223,9 @@
     "provName": "Ferrara",
     "provSlug": "ferrara",
     "region": "Emilia-Romagna",
-    "stationsCount": 3,
-    "avgBenzina": 2.063,
-    "avgDiesel": 2.263,
+    "stationsCount": 2,
+    "avgBenzina": 2.045,
+    "avgDiesel": 2.244,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.724,
@@ -108218,8 +108242,8 @@
       "indirizzo": "Via Brusantina P. snc 44033",
       "prezzo": 2.19
     },
-    "lat": 44.9564,
-    "lng": 11.9233
+    "lat": 44.9665,
+    "lng": 12.003
   },
   {
     "name": "Riva Ligure",
@@ -109534,23 +109558,23 @@
     "provSlug": "grosseto",
     "region": "Toscana",
     "stationsCount": 1,
-    "avgBenzina": 2.188,
-    "avgDiesel": 2.398,
-    "minBenzina": 2.188,
-    "minDiesel": 2.398,
+    "avgBenzina": 2.158,
+    "avgDiesel": 2.428,
+    "minBenzina": 2.158,
+    "minDiesel": 2.428,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "BOCCINI",
       "brand": "Pompa Bianca",
       "indirizzo": "STRADA STATALE 323 SNC SNC 58053",
-      "prezzo": 2.188
+      "prezzo": 2.158
     },
     "cheapestDiesel": {
       "nome": "BOCCINI",
       "brand": "Pompa Bianca",
       "indirizzo": "STRADA STATALE 323 SNC SNC 58053",
-      "prezzo": 2.398
+      "prezzo": 2.428
     },
     "lat": 42.7847,
     "lng": 11.4868
@@ -110896,8 +110920,8 @@
     "provSlug": "verona",
     "region": "Veneto",
     "stationsCount": 2,
-    "avgBenzina": 1.989,
-    "avgDiesel": 2.274,
+    "avgBenzina": 1.994,
+    "avgDiesel": 2.279,
     "minBenzina": 1.989,
     "minDiesel": 2.259,
     "minGpl": 0.764,
@@ -111709,7 +111733,7 @@
     "region": "Lombardia",
     "stationsCount": 9,
     "avgBenzina": 2.003,
-    "avgDiesel": 2.254,
+    "avgDiesel": 2.252,
     "minBenzina": 1.989,
     "minDiesel": 2.199,
     "minGpl": 0.748,
@@ -112202,7 +112226,7 @@
     "region": "Emilia-Romagna",
     "stationsCount": 3,
     "avgBenzina": 1.993,
-    "avgDiesel": 2.216,
+    "avgDiesel": 2.213,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -112453,7 +112477,7 @@
     "region": "Lazio",
     "stationsCount": 11,
     "avgBenzina": 1.982,
-    "avgDiesel": 2.181,
+    "avgDiesel": 2.175,
     "minBenzina": 1.666,
     "minDiesel": 1.644,
     "minGpl": 0.769,
@@ -112829,8 +112853,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 9,
-    "avgBenzina": 2.024,
-    "avgDiesel": 2.267,
+    "avgBenzina": 2.013,
+    "avgDiesel": 2.265,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.829,
@@ -113177,8 +113201,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 35,
-    "avgBenzina": 2.031,
-    "avgDiesel": 2.294,
+    "avgBenzina": 2.029,
+    "avgDiesel": 2.291,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.699,
@@ -114106,7 +114130,7 @@
     "region": "Veneto",
     "stationsCount": 8,
     "avgBenzina": 1.996,
-    "avgDiesel": 2.228,
+    "avgDiesel": 2.227,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -114453,11 +114477,11 @@
     "provSlug": "lecce",
     "region": "Puglia",
     "stationsCount": 5,
-    "avgBenzina": 2.007,
-    "avgDiesel": 2.251,
+    "avgBenzina": 1.995,
+    "avgDiesel": 2.233,
     "minBenzina": 1.989,
     "minDiesel": 2.195,
-    "minGpl": 0.699,
+    "minGpl": 0.749,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "SAN CESARIO DI LECCE VIA CIRCONVALLAZIONE 37",
@@ -115217,7 +115241,7 @@
     "region": "Campania",
     "stationsCount": 5,
     "avgBenzina": 2.095,
-    "avgDiesel": 2.331,
+    "avgDiesel": 2.333,
     "minBenzina": 2.079,
     "minDiesel": 2.299,
     "minGpl": 0.749,
@@ -115623,9 +115647,9 @@
     "region": "Lombardia",
     "stationsCount": 2,
     "avgBenzina": 2.068,
-    "avgDiesel": 2.333,
+    "avgDiesel": 2.323,
     "minBenzina": 1.999,
-    "minDiesel": 2.269,
+    "minDiesel": 2.249,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -115638,7 +115662,7 @@
       "nome": "SERVIZIO ESSO DI DAMIANI ANITA",
       "brand": "Esso",
       "indirizzo": "VIA PORTA PESCARINA 58 27010",
-      "prezzo": 2.269
+      "prezzo": 2.249
     },
     "lat": 45.2427,
     "lng": 9.1908
@@ -115999,7 +116023,7 @@
     "provSlug": "pordenone",
     "region": "Friuli Venezia Giulia",
     "stationsCount": 3,
-    "avgBenzina": 2.034,
+    "avgBenzina": 2.019,
     "avgDiesel": 2.264,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
@@ -116691,7 +116715,7 @@
     "region": "Veneto",
     "stationsCount": 5,
     "avgBenzina": 2.005,
-    "avgDiesel": 2.227,
+    "avgDiesel": 2.237,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -116778,7 +116802,7 @@
     "region": "Abruzzo",
     "stationsCount": 8,
     "avgBenzina": 2.022,
-    "avgDiesel": 2.236,
+    "avgDiesel": 2.243,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.797,
@@ -117289,17 +117313,17 @@
     "provSlug": "benevento",
     "region": "Campania",
     "stationsCount": 3,
-    "avgBenzina": 2.146,
+    "avgBenzina": 2.106,
     "avgDiesel": 2.399,
-    "minBenzina": 2.12,
+    "minBenzina": 2.098,
     "minDiesel": 2.399,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "F.lli Lavorgna & C. s.n.c.",
-      "brand": "IP",
-      "indirizzo": "Via S. Salvatore 86 82030",
-      "prezzo": 2.12
+      "nome": "RAINBOW_San Lorenzello",
+      "brand": "357",
+      "indirizzo": "via Telese 1/9 82030",
+      "prezzo": 2.098
     },
     "cheapestDiesel": {
       "nome": "EVOLVE CARBURANTE",
@@ -117521,8 +117545,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 2,
-    "avgBenzina": 2.064,
-    "avgDiesel": 2.284,
+    "avgBenzina": 2.039,
+    "avgDiesel": 2.274,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -117579,9 +117603,9 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 6,
-    "avgBenzina": 2.097,
-    "avgDiesel": 2.286,
-    "minBenzina": 1.899,
+    "avgBenzina": 2.079,
+    "avgDiesel": 2.273,
+    "minBenzina": 1.909,
     "minDiesel": 1.999,
     "minGpl": 0.739,
     "minMetano": 1.849,
@@ -117589,7 +117613,7 @@
       "nome": "pompa bianca",
       "brand": "Pompa Bianca",
       "indirizzo": "CORSO EUROPA 293 81030",
-      "prezzo": 1.899
+      "prezzo": 1.909
     },
     "cheapestDiesel": {
       "nome": "pompa bianca",
@@ -117947,9 +117971,9 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 2,
     "avgBenzina": 2.099,
-    "avgDiesel": 2.419,
+    "avgDiesel": 2.429,
     "minBenzina": 2.099,
-    "minDiesel": 2.419,
+    "minDiesel": 2.429,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -117962,7 +117986,7 @@
       "nome": "Kostner - Passeier",
       "brand": "Kostner",
       "indirizzo": "Jaufenstraße  10 39010",
-      "prezzo": 2.419
+      "prezzo": 2.429
     },
     "lat": 46.7648,
     "lng": 11.2174
@@ -118381,23 +118405,23 @@
     "provSlug": "crotone",
     "region": "Calabria",
     "stationsCount": 1,
-    "avgBenzina": 2.137,
-    "avgDiesel": 2.427,
-    "minBenzina": 2.137,
-    "minDiesel": 2.427,
+    "avgBenzina": 2.097,
+    "avgDiesel": 2.397,
+    "minBenzina": 2.097,
+    "minDiesel": 2.397,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Cirillo Carburanti Stazione di servizio",
       "brand": "4.0",
       "indirizzo": "PROVINCIALE 38 SNC 88831",
-      "prezzo": 2.137
+      "prezzo": 2.097
     },
     "cheapestDiesel": {
       "nome": "Cirillo Carburanti Stazione di servizio",
       "brand": "4.0",
       "indirizzo": "PROVINCIALE 38 SNC 88831",
-      "prezzo": 2.427
+      "prezzo": 2.397
     },
     "lat": 39.058,
     "lng": 16.9281
@@ -119285,7 +119309,7 @@
     "minBenzina": 1.989,
     "minDiesel": 2.249,
     "minGpl": 0.789,
-    "minMetano": 2.299,
+    "minMetano": 2.399,
     "cheapestBenzina": {
       "nome": "SAN PIETRO IN CARIANO DANTE 91",
       "brand": "Q8",
@@ -119343,7 +119367,7 @@
     "minBenzina": 1.989,
     "minDiesel": 2.219,
     "minGpl": null,
-    "minMetano": 1.999,
+    "minMetano": 2.199,
     "cheapestBenzina": {
       "nome": "ESSO - SAN PIETRO IN GU",
       "brand": "Esso",
@@ -120151,7 +120175,7 @@
     "region": "Puglia",
     "stationsCount": 23,
     "avgBenzina": 2.011,
-    "avgDiesel": 2.28,
+    "avgDiesel": 2.29,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.698,
@@ -120266,8 +120290,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 3,
-    "avgBenzina": 2.077,
-    "avgDiesel": 2.32,
+    "avgBenzina": 2.08,
+    "avgDiesel": 2.337,
     "minBenzina": 2.029,
     "minDiesel": 2.285,
     "minGpl": 0.759,
@@ -121252,7 +121276,7 @@
     "region": "Lombardia",
     "stationsCount": 4,
     "avgBenzina": 1.997,
-    "avgDiesel": 2.257,
+    "avgDiesel": 2.247,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.634,
@@ -121310,9 +121334,9 @@
     "region": "Puglia",
     "stationsCount": 4,
     "avgBenzina": 2.044,
-    "avgDiesel": 2.269,
+    "avgDiesel": 2.276,
     "minBenzina": 1.999,
-    "minDiesel": 2.22,
+    "minDiesel": 2.249,
     "minGpl": 0.685,
     "minMetano": null,
     "cheapestBenzina": {
@@ -121325,7 +121349,7 @@
       "nome": "IP",
       "brand": "IP",
       "indirizzo": "S.P. 53 SANNICOLA-ALEZIO SNC 73017",
-      "prezzo": 2.22
+      "prezzo": 2.249
     },
     "lat": 40.1009,
     "lng": 18.0493
@@ -121657,23 +121681,23 @@
     "provSlug": "pavia",
     "region": "Lombardia",
     "stationsCount": 1,
-    "avgBenzina": 2.077,
-    "avgDiesel": 2.357,
-    "minBenzina": 2.077,
-    "minDiesel": 2.357,
+    "avgBenzina": 1.999,
+    "avgDiesel": 2.249,
+    "minBenzina": 1.999,
+    "minDiesel": 2.249,
     "minGpl": 0.777,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Pan-Oil",
       "brand": "PAN OIL",
       "indirizzo": "CA' DE ZETTI SP 2 LOC. 2 PORTE SNC 27016",
-      "prezzo": 2.077
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "Pan-Oil",
       "brand": "PAN OIL",
       "indirizzo": "CA' DE ZETTI SP 2 LOC. 2 PORTE SNC 27016",
-      "prezzo": 2.357
+      "prezzo": 2.249
     },
     "lat": 45.2248,
     "lng": 9.2095
@@ -122035,9 +122059,9 @@
     "region": "Campania",
     "stationsCount": 1,
     "avgBenzina": 2.194,
-    "avgDiesel": 2.259,
+    "avgDiesel": 2.299,
     "minBenzina": 2.194,
-    "minDiesel": 2.259,
+    "minDiesel": 2.299,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -122050,7 +122074,7 @@
       "nome": "DG Carburanti",
       "brand": "Pompa Bianca",
       "indirizzo": "VIA M.M. REPPUCCI SNC 83050",
-      "prezzo": 2.259
+      "prezzo": 2.299
     },
     "lat": 41.0032,
     "lng": 14.9975
@@ -122325,7 +122349,7 @@
     "region": "Campania",
     "stationsCount": 10,
     "avgBenzina": 2.108,
-    "avgDiesel": 2.369,
+    "avgDiesel": 2.368,
     "minBenzina": 1.989,
     "minDiesel": 2.249,
     "minGpl": 0.759,
@@ -122499,7 +122523,7 @@
     "region": "Basilicata",
     "stationsCount": 2,
     "avgBenzina": 2.089,
-    "avgDiesel": 2.304,
+    "avgDiesel": 2.324,
     "minBenzina": 2.079,
     "minDiesel": 2.289,
     "minGpl": 0.778,
@@ -122528,9 +122552,9 @@
     "region": "Campania",
     "stationsCount": 4,
     "avgBenzina": 2.131,
-    "avgDiesel": 2.359,
+    "avgDiesel": 2.357,
     "minBenzina": 2.049,
-    "minDiesel": 2.299,
+    "minDiesel": 2.319,
     "minGpl": 0.759,
     "minMetano": null,
     "cheapestBenzina": {
@@ -122540,10 +122564,10 @@
       "prezzo": 2.049
     },
     "cheapestDiesel": {
-      "nome": "IP",
-      "brand": "IP",
-      "indirizzo": "MARTIRI ATELLANI 49 81030",
-      "prezzo": 2.299
+      "nome": "NATALE CARBURANTI SANT'ARPINO",
+      "brand": "Pompa Bianca",
+      "indirizzo": "ROTONDELLA 267 81030",
+      "prezzo": 2.319
     },
     "lat": 40.9572,
     "lng": 14.2517
@@ -122614,8 +122638,8 @@
     "provSlug": "salerno",
     "region": "Campania",
     "stationsCount": 4,
-    "avgBenzina": 2.102,
-    "avgDiesel": 2.357,
+    "avgBenzina": 2.097,
+    "avgDiesel": 2.352,
     "minBenzina": 1.999,
     "minDiesel": 2.219,
     "minGpl": 0.749,
@@ -122905,9 +122929,9 @@
     "region": "Lazio",
     "stationsCount": 1,
     "avgBenzina": 2.179,
-    "avgDiesel": 2.399,
+    "avgDiesel": 2.379,
     "minBenzina": 2.179,
-    "minDiesel": 2.399,
+    "minDiesel": 2.379,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -122920,7 +122944,7 @@
       "nome": "diamanti marco",
       "brand": "IP",
       "indirizzo": "VIALE DEL VIGNOLA SNC 00060",
-      "prezzo": 2.399
+      "prezzo": 2.379
     },
     "lat": 42.2352,
     "lng": 12.519
@@ -123659,7 +123683,7 @@
     "region": "Campania",
     "stationsCount": 10,
     "avgBenzina": 2.026,
-    "avgDiesel": 2.286,
+    "avgDiesel": 2.287,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.729,
@@ -123861,8 +123885,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 8,
-    "avgBenzina": 2.124,
-    "avgDiesel": 2.377,
+    "avgBenzina": 2.105,
+    "avgDiesel": 2.372,
     "minBenzina": 1.994,
     "minDiesel": 2.254,
     "minGpl": null,
@@ -125340,8 +125364,8 @@
     "provSlug": "varese",
     "region": "Lombardia",
     "stationsCount": 16,
-    "avgBenzina": 2.001,
-    "avgDiesel": 2.246,
+    "avgBenzina": 1.997,
+    "avgDiesel": 2.244,
     "minBenzina": 1.987,
     "minDiesel": 2.19,
     "minGpl": 0.799,
@@ -125608,9 +125632,9 @@
     "minGpl": 0.829,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "Sassari",
-      "brand": "Auchan",
-      "indirizzo": "VIA PORTO TORRES SNC 07100",
+      "nome": "consulenze e gestioni srl",
+      "brand": "Esso",
+      "indirizzo": "ZONA INDUSTRIALE PREDDA NIEDDA STRADA 18 -, 07100 - -",
       "prezzo": 1.989
     },
     "cheapestDiesel": {
@@ -126026,17 +126050,17 @@
     "provSlug": "cuneo",
     "region": "Piemonte",
     "stationsCount": 11,
-    "avgBenzina": 2.018,
+    "avgBenzina": 2.019,
     "avgDiesel": 2.245,
-    "minBenzina": 1.985,
+    "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.698,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "SOCOGAS RETE SAVIGLIANO PV 361389",
-      "brand": "Esso",
-      "indirizzo": "Via Alba 44/A 12038",
-      "prezzo": 1.985
+      "nome": "SAVIGLIANO-CORSO INDIPENDENZA 8",
+      "brand": "Q8",
+      "indirizzo": "CORSO INDIPENDENZA 8 12038",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "215 SAVIGLIANO",
@@ -126376,15 +126400,15 @@
     "stationsCount": 8,
     "avgBenzina": 2.026,
     "avgDiesel": 2.269,
-    "minBenzina": 1.985,
+    "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.775,
     "minMetano": 2.057,
     "cheapestBenzina": {
-      "nome": "NEW RETE SCANDIANO",
-      "brand": "Esso",
-      "indirizzo": "via bosco  14",
-      "prezzo": 1.985
+      "nome": "Distributore EGO Giavelli SAS",
+      "brand": "EG Italia",
+      "indirizzo": "VIA BROLO SOTTO 86 42019",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "Vergnani s.n.c. di Vergnani Irma e figli",
@@ -126664,7 +126688,7 @@
     "provSlug": "firenze",
     "region": "Toscana",
     "stationsCount": 7,
-    "avgBenzina": 1.987,
+    "avgBenzina": 1.985,
     "avgDiesel": 2.245,
     "minBenzina": 1.95,
     "minDiesel": 2.19,
@@ -126973,9 +126997,9 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 4,
-    "avgBenzina": 2.124,
-    "avgDiesel": 2.347,
-    "minBenzina": 2.099,
+    "avgBenzina": 2.044,
+    "avgDiesel": 2.342,
+    "minBenzina": 1.999,
     "minDiesel": 2.329,
     "minGpl": 0.759,
     "minMetano": null,
@@ -126983,7 +127007,7 @@
       "nome": "camaldoli service",
       "brand": "Pompa Bianca",
       "indirizzo": "ROSSI SC 80030",
-      "prezzo": 2.099
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "camaldoli service",
@@ -127572,17 +127596,17 @@
     "provSlug": "cagliari",
     "region": "Sardegna",
     "stationsCount": 7,
-    "avgBenzina": 1.994,
-    "avgDiesel": 2.237,
-    "minBenzina": 1.989,
+    "avgBenzina": 1.996,
+    "avgDiesel": 2.235,
+    "minBenzina": 1.994,
     "minDiesel": 2.195,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "ESSO",
-      "brand": "Esso",
-      "indirizzo": "VIA PRIMO MAGGIO SNC 09047",
-      "prezzo": 1.989
+      "nome": "PISCHEDDA CARBURANTI S.R.L.",
+      "brand": "Q8",
+      "indirizzo": "SS554 KM 4,200 09047",
+      "prezzo": 1.994
     },
     "cheapestDiesel": {
       "nome": "17530",
@@ -127853,9 +127877,9 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 1,
     "avgBenzina": 2.099,
-    "avgDiesel": 2.419,
+    "avgDiesel": 2.429,
     "minBenzina": 2.099,
-    "minDiesel": 2.419,
+    "minDiesel": 2.429,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -127868,7 +127892,7 @@
       "nome": "Kostner - Schnals",
       "brand": "Kostner",
       "indirizzo": "Karthaus 60 39020",
-      "prezzo": 2.419
+      "prezzo": 2.429
     },
     "lat": 46.7097,
     "lng": 10.9029
@@ -128027,7 +128051,7 @@
     "region": "Sardegna",
     "stationsCount": 3,
     "avgBenzina": 2.016,
-    "avgDiesel": 2.249,
+    "avgDiesel": 2.246,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -128944,7 +128968,7 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 10,
-    "avgBenzina": 2.057,
+    "avgBenzina": 2.049,
     "avgDiesel": 2.292,
     "minBenzina": 1.99,
     "minDiesel": 2.195,
@@ -130298,7 +130322,7 @@
     "region": "Sardegna",
     "stationsCount": 6,
     "avgBenzina": 2.102,
-    "avgDiesel": 2.319,
+    "avgDiesel": 2.312,
     "minBenzina": 1.989,
     "minDiesel": 2.219,
     "minGpl": 0.945,
@@ -130732,8 +130756,8 @@
     "provSlug": "ravenna",
     "region": "Emilia-Romagna",
     "stationsCount": 3,
-    "avgBenzina": 2.096,
-    "avgDiesel": 2.329,
+    "avgBenzina": 2.086,
+    "avgDiesel": 2.319,
     "minBenzina": 1.999,
     "minDiesel": 2.24,
     "minGpl": 0.949,
@@ -130954,8 +130978,8 @@
     "provSlug": "modena",
     "region": "Emilia-Romagna",
     "stationsCount": 5,
-    "avgBenzina": 1.999,
-    "avgDiesel": 2.283,
+    "avgBenzina": 1.995,
+    "avgDiesel": 2.287,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.804,
@@ -131128,8 +131152,8 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 17,
-    "avgBenzina": 2.042,
-    "avgDiesel": 2.265,
+    "avgBenzina": 2.041,
+    "avgDiesel": 2.26,
     "minBenzina": 1.989,
     "minDiesel": 2.149,
     "minGpl": 0.749,
@@ -131302,23 +131326,23 @@
     "provSlug": "cremona",
     "region": "Lombardia",
     "stationsCount": 4,
-    "avgBenzina": 2.017,
-    "avgDiesel": 2.257,
-    "minBenzina": 1.99,
-    "minDiesel": 2.19,
+    "avgBenzina": 2.018,
+    "avgDiesel": 2.258,
+    "minBenzina": 1.995,
+    "minDiesel": 2.195,
     "minGpl": 0.719,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "ENI STATION DI FERRARI GIANPAOLO",
       "brand": "Eni",
       "indirizzo": "VIA XXV APRILE 28, 26029 - -",
-      "prezzo": 1.99
+      "prezzo": 1.995
     },
     "cheapestDiesel": {
       "nome": "ENI STATION DI FERRARI GIANPAOLO",
       "brand": "Eni",
       "indirizzo": "VIA XXV APRILE 28, 26029 - -",
-      "prezzo": 2.19
+      "prezzo": 2.195
     },
     "lat": 45.4141,
     "lng": 9.8577
@@ -131361,7 +131385,7 @@
     "region": "Lombardia",
     "stationsCount": 8,
     "avgBenzina": 2.006,
-    "avgDiesel": 2.264,
+    "avgDiesel": 2.271,
     "minBenzina": 1.989,
     "minDiesel": 2.195,
     "minGpl": 0.859,
@@ -131448,7 +131472,7 @@
     "region": "Lazio",
     "stationsCount": 17,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.236,
+    "avgDiesel": 2.218,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.739,
@@ -131824,7 +131848,7 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 5,
-    "avgBenzina": 2.047,
+    "avgBenzina": 2.027,
     "avgDiesel": 2.275,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
@@ -132114,9 +132138,9 @@
     "provSlug": "vicenza",
     "region": "Veneto",
     "stationsCount": 3,
-    "avgBenzina": 2.016,
+    "avgBenzina": 2.026,
     "avgDiesel": 2.229,
-    "minBenzina": 1.959,
+    "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.799,
     "minMetano": null,
@@ -132124,7 +132148,7 @@
       "nome": "Energy Station",
       "brand": "Energy Station",
       "indirizzo": "VIA GUGLIELMO MARCONI 12 36049",
-      "prezzo": 1.959
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "PV 13983",
@@ -132201,8 +132225,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 3,
-    "avgBenzina": 2.086,
-    "avgDiesel": 2.349,
+    "avgBenzina": 2.066,
+    "avgDiesel": 2.266,
     "minBenzina": 1.999,
     "minDiesel": 2.229,
     "minGpl": null,
@@ -132288,7 +132312,7 @@
     "provSlug": "perugia",
     "region": "Umbria",
     "stationsCount": 4,
-    "avgBenzina": 2.013,
+    "avgBenzina": 2.008,
     "avgDiesel": 2.278,
     "minBenzina": 1.989,
     "minDiesel": 2.195,
@@ -132641,7 +132665,7 @@
     "minBenzina": 1.994,
     "minDiesel": 2.254,
     "minGpl": 0.739,
-    "minMetano": 1.969,
+    "minMetano": 2.099,
     "cheapestBenzina": {
       "nome": "IDP Pagliare di Spinetoli",
       "brand": "Q8",
@@ -132781,17 +132805,17 @@
     "provSlug": "pescara",
     "region": "Abruzzo",
     "stationsCount": 10,
-    "avgBenzina": 1.993,
+    "avgBenzina": 1.992,
     "avgDiesel": 2.229,
-    "minBenzina": 1.989,
+    "minBenzina": 1.987,
     "minDiesel": 2.189,
     "minGpl": 0.815,
     "minMetano": 1.844,
     "cheapestBenzina": {
-      "nome": "ESSO - SPOLTORE VIA MARE ADRIATICO",
-      "brand": "Esso",
-      "indirizzo": "VIA MARE ADRIATICO 117 65010",
-      "prezzo": 1.989
+      "nome": "Sozio carburanti",
+      "brand": "Pompa Bianca",
+      "indirizzo": "Viale Europa 97 65010",
+      "prezzo": 1.987
     },
     "cheapestDiesel": {
       "nome": "Spoltore",
@@ -133004,9 +133028,9 @@
     "region": "Veneto",
     "stationsCount": 3,
     "avgBenzina": 2.003,
-    "avgDiesel": 2.249,
+    "avgDiesel": 2.256,
     "minBenzina": 1.989,
-    "minDiesel": 2.229,
+    "minDiesel": 2.249,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -133019,7 +133043,7 @@
       "nome": "LUDOIL",
       "brand": "Pompa Bianca",
       "indirizzo": "NAZIONALE 148 35048",
-      "prezzo": 2.229
+      "prezzo": 2.249
     },
     "lat": 45.1282,
     "lng": 11.7625
@@ -133148,8 +133172,8 @@
     "provSlug": "bergamo",
     "region": "Lombardia",
     "stationsCount": 2,
-    "avgBenzina": 2.027,
-    "avgDiesel": 2.222,
+    "avgBenzina": 1.997,
+    "avgDiesel": 2.227,
     "minBenzina": 1.995,
     "minDiesel": 2.195,
     "minGpl": null,
@@ -133584,9 +133608,9 @@
     "region": "Piemonte",
     "stationsCount": 1,
     "avgBenzina": 1.979,
-    "avgDiesel": 2.319,
+    "avgDiesel": 2.289,
     "minBenzina": 1.979,
-    "minDiesel": 2.319,
+    "minDiesel": 2.289,
     "minGpl": 0.729,
     "minMetano": null,
     "cheapestBenzina": {
@@ -133599,7 +133623,7 @@
       "nome": "ERRETRE STREVI",
       "brand": "Pompa Bianca",
       "indirizzo": "EX SS 30  15019",
-      "prezzo": 2.319
+      "prezzo": 2.289
     },
     "lat": 44.7135,
     "lng": 8.5323
@@ -133815,8 +133839,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 6,
-    "avgBenzina": 2.055,
-    "avgDiesel": 2.315,
+    "avgBenzina": 2.045,
+    "avgDiesel": 2.295,
     "minBenzina": 1.994,
     "minDiesel": 2.249,
     "minGpl": 0.699,
@@ -134762,23 +134786,23 @@
     "provSlug": "cuneo",
     "region": "Piemonte",
     "stationsCount": 1,
-    "avgBenzina": 2.019,
-    "avgDiesel": 2.219,
-    "minBenzina": 2.019,
-    "minDiesel": 2.219,
+    "avgBenzina": 1.999,
+    "avgDiesel": 2.199,
+    "minBenzina": 1.999,
+    "minDiesel": 2.199,
     "minGpl": 0.759,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Stazione di Servizio Esso",
       "brand": "Esso",
       "indirizzo": "Via Circonvallazione 44 12020",
-      "prezzo": 2.019
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "Stazione di Servizio Esso",
       "brand": "Esso",
       "indirizzo": "Via Circonvallazione 44 12020",
-      "prezzo": 2.219
+      "prezzo": 2.199
     },
     "lat": 44.4893,
     "lng": 7.5424
@@ -134792,7 +134816,7 @@
     "region": "Puglia",
     "stationsCount": 62,
     "avgBenzina": 2.015,
-    "avgDiesel": 2.257,
+    "avgDiesel": 2.256,
     "minBenzina": 1.919,
     "minDiesel": 2.089,
     "minGpl": 0.729,
@@ -135516,17 +135540,17 @@
     "provSlug": "sassari",
     "region": "Sardegna",
     "stationsCount": 4,
-    "avgBenzina": 1.997,
-    "avgDiesel": 2.254,
-    "minBenzina": 1.99,
+    "avgBenzina": 1.994,
+    "avgDiesel": 2.247,
+    "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.859,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "IMPIANTO 7767",
-      "brand": "Eni",
-      "indirizzo": "VIA PALAU 21, 07029 - -",
-      "prezzo": 1.99
+      "nome": "Esso Tempio",
+      "brand": "Esso",
+      "indirizzo": "Via Olbia 40 07027",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "IMPIANTO 7767",
@@ -135604,7 +135628,7 @@
     "region": "Abruzzo",
     "stationsCount": 27,
     "avgBenzina": 1.997,
-    "avgDiesel": 2.22,
+    "avgDiesel": 2.219,
     "minBenzina": 1.859,
     "minDiesel": 1.809,
     "minGpl": 0.789,
@@ -135724,7 +135748,7 @@
     "minBenzina": 1.984,
     "minDiesel": 2.179,
     "minGpl": 0.747,
-    "minMetano": 1.829,
+    "minMetano": 1.949,
     "cheapestBenzina": {
       "nome": "CAMER TERLIZZI",
       "brand": "Camer",
@@ -135952,7 +135976,7 @@
     "region": "Lazio",
     "stationsCount": 18,
     "avgBenzina": 2.006,
-    "avgDiesel": 2.255,
+    "avgDiesel": 2.258,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.849,
@@ -136386,8 +136410,8 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 9,
-    "avgBenzina": 2.052,
-    "avgDiesel": 2.305,
+    "avgBenzina": 2.007,
+    "avgDiesel": 2.288,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -137556,7 +137580,7 @@
     "region": "Campania",
     "stationsCount": 9,
     "avgBenzina": 2.05,
-    "avgDiesel": 2.293,
+    "avgDiesel": 2.279,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.739,
@@ -137729,7 +137753,7 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 17,
-    "avgBenzina": 2.044,
+    "avgBenzina": 2.038,
     "avgDiesel": 2.28,
     "minBenzina": 1.749,
     "minDiesel": 1.659,
@@ -138445,7 +138469,7 @@
     "region": "Piemonte",
     "stationsCount": 21,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.247,
+    "avgDiesel": 2.245,
     "minBenzina": 1.979,
     "minDiesel": 2.19,
     "minGpl": 0.759,
@@ -138821,17 +138845,17 @@
     "provSlug": "barletta-andria-trani",
     "region": "Puglia",
     "stationsCount": 13,
-    "avgBenzina": 2.016,
+    "avgBenzina": 2.014,
     "avgDiesel": 2.244,
-    "minBenzina": 1.989,
+    "minBenzina": 1.967,
     "minDiesel": 2.19,
     "minGpl": 0.754,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "TRANI SS 378 USCITA PER CORATO",
-      "brand": "Q8",
-      "indirizzo": "SS 378 USCITA PER CORATO",
-      "prezzo": 1.989
+      "nome": "P P ENERGY",
+      "brand": "Pompa Bianca",
+      "indirizzo": "VIA S. A. MARIA DI FRANCIA 102 76125",
+      "prezzo": 1.967
     },
     "cheapestDiesel": {
       "nome": "LORUSSO RAFFAELE - Area di servizio Eni",
@@ -138879,9 +138903,9 @@
     "provSlug": "trapani",
     "region": "Sicilia",
     "stationsCount": 24,
-    "avgBenzina": 2.012,
+    "avgBenzina": 2.011,
     "avgDiesel": 2.252,
-    "minBenzina": 1.977,
+    "minBenzina": 1.967,
     "minDiesel": 1.999,
     "minGpl": 0.869,
     "minMetano": null,
@@ -138889,7 +138913,7 @@
       "nome": "ECO ENERGY SRL IP TRAPANI \"LUNGOMARE DANTE ALIGHIERI / VIA ORLANDINI\"",
       "brand": "IP",
       "indirizzo": "Lungomare Dante Alighieri (angolo via Orlandini)  91100",
-      "prezzo": 1.977
+      "prezzo": 1.967
     },
     "cheapestDiesel": {
       "nome": "ECOLGAS XITTA",
@@ -138937,17 +138961,17 @@
     "provSlug": "laquila",
     "region": "Abruzzo",
     "stationsCount": 2,
-    "avgBenzina": 2.039,
+    "avgBenzina": 1.99,
     "avgDiesel": 2.247,
-    "minBenzina": 1.99,
+    "minBenzina": 1.989,
     "minDiesel": 2.195,
     "minGpl": 0.768,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "stazione eni",
-      "brand": "Eni",
-      "indirizzo": "ROMA SNC 67059",
-      "prezzo": 1.99
+      "nome": "Perinetti Auto Fuel",
+      "brand": "Pompa Bianca",
+      "indirizzo": "VIA ROMA KM. 12.450 SN 67059",
+      "prezzo": 1.989
     },
     "cheapestDiesel": {
       "nome": "stazione eni",
@@ -138967,9 +138991,9 @@
     "region": "Friuli Venezia Giulia",
     "stationsCount": 1,
     "avgBenzina": 2.159,
-    "avgDiesel": 2.399,
+    "avgDiesel": 2.419,
     "minBenzina": 2.159,
-    "minDiesel": 2.399,
+    "minDiesel": 2.419,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -138982,7 +139006,7 @@
       "nome": "SMP San Marco Petroli - Trasaghis",
       "brand": "San Marco",
       "indirizzo": "Via Onorio De Luca 63 33010",
-      "prezzo": 2.399
+      "prezzo": 2.419
     },
     "lat": 46.2813,
     "lng": 13.0807
@@ -139058,7 +139082,7 @@
     "minBenzina": 1.999,
     "minDiesel": 2.239,
     "minGpl": 0.839,
-    "minMetano": 1.999,
+    "minMetano": 2.049,
     "cheapestBenzina": {
       "nome": "IP GHERRI ENORE",
       "brand": "IP",
@@ -140242,7 +140266,7 @@
     "provSlug": "trieste",
     "region": "Friuli Venezia Giulia",
     "stationsCount": 24,
-    "avgBenzina": 2.03,
+    "avgBenzina": 2.029,
     "avgDiesel": 2.286,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
@@ -140493,23 +140517,23 @@
     "provSlug": "bolzano",
     "region": "Trentino-Alto Adige",
     "stationsCount": 1,
-    "avgBenzina": 2.079,
-    "avgDiesel": 2.279,
-    "minBenzina": 2.079,
-    "minDiesel": 2.279,
+    "avgBenzina": 1.999,
+    "avgDiesel": 2.199,
+    "minBenzina": 1.999,
+    "minDiesel": 2.199,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Esso di Ebner Johann",
       "brand": "Esso",
       "indirizzo": "VIA VAL DI FIEMME 13 39040",
-      "prezzo": 2.079
+      "prezzo": 1.999
     },
     "cheapestDiesel": {
       "nome": "Esso di Ebner Johann",
       "brand": "Esso",
       "indirizzo": "VIA VAL DI FIEMME 13 39040",
-      "prezzo": 2.279
+      "prezzo": 2.199
     },
     "lat": 46.3288,
     "lng": 11.3769
@@ -141248,9 +141272,9 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 1,
     "avgBenzina": 2.099,
-    "avgDiesel": 2.419,
+    "avgDiesel": 2.429,
     "minBenzina": 2.099,
-    "minDiesel": 2.419,
+    "minDiesel": 2.429,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -141263,7 +141287,7 @@
       "nome": "Kostner - Ulten",
       "brand": "Kostner",
       "indirizzo": "St. Walburg 172 39016",
-      "prezzo": 2.419
+      "prezzo": 2.429
     },
     "lat": 46.5474,
     "lng": 11.0012
@@ -142451,9 +142475,9 @@
     "region": "Piemonte",
     "stationsCount": 2,
     "avgBenzina": 2.119,
-    "avgDiesel": 2.304,
+    "avgDiesel": 2.299,
     "minBenzina": 1.999,
-    "minDiesel": 2.239,
+    "minDiesel": 2.229,
     "minGpl": 0.789,
     "minMetano": null,
     "cheapestBenzina": {
@@ -142466,7 +142490,7 @@
       "nome": "FRATELLI GREMMO SNC",
       "brand": "Esso",
       "indirizzo": "Q. SELLA 63 13855",
-      "prezzo": 2.239
+      "prezzo": 2.229
     },
     "lat": 45.5647,
     "lng": 8.133
@@ -144132,7 +144156,7 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 4,
     "avgBenzina": 2.039,
-    "avgDiesel": 2.353,
+    "avgDiesel": 2.355,
     "minBenzina": 1.988,
     "minDiesel": 2.254,
     "minGpl": null,
@@ -144367,7 +144391,7 @@
     "avgDiesel": 2.249,
     "minBenzina": 1.985,
     "minDiesel": 2.19,
-    "minGpl": 0.769,
+    "minGpl": 0.776,
     "minMetano": 2.399,
     "cheapestBenzina": {
       "nome": "Area Servizi Snc",
@@ -144450,8 +144474,8 @@
     "provSlug": "lecce",
     "region": "Puglia",
     "stationsCount": 7,
-    "avgBenzina": 2.008,
-    "avgDiesel": 2.254,
+    "avgBenzina": 1.999,
+    "avgDiesel": 2.241,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.699,
@@ -144508,17 +144532,17 @@
     "provSlug": "roma",
     "region": "Lazio",
     "stationsCount": 16,
-    "avgBenzina": 2.005,
-    "avgDiesel": 2.251,
-    "minBenzina": 1.989,
+    "avgBenzina": 2.002,
+    "avgDiesel": 2.241,
+    "minBenzina": 1.969,
     "minDiesel": 2.189,
     "minGpl": 0.765,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "DMT CARBURANTI",
-      "brand": "Pompa Bianca",
-      "indirizzo": "VIALE GUGLIELMO OBERDAN 114 00049",
-      "prezzo": 1.989
+      "nome": "keropetrol spa",
+      "brand": "KEROPETROL",
+      "indirizzo": "p.za XX settembre  snc 00049",
+      "prezzo": 1.969
     },
     "cheapestDiesel": {
       "nome": "DMT CARBURANTI",
@@ -144595,8 +144619,8 @@
     "provSlug": "isernia",
     "region": "Molise",
     "stationsCount": 7,
-    "avgBenzina": 2.021,
-    "avgDiesel": 2.28,
+    "avgBenzina": 2.023,
+    "avgDiesel": 2.29,
     "minBenzina": 1.994,
     "minDiesel": 2.195,
     "minGpl": 0.795,
@@ -144770,7 +144794,7 @@
     "region": "Veneto",
     "stationsCount": 67,
     "avgBenzina": 2.026,
-    "avgDiesel": 2.245,
+    "avgDiesel": 2.246,
     "minBenzina": 1.984,
     "minDiesel": 1.769,
     "minGpl": 0.729,
@@ -144905,7 +144929,7 @@
     "region": "Liguria",
     "stationsCount": 4,
     "avgBenzina": 1.99,
-    "avgDiesel": 2.202,
+    "avgDiesel": 2.205,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -145291,7 +145315,7 @@
     "region": "Lombardia",
     "stationsCount": 6,
     "avgBenzina": 1.993,
-    "avgDiesel": 2.261,
+    "avgDiesel": 2.26,
     "minBenzina": 1.989,
     "minDiesel": 2.195,
     "minGpl": 0.759,
@@ -145552,7 +145576,7 @@
     "region": "Veneto",
     "stationsCount": 91,
     "avgBenzina": 1.995,
-    "avgDiesel": 2.234,
+    "avgDiesel": 2.236,
     "minBenzina": 1.589,
     "minDiesel": 1.638,
     "minGpl": 0.729,
@@ -146247,8 +146271,8 @@
     "provSlug": "lucca",
     "region": "Toscana",
     "stationsCount": 20,
-    "avgBenzina": 2.009,
-    "avgDiesel": 2.235,
+    "avgBenzina": 2.008,
+    "avgDiesel": 2.237,
     "minBenzina": 1.989,
     "minDiesel": 2.095,
     "minGpl": 0.769,
@@ -146277,7 +146301,7 @@
     "region": "Calabria",
     "stationsCount": 10,
     "avgBenzina": 2.036,
-    "avgDiesel": 2.277,
+    "avgDiesel": 2.276,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.799,
@@ -146306,7 +146330,7 @@
     "region": "Campania",
     "stationsCount": 3,
     "avgBenzina": 2.026,
-    "avgDiesel": 2.266,
+    "avgDiesel": 2.246,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": null,
@@ -147059,16 +147083,16 @@
     "provSlug": "milano",
     "region": "Lombardia",
     "stationsCount": 5,
-    "avgBenzina": 1.995,
+    "avgBenzina": 1.993,
     "avgDiesel": 2.233,
     "minBenzina": 1.989,
     "minDiesel": 2.19,
     "minGpl": null,
-    "minMetano": 2.099,
+    "minMetano": 2.199,
     "cheapestBenzina": {
-      "nome": "VIGNATE-CASSANESE SP 103 C/O CC ACQUARIO",
-      "brand": "Q8",
-      "indirizzo": "CASSANESE SP 103 C/O CC ACQUARIO S/N 20060",
+      "nome": "DALOIL 1971",
+      "brand": "Pompa Bianca",
+      "indirizzo": "VIA MOLINA  20060",
       "prezzo": 1.989
     },
     "cheapestDiesel": {
@@ -147842,7 +147866,7 @@
     "provSlug": "caserta",
     "region": "Campania",
     "stationsCount": 9,
-    "avgBenzina": 2.104,
+    "avgBenzina": 2.097,
     "avgDiesel": 2.361,
     "minBenzina": 2.03,
     "minDiesel": 2.259,
@@ -147871,17 +147895,17 @@
     "provSlug": "reggio-emilia",
     "region": "Emilia-Romagna",
     "stationsCount": 2,
-    "avgBenzina": 2.084,
+    "avgBenzina": 2.024,
     "avgDiesel": 2.364,
-    "minBenzina": 2.029,
+    "minBenzina": 2.019,
     "minDiesel": 2.359,
     "minGpl": 0.799,
     "minMetano": null,
     "cheapestBenzina": {
-      "nome": "CORIANI ALESSANDRO",
-      "brand": "IP",
-      "indirizzo": "VIA DEL POGGIO 12 42030",
-      "prezzo": 2.029
+      "nome": "STAZIONE DI SERVIZIO TAMOIL DI RIOTTI TEODOLINDA",
+      "brand": "Tamoil",
+      "indirizzo": "VIA VAL D'ASTA 21/A-B 42030",
+      "prezzo": 2.019
     },
     "cheapestDiesel": {
       "nome": "STAZIONE DI SERVIZIO TAMOIL DI RIOTTI TEODOLINDA",
@@ -148393,23 +148417,23 @@
     "provSlug": "vicenza",
     "region": "Veneto",
     "stationsCount": 1,
-    "avgBenzina": 1.999,
-    "avgDiesel": 2.309,
-    "minBenzina": 1.999,
-    "minDiesel": 2.309,
+    "avgBenzina": 2.009,
+    "avgDiesel": 2.299,
+    "minBenzina": 2.009,
+    "minDiesel": 2.299,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "GASPARI MASSIMO",
       "brand": "Pompa Bianca",
       "indirizzo": "BERICO EUGANEA 19 36021",
-      "prezzo": 1.999
+      "prezzo": 2.009
     },
     "cheapestDiesel": {
       "nome": "GASPARI MASSIMO",
       "brand": "Pompa Bianca",
       "indirizzo": "BERICO EUGANEA 19 36021",
-      "prezzo": 2.309
+      "prezzo": 2.299
     },
     "lat": 45.364,
     "lng": 11.5245
@@ -148626,9 +148650,9 @@
     "region": "Liguria",
     "stationsCount": 1,
     "avgBenzina": 1.999,
-    "avgDiesel": 2.229,
+    "avgDiesel": 2.239,
     "minBenzina": 1.999,
-    "minDiesel": 2.229,
+    "minDiesel": 2.239,
     "minGpl": null,
     "minMetano": null,
     "cheapestBenzina": {
@@ -148641,7 +148665,7 @@
       "nome": "TOTALERG",
       "brand": "IP",
       "indirizzo": "VIA MARTIRI 32 17038",
-      "prezzo": 2.229
+      "prezzo": 2.239
     },
     "lat": 44.0454,
     "lng": 8.1425
@@ -149003,7 +149027,7 @@
     "region": "Calabria",
     "stationsCount": 5,
     "avgBenzina": 2,
-    "avgDiesel": 2.252,
+    "avgDiesel": 2.256,
     "minBenzina": 1.989,
     "minDiesel": 2.229,
     "minGpl": 0.759,
@@ -149015,9 +149039,9 @@
       "prezzo": 1.989
     },
     "cheapestDiesel": {
-      "nome": "EREDI DI TUCCI ROCCO SAS",
+      "nome": "VILLAPIANA - SS 106",
       "brand": "IP",
-      "indirizzo": "VIA NAZIONALE  87070",
+      "indirizzo": "STRADA STATALE 106 KM 375 + 736 SNC  87076",
       "prezzo": 2.229
     },
     "lat": 39.8003,
@@ -149264,9 +149288,9 @@
     "region": "Campania",
     "stationsCount": 10,
     "avgBenzina": 2.082,
-    "avgDiesel": 2.302,
+    "avgDiesel": 2.308,
     "minBenzina": 1.989,
-    "minDiesel": 2.189,
+    "minDiesel": 2.19,
     "minGpl": 0.719,
     "minMetano": null,
     "cheapestBenzina": {
@@ -149276,10 +149300,10 @@
       "prezzo": 1.989
     },
     "cheapestDiesel": {
-      "nome": "PP131",
-      "brand": "IP",
-      "indirizzo": "Via della Libertà n.c. 80010",
-      "prezzo": 2.189
+      "nome": "pv 18019 Villaricca",
+      "brand": "Eni",
+      "indirizzo": "EUROPA 581 80010",
+      "prezzo": 2.19
     },
     "lat": 40.9138,
     "lng": 14.1544
@@ -149921,7 +149945,7 @@
     "region": "Trentino-Alto Adige",
     "stationsCount": 3,
     "avgBenzina": 2.043,
-    "avgDiesel": 2.289,
+    "avgDiesel": 2.293,
     "minBenzina": 1.99,
     "minDiesel": 2.19,
     "minGpl": 0.799,
@@ -150272,7 +150296,7 @@
     "avgDiesel": 2.348,
     "minBenzina": 1.997,
     "minDiesel": 2.299,
-    "minGpl": 0.739,
+    "minGpl": 0.799,
     "minMetano": null,
     "cheapestBenzina": {
       "nome": "Gaffoil Vitulazio",
@@ -150500,7 +150524,7 @@
     "provSlug": "ferrara",
     "region": "Emilia-Romagna",
     "stationsCount": 3,
-    "avgBenzina": 2.016,
+    "avgBenzina": 2.002,
     "avgDiesel": 2.224,
     "minBenzina": 1.989,
     "minDiesel": 2.189,
@@ -150558,7 +150582,7 @@
     "provSlug": "napoli",
     "region": "Campania",
     "stationsCount": 8,
-    "avgBenzina": 2.1,
+    "avgBenzina": 2.087,
     "avgDiesel": 2.247,
     "minBenzina": 1.99,
     "minDiesel": 1.879,
@@ -151341,7 +151365,7 @@
     "provSlug": "modena",
     "region": "Emilia-Romagna",
     "stationsCount": 2,
-    "avgBenzina": 2.031,
+    "avgBenzina": 1.997,
     "avgDiesel": 2.296,
     "minBenzina": 1.994,
     "minDiesel": 2.254,
@@ -151485,9 +151509,9 @@
     "provName": "Pordenone",
     "provSlug": "pordenone",
     "region": "Friuli Venezia Giulia",
-    "stationsCount": 6,
+    "stationsCount": 7,
     "avgBenzina": 1.993,
-    "avgDiesel": 2.253,
+    "avgDiesel": 2.252,
     "minBenzina": 1.989,
     "minDiesel": 2.249,
     "minGpl": 0.799,
@@ -151499,13 +151523,13 @@
       "prezzo": 1.989
     },
     "cheapestDiesel": {
-      "nome": "COSTANTIN ZOPPOLA",
+      "nome": "COSTANTIN POINCICCO",
       "brand": "Costantin",
-      "indirizzo": "Via Panciera  74 33080",
+      "indirizzo": "Via Cusano 14  33080",
       "prezzo": 2.249
     },
-    "lat": 45.9593,
-    "lng": 12.7912
+    "lat": 45.9578,
+    "lng": 12.7848
   },
   {
     "name": "Zuclo",

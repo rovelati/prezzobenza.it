@@ -1,6 +1,35 @@
 {
-  "updatedAt": "2026-10-27T13:10:09.102Z",
+  "updatedAt": "2026-10-28T13:59:53.523Z",
   "topExpensiveBenzina": [
+    {
+      "id": "51298",
+      "gestore": "OILFUEL SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "COVIELLO",
+      "indirizzo": "CORSO DAUNO IRPINO  71020",
+      "comune": "ROCCHETTA SANT'ANTONIO",
+      "provincia": "FG",
+      "lat": 41.105656,
+      "lng": 15.457799,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 2.799,
+          "isSelf": true,
+          "dt": "26/10/2026 14:14:25"
+        },
+        "diesel_self": {
+          "prezzo": 2.799,
+          "isSelf": true,
+          "dt": "26/10/2026 14:14:25"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "self",
+      "fuel": "Benzina",
+      "fullTankCost": 139.95
+    },
     {
       "id": "15315",
       "gestore": "RUBECA MARIO",
@@ -104,6 +133,30 @@
       "fullTankCost": 138.15
     },
     {
+      "id": "40521",
+      "gestore": "CLUB DELLA SOFFERENZA DI SANTORO ARTURO",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "carburanti di santoro arturo",
+      "indirizzo": "loc. punta secca  71040",
+      "comune": "ISOLE TREMITI",
+      "provincia": "FG",
+      "lat": 42.112664,
+      "lng": 15.476004,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.75,
+          "isSelf": false,
+          "dt": "27/10/2026 07:36:31"
+        }
+      },
+      "prezzo": 2.75,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 137.5
+    },
+    {
       "id": "16240",
       "gestore": "DE BIASE MARCO",
       "brand": "Esso",
@@ -187,22 +240,22 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "21/10/2026 17:37:59"
+          "dt": "26/10/2026 16:45:28"
         },
         "benzina_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "21/10/2026 17:37:59"
+          "dt": "26/10/2026 16:45:28"
         },
         "diesel_servito": {
           "prezzo": 2.779,
           "isSelf": false,
-          "dt": "21/10/2026 17:37:59"
+          "dt": "26/10/2026 16:45:28"
         },
         "diesel_self": {
           "prezzo": 2.779,
           "isSelf": true,
-          "dt": "21/10/2026 17:37:59"
+          "dt": "26/10/2026 16:45:28"
         }
       },
       "prezzo": 2.699,
@@ -277,64 +330,6 @@
       "service": "servito",
       "fuel": "Benzina",
       "fullTankCost": 134.95
-    },
-    {
-      "id": "57736",
-      "gestore": "FAST EAT ITALY SRL",
-      "brand": "Kerotris",
-      "bandieraRaw": "Kerotris",
-      "tipo": "Autostradale",
-      "nome": "DUINO NORD",
-      "indirizzo": "Autostrada A4 VENEZIA-TRIESTE, dir. VENEZIA 34011",
-      "comune": "DUINO-AURISINA",
-      "provincia": "TS",
-      "lat": 45.777415,
-      "lng": 13.60786,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.699,
-          "isSelf": false,
-          "dt": "24/10/2026 08:06:44"
-        },
-        "benzina_self": {
-          "prezzo": 2.499,
-          "isSelf": true,
-          "dt": "24/10/2026 08:06:44"
-        },
-        "diesel_self": {
-          "prezzo": 2.699,
-          "isSelf": true,
-          "dt": "24/10/2026 08:06:44"
-        }
-      },
-      "prezzo": 2.699,
-      "service": "servito",
-      "fuel": "Benzina",
-      "fullTankCost": 134.95
-    },
-    {
-      "id": "61729",
-      "gestore": "SAN MARCO PETROLI SOCIETA' PER AZIONI",
-      "brand": "San Marco",
-      "bandieraRaw": "San Marco Petroli",
-      "tipo": "Autostradale",
-      "nome": "POSTUMIA NORD",
-      "indirizzo": "Autostrada A31 TRENTO-VALDASTICO-VICENZA-RIVIERA BERICA-ROVIGO,  Km. 10.150, dir. nord 36050",
-      "comune": "BOLZANO VICENTINO",
-      "provincia": "VI",
-      "lat": 45.594892,
-      "lng": 11.599892,
-      "prices": {
-        "benzina_self": {
-          "prezzo": 2.699,
-          "isSelf": true,
-          "dt": "25/10/2026 14:33:10"
-        }
-      },
-      "prezzo": 2.699,
-      "service": "self",
-      "fuel": "Benzina",
-      "fullTankCost": 134.95
     }
   ],
   "topExpensiveDiesel": [
@@ -354,7 +349,7 @@
         "diesel_servito": {
           "prezzo": 2.8,
           "isSelf": false,
-          "dt": "19/10/2026 12:42:03"
+          "dt": "26/10/2026 10:35:53"
         }
       },
       "prezzo": 2.8,
@@ -510,27 +505,27 @@
         "benzina_servito": {
           "prezzo": 2.529,
           "isSelf": false,
-          "dt": "24/10/2026 09:11:01"
+          "dt": "26/10/2026 09:00:46"
         },
         "benzina_self": {
           "prezzo": 2.092,
           "isSelf": true,
-          "dt": "24/10/2026 09:11:01"
+          "dt": "26/10/2026 09:00:46"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "24/10/2026 09:11:01"
+          "dt": "26/10/2026 09:00:46"
         },
         "diesel_self": {
           "prezzo": 2.362,
           "isSelf": true,
-          "dt": "24/10/2026 09:11:01"
+          "dt": "26/10/2026 09:00:46"
         },
         "gpl": {
           "prezzo": 0.949,
           "isSelf": false,
-          "dt": "24/10/2026 09:11:01"
+          "dt": "26/10/2026 09:00:46"
         }
       },
       "prezzo": 2.799,
@@ -554,7 +549,7 @@
         "benzina_servito": {
           "prezzo": 2.529,
           "isSelf": false,
-          "dt": "24/10/2026 06:15:09"
+          "dt": "26/10/2026 13:17:09"
         },
         "benzina_self": {
           "prezzo": 2.099,
@@ -564,12 +559,12 @@
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "24/10/2026 06:15:09"
+          "dt": "26/10/2026 13:17:09"
         },
         "diesel_self": {
-          "prezzo": 2.359,
+          "prezzo": 2.399,
           "isSelf": true,
-          "dt": "25/10/2026 22:01:05"
+          "dt": "26/10/2026 13:17:09"
         }
       },
       "prezzo": 2.799,
@@ -593,12 +588,12 @@
         "benzina_servito": {
           "prezzo": 2.529,
           "isSelf": false,
-          "dt": "23/10/2026 14:43:20"
+          "dt": "26/10/2026 11:41:06"
         },
         "benzina_self": {
           "prezzo": 1.988,
           "isSelf": true,
-          "dt": "23/10/2026 14:43:20"
+          "dt": "26/10/2026 11:41:06"
         },
         "diesel_servito": {
           "prezzo": 2.799,
@@ -606,9 +601,9 @@
           "dt": "25/10/2026 11:39:03"
         },
         "diesel_self": {
-          "prezzo": 2.379,
+          "prezzo": 2.399,
           "isSelf": true,
-          "dt": "24/10/2026 11:37:02"
+          "dt": "26/10/2026 13:03:13"
         }
       },
       "prezzo": 2.799,
@@ -617,46 +612,31 @@
       "fullTankCost": 139.95
     },
     {
-      "id": "25175",
-      "gestore": "CARUSEL S.A.S. DI RANIERI ALESSANDRO",
+      "id": "51298",
+      "gestore": "OILFUEL SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA",
       "brand": "Pompa Bianca",
       "bandieraRaw": "Pompe Bianche",
       "tipo": "Stradale",
-      "nome": "stazione servizio CARUSEL",
-      "indirizzo": "Statale 89 Garganica, Km. 85+800, dir. PESCHICI - 71010",
-      "comune": "PESCHICI",
+      "nome": "COVIELLO",
+      "indirizzo": "CORSO DAUNO IRPINO  71020",
+      "comune": "ROCCHETTA SANT'ANTONIO",
       "provincia": "FG",
-      "lat": 41.933536,
-      "lng": 16.014865,
+      "lat": 41.105656,
+      "lng": 15.457799,
       "prices": {
-        "benzina_servito": {
-          "prezzo": 2.499,
-          "isSelf": false,
-          "dt": "19/10/2026 20:03:25"
-        },
         "benzina_self": {
-          "prezzo": 2.199,
-          "isSelf": true,
-          "dt": "19/10/2026 20:03:25"
-        },
-        "diesel_servito": {
           "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "19/10/2026 20:03:25"
+          "isSelf": true,
+          "dt": "26/10/2026 14:14:25"
         },
         "diesel_self": {
-          "prezzo": 2.499,
+          "prezzo": 2.799,
           "isSelf": true,
-          "dt": "19/10/2026 20:03:25"
-        },
-        "gpl": {
-          "prezzo": 0.999,
-          "isSelf": false,
-          "dt": "19/10/2026 20:03:25"
+          "dt": "26/10/2026 14:14:25"
         }
       },
       "prezzo": 2.799,
-      "service": "servito",
+      "service": "self",
       "fuel": "Diesel",
       "fullTankCost": 139.95
     },
@@ -720,7 +700,7 @@
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "24/10/2026 21:42:51"
+          "dt": "26/10/2026 22:04:02"
         },
         "diesel_servito": {
           "prezzo": 2.799,
@@ -730,12 +710,12 @@
         "diesel_self": {
           "prezzo": 2.359,
           "isSelf": true,
-          "dt": "24/10/2026 21:42:51"
+          "dt": "26/10/2026 22:04:02"
         },
         "gpl": {
           "prezzo": 0.889,
           "isSelf": false,
-          "dt": "24/10/2026 23:46:09"
+          "dt": "27/10/2026 04:10:05"
         }
       },
       "prezzo": 2.799,

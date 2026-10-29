@@ -416,12 +416,12 @@
         "benzina_self": {
           "prezzo": 1.599,
           "isSelf": true,
-          "dt": "23/10/2026 21:53:42"
+          "dt": "27/10/2026 21:48:19"
         },
         "diesel_self": {
           "prezzo": 1.619,
           "isSelf": true,
-          "dt": "23/10/2026 21:53:42"
+          "dt": "27/10/2026 21:48:19"
         }
       }
     },
@@ -923,7 +923,7 @@
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "25/10/2026 18:43:05"
+          "dt": "27/10/2026 19:05:05"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -953,12 +953,12 @@
         "diesel_servito": {
           "prezzo": 1.307,
           "isSelf": false,
-          "dt": "20/10/2026 18:02:51"
+          "dt": "27/10/2026 11:55:34"
         },
         "diesel_self": {
           "prezzo": 1.307,
           "isSelf": true,
-          "dt": "20/10/2026 18:02:51"
+          "dt": "27/10/2026 11:55:34"
         }
       }
     },
@@ -1008,7 +1008,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "20/10/2026 14:33:58"
+          "dt": "27/10/2026 15:03:04"
         },
         "diesel_self": {
           "prezzo": 1.309,
@@ -1033,7 +1033,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "20/10/2026 14:39:25"
+          "dt": "27/10/2026 15:11:22"
         },
         "diesel_self": {
           "prezzo": 1.399,
@@ -1423,41 +1423,6 @@
       }
     },
     {
-      "id": "55763",
-      "gestore": "SMAF SERVICES S.R.L.",
-      "brand": "Smaf",
-      "bandieraRaw": "Smaf",
-      "tipo": "Stradale",
-      "nome": "SMAF 1031 - PULVILLO",
-      "indirizzo": "gestori.prezzibenzina.it",
-      "comune": "ORAZIO PULVILLO 8 00175",
-      "provincia": "ROMA",
-      "lat": null,
-      "lng": null,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 1.958,
-          "isSelf": false,
-          "dt": "21/10/2026 19:50:39"
-        },
-        "benzina_self": {
-          "prezzo": 1.658,
-          "isSelf": true,
-          "dt": "21/10/2026 19:50:39"
-        },
-        "diesel_servito": {
-          "prezzo": 1.878,
-          "isSelf": false,
-          "dt": "21/10/2026 19:50:39"
-        },
-        "diesel_self": {
-          "prezzo": 1.578,
-          "isSelf": true,
-          "dt": "21/10/2026 19:50:39"
-        }
-      }
-    },
-    {
       "id": "32991",
       "gestore": "PENTA PETROLI SRL",
       "brand": "Pompa Bianca",
@@ -1608,12 +1573,12 @@
         "benzina_self": {
           "prezzo": 1.629,
           "isSelf": true,
-          "dt": "23/10/2026 21:49:34"
+          "dt": "27/10/2026 21:49:39"
         },
         "diesel_self": {
           "prezzo": 1.589,
           "isSelf": true,
-          "dt": "23/10/2026 21:49:34"
+          "dt": "27/10/2026 21:49:39"
         }
       }
     },
@@ -1663,27 +1628,27 @@
         "benzina_servito": {
           "prezzo": 1.779,
           "isSelf": false,
-          "dt": "23/10/2026 21:49:17"
+          "dt": "27/10/2026 21:45:40"
         },
         "benzina_self": {
           "prezzo": 1.629,
           "isSelf": true,
-          "dt": "23/10/2026 21:49:17"
+          "dt": "27/10/2026 21:45:40"
         },
         "diesel_servito": {
           "prezzo": 1.739,
           "isSelf": false,
-          "dt": "23/10/2026 21:49:17"
+          "dt": "27/10/2026 21:45:40"
         },
         "diesel_self": {
           "prezzo": 1.589,
           "isSelf": true,
-          "dt": "23/10/2026 21:49:17"
+          "dt": "27/10/2026 21:45:40"
         },
         "gpl": {
           "prezzo": 1,
           "isSelf": false,
-          "dt": "23/10/2026 21:49:17"
+          "dt": "27/10/2026 21:45:40"
         }
       }
     },
@@ -1714,6 +1679,31 @@
           "prezzo": 0.554,
           "isSelf": false,
           "dt": "02/10/2026 21:58:27"
+        }
+      }
+    },
+    {
+      "id": "60090",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "LUZZARA",
+      "indirizzo": "Via G. Carboni 42  42045",
+      "comune": "LUZZARA",
+      "provincia": "RE",
+      "lat": 44.95925,
+      "lng": 10.68953,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.595,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
+        },
+        "diesel_self": {
+          "prezzo": 1.594,
+          "isSelf": true,
+          "dt": "04/10/2026 21:40:40"
         }
       }
     }

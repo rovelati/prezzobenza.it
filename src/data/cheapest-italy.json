@@ -726,22 +726,22 @@
         "benzina_servito": {
           "prezzo": 1.619,
           "isSelf": false,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         },
         "benzina_self": {
           "prezzo": 1.619,
           "isSelf": true,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         },
         "diesel_servito": {
           "prezzo": 1.709,
           "isSelf": false,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         },
         "diesel_self": {
           "prezzo": 1.709,
           "isSelf": true,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         }
       }
     },
@@ -938,31 +938,6 @@
       }
     },
     {
-      "id": "9205",
-      "gestore": "PARROCCHIA S. ANNA DI TREPALLE",
-      "brand": "Eni",
-      "bandieraRaw": "Agip Eni",
-      "tipo": "Stradale",
-      "nome": "ENI TREPALLE",
-      "indirizzo": "Statale 301 del Foscagno, Km. 28,400, dir. BORMIO -",
-      "comune": "LIVIGNO",
-      "provincia": "SO",
-      "lat": 46.526547,
-      "lng": 10.175804,
-      "prices": {
-        "diesel_servito": {
-          "prezzo": 1.307,
-          "isSelf": false,
-          "dt": "27/10/2026 11:55:34"
-        },
-        "diesel_self": {
-          "prezzo": 1.307,
-          "isSelf": true,
-          "dt": "27/10/2026 11:55:34"
-        }
-      }
-    },
-    {
       "id": "22628",
       "gestore": "GES.CAR. S.A.S. DI CUSINI BERNARDO MOSE' E C.",
       "brand": "Eni",
@@ -1008,12 +983,37 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "27/10/2026 15:03:04"
+          "dt": "29/10/2026 01:35:05"
         },
         "diesel_self": {
           "prezzo": 1.309,
           "isSelf": true,
           "dt": "03/12/2016 01:35:21"
+        }
+      }
+    },
+    {
+      "id": "9205",
+      "gestore": "PARROCCHIA S. ANNA DI TREPALLE",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "ENI TREPALLE",
+      "indirizzo": "Statale 301 del Foscagno, Km. 28,400, dir. BORMIO -",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.526547,
+      "lng": 10.175804,
+      "prices": {
+        "diesel_servito": {
+          "prezzo": 1.347,
+          "isSelf": false,
+          "dt": "28/10/2026 17:02:23"
+        },
+        "diesel_self": {
+          "prezzo": 1.347,
+          "isSelf": true,
+          "dt": "28/10/2026 17:02:23"
         }
       }
     },
@@ -1033,7 +1033,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "27/10/2026 15:11:22"
+          "dt": "29/10/2026 01:37:46"
         },
         "diesel_self": {
           "prezzo": 1.399,
@@ -2025,22 +2025,22 @@
         "benzina_servito": {
           "prezzo": 1.619,
           "isSelf": false,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         },
         "benzina_self": {
           "prezzo": 1.619,
           "isSelf": true,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         },
         "diesel_servito": {
           "prezzo": 1.709,
           "isSelf": false,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         },
         "diesel_self": {
           "prezzo": 1.709,
           "isSelf": true,
-          "dt": "26/10/2026 08:01:02"
+          "dt": "29/10/2026 07:29:17"
         }
       }
     },

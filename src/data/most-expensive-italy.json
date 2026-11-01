@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T20:27:54.749Z",
+  "updatedAt": "2026-11-01T14:15:49.319Z",
   "topExpensiveBenzina": [
     {
       "id": "51298",
@@ -92,6 +92,45 @@
       "service": "servito",
       "fuel": "Benzina",
       "fullTankCost": 139.45
+    },
+    {
+      "id": "3898",
+      "gestore": "DUINO SUD PETROLI S.A.S. DI ZORZIN SILVANA & C.",
+      "brand": "Kerotris",
+      "bandieraRaw": "Kerotris",
+      "tipo": "Autostradale",
+      "nome": "DUINO SUD",
+      "indirizzo": "Autostrada A4 VENEZIA-TRIESTE,  Km. 122.9, dir. Est - 34013",
+      "comune": "DUINO-AURISINA",
+      "provincia": "TS",
+      "lat": 45.776672,
+      "lng": 13.608472,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.769,
+          "isSelf": false,
+          "dt": "30/10/2026 11:32:08"
+        },
+        "benzina_self": {
+          "prezzo": 2.519,
+          "isSelf": true,
+          "dt": "30/10/2026 11:32:08"
+        },
+        "diesel_servito": {
+          "prezzo": 2.769,
+          "isSelf": false,
+          "dt": "30/10/2026 11:32:08"
+        },
+        "diesel_self": {
+          "prezzo": 2.519,
+          "isSelf": true,
+          "dt": "30/10/2026 11:32:08"
+        }
+      },
+      "prezzo": 2.769,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 138.45
     },
     {
       "id": "61340",
@@ -211,12 +250,12 @@
         "benzina_servito": {
           "prezzo": 2.729,
           "isSelf": false,
-          "dt": "27/10/2026 11:05:05"
+          "dt": "30/10/2026 09:41:47"
         },
         "diesel_servito": {
           "prezzo": 2.759,
           "isSelf": false,
-          "dt": "27/10/2026 11:05:05"
+          "dt": "30/10/2026 09:41:47"
         }
       },
       "prezzo": 2.729,
@@ -279,51 +318,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "29/10/2026 07:36:29"
+          "dt": "31/10/2026 07:42:46"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "29/10/2026 07:36:29"
+          "dt": "31/10/2026 07:42:46"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "29/10/2026 07:36:29"
-        }
-      },
-      "prezzo": 2.699,
-      "service": "servito",
-      "fuel": "Benzina",
-      "fullTankCost": 134.95
-    },
-    {
-      "id": "57732",
-      "gestore": "FAST EAT ITALY SRL",
-      "brand": "Kerotris",
-      "bandieraRaw": "Kerotris",
-      "tipo": "Autostradale",
-      "nome": "PORCIA NORD",
-      "indirizzo": "Autostrada A28 PORTOGRUARO-CONEGLIANO,  Km. 29, dir. CONEGLIANO 33080",
-      "comune": "PORCIA",
-      "provincia": "PN",
-      "lat": 45.942151,
-      "lng": 12.562335,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.699,
-          "isSelf": false,
-          "dt": "29/10/2026 07:36:44"
-        },
-        "benzina_self": {
-          "prezzo": 2.499,
-          "isSelf": true,
-          "dt": "29/10/2026 07:36:44"
-        },
-        "diesel_self": {
-          "prezzo": 2.699,
-          "isSelf": true,
-          "dt": "29/10/2026 07:36:44"
+          "dt": "31/10/2026 07:42:46"
         }
       },
       "prezzo": 2.699,
@@ -373,27 +378,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "28/10/2026 19:30:35"
+          "dt": "30/10/2026 20:13:17"
         },
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "28/10/2026 19:30:35"
+          "dt": "30/10/2026 20:13:17"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "28/10/2026 19:30:35"
+          "dt": "30/10/2026 20:13:17"
         },
         "diesel_self": {
           "prezzo": 2.349,
           "isSelf": true,
-          "dt": "28/10/2026 19:30:35"
+          "dt": "30/10/2026 20:13:17"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "28/10/2026 19:30:35"
+          "dt": "30/10/2026 20:13:17"
         }
       },
       "prezzo": 2.799,
@@ -461,105 +466,27 @@
         "benzina_servito": {
           "prezzo": 2.529,
           "isSelf": false,
-          "dt": "29/10/2026 11:27:53"
+          "dt": "30/10/2026 08:33:05"
         },
         "benzina_self": {
           "prezzo": 2.092,
           "isSelf": true,
-          "dt": "29/10/2026 11:27:53"
+          "dt": "30/10/2026 08:33:05"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "29/10/2026 11:27:53"
+          "dt": "30/10/2026 08:33:05"
         },
         "diesel_self": {
           "prezzo": 2.362,
           "isSelf": true,
-          "dt": "29/10/2026 11:27:53"
+          "dt": "30/10/2026 08:33:05"
         },
         "gpl": {
           "prezzo": 0.949,
           "isSelf": false,
-          "dt": "29/10/2026 11:27:53"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "41081",
-      "gestore": "TIGER S.R.L.",
-      "brand": "Tamoil",
-      "bandieraRaw": "Tamoil",
-      "tipo": "Autostradale",
-      "nome": "LAIMBURG EST",
-      "indirizzo": "A22 BRENNERO-MODENA, Km. 220, NORD - 39051",
-      "comune": "VADENA",
-      "provincia": "BZ",
-      "lat": 46.386691,
-      "lng": 11.294112,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.529,
-          "isSelf": false,
-          "dt": "29/10/2026 06:03:09"
-        },
-        "benzina_self": {
-          "prezzo": 2.099,
-          "isSelf": true,
-          "dt": "29/10/2026 22:56:08"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "29/10/2026 06:03:09"
-        },
-        "diesel_self": {
-          "prezzo": 2.399,
-          "isSelf": true,
-          "dt": "28/10/2026 21:51:08"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "46748",
-      "gestore": "TIGER S.R.L.",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Autostradale",
-      "nome": "PLOSE EST",
-      "indirizzo": "A22 BRENNERO-MODENA, Km. 271,00, NORD - 39040",
-      "comune": "VARNA",
-      "provincia": "BZ",
-      "lat": 46.732298,
-      "lng": 11.641673,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.529,
-          "isSelf": false,
-          "dt": "28/10/2026 13:07:30"
-        },
-        "benzina_self": {
-          "prezzo": 1.988,
-          "isSelf": true,
-          "dt": "28/10/2026 13:07:30"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "29/10/2026 13:09:12"
-        },
-        "diesel_self": {
-          "prezzo": 2.399,
-          "isSelf": true,
-          "dt": "28/10/2026 13:07:30"
+          "dt": "30/10/2026 08:33:05"
         }
       },
       "prezzo": 2.799,
@@ -636,50 +563,6 @@
       "fullTankCost": 139.95
     },
     {
-      "id": "37965",
-      "gestore": "SALVETTI RETE S.R.L.",
-      "brand": "Tamoil",
-      "bandieraRaw": "Tamoil",
-      "tipo": "Autostradale",
-      "nome": "NOVARA SUD",
-      "indirizzo": "Autostrada A4 TORINO-MILANO, Km. 89, dir. milano - 28100",
-      "comune": "NOVARA",
-      "provincia": "NO",
-      "lat": 45.468335,
-      "lng": 8.660131,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.529,
-          "isSelf": false,
-          "dt": "30/10/2026 06:13:03"
-        },
-        "benzina_self": {
-          "prezzo": 2.099,
-          "isSelf": true,
-          "dt": "29/10/2026 05:55:07"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "30/10/2026 06:13:03"
-        },
-        "diesel_self": {
-          "prezzo": 2.359,
-          "isSelf": true,
-          "dt": "29/10/2026 05:55:07"
-        },
-        "gpl": {
-          "prezzo": 0.889,
-          "isSelf": false,
-          "dt": "29/10/2026 05:55:07"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
       "id": "15315",
       "gestore": "RUBECA MARIO",
       "brand": "Pompa Bianca",
@@ -711,6 +594,133 @@
           "prezzo": 2.799,
           "isSelf": true,
           "dt": "24/10/2026 10:34:13"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "48237",
+      "gestore": "SALVETTI RETE S.R.L.",
+      "brand": "Tamoil",
+      "bandieraRaw": "Tamoil",
+      "tipo": "Autostradale",
+      "nome": "PAGANELLA EST",
+      "indirizzo": "A22 BRENNERO-MODENA, Km. 127,91, BRENNERO - 38015",
+      "comune": "LAVIS",
+      "provincia": "TN",
+      "lat": 46.141553,
+      "lng": 11.087308,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.529,
+          "isSelf": false,
+          "dt": "30/10/2026 22:04:09"
+        },
+        "benzina_self": {
+          "prezzo": 2.099,
+          "isSelf": true,
+          "dt": "30/10/2026 22:04:09"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "30/10/2026 22:04:09"
+        },
+        "diesel_self": {
+          "prezzo": 2.359,
+          "isSelf": true,
+          "dt": "30/10/2026 22:04:09"
+        },
+        "metano": {
+          "prezzo": 1.999,
+          "isSelf": false,
+          "dt": "29/10/2026 22:49:08"
+        },
+        "gpl": {
+          "prezzo": 0.999,
+          "isSelf": false,
+          "dt": "30/10/2026 22:04:09"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "50651",
+      "gestore": "ECONOMY S.R.L.",
+      "brand": "Economysrl",
+      "bandieraRaw": "Economysrl",
+      "tipo": "Autostradale",
+      "nome": "GRAN BOSCO SALBERTRAND EST",
+      "indirizzo": "A32 TORINO-BARDONECCHIA, Km. 55.000, Nord-Est - 10050",
+      "comune": "SALBERTRAND",
+      "provincia": "TO",
+      "lat": 45.071677,
+      "lng": 6.89261,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.599,
+          "isSelf": false,
+          "dt": "29/10/2026 14:40:49"
+        },
+        "benzina_self": {
+          "prezzo": 2.299,
+          "isSelf": true,
+          "dt": "29/10/2026 14:40:49"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "29/10/2026 14:40:49"
+        },
+        "diesel_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "29/10/2026 14:40:49"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "61542",
+      "gestore": "ROMANO GIUSEPPE E C. S.R.L. UNIPERSONALE",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "GR Green Carburanti",
+      "indirizzo": "KAZEN SNC 91017",
+      "comune": "PANTELLERIA",
+      "provincia": "TP",
+      "lat": 36.826057,
+      "lng": 11.945954,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.659,
+          "isSelf": false,
+          "dt": "30/10/2026 08:24:33"
+        },
+        "benzina_self": {
+          "prezzo": 2.659,
+          "isSelf": true,
+          "dt": "30/10/2026 08:24:33"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "30/10/2026 08:24:33"
+        },
+        "diesel_self": {
+          "prezzo": 2.799,
+          "isSelf": true,
+          "dt": "30/10/2026 08:24:33"
         }
       },
       "prezzo": 2.799,

@@ -16,27 +16,27 @@
         "benzina_servito": {
           "prezzo": 1.505,
           "isSelf": false,
-          "dt": "30/10/2026 07:23:31"
+          "dt": "30/10/2026 18:03:39"
         },
         "benzina_self": {
           "prezzo": 1.505,
           "isSelf": true,
-          "dt": "30/10/2026 07:23:31"
+          "dt": "30/10/2026 18:03:39"
         },
         "diesel_servito": {
-          "prezzo": 2.489,
+          "prezzo": 2.459,
           "isSelf": false,
-          "dt": "30/10/2026 07:23:31"
+          "dt": "30/10/2026 18:03:39"
         },
         "diesel_self": {
-          "prezzo": 2.249,
+          "prezzo": 2.219,
           "isSelf": true,
-          "dt": "30/10/2026 07:23:31"
+          "dt": "30/10/2026 18:03:39"
         },
         "gpl": {
           "prezzo": 0.869,
           "isSelf": false,
-          "dt": "30/10/2026 07:23:31"
+          "dt": "30/10/2026 18:03:39"
         }
       }
     },
@@ -136,22 +136,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         }
       }
     },
@@ -439,24 +439,24 @@
       "lng": 10.138709,
       "prices": {
         "benzina_servito": {
-          "prezzo": 1.613,
+          "prezzo": 1.608,
           "isSelf": false,
-          "dt": "23/10/2026 15:23:21"
+          "dt": "30/10/2026 16:22:56"
         },
         "benzina_self": {
-          "prezzo": 1.613,
+          "prezzo": 1.608,
           "isSelf": true,
-          "dt": "23/10/2026 15:23:21"
+          "dt": "30/10/2026 16:22:56"
         },
         "diesel_servito": {
-          "prezzo": 1.713,
+          "prezzo": 1.708,
           "isSelf": false,
-          "dt": "23/10/2026 15:23:21"
+          "dt": "30/10/2026 16:22:56"
         },
         "diesel_self": {
-          "prezzo": 1.713,
+          "prezzo": 1.708,
           "isSelf": true,
-          "dt": "23/10/2026 15:23:21"
+          "dt": "30/10/2026 16:22:56"
         }
       }
     },
@@ -474,24 +474,24 @@
       "lng": 10.127919,
       "prices": {
         "benzina_servito": {
-          "prezzo": 1.613,
+          "prezzo": 1.608,
           "isSelf": false,
-          "dt": "23/10/2026 15:23:12"
+          "dt": "30/10/2026 16:21:58"
         },
         "benzina_self": {
-          "prezzo": 1.613,
+          "prezzo": 1.608,
           "isSelf": true,
-          "dt": "23/10/2026 15:23:12"
+          "dt": "30/10/2026 16:21:58"
         },
         "diesel_servito": {
-          "prezzo": 1.713,
+          "prezzo": 1.708,
           "isSelf": false,
-          "dt": "23/10/2026 15:23:12"
+          "dt": "30/10/2026 16:21:58"
         },
         "diesel_self": {
-          "prezzo": 1.713,
+          "prezzo": 1.708,
           "isSelf": true,
-          "dt": "23/10/2026 15:23:12"
+          "dt": "30/10/2026 16:21:58"
         }
       }
     },
@@ -923,7 +923,7 @@
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "27/10/2026 19:05:05"
+          "dt": "30/10/2026 10:25:09"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -934,36 +934,6 @@
           "prezzo": 1.305,
           "isSelf": true,
           "dt": "15/01/2016 08:58:05"
-        }
-      }
-    },
-    {
-      "id": "22628",
-      "gestore": "GES.CAR. S.A.S. DI CUSINI BERNARDO MOSE' E C.",
-      "brand": "Eni",
-      "bandieraRaw": "Agip Eni",
-      "tipo": "Stradale",
-      "nome": "GES.CAR. SAS",
-      "indirizzo": "VIA BORCH 770 23030",
-      "comune": "LIVIGNO",
-      "provincia": "SO",
-      "lat": 46.519084,
-      "lng": 10.124914,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 1.613,
-          "isSelf": false,
-          "dt": "29/10/2026 18:50:41"
-        },
-        "diesel_servito": {
-          "prezzo": 1.719,
-          "isSelf": false,
-          "dt": "29/10/2026 18:50:41"
-        },
-        "diesel_self": {
-          "prezzo": 1.307,
-          "isSelf": true,
-          "dt": "25/10/2026 15:28:05"
         }
       }
     },
@@ -1014,6 +984,36 @@
           "prezzo": 1.347,
           "isSelf": true,
           "dt": "28/10/2026 17:02:23"
+        }
+      }
+    },
+    {
+      "id": "22628",
+      "gestore": "GES.CAR. S.A.S. DI CUSINI BERNARDO MOSE' E C.",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "GES.CAR. SAS",
+      "indirizzo": "VIA BORCH 770 23030",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.519084,
+      "lng": 10.124914,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.613,
+          "isSelf": false,
+          "dt": "29/10/2026 18:50:41"
+        },
+        "diesel_servito": {
+          "prezzo": 1.719,
+          "isSelf": false,
+          "dt": "29/10/2026 18:50:41"
+        },
+        "diesel_self": {
+          "prezzo": 1.347,
+          "isSelf": true,
+          "dt": "29/10/2026 18:50:41"
         }
       }
     },
@@ -1805,22 +1805,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "29/10/2026 19:09:31"
+          "dt": "30/10/2026 16:06:24"
         }
       }
     },

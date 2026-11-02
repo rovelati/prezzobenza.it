@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T14:15:49.319Z",
+  "updatedAt": "2026-11-02T17:01:05.588Z",
   "topExpensiveBenzina": [
     {
       "id": "51298",
@@ -46,22 +46,22 @@
         "benzina_servito": {
           "prezzo": 2.789,
           "isSelf": false,
-          "dt": "24/10/2026 10:34:13"
+          "dt": "31/10/2026 09:29:17"
         },
         "benzina_self": {
           "prezzo": 2.789,
           "isSelf": true,
-          "dt": "24/10/2026 10:34:13"
+          "dt": "31/10/2026 09:29:17"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "24/10/2026 10:34:13"
+          "dt": "31/10/2026 09:29:17"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "24/10/2026 10:34:13"
+          "dt": "31/10/2026 09:29:17"
         }
       },
       "prezzo": 2.789,
@@ -279,22 +279,22 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "26/10/2026 16:45:28"
+          "dt": "31/10/2026 16:17:36"
         },
         "benzina_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "26/10/2026 16:45:28"
+          "dt": "31/10/2026 16:17:36"
         },
         "diesel_servito": {
           "prezzo": 2.779,
           "isSelf": false,
-          "dt": "26/10/2026 16:45:28"
+          "dt": "31/10/2026 16:17:36"
         },
         "diesel_self": {
           "prezzo": 2.779,
           "isSelf": true,
-          "dt": "26/10/2026 16:45:28"
+          "dt": "31/10/2026 16:17:36"
         }
       },
       "prezzo": 2.699,
@@ -378,115 +378,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "30/10/2026 20:13:17"
+          "dt": "31/10/2026 18:05:32"
         },
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "30/10/2026 20:13:17"
+          "dt": "31/10/2026 18:05:32"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "30/10/2026 20:13:17"
+          "dt": "31/10/2026 18:05:32"
         },
         "diesel_self": {
           "prezzo": 2.349,
           "isSelf": true,
-          "dt": "30/10/2026 20:13:17"
+          "dt": "31/10/2026 18:05:32"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "30/10/2026 20:13:17"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "3537",
-      "gestore": "TICABI S.N.C. DI CANNONI VASCO & C.",
-      "brand": "Esso",
-      "bandieraRaw": "Esso",
-      "tipo": "Autostradale",
-      "nome": "BADIA AL PINO EST",
-      "indirizzo": "Autostrada A1 MILANO-NAPOLI,  Km. 362, dir. nord 52041",
-      "comune": "CIVITELLA IN VAL DI CHIANA",
-      "provincia": "AR",
-      "lat": 43.406412,
-      "lng": 11.763894,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.589,
-          "isSelf": false,
-          "dt": "01/10/2026 19:00:09"
-        },
-        "benzina_self": {
-          "prezzo": 2.092,
-          "isSelf": true,
-          "dt": "16/10/2026 09:30:14"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "07/10/2026 18:00:05"
-        },
-        "diesel_self": {
-          "prezzo": 2.362,
-          "isSelf": true,
-          "dt": "07/10/2026 18:00:05"
-        },
-        "gpl": {
-          "prezzo": 0.949,
-          "isSelf": false,
-          "dt": "07/10/2026 18:00:06"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "63475",
-      "gestore": "TIGER S.R.L.",
-      "brand": "Esso",
-      "bandieraRaw": "Esso",
-      "tipo": "Autostradale",
-      "nome": "BADIA AL PINO EST",
-      "indirizzo": "Autostrada A1 MILANO-NAPOLI,  Km. 362, dir. nord",
-      "comune": "CIVITELLA IN VAL DI CHIANA",
-      "provincia": "AR",
-      "lat": 43.407165,
-      "lng": 11.768668,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.529,
-          "isSelf": false,
-          "dt": "30/10/2026 08:33:05"
-        },
-        "benzina_self": {
-          "prezzo": 2.092,
-          "isSelf": true,
-          "dt": "30/10/2026 08:33:05"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "30/10/2026 08:33:05"
-        },
-        "diesel_self": {
-          "prezzo": 2.362,
-          "isSelf": true,
-          "dt": "30/10/2026 08:33:05"
-        },
-        "gpl": {
-          "prezzo": 0.949,
-          "isSelf": false,
-          "dt": "30/10/2026 08:33:05"
+          "dt": "31/10/2026 18:05:32"
         }
       },
       "prezzo": 2.799,
@@ -578,71 +490,22 @@
         "benzina_servito": {
           "prezzo": 2.789,
           "isSelf": false,
-          "dt": "24/10/2026 10:34:13"
+          "dt": "31/10/2026 09:29:17"
         },
         "benzina_self": {
           "prezzo": 2.789,
           "isSelf": true,
-          "dt": "24/10/2026 10:34:13"
+          "dt": "31/10/2026 09:29:17"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "24/10/2026 10:34:13"
+          "dt": "31/10/2026 09:29:17"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "24/10/2026 10:34:13"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "48237",
-      "gestore": "SALVETTI RETE S.R.L.",
-      "brand": "Tamoil",
-      "bandieraRaw": "Tamoil",
-      "tipo": "Autostradale",
-      "nome": "PAGANELLA EST",
-      "indirizzo": "A22 BRENNERO-MODENA, Km. 127,91, BRENNERO - 38015",
-      "comune": "LAVIS",
-      "provincia": "TN",
-      "lat": 46.141553,
-      "lng": 11.087308,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.529,
-          "isSelf": false,
-          "dt": "30/10/2026 22:04:09"
-        },
-        "benzina_self": {
-          "prezzo": 2.099,
-          "isSelf": true,
-          "dt": "30/10/2026 22:04:09"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "30/10/2026 22:04:09"
-        },
-        "diesel_self": {
-          "prezzo": 2.359,
-          "isSelf": true,
-          "dt": "30/10/2026 22:04:09"
-        },
-        "metano": {
-          "prezzo": 1.999,
-          "isSelf": false,
-          "dt": "29/10/2026 22:49:08"
-        },
-        "gpl": {
-          "prezzo": 0.999,
-          "isSelf": false,
-          "dt": "30/10/2026 22:04:09"
+          "dt": "31/10/2026 09:29:17"
         }
       },
       "prezzo": 2.799,
@@ -727,6 +590,118 @@
       "service": "servito",
       "fuel": "Diesel",
       "fullTankCost": 139.95
+    },
+    {
+      "id": "61198",
+      "gestore": "EOS SERVICES S.R.L. A SOCIO UNICO",
+      "brand": "EOS",
+      "bandieraRaw": "EOS",
+      "tipo": "Stradale",
+      "nome": "TP114",
+      "indirizzo": "KAZEN SNC 91017",
+      "comune": "PANTELLERIA",
+      "provincia": "TP",
+      "lat": 36.824984,
+      "lng": 11.93995,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.659,
+          "isSelf": false,
+          "dt": "27/10/2026 12:39:10"
+        },
+        "benzina_self": {
+          "prezzo": 2.659,
+          "isSelf": true,
+          "dt": "27/10/2026 12:39:10"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "27/10/2026 12:39:10"
+        },
+        "diesel_self": {
+          "prezzo": 2.799,
+          "isSelf": true,
+          "dt": "27/10/2026 12:39:10"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "46624",
+      "gestore": "GAMI S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "FULGOR OIL",
+      "indirizzo": "LOCALITA' LA CHIANA SS18 SNC 87021",
+      "comune": "BELVEDERE MARITTIMO",
+      "provincia": "CS",
+      "lat": 39.608102,
+      "lng": 15.86134,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.392,
+          "isSelf": false,
+          "dt": "26/10/2026 10:54:11"
+        },
+        "benzina_self": {
+          "prezzo": 2.057,
+          "isSelf": true,
+          "dt": "26/10/2026 10:54:11"
+        },
+        "diesel_servito": {
+          "prezzo": 2.795,
+          "isSelf": false,
+          "dt": "26/10/2026 10:54:12"
+        },
+        "diesel_self": {
+          "prezzo": 2.397,
+          "isSelf": true,
+          "dt": "26/10/2026 10:54:12"
+        },
+        "gpl": {
+          "prezzo": 0.912,
+          "isSelf": false,
+          "dt": "26/10/2026 10:54:12"
+        }
+      },
+      "prezzo": 2.795,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.75
+    },
+    {
+      "id": "50579",
+      "gestore": "COPPOLA OIL S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "coppola",
+      "indirizzo": "Porto turistico di Nisida - Molo Cappellini  snc 80124",
+      "comune": "NAPOLI",
+      "provincia": "NA",
+      "lat": 40.798029,
+      "lng": 14.170602,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.595,
+          "isSelf": false,
+          "dt": "31/10/2026 09:21:21"
+        },
+        "diesel_servito": {
+          "prezzo": 2.795,
+          "isSelf": false,
+          "dt": "31/10/2026 09:21:21"
+        }
+      },
+      "prezzo": 2.795,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.75
     }
   ]
 }

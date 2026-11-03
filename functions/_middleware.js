@@ -39,6 +39,14 @@ export async function onRequest(context) {
     });
   }
 
+  // Redirect legacy /about and /contact
+  if (url.pathname === '/about' || url.pathname === '/about/') {
+    return Response.redirect(`https://www.prezzobenza.it/chi-siamo`, 301);
+  }
+  if (url.pathname === '/contact' || url.pathname === '/contact/') {
+    return Response.redirect(`https://www.prezzobenza.it/contatti`, 301);
+  }
+
   // Normal request on custom domain (prezzobenza.it)
   return await context.next();
 }

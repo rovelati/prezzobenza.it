@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Contatti e Redazione | PrezzoBenza.it";
+const pageDesc = "Contatta la redazione di PrezzoBenza.it: segnala anomalie sui prezzi dei carburanti, richiedi informazioni o collabora con il nostro team.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contatti - PrezzoBenza.it",
+  "url": "https://www.prezzobenza.it/contatti",
+  "description": pageDesc,
+  "inLanguage": "it-IT",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "PrezzoBenza.it",
+    "url": "https://www.prezzobenza.it",
+    "email": "info@prezzobenza.it",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "email": "redazione@prezzobenza.it",
+        "contactType": "editorial",
+        "availableLanguage": ["Italian", "English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "segnalazioni@prezzobenza.it",
+        "contactType": "technical support",
+        "availableLanguage": ["Italian"]
+      }
+    ]
+  }
+};
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDesc} 
+  canonical="https://www.prezzobenza.it/contatti"
+  structuredData={structuredData}
+>
+  <div class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+    <!-- Header -->
+    <header class="text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+        Canali di Contatto
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
+        Mettiti in Contatto con PrezzoBenza.it
+      </h1>
+      <p class="text-base text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        Hai notato una discrepanza tra il prezzo alla pompa e quello comunicato dal MIMIT? Vuoi proporre una collaborazione editoriale o un approfondimento? Siamo a tua disposizione.
+      </p>
+    </header>
+
+    <!-- Desk di Contatto Rapido -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl">
+          ✍️
+        </div>
+        <h2 class="font-bold text-zinc-900 dark:text-white text-base">Redazione & Guide</h2>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          Per quesiti sui contenuti informativi, studi sui trend di mercato o citazioni stampa.
+        </p>
+        <a href="mailto:redazione@prezzobenza.it" class="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+          redazione@prezzobenza.it &rarr;
+        </a>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl">
+          ⛽
+        </div>
+        <h2 class="font-bold text-zinc-900 dark:text-white text-base">Segnalazioni Impianti</h2>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          Per segnalare distributori dismessi, errori nelle coordinate GPS o ritardi negli aggiornamenti MIMIT.
+        </p>
+        <a href="mailto:segnalazioni@prezzobenza.it" class="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+          segnalazioni@prezzobenza.it &rarr;
+        </a>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl">
+          💼
+        </div>
+        <h2 class="font-bold text-zinc-900 dark:text-white text-base">Info Generali & Privacy</h2>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          Per richieste amministrative, esercizio dei diritti privacy (GDPR) o partnership tecniche.
+        </p>
+        <a href="mailto:info@prezzobenza.it" class="inline-block text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+          info@prezzobenza.it &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Modulo di Messaggio Diretto -->
+    <section class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">
+          Invia un Messaggio alla Redazione
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+          Compila i campi sottostanti; il nostro team risponde solitamente entro 24-48 ore lavorative.
+        </p>
+      </div>
+
+      <form id="contact-form" class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden'); this.reset();">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Nome e Cognome *</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              placeholder="Mario Rossi"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Indirizzo Email *</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="mario.rossi@example.it"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="subject" class="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Oggetto *</label>
+            <select 
+              id="subject" 
+              name="subject" 
+              required
+              class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="segnalazione">Segnalazione prezzo o distributore</option>
+              <option value="editoriale">Proposta editoriale o correzione guida</option>
+              <option value="collaborazione">Richiesta di partnership / Dati</option>
+              <option value="altro">Altra richiesta</option>
+            </select>
+          </div>
+          <div>
+            <label for="impianto" class="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">ID Impianto o Indirizzo (Opzionale)</label>
+            <input 
+              type="text" 
+              id="impianto" 
+              name="impianto" 
+              placeholder="Es. Eni Via Tiburtina 120, Roma"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="message" class="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">Messaggio *</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            required 
+            placeholder="Descrivi dettagliatamente la tua segnalazione o richiesta..."
+            class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-sm text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="px-6 py-3 rounded-xl font-bold text-sm bg-emerald-500 hover:bg-emerald-400 text-zinc-950 transition-colors shadow-sm flex items-center gap-2 cursor-pointer"
+        >
+          <span>Invia Segnalazione</span>
+          <span>&rarr;</span>
+        </button>
+
+        <div id="form-feedback" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs sm:text-sm">
+          Grazie! Il tuo messaggio è stato ricevuto dalla nostra redazione. Ti risponderemo al più presto all'indirizzo email indicato.
+        </div>
+      </form>
+    </section>
+  </div>
+</Layout>

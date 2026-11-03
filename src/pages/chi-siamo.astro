@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Chi Siamo, Missione e Metodologia | PrezzoBenza.it";
+const pageDesc = "Scopri chi c'è dietro PrezzoBenza.it: la nostra missione di trasparenza sui prezzi dei carburanti in Italia, i dati ufficiali MIMIT e il team di analisti.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Chi Siamo - PrezzoBenza.it",
+  "url": "https://www.prezzobenza.it/chi-siamo",
+  "description": pageDesc,
+  "inLanguage": "it-IT",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "PrezzoBenza.it",
+    "url": "https://www.prezzobenza.it",
+    "logo": "https://www.prezzobenza.it/favicon.svg",
+    "description": "Portale indipendente di monitoraggio e comparazione dei prezzi dei carburanti in Italia basato su dati ufficiali MIMIT.",
+    "foundingDate": "2024",
+    "knowsAbout": [
+      "Prezzi Benzina e Gasolio",
+      "Osservatorio Carburanti MIMIT",
+      "Pompe Bianche e No-Logo",
+      "Mobilità e Consumi Energetici"
+    ]
+  }
+};
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDesc} 
+  canonical="https://www.prezzobenza.it/chi-siamo"
+  structuredData={structuredData}
+>
+  <div class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+    <!-- Header -->
+    <header class="text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+        Trasparenza & E-E-A-T
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white tracking-tight">
+        Chi Siamo: La Guida Indipendente ai Prezzi dei Carburanti
+      </h1>
+      <p class="text-base text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        PrezzoBenza.it nasce con un obiettivo preciso: aiutare famiglie, pendolari e professionisti a orientarsi tra i rincari dei carburanti, trovando il rifornimento più conveniente senza percorrere chilometri a vuoto.
+      </p>
+    </header>
+
+    <!-- Manifesto / Missione -->
+    <section class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
+      <h2 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+        <span class="text-emerald-500">🎯</span> La Nostra Missione
+      </h2>
+      <p class="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+        Il mercato dei carburanti in Italia è caratterizzato da forti oscillazioni e da una marcata eterogeneità territoriale: tra un distributore di marca su un'arteria ad alto scorrimento e una pompa bianca no-logo a pochi chilometri di distanza possono esserci differenze anche superiori a 20 o 30 centesimi al litro.
+      </p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+        PrezzoBenza.it aggrega, normalizza e analizza i flussi informativi ufficiali per trasformarli in uno strumento pratico, veloce e gratuito. Non ci limitiamo a mostrare una classifica di prezzi: calcoliamo il <strong>costo reale dello spostamento</strong> per dirti subito se conviene davvero deviare dal tuo tragitto abituale.
+      </p>
+    </section>
+
+    <!-- Origine dei Dati e Metodologia -->
+    <section class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
+      <h2 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+        <span class="text-emerald-500">🔬</span> Fonte Ufficiale e Metodologia di Calcolo
+      </h2>
+      <div class="space-y-3 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+        <p>
+          Tutti i dati pubblicati su PrezzoBenza.it provengono dall'<strong>Osservatorio Prezzi Carburanti del MIMIT</strong> (Ministero delle Imprese e del Made in Italy), gestito in conformità all'art. 51 della Legge n. 99/2009 e al D.L. n. 1/2023 ("Decreto Trasparenza").
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-xs sm:text-sm">
+          <li><strong>Obbligo di Comunicazione:</strong> Tutti i titolari di impianti di distribuzione stradale e autostradale in Italia hanno l'obbligo di comunicare tempestivamente al Ministero ogni variazione del prezzo praticato per benzina, gasolio, GPL e metano.</li>
+          <li><strong>Aggiornamento Quotidiano:</strong> La nostra infrastruttura sincronizza gli Open Data del MIMIT più volte al giorno, verificando la consistenza geografica, le coordinate GPS e gli orari di apertura dei singoli punti vendita.</li>
+          <li><strong>Algoritmo "Prezzo Opportunità":</strong> Considera un consumo medio standard (6,5 litri / 100 km) e calcola il costo del tragitto di andata e ritorno verso l'impianto rispetto al volume medio di rifornimento (40 litri). Se il costo del carburante speso per raggiungere il distributore supera il risparmio alla pompa, il sistema segnala chiaramente che la deviazione non è conveniente.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Comitato di Redazione e Analisi -->
+    <section class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+          <span class="text-emerald-500">👥</span> Il Team Editoriale e di Ricerca
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+          Profili professionali con esperienza nell'analisi energetica, nel giornalismo automobilistico e nei sistemi informativi geografici.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 space-y-2">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
+            MG
+          </div>
+          <h3 class="font-bold text-zinc-900 dark:text-white text-sm">Matteo Grassi</h3>
+          <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Analista Dati Energetici & Mobilità</p>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Specializzato nello studio delle quotazioni internazionali Platts del petrolio e nella trasmissione dei costi sui mercati al dettaglio dei carburanti in Europa.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 space-y-2">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
+            SD
+          </div>
+          <h3 class="font-bold text-zinc-900 dark:text-white text-sm">Serena De Luca</h3>
+          <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Curatrice Editoriale Consumer Economy</p>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Giornalista esperta di tutela dei consumatori, normative sulla trasparenza dei prezzi al consumo e guide pratiche al risparmio per le famiglie.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 space-y-2">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
+            MB
+          </div>
+          <h3 class="font-bold text-zinc-900 dark:text-white text-sm">Marco Bellini</h3>
+          <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Ingegnere Open Data & GIS</p>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Cura la pipeline algoritmica di acquisizione, geocodifica e clusterizzazione delle oltre 22.000 stazioni di servizio attive sul territorio italiano.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Indipendenza Editoriale -->
+    <section class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/50 rounded-2xl p-6 sm:p-8 space-y-3">
+      <h3 class="text-base font-bold text-emerald-900 dark:text-emerald-300">
+        Indipendenza Assoluta dai Marchi Petroliferi
+      </h3>
+      <p class="text-xs sm:text-sm text-emerald-800 dark:text-emerald-400 leading-relaxed">
+        PrezzoBenza.it non appartiene a compagnie petrolifere, catene di distributori o consorzi di categoria. Il nostro ordinamento dei prezzi è basato esclusivamente su criteri oggettivi: tariffa esposta al litro e convenienza calcolata per l'utente finale. Nessun operatore può pagare per posizionarsi più in alto nei nostri elenchi.
+      </p>
+      <div class="pt-2">
+        <a href="/contatti" class="text-xs font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
+          Hai domande o vuoi inviarci una segnalazione? Visita la pagina Contatti &rarr;
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>

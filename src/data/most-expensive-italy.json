@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T22:17:31.537Z",
+  "updatedAt": "2026-11-04T15:24:06.189Z",
   "topExpensiveBenzina": [
     {
       "id": "51298",
@@ -17,12 +17,12 @@
         "benzina_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "26/10/2026 14:14:25"
+          "dt": "02/11/2026 14:56:47"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "26/10/2026 14:14:25"
+          "dt": "02/11/2026 14:56:47"
         }
       },
       "prezzo": 2.799,
@@ -92,45 +92,6 @@
       "service": "servito",
       "fuel": "Benzina",
       "fullTankCost": 139.45
-    },
-    {
-      "id": "3898",
-      "gestore": "DUINO SUD PETROLI S.A.S. DI ZORZIN SILVANA & C.",
-      "brand": "Kerotris",
-      "bandieraRaw": "Kerotris",
-      "tipo": "Autostradale",
-      "nome": "DUINO SUD",
-      "indirizzo": "Autostrada A4 VENEZIA-TRIESTE,  Km. 122.9, dir. Est - 34013",
-      "comune": "DUINO-AURISINA",
-      "provincia": "TS",
-      "lat": 45.776672,
-      "lng": 13.608472,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.769,
-          "isSelf": false,
-          "dt": "02/11/2026 05:58:17"
-        },
-        "benzina_self": {
-          "prezzo": 2.519,
-          "isSelf": true,
-          "dt": "01/11/2026 21:56:09"
-        },
-        "diesel_servito": {
-          "prezzo": 2.769,
-          "isSelf": false,
-          "dt": "02/11/2026 05:58:17"
-        },
-        "diesel_self": {
-          "prezzo": 2.519,
-          "isSelf": true,
-          "dt": "01/11/2026 21:56:09"
-        }
-      },
-      "prezzo": 2.769,
-      "service": "servito",
-      "fuel": "Benzina",
-      "fullTankCost": 138.45
     },
     {
       "id": "61340",
@@ -318,17 +279,51 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "31/10/2026 07:42:46"
+          "dt": "02/11/2026 08:36:33"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "31/10/2026 07:42:46"
+          "dt": "02/11/2026 08:36:33"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "31/10/2026 07:42:46"
+          "dt": "02/11/2026 08:36:33"
+        }
+      },
+      "prezzo": 2.699,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 134.95
+    },
+    {
+      "id": "57732",
+      "gestore": "FAST EAT ITALY SRL",
+      "brand": "Kerotris",
+      "bandieraRaw": "Kerotris",
+      "tipo": "Autostradale",
+      "nome": "PORCIA NORD",
+      "indirizzo": "Autostrada A28 PORTOGRUARO-CONEGLIANO,  Km. 29, dir. CONEGLIANO 33080",
+      "comune": "PORCIA",
+      "provincia": "PN",
+      "lat": 45.942151,
+      "lng": 12.562335,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.699,
+          "isSelf": false,
+          "dt": "02/11/2026 08:36:48"
+        },
+        "benzina_self": {
+          "prezzo": 2.499,
+          "isSelf": true,
+          "dt": "02/11/2026 08:36:48"
+        },
+        "diesel_self": {
+          "prezzo": 2.699,
+          "isSelf": true,
+          "dt": "02/11/2026 08:36:48"
         }
       },
       "prezzo": 2.699,
@@ -354,7 +349,7 @@
         "diesel_servito": {
           "prezzo": 2.8,
           "isSelf": false,
-          "dt": "26/10/2026 10:35:53"
+          "dt": "02/11/2026 12:40:09"
         }
       },
       "prezzo": 2.8,
@@ -378,27 +373,66 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "01/11/2026 14:12:48"
+          "dt": "02/11/2026 20:02:39"
         },
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "01/11/2026 14:12:47"
+          "dt": "02/11/2026 20:02:39"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "01/11/2026 14:12:47"
+          "dt": "02/11/2026 20:02:39"
         },
         "diesel_self": {
           "prezzo": 2.349,
           "isSelf": true,
-          "dt": "01/11/2026 14:12:47"
+          "dt": "02/11/2026 20:02:39"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "01/11/2026 14:12:48"
+          "dt": "02/11/2026 20:02:39"
+        }
+      },
+      "prezzo": 2.799,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.95
+    },
+    {
+      "id": "56474",
+      "gestore": "TIGER S.R.L.",
+      "brand": "Esso",
+      "bandieraRaw": "Esso",
+      "tipo": "Autostradale",
+      "nome": "LAIMBURG OVEST",
+      "indirizzo": "Autostrada A22 BRENNERO-MODENA, dir. SUD",
+      "comune": "VADENA",
+      "provincia": "BZ",
+      "lat": 46.359542,
+      "lng": 11.288291,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.599,
+          "isSelf": false,
+          "dt": "03/11/2026 07:09:08"
+        },
+        "benzina_self": {
+          "prezzo": 2.199,
+          "isSelf": true,
+          "dt": "02/11/2026 00:01:03"
+        },
+        "diesel_servito": {
+          "prezzo": 2.799,
+          "isSelf": false,
+          "dt": "02/11/2026 08:57:05"
+        },
+        "diesel_self": {
+          "prezzo": 2.399,
+          "isSelf": true,
+          "dt": "02/11/2026 08:57:05"
         }
       },
       "prezzo": 2.799,
@@ -422,12 +456,12 @@
         "benzina_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "26/10/2026 14:14:25"
+          "dt": "02/11/2026 14:56:47"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "26/10/2026 14:14:25"
+          "dt": "02/11/2026 14:56:47"
         }
       },
       "prezzo": 2.799,
@@ -449,24 +483,24 @@
       "lng": 14.514061,
       "prices": {
         "benzina_servito": {
-          "prezzo": 2.629,
+          "prezzo": 2.549,
           "isSelf": false,
-          "dt": "30/10/2026 06:48:56"
+          "dt": "02/11/2026 12:42:14"
         },
         "benzina_self": {
-          "prezzo": 2.629,
+          "prezzo": 2.399,
           "isSelf": true,
-          "dt": "30/10/2026 06:48:56"
+          "dt": "02/11/2026 12:42:14"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "30/10/2026 06:48:56"
+          "dt": "02/11/2026 12:42:14"
         },
         "diesel_self": {
-          "prezzo": 2.799,
+          "prezzo": 2.649,
           "isSelf": true,
-          "dt": "30/10/2026 06:48:56"
+          "dt": "02/11/2026 12:42:14"
         }
       },
       "prezzo": 2.799,
@@ -529,22 +563,22 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "29/10/2026 14:40:49"
+          "dt": "02/11/2026 11:56:39"
         },
         "benzina_self": {
           "prezzo": 2.299,
           "isSelf": true,
-          "dt": "29/10/2026 14:40:49"
+          "dt": "02/11/2026 11:56:39"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "29/10/2026 14:40:49"
+          "dt": "02/11/2026 11:56:39"
         },
         "diesel_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "29/10/2026 14:40:49"
+          "dt": "02/11/2026 11:56:39"
         }
       },
       "prezzo": 2.799,
@@ -568,22 +602,22 @@
         "benzina_servito": {
           "prezzo": 2.659,
           "isSelf": false,
-          "dt": "30/10/2026 08:24:33"
+          "dt": "02/11/2026 08:04:23"
         },
         "benzina_self": {
           "prezzo": 2.659,
           "isSelf": true,
-          "dt": "30/10/2026 08:24:33"
+          "dt": "02/11/2026 08:04:23"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "30/10/2026 08:24:33"
+          "dt": "02/11/2026 08:04:23"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "30/10/2026 08:24:33"
+          "dt": "02/11/2026 08:04:23"
         }
       },
       "prezzo": 2.799,
@@ -646,56 +680,27 @@
         "benzina_servito": {
           "prezzo": 2.392,
           "isSelf": false,
-          "dt": "26/10/2026 10:54:11"
+          "dt": "02/11/2026 11:17:13"
         },
         "benzina_self": {
           "prezzo": 2.057,
           "isSelf": true,
-          "dt": "26/10/2026 10:54:11"
+          "dt": "02/11/2026 11:17:13"
         },
         "diesel_servito": {
           "prezzo": 2.795,
           "isSelf": false,
-          "dt": "26/10/2026 10:54:12"
+          "dt": "02/11/2026 11:17:13"
         },
         "diesel_self": {
           "prezzo": 2.397,
           "isSelf": true,
-          "dt": "26/10/2026 10:54:12"
+          "dt": "02/11/2026 11:17:13"
         },
         "gpl": {
           "prezzo": 0.912,
           "isSelf": false,
-          "dt": "26/10/2026 10:54:12"
-        }
-      },
-      "prezzo": 2.795,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.75
-    },
-    {
-      "id": "50579",
-      "gestore": "COPPOLA OIL S.R.L.",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "coppola",
-      "indirizzo": "Porto turistico di Nisida - Molo Cappellini  snc 80124",
-      "comune": "NAPOLI",
-      "provincia": "NA",
-      "lat": 40.798029,
-      "lng": 14.170602,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.595,
-          "isSelf": false,
-          "dt": "31/10/2026 09:21:21"
-        },
-        "diesel_servito": {
-          "prezzo": 2.795,
-          "isSelf": false,
-          "dt": "31/10/2026 09:21:21"
+          "dt": "02/11/2026 11:17:13"
         }
       },
       "prezzo": 2.795,

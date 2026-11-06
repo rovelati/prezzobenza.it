@@ -136,22 +136,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         }
       }
     },
@@ -227,31 +227,6 @@
           "prezzo": 1.654,
           "isSelf": true,
           "dt": "02/10/2026 21:57:28"
-        }
-      }
-    },
-    {
-      "id": "60094",
-      "gestore": "SERVIZI & GESTIONI ITALIA S.R.L.",
-      "brand": "Q8",
-      "bandieraRaw": "Q8",
-      "tipo": "Stradale",
-      "nome": "Verona Via Unità d'Italia",
-      "indirizzo": "Via Unità d'Italia 350  37132",
-      "comune": "VERONA",
-      "provincia": "VR",
-      "lat": 45.43006,
-      "lng": 11.058751,
-      "prices": {
-        "benzina_self": {
-          "prezzo": 1.589,
-          "isSelf": true,
-          "dt": "29/10/2026 23:31:03"
-        },
-        "diesel_self": {
-          "prezzo": 1.638,
-          "isSelf": true,
-          "dt": "29/10/2026 23:31:03"
         }
       }
     },
@@ -381,22 +356,22 @@
         "benzina_servito": {
           "prezzo": 1.613,
           "isSelf": false,
-          "dt": "29/10/2026 12:49:51"
+          "dt": "04/11/2026 16:50:48"
         },
         "benzina_self": {
           "prezzo": 1.598,
           "isSelf": true,
-          "dt": "29/10/2026 12:49:51"
+          "dt": "04/11/2026 16:50:48"
         },
         "diesel_servito": {
           "prezzo": 1.718,
           "isSelf": false,
-          "dt": "29/10/2026 12:49:51"
+          "dt": "04/11/2026 16:50:48"
         },
         "diesel_self": {
           "prezzo": 1.703,
           "isSelf": true,
-          "dt": "29/10/2026 12:49:51"
+          "dt": "04/11/2026 16:50:48"
         }
       }
     },
@@ -416,12 +391,12 @@
         "benzina_self": {
           "prezzo": 1.599,
           "isSelf": true,
-          "dt": "31/10/2026 21:47:53"
+          "dt": "04/11/2026 21:46:21"
         },
         "diesel_self": {
           "prezzo": 1.619,
           "isSelf": true,
-          "dt": "31/10/2026 21:47:53"
+          "dt": "04/11/2026 21:46:21"
         }
       }
     },
@@ -899,6 +874,31 @@
           "dt": "02/10/2026 21:57:11"
         }
       }
+    },
+    {
+      "id": "59999",
+      "gestore": "SPAZIO S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "SAN MASSIMO",
+      "indirizzo": "SS 17 km 201  snc 86027",
+      "comune": "SAN MASSIMO",
+      "provincia": "CB",
+      "lat": 41.510359,
+      "lng": 14.436459,
+      "prices": {
+        "benzina_self": {
+          "prezzo": 1.628,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:43"
+        },
+        "diesel_self": {
+          "prezzo": 1.605,
+          "isSelf": true,
+          "dt": "02/10/2026 21:58:43"
+        }
+      }
     }
   ],
   "topDiesel": [
@@ -918,12 +918,12 @@
         "benzina_servito": {
           "prezzo": 1.999,
           "isSelf": false,
-          "dt": "03/11/2026 07:38:02"
+          "dt": "05/11/2026 07:42:13"
         },
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "01/11/2026 18:55:06"
+          "dt": "03/11/2026 19:01:10"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -953,7 +953,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "29/10/2026 01:35:05"
+          "dt": "05/11/2026 02:06:46"
         },
         "diesel_self": {
           "prezzo": 1.309,
@@ -978,12 +978,12 @@
         "diesel_servito": {
           "prezzo": 1.347,
           "isSelf": false,
-          "dt": "28/10/2026 17:02:23"
+          "dt": "04/11/2026 08:30:51"
         },
         "diesel_self": {
           "prezzo": 1.347,
           "isSelf": true,
-          "dt": "28/10/2026 17:02:23"
+          "dt": "04/11/2026 08:30:51"
         }
       }
     },
@@ -1033,7 +1033,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "29/10/2026 01:37:46"
+          "dt": "05/11/2026 02:09:24"
         },
         "diesel_self": {
           "prezzo": 1.399,
@@ -1573,12 +1573,12 @@
         "benzina_self": {
           "prezzo": 1.629,
           "isSelf": true,
-          "dt": "31/10/2026 21:40:48"
+          "dt": "04/11/2026 21:40:19"
         },
         "diesel_self": {
           "prezzo": 1.589,
           "isSelf": true,
-          "dt": "31/10/2026 21:40:48"
+          "dt": "04/11/2026 21:40:19"
         }
       }
     },
@@ -1628,27 +1628,27 @@
         "benzina_servito": {
           "prezzo": 1.779,
           "isSelf": false,
-          "dt": "31/10/2026 21:48:53"
+          "dt": "04/11/2026 21:43:48"
         },
         "benzina_self": {
           "prezzo": 1.629,
           "isSelf": true,
-          "dt": "31/10/2026 21:48:53"
+          "dt": "04/11/2026 21:43:48"
         },
         "diesel_servito": {
           "prezzo": 1.739,
           "isSelf": false,
-          "dt": "31/10/2026 21:48:53"
+          "dt": "04/11/2026 21:43:47"
         },
         "diesel_self": {
           "prezzo": 1.589,
           "isSelf": true,
-          "dt": "31/10/2026 21:48:53"
+          "dt": "04/11/2026 21:43:47"
         },
         "gpl": {
           "prezzo": 1,
           "isSelf": false,
-          "dt": "31/10/2026 21:48:53"
+          "dt": "04/11/2026 21:43:48"
         }
       }
     },
@@ -1805,22 +1805,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "30/10/2026 16:06:24"
+          "dt": "03/11/2026 17:01:27"
         }
       }
     },

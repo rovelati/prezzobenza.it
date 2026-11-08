@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T20:52:28.157Z",
+  "updatedAt": "2026-11-08T21:07:53.075Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -378,27 +378,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "05/11/2026 20:14:03"
+          "dt": "06/11/2026 21:02:03"
         },
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "05/11/2026 20:14:03"
+          "dt": "06/11/2026 21:02:03"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "05/11/2026 20:14:03"
+          "dt": "06/11/2026 21:02:03"
         },
         "diesel_self": {
           "prezzo": 2.349,
           "isSelf": true,
-          "dt": "05/11/2026 20:14:03"
+          "dt": "06/11/2026 21:02:03"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "05/11/2026 20:14:03"
+          "dt": "06/11/2026 21:02:03"
         }
       },
       "prezzo": 2.799,
@@ -437,7 +437,7 @@
         "diesel_self": {
           "prezzo": 2.399,
           "isSelf": true,
-          "dt": "04/11/2026 22:13:07"
+          "dt": "07/11/2026 06:01:09"
         }
       },
       "prezzo": 2.799,
@@ -578,22 +578,22 @@
         "benzina_servito": {
           "prezzo": 2.659,
           "isSelf": false,
-          "dt": "05/11/2026 07:50:05"
+          "dt": "06/11/2026 08:28:50"
         },
         "benzina_self": {
           "prezzo": 2.659,
           "isSelf": true,
-          "dt": "05/11/2026 07:50:05"
+          "dt": "06/11/2026 08:28:50"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "05/11/2026 07:50:05"
+          "dt": "06/11/2026 08:28:50"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "05/11/2026 07:50:05"
+          "dt": "06/11/2026 08:28:50"
         }
       },
       "prezzo": 2.799,

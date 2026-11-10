@@ -136,22 +136,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         }
       }
     },
@@ -541,6 +541,41 @@
       }
     },
     {
+      "id": "23219",
+      "gestore": "G.M.F. S.R.L.",
+      "brand": "Pompa Bianca",
+      "bandieraRaw": "Pompe Bianche",
+      "tipo": "Stradale",
+      "nome": "PETROL",
+      "indirizzo": "VIA PONTIGLIA N.159 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.53959,
+      "lng": 10.138176,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.599,
+          "isSelf": false,
+          "dt": "08/11/2026 10:45:14"
+        },
+        "benzina_self": {
+          "prezzo": 1.599,
+          "isSelf": true,
+          "dt": "08/11/2026 10:45:14"
+        },
+        "diesel_servito": {
+          "prezzo": 1.686,
+          "isSelf": false,
+          "dt": "08/11/2026 10:45:14"
+        },
+        "diesel_self": {
+          "prezzo": 1.686,
+          "isSelf": true,
+          "dt": "08/11/2026 10:45:14"
+        }
+      }
+    },
+    {
       "id": "22687",
       "gestore": "TRE.CAR. S.R.L.",
       "brand": "Q8",
@@ -682,41 +717,6 @@
           "prezzo": 1.704,
           "isSelf": true,
           "dt": "06/11/2026 08:47:46"
-        }
-      }
-    },
-    {
-      "id": "23219",
-      "gestore": "G.M.F. S.R.L.",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "PETROL",
-      "indirizzo": "VIA PONTIGLIA N.159 23041",
-      "comune": "LIVIGNO",
-      "provincia": "SO",
-      "lat": 46.53959,
-      "lng": 10.138176,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 1.619,
-          "isSelf": false,
-          "dt": "05/11/2026 08:09:47"
-        },
-        "benzina_self": {
-          "prezzo": 1.619,
-          "isSelf": true,
-          "dt": "05/11/2026 08:09:47"
-        },
-        "diesel_servito": {
-          "prezzo": 1.709,
-          "isSelf": false,
-          "dt": "05/11/2026 08:09:47"
-        },
-        "diesel_self": {
-          "prezzo": 1.709,
-          "isSelf": true,
-          "dt": "05/11/2026 08:09:47"
         }
       }
     },
@@ -923,7 +923,7 @@
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "05/11/2026 19:09:06"
+          "dt": "08/11/2026 18:17:10"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -953,7 +953,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "05/11/2026 02:06:46"
+          "dt": "08/11/2026 12:33:47"
         },
         "diesel_self": {
           "prezzo": 1.309,
@@ -1028,7 +1028,7 @@
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "05/11/2026 02:09:24"
+          "dt": "08/11/2026 12:36:32"
         },
         "diesel_self": {
           "prezzo": 1.399,
@@ -1800,22 +1800,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "05/11/2026 17:42:30"
+          "dt": "08/11/2026 20:45:23"
         }
       }
     },
@@ -2018,24 +2018,24 @@
       "lng": 10.138176,
       "prices": {
         "benzina_servito": {
-          "prezzo": 1.619,
+          "prezzo": 1.599,
           "isSelf": false,
-          "dt": "05/11/2026 08:09:47"
+          "dt": "08/11/2026 10:45:14"
         },
         "benzina_self": {
-          "prezzo": 1.619,
+          "prezzo": 1.599,
           "isSelf": true,
-          "dt": "05/11/2026 08:09:47"
+          "dt": "08/11/2026 10:45:14"
         },
         "diesel_servito": {
-          "prezzo": 1.709,
+          "prezzo": 1.686,
           "isSelf": false,
-          "dt": "05/11/2026 08:09:47"
+          "dt": "08/11/2026 10:45:14"
         },
         "diesel_self": {
-          "prezzo": 1.709,
+          "prezzo": 1.686,
           "isSelf": true,
-          "dt": "05/11/2026 08:09:47"
+          "dt": "08/11/2026 10:45:14"
         }
       }
     },

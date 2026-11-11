@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T22:21:09.450Z",
+  "updatedAt": "2026-11-11T15:07:50.089Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -80,22 +80,22 @@
         "benzina_servito": {
           "prezzo": 2.763,
           "isSelf": false,
-          "dt": "05/11/2026 10:24:18"
+          "dt": "09/11/2026 14:52:16"
         },
         "benzina_self": {
           "prezzo": 2.763,
           "isSelf": true,
-          "dt": "05/11/2026 10:45:18"
+          "dt": "09/11/2026 14:52:16"
         },
         "diesel_servito": {
           "prezzo": 2.613,
           "isSelf": false,
-          "dt": "05/11/2026 10:24:18"
+          "dt": "09/11/2026 14:52:16"
         },
         "diesel_self": {
           "prezzo": 2.613,
           "isSelf": true,
-          "dt": "05/11/2026 10:45:18"
+          "dt": "09/11/2026 14:52:16"
         }
       },
       "prezzo": 2.763,
@@ -250,17 +250,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "07/11/2026 08:34:05"
+          "dt": "09/11/2026 08:20:31"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "07/11/2026 08:34:05"
+          "dt": "09/11/2026 08:20:31"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "07/11/2026 08:34:05"
+          "dt": "09/11/2026 08:20:31"
         }
       },
       "prezzo": 2.699,
@@ -284,17 +284,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "07/11/2026 08:34:14"
+          "dt": "09/11/2026 08:20:50"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "07/11/2026 08:34:14"
+          "dt": "09/11/2026 08:20:50"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "07/11/2026 08:34:14"
+          "dt": "09/11/2026 08:20:50"
         }
       },
       "prezzo": 2.699,
@@ -318,17 +318,17 @@
         "benzina_servito": {
           "prezzo": 2.699,
           "isSelf": false,
-          "dt": "07/11/2026 08:34:38"
+          "dt": "09/11/2026 08:21:19"
         },
         "benzina_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "07/11/2026 08:34:38"
+          "dt": "09/11/2026 08:21:19"
         },
         "diesel_self": {
           "prezzo": 2.699,
           "isSelf": true,
-          "dt": "07/11/2026 08:34:38"
+          "dt": "09/11/2026 08:21:19"
         }
       },
       "prezzo": 2.699,
@@ -378,27 +378,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "08/11/2026 14:40:52"
+          "dt": "09/11/2026 18:51:28"
         },
         "benzina_self": {
           "prezzo": 2.099,
           "isSelf": true,
-          "dt": "08/11/2026 14:40:52"
+          "dt": "09/11/2026 18:51:28"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "08/11/2026 14:40:52"
+          "dt": "09/11/2026 18:51:28"
         },
         "diesel_self": {
           "prezzo": 2.349,
           "isSelf": true,
-          "dt": "08/11/2026 14:40:52"
+          "dt": "09/11/2026 18:51:28"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "08/11/2026 14:40:52"
+          "dt": "09/11/2026 18:51:28"
         }
       },
       "prezzo": 2.799,
@@ -422,7 +422,7 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "08/11/2026 06:05:10"
+          "dt": "10/11/2026 07:31:12"
         },
         "benzina_self": {
           "prezzo": 2.199,
@@ -432,7 +432,7 @@
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "08/11/2026 06:05:10"
+          "dt": "10/11/2026 07:31:12"
         },
         "diesel_self": {
           "prezzo": 2.399,
@@ -578,22 +578,22 @@
         "benzina_servito": {
           "prezzo": 2.659,
           "isSelf": false,
-          "dt": "06/11/2026 08:28:50"
+          "dt": "10/11/2026 07:58:49"
         },
         "benzina_self": {
           "prezzo": 2.659,
           "isSelf": true,
-          "dt": "06/11/2026 08:28:50"
+          "dt": "10/11/2026 07:58:49"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "06/11/2026 08:28:50"
+          "dt": "10/11/2026 07:58:49"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "06/11/2026 08:28:50"
+          "dt": "10/11/2026 07:58:49"
         }
       },
       "prezzo": 2.799,
@@ -641,50 +641,6 @@
       "fullTankCost": 139.95
     },
     {
-      "id": "46624",
-      "gestore": "GAMI S.R.L.",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "FULGOR OIL",
-      "indirizzo": "LOCALITA' LA CHIANA SS18 SNC 87021",
-      "comune": "BELVEDERE MARITTIMO",
-      "provincia": "CS",
-      "lat": 39.608102,
-      "lng": 15.86134,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.392,
-          "isSelf": false,
-          "dt": "02/11/2026 11:17:13"
-        },
-        "benzina_self": {
-          "prezzo": 2.057,
-          "isSelf": true,
-          "dt": "02/11/2026 11:17:13"
-        },
-        "diesel_servito": {
-          "prezzo": 2.795,
-          "isSelf": false,
-          "dt": "02/11/2026 11:17:13"
-        },
-        "diesel_self": {
-          "prezzo": 2.397,
-          "isSelf": true,
-          "dt": "02/11/2026 11:17:13"
-        },
-        "gpl": {
-          "prezzo": 0.912,
-          "isSelf": false,
-          "dt": "02/11/2026 11:17:13"
-        }
-      },
-      "prezzo": 2.795,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.75
-    },
-    {
       "id": "50579",
       "gestore": "COPPOLA OIL S.R.L.",
       "brand": "Pompa Bianca",
@@ -706,6 +662,45 @@
           "prezzo": 2.795,
           "isSelf": false,
           "dt": "07/11/2026 09:43:09"
+        }
+      },
+      "prezzo": 2.795,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.75
+    },
+    {
+      "id": "58516",
+      "gestore": "CIURA ALESSANDRO",
+      "brand": "Italiana Carburanti",
+      "bandieraRaw": "Italiana Carburanti",
+      "tipo": "Stradale",
+      "nome": "Italiana Carburanti - Allis BAR di Ciura Alessandro",
+      "indirizzo": "UNITA' D'ITALIA 123 74121",
+      "comune": "TARANTO",
+      "provincia": "TA",
+      "lat": 40.43797,
+      "lng": 17.258484,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.569,
+          "isSelf": false,
+          "dt": "30/10/2026 13:00:40"
+        },
+        "benzina_self": {
+          "prezzo": 2.199,
+          "isSelf": true,
+          "dt": "30/10/2026 13:00:40"
+        },
+        "diesel_servito": {
+          "prezzo": 2.795,
+          "isSelf": false,
+          "dt": "30/10/2026 13:00:40"
+        },
+        "diesel_self": {
+          "prezzo": 2.445,
+          "isSelf": true,
+          "dt": "30/10/2026 13:00:40"
         }
       },
       "prezzo": 2.795,

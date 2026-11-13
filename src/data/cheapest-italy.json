@@ -16,27 +16,27 @@
         "benzina_servito": {
           "prezzo": 1.505,
           "isSelf": false,
-          "dt": "09/11/2026 09:57:43"
+          "dt": "11/11/2026 18:16:41"
         },
         "benzina_self": {
           "prezzo": 1.505,
           "isSelf": true,
-          "dt": "09/11/2026 09:57:43"
+          "dt": "11/11/2026 18:16:41"
         },
         "diesel_servito": {
           "prezzo": 2.459,
           "isSelf": false,
-          "dt": "09/11/2026 09:57:43"
+          "dt": "11/11/2026 18:16:41"
         },
         "diesel_self": {
           "prezzo": 2.219,
           "isSelf": true,
-          "dt": "09/11/2026 09:57:43"
+          "dt": "11/11/2026 18:16:41"
         },
         "gpl": {
           "prezzo": 0.969,
           "isSelf": false,
-          "dt": "09/11/2026 09:57:43"
+          "dt": "11/11/2026 18:16:41"
         }
       }
     },
@@ -641,12 +641,12 @@
         "benzina_self": {
           "prezzo": 1.599,
           "isSelf": true,
-          "dt": "07/11/2026 22:00:45"
+          "dt": "11/11/2026 21:44:41"
         },
         "diesel_self": {
           "prezzo": 1.619,
           "isSelf": true,
-          "dt": "07/11/2026 22:00:45"
+          "dt": "11/11/2026 21:44:41"
         }
       }
     },
@@ -916,14 +916,14 @@
       "lng": 7.513705,
       "prices": {
         "benzina_servito": {
-          "prezzo": 1.999,
+          "prezzo": 1.989,
           "isSelf": false,
-          "dt": "09/11/2026 10:35:05"
+          "dt": "11/11/2026 14:33:17"
         },
         "benzina_self": {
-          "prezzo": 1.999,
+          "prezzo": 1.989,
           "isSelf": true,
-          "dt": "08/11/2026 18:17:10"
+          "dt": "11/11/2026 14:06:19"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -951,9 +951,9 @@
       "lng": 8.281929,
       "prices": {
         "benzina_self": {
-          "prezzo": 1.989,
+          "prezzo": 1.934,
           "isSelf": true,
-          "dt": "10/11/2026 12:07:17"
+          "dt": "12/11/2026 01:40:22"
         },
         "diesel_self": {
           "prezzo": 1.309,
@@ -976,14 +976,14 @@
       "lng": 10.175804,
       "prices": {
         "diesel_servito": {
-          "prezzo": 1.325,
+          "prezzo": 1.34,
           "isSelf": false,
-          "dt": "10/11/2026 08:14:21"
+          "dt": "10/11/2026 17:02:01"
         },
         "diesel_self": {
-          "prezzo": 1.325,
+          "prezzo": 1.34,
           "isSelf": true,
-          "dt": "10/11/2026 08:14:21"
+          "dt": "10/11/2026 17:02:01"
         }
       }
     },
@@ -1026,9 +1026,9 @@
       "lng": 11.921504,
       "prices": {
         "benzina_self": {
-          "prezzo": 1.989,
+          "prezzo": 1.934,
           "isSelf": true,
-          "dt": "10/11/2026 12:11:17"
+          "dt": "12/11/2026 01:43:07"
         },
         "diesel_self": {
           "prezzo": 1.399,
@@ -1568,12 +1568,12 @@
         "benzina_self": {
           "prezzo": 1.629,
           "isSelf": true,
-          "dt": "07/11/2026 21:54:14"
+          "dt": "11/11/2026 21:44:01"
         },
         "diesel_self": {
           "prezzo": 1.589,
           "isSelf": true,
-          "dt": "07/11/2026 21:54:14"
+          "dt": "11/11/2026 21:44:01"
         }
       }
     },
@@ -1623,27 +1623,27 @@
         "benzina_servito": {
           "prezzo": 1.779,
           "isSelf": false,
-          "dt": "07/11/2026 21:59:17"
+          "dt": "11/11/2026 21:40:47"
         },
         "benzina_self": {
           "prezzo": 1.629,
           "isSelf": true,
-          "dt": "07/11/2026 21:59:17"
+          "dt": "11/11/2026 21:40:47"
         },
         "diesel_servito": {
           "prezzo": 1.739,
           "isSelf": false,
-          "dt": "07/11/2026 21:59:17"
+          "dt": "11/11/2026 21:40:47"
         },
         "diesel_self": {
           "prezzo": 1.589,
           "isSelf": true,
-          "dt": "07/11/2026 21:59:17"
+          "dt": "11/11/2026 21:40:47"
         },
         "gpl": {
           "prezzo": 1,
           "isSelf": false,
-          "dt": "07/11/2026 21:59:17"
+          "dt": "11/11/2026 21:40:47"
         }
       }
     },

@@ -1,13 +1,13 @@
 {
-  "extractionDate": "2026-11-11",
-  "lastUpdated": "2026-11-12T22:42:52.940Z",
-  "totalStations": 23947,
-  "totalActiveWithPrices": 21626,
+  "extractionDate": "2026-11-12",
+  "lastUpdated": "2026-11-13T15:21:08.162Z",
+  "totalStations": 23951,
+  "totalActiveWithPrices": 21633,
   "averages": {
-    "benzina_self": 1.993,
-    "diesel_self": 2.224,
-    "gpl": 0.838,
-    "metano": 2.117
+    "benzina_self": 1.979,
+    "diesel_self": 2.217,
+    "gpl": 0.84,
+    "metano": 2.13
   },
   "min": {
     "benzina_self": 1.505,

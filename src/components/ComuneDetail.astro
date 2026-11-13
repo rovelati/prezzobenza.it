@@ -187,10 +187,9 @@ const mapStations = stations
 const natBenzinaAvg = (nationalStats as any).averages?.benzina_self || 1.82;
 const natDieselAvg = (nationalStats as any).averages?.diesel_self || 1.72;
 
-// SEO Titoli e Meta Description
-const canonicalPath = isDiesel
-  ? `/provincia/${comune.provSlug}/${comune.slug}/diesel/`
-  : `/provincia/${comune.provSlug}/${comune.slug}/`;
+// SEO Titoli e Meta Description (la sottopagina diesel fa canonical al comune principale per evitare cannibalizzazione e duplicazione)
+const canonicalPath = `/provincia/${comune.provSlug}/${comune.slug}/`;
+const robotsDirective = isDiesel ? 'noindex, follow' : 'index, follow';
 
 const pageTitle = isDiesel
   ? `Prezzo Gasolio e Diesel a ${comune.name} (${comune.provCode}) Oggi: Costi al Litro | PrezzoBenza.it`
@@ -313,6 +312,7 @@ const structuredData = {
   description={pageDescription}
   canonical={canonicalPath}
   structuredData={structuredData}
+  robots={robotsDirective}
 >
   <!-- Breadcrumbs -->
   <div class="border-b border-zinc-200 dark:border-zinc-900 bg-zinc-100/60 dark:bg-zinc-950/60 py-3 transition-colors">
@@ -673,6 +673,59 @@ const structuredData = {
         </div>
       </div>
     )}
+
+    <!-- Guida al Rifornimento e Analisi Mercato Locale (Anti-Thin Content) -->
+    <div class="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 p-6 sm:p-7 space-y-4 shadow-xs">
+      <div class="space-y-1">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+          Guida al Risparmio Carburante
+        </div>
+        <h2 class="text-xl sm:text-2xl font-black text-zinc-900 dark:text-white tracking-tight">
+          Come Risparmiare sul Carburante a {comune.name}
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
+          Consigli pratici, normative di trasparenza e analisi dei costi per fare il pieno spendendo meno a {comune.name} e nei territori limitrofi della {comune.provName}.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-950/40 border border-zinc-200/80 dark:border-zinc-800/80 space-y-2">
+          <h3 class="font-bold text-sm text-zinc-900 dark:text-white flex items-center gap-2">
+            <span>⛽ Self-Service vs Servito</span>
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            In Italia la differenza media tra la modalità <strong>Self</strong> e quella <strong>Servito</strong> si attesta tra i <strong>20 e i 35 centesimi al litro</strong>. A {comune.name}, optare sempre per il self-service garantisce un risparmio immediato di oltre 10-15€ su un serbatoio da 50 litri. Controlla sempre che la pistola erogatrice selezionata corrisponda alla tariffa self indicata sul totem.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-950/40 border border-zinc-200/80 dark:border-zinc-800/80 space-y-2">
+          <h3 class="font-bold text-sm text-zinc-900 dark:text-white flex items-center gap-2">
+            <span>🏷️ Pompe Bianche e Marchi No Logo</span>
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Le cosiddette <strong>Pompe Bianche</strong> (distributori indipendenti non affiliati a grandi marchi petroliferi come Eni, IP, Q8 o Tamoil) acquistano carburante sui mercati all'ingrosso alle medesime specifiche qualitative e normative europee (norma EN 228 per la benzina, EN 590 per il diesel), applicando margini commerciali inferiori a beneficio del consumatore.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-950/40 border border-zinc-200/80 dark:border-zinc-800/80 space-y-2">
+          <h3 class="font-bold text-sm text-zinc-900 dark:text-white flex items-center gap-2">
+            <span>📊 Obbligo Trasparenza Prezzi MIMIT</span>
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            In base al <strong>Decreto Legge 5/2023</strong> (Legge 23/2023), tutti i gestori attivi nel comune di {comune.name} hanno l'obbligo di comunicare tempestivamente i prezzi praticati all'Osservaprezzi del Ministero delle Imprese e del Made in Italy (MIMIT) e di esporre giornalmente il cartello con il prezzo medio regionale di riferimento.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-950/40 border border-zinc-200/80 dark:border-zinc-800/80 space-y-2">
+          <h3 class="font-bold text-sm text-zinc-900 dark:text-white flex items-center gap-2">
+            <span>🛣️ Occhio ai Rifornimenti in Autostrada</span>
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Le stazioni di servizio posizionate lungo la rete autostradale applicano storicamente sovrapprezzi fino a 15-25 centesimi al litro rispetto alla rete ordinaria provinciale di {comune.provName}. Se devi metterti in viaggio, pianifica il rifornimento presso le pompe cittadine di {comune.name} o nei comuni limitrofi prima di entrare in autostrada.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- FAQ Locali sul Comune -->
     <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-900/30 p-6 space-y-4">

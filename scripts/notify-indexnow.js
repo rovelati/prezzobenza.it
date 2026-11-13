@@ -12,7 +12,7 @@
 
 import provincesSummary from '../src/data/provinces-summary.json' with { type: 'json' };
 
-const HOST = 'prezzobenza.it';
+const HOST = 'www.prezzobenza.it';
 const SITE_URL = `https://${HOST}`;
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || 'c491fade6de847b39a3bfce7e3e018d9';
 const KEY_LOCATION = `${SITE_URL}/${INDEXNOW_KEY}.txt`;
@@ -24,14 +24,12 @@ const ENDPOINTS = [
 ];
 
 let comuniUrls = [];
-let comuniDieselUrls = [];
 try {
   const comuniIndex = (await import('../src/data/comuni-index.json', { with: { type: 'json' } })).default;
   comuniUrls = comuniIndex.map(c => `${SITE_URL}/provincia/${c.provSlug}/${c.slug}/`);
-  comuniDieselUrls = comuniIndex.map(c => `${SITE_URL}/provincia/${c.provSlug}/${c.slug}/diesel/`);
 } catch (e) {}
 
-// Tutte le pagine canoniche del sito
+// Tutte le pagine canoniche del sito (solo pagine principali uniche per evitare spreco di quota su duplicati)
 const allUrls = [
   `${SITE_URL}/`,
   `${SITE_URL}/pompe-bianche/`,
@@ -41,7 +39,6 @@ const allUrls = [
   ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/diesel/`),
   ...provincesSummary.map(p => `${SITE_URL}/provincia/${p.slug}/metano-gpl/`),
   ...comuniUrls,
-  ...comuniDieselUrls,
 ];
 
 // Parsing argomenti CLI o selezione automatica in base all'ora

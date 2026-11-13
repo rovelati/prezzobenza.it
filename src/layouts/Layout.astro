@@ -9,6 +9,7 @@ interface Props {
   ogType?: string;
   ogImage?: string;
   structuredData?: any;
+  robots?: string;
 }
 
 const {
@@ -18,10 +19,15 @@ const {
   ogType = 'website',
   ogImage = '/og-image.png',
   structuredData,
+  robots = 'index, follow',
 } = Astro.props;
 
 const siteUrl = 'https://www.prezzobenza.it';
-const fullCanonical = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
+let rawCanonical = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical.startsWith('/') ? canonical : `/${canonical}`}`;
+if (!rawCanonical.endsWith('/') && !rawCanonical.split('/').pop()?.includes('.')) {
+  rawCanonical = `${rawCanonical}/`;
+}
+const fullCanonical = rawCanonical;
 const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.startsWith('/') ? ogImage : `/${ogImage}`}`;
 ---
 
@@ -32,6 +38,7 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
     <link rel="canonical" href={fullCanonical} />
     <meta name="google-adsense-account" content="ca-pub-2168172914069272" />
 

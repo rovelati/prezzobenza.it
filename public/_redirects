@@ -1,4 +1,5 @@
-/about /chi-siamo 301
-/about/ /chi-siamo 301
-/contact /contatti 301
-/contact/ /contatti 301
+/about /chi-siamo/ 301
+/about/ /chi-siamo/ 301
+/contact /contatti/ 301
+/contact/ /contatti/ 301
+/sitemap.xml /sitemap-index.xml 301

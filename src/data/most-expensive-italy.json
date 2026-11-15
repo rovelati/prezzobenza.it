@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T21:25:58.090Z",
+  "updatedAt": "2026-11-15T14:44:07.993Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -80,22 +80,22 @@
         "benzina_servito": {
           "prezzo": 2.774,
           "isSelf": false,
-          "dt": "13/11/2026 07:34:13"
+          "dt": "14/11/2026 07:37:39"
         },
         "benzina_self": {
           "prezzo": 1.956,
           "isSelf": true,
-          "dt": "13/11/2026 07:34:13"
+          "dt": "14/11/2026 07:37:39"
         },
         "diesel_self": {
           "prezzo": 2.206,
           "isSelf": true,
-          "dt": "13/11/2026 07:34:13"
+          "dt": "14/11/2026 07:37:39"
         },
         "gpl": {
           "prezzo": 0.826,
           "isSelf": false,
-          "dt": "13/11/2026 07:34:13"
+          "dt": "14/11/2026 07:37:39"
         }
       },
       "prezzo": 2.774,
@@ -119,28 +119,62 @@
         "benzina_servito": {
           "prezzo": 2.763,
           "isSelf": false,
-          "dt": "10/11/2026 16:42:30"
+          "dt": "13/11/2026 15:06:28"
         },
         "benzina_self": {
           "prezzo": 2.763,
           "isSelf": true,
-          "dt": "10/11/2026 16:42:30"
+          "dt": "13/11/2026 15:06:28"
         },
         "diesel_servito": {
           "prezzo": 2.613,
           "isSelf": false,
-          "dt": "10/11/2026 16:42:30"
+          "dt": "13/11/2026 15:06:28"
         },
         "diesel_self": {
           "prezzo": 2.613,
           "isSelf": true,
-          "dt": "10/11/2026 16:42:30"
+          "dt": "13/11/2026 15:06:28"
         }
       },
       "prezzo": 2.763,
       "service": "servito",
       "fuel": "Benzina",
       "fullTankCost": 138.15
+    },
+    {
+      "id": "37545",
+      "gestore": "GONELLA & SOMA' S.R.L.",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "IP FOSSANO - SAN LORENZO",
+      "indirizzo": "SP 165 FOSSANO - MARENE  12045",
+      "comune": "FOSSANO",
+      "provincia": "CN",
+      "lat": 44.599735,
+      "lng": 7.733961,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.76,
+          "isSelf": false,
+          "dt": "13/11/2026 16:21:35"
+        },
+        "benzina_self": {
+          "prezzo": 1.999,
+          "isSelf": true,
+          "dt": "13/11/2026 16:21:35"
+        },
+        "diesel_self": {
+          "prezzo": 2.229,
+          "isSelf": true,
+          "dt": "13/11/2026 16:21:35"
+        }
+      },
+      "prezzo": 2.76,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 138
     },
     {
       "id": "21783",
@@ -236,17 +270,17 @@
         "benzina_servito": {
           "prezzo": 2.76,
           "isSelf": false,
-          "dt": "12/11/2026 09:53:37"
+          "dt": "13/11/2026 08:51:12"
         },
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "12/11/2026 09:53:37"
+          "dt": "13/11/2026 08:51:12"
         },
         "diesel_self": {
           "prezzo": 2.229,
           "isSelf": true,
-          "dt": "12/11/2026 09:53:37"
+          "dt": "13/11/2026 08:51:12"
         }
       },
       "prezzo": 2.76,
@@ -311,45 +345,6 @@
       "service": "servito",
       "fuel": "Benzina",
       "fullTankCost": 137.5
-    },
-    {
-      "id": "16240",
-      "gestore": "DE BIASE MARCO",
-      "brand": "Esso",
-      "bandieraRaw": "Esso",
-      "tipo": "Stradale",
-      "nome": "ESSO",
-      "indirizzo": "MONTAGNA SPACCATA 491 80126",
-      "comune": "NAPOLI",
-      "provincia": "NA",
-      "lat": 40.855179,
-      "lng": 14.151977,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.749,
-          "isSelf": false,
-          "dt": "12/11/2026 11:52:57"
-        },
-        "benzina_self": {
-          "prezzo": 1.979,
-          "isSelf": true,
-          "dt": "12/11/2026 11:52:57"
-        },
-        "diesel_servito": {
-          "prezzo": 2.749,
-          "isSelf": false,
-          "dt": "12/11/2026 11:52:57"
-        },
-        "diesel_self": {
-          "prezzo": 2.199,
-          "isSelf": true,
-          "dt": "12/11/2026 11:52:57"
-        }
-      },
-      "prezzo": 2.749,
-      "service": "servito",
-      "fuel": "Benzina",
-      "fullTankCost": 137.45
     }
   ],
   "topExpensiveDiesel": [
@@ -393,27 +388,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "12/11/2026 18:46:17"
+          "dt": "13/11/2026 20:13:37"
         },
         "benzina_self": {
           "prezzo": 2.019,
           "isSelf": true,
-          "dt": "12/11/2026 18:46:17"
+          "dt": "13/11/2026 20:13:37"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "12/11/2026 18:46:17"
+          "dt": "13/11/2026 20:13:37"
         },
         "diesel_self": {
           "prezzo": 2.309,
           "isSelf": true,
-          "dt": "12/11/2026 18:46:17"
+          "dt": "13/11/2026 20:13:37"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "12/11/2026 18:46:17"
+          "dt": "13/11/2026 20:13:37"
         }
       },
       "prezzo": 2.799,
@@ -442,7 +437,7 @@
         "benzina_self": {
           "prezzo": 2.199,
           "isSelf": true,
-          "dt": "11/11/2026 06:07:32"
+          "dt": "13/11/2026 08:03:04"
         },
         "diesel_servito": {
           "prezzo": 2.799,
@@ -452,7 +447,7 @@
         "diesel_self": {
           "prezzo": 2.399,
           "isSelf": true,
-          "dt": "11/11/2026 15:25:16"
+          "dt": "13/11/2026 22:53:02"
         }
       },
       "prezzo": 2.799,
@@ -593,22 +588,22 @@
         "benzina_servito": {
           "prezzo": 2.659,
           "isSelf": false,
-          "dt": "12/11/2026 08:49:38"
+          "dt": "13/11/2026 08:43:56"
         },
         "benzina_self": {
           "prezzo": 2.659,
           "isSelf": true,
-          "dt": "12/11/2026 08:49:38"
+          "dt": "13/11/2026 08:43:56"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "12/11/2026 08:49:38"
+          "dt": "13/11/2026 08:43:56"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "12/11/2026 08:49:38"
+          "dt": "13/11/2026 08:43:56"
         }
       },
       "prezzo": 2.799,

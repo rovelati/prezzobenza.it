@@ -16,27 +16,62 @@
         "benzina_servito": {
           "prezzo": 1.505,
           "isSelf": false,
-          "dt": "13/11/2026 07:15:05"
+          "dt": "13/11/2026 15:55:14"
         },
         "benzina_self": {
           "prezzo": 1.505,
           "isSelf": true,
-          "dt": "13/11/2026 07:15:05"
+          "dt": "13/11/2026 15:55:14"
         },
         "diesel_servito": {
-          "prezzo": 2.439,
+          "prezzo": 2.429,
           "isSelf": false,
-          "dt": "13/11/2026 07:15:05"
+          "dt": "13/11/2026 15:55:14"
         },
         "diesel_self": {
-          "prezzo": 2.199,
+          "prezzo": 2.189,
           "isSelf": true,
-          "dt": "13/11/2026 07:15:05"
+          "dt": "13/11/2026 15:55:14"
         },
         "gpl": {
           "prezzo": 0.969,
           "isSelf": false,
-          "dt": "13/11/2026 07:15:05"
+          "dt": "13/11/2026 15:55:14"
+        }
+      }
+    },
+    {
+      "id": "51363",
+      "gestore": "GLOBAL SERVICE S.R.L. O PIU' BREVEMENTE GLOBAL S.R.L.",
+      "brand": "Q8",
+      "bandieraRaw": "Q8",
+      "tipo": "Stradale",
+      "nome": "Global Srl",
+      "indirizzo": "VIA RASIA 1077 23041",
+      "comune": "LIVIGNO",
+      "provincia": "SO",
+      "lat": 46.556566,
+      "lng": 10.143739,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 1.568,
+          "isSelf": false,
+          "dt": "13/11/2026 12:37:43"
+        },
+        "benzina_self": {
+          "prezzo": 1.553,
+          "isSelf": true,
+          "dt": "13/11/2026 12:37:43"
+        },
+        "diesel_servito": {
+          "prezzo": 1.683,
+          "isSelf": false,
+          "dt": "13/11/2026 12:37:43"
+        },
+        "diesel_self": {
+          "prezzo": 1.668,
+          "isSelf": true,
+          "dt": "13/11/2026 12:37:43"
         }
       }
     },
@@ -136,22 +171,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         }
       }
     },
@@ -177,41 +212,6 @@
           "prezzo": 1.645,
           "isSelf": true,
           "dt": "02/10/2026 21:57:44"
-        }
-      }
-    },
-    {
-      "id": "51363",
-      "gestore": "GLOBAL SERVICE S.R.L. O PIU' BREVEMENTE GLOBAL S.R.L.",
-      "brand": "Q8",
-      "bandieraRaw": "Q8",
-      "tipo": "Stradale",
-      "nome": "Global Srl",
-      "indirizzo": "VIA RASIA 1077 23041",
-      "comune": "LIVIGNO",
-      "provincia": "SO",
-      "lat": 46.556566,
-      "lng": 10.143739,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 1.593,
-          "isSelf": false,
-          "dt": "06/11/2026 13:54:34"
-        },
-        "benzina_self": {
-          "prezzo": 1.578,
-          "isSelf": true,
-          "dt": "06/11/2026 13:54:34"
-        },
-        "diesel_servito": {
-          "prezzo": 1.698,
-          "isSelf": false,
-          "dt": "06/11/2026 13:54:34"
-        },
-        "diesel_self": {
-          "prezzo": 1.683,
-          "isSelf": true,
-          "dt": "06/11/2026 13:54:34"
         }
       }
     },
@@ -446,22 +446,22 @@
         "benzina_servito": {
           "prezzo": 1.593,
           "isSelf": false,
-          "dt": "06/11/2026 14:10:59"
+          "dt": "13/11/2026 16:23:10"
         },
         "benzina_self": {
           "prezzo": 1.593,
           "isSelf": true,
-          "dt": "06/11/2026 14:10:59"
+          "dt": "13/11/2026 16:23:10"
         },
         "diesel_servito": {
           "prezzo": 1.688,
           "isSelf": false,
-          "dt": "06/11/2026 14:10:59"
+          "dt": "13/11/2026 16:23:10"
         },
         "diesel_self": {
           "prezzo": 1.688,
           "isSelf": true,
-          "dt": "06/11/2026 14:10:59"
+          "dt": "13/11/2026 16:23:10"
         }
       }
     },
@@ -481,22 +481,22 @@
         "benzina_servito": {
           "prezzo": 1.593,
           "isSelf": false,
-          "dt": "06/11/2026 14:09:39"
+          "dt": "13/11/2026 16:23:00"
         },
         "benzina_self": {
           "prezzo": 1.593,
           "isSelf": true,
-          "dt": "06/11/2026 14:09:39"
+          "dt": "13/11/2026 16:23:00"
         },
         "diesel_servito": {
           "prezzo": 1.688,
           "isSelf": false,
-          "dt": "06/11/2026 14:09:40"
+          "dt": "13/11/2026 16:23:00"
         },
         "diesel_self": {
           "prezzo": 1.688,
           "isSelf": true,
-          "dt": "06/11/2026 14:09:40"
+          "dt": "13/11/2026 16:23:00"
         }
       }
     },
@@ -666,22 +666,22 @@
         "benzina_servito": {
           "prezzo": 1.599,
           "isSelf": false,
-          "dt": "07/11/2026 09:08:30"
+          "dt": "14/11/2026 07:13:48"
         },
         "benzina_self": {
           "prezzo": 1.599,
           "isSelf": true,
-          "dt": "07/11/2026 09:08:30"
+          "dt": "14/11/2026 07:13:48"
         },
         "diesel_servito": {
           "prezzo": 1.699,
           "isSelf": false,
-          "dt": "07/11/2026 09:08:30"
+          "dt": "14/11/2026 07:13:48"
         },
         "diesel_self": {
           "prezzo": 1.699,
           "isSelf": true,
-          "dt": "07/11/2026 09:08:30"
+          "dt": "14/11/2026 07:13:48"
         }
       }
     },
@@ -701,22 +701,22 @@
         "benzina_servito": {
           "prezzo": 1.599,
           "isSelf": false,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         },
         "benzina_self": {
           "prezzo": 1.599,
           "isSelf": true,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         },
         "diesel_servito": {
           "prezzo": 1.686,
           "isSelf": false,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         },
         "diesel_self": {
           "prezzo": 1.686,
           "isSelf": true,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         }
       }
     },
@@ -918,12 +918,12 @@
         "benzina_servito": {
           "prezzo": 1.989,
           "isSelf": false,
-          "dt": "11/11/2026 14:33:17"
+          "dt": "13/11/2026 14:39:04"
         },
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "11/11/2026 14:06:19"
+          "dt": "13/11/2026 19:07:10"
         },
         "diesel_servito": {
           "prezzo": 1.305,
@@ -1800,22 +1800,22 @@
         "benzina_servito": {
           "prezzo": 1.569,
           "isSelf": false,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         },
         "benzina_self": {
           "prezzo": 1.569,
           "isSelf": true,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         },
         "diesel_servito": {
           "prezzo": 2.058,
           "isSelf": false,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         },
         "diesel_self": {
           "prezzo": 2.058,
           "isSelf": true,
-          "dt": "11/11/2026 06:31:35"
+          "dt": "13/11/2026 18:27:17"
         }
       }
     },
@@ -2020,22 +2020,22 @@
         "benzina_servito": {
           "prezzo": 1.599,
           "isSelf": false,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         },
         "benzina_self": {
           "prezzo": 1.599,
           "isSelf": true,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         },
         "diesel_servito": {
           "prezzo": 1.686,
           "isSelf": false,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         },
         "diesel_self": {
           "prezzo": 1.686,
           "isSelf": true,
-          "dt": "08/11/2026 10:45:14"
+          "dt": "13/11/2026 08:47:56"
         }
       }
     },

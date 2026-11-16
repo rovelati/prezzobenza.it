@@ -1038,6 +1038,41 @@
       }
     },
     {
+      "id": "54519",
+      "gestore": "M2 ENERGY DI ARTURO ALFERINO & C. S.A.S.",
+      "brand": "Eni",
+      "bandieraRaw": "Agip Eni",
+      "tipo": "Stradale",
+      "nome": "Stazione di servizio ENI N°9285",
+      "indirizzo": "S.S. 16 KM.698+492 SNC 71045",
+      "comune": "ORTA NOVA",
+      "provincia": "FG",
+      "lat": 41.331193,
+      "lng": 15.764008,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.15,
+          "isSelf": false,
+          "dt": "14/11/2026 20:04:06"
+        },
+        "benzina_self": {
+          "prezzo": 1.94,
+          "isSelf": true,
+          "dt": "14/11/2026 20:04:06"
+        },
+        "diesel_servito": {
+          "prezzo": 2.41,
+          "isSelf": false,
+          "dt": "13/11/2026 21:42:39"
+        },
+        "diesel_self": {
+          "prezzo": 1.5,
+          "isSelf": true,
+          "dt": "14/11/2026 21:44:37"
+        }
+      }
+    },
+    {
       "id": "60909",
       "gestore": "SPAZIO S.R.L.",
       "brand": "Pompa Bianca",
@@ -1674,31 +1709,6 @@
           "prezzo": 0.554,
           "isSelf": false,
           "dt": "02/10/2026 21:58:27"
-        }
-      }
-    },
-    {
-      "id": "60090",
-      "gestore": "SPAZIO S.R.L.",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "LUZZARA",
-      "indirizzo": "Via G. Carboni 42  42045",
-      "comune": "LUZZARA",
-      "provincia": "RE",
-      "lat": 44.95925,
-      "lng": 10.68953,
-      "prices": {
-        "benzina_self": {
-          "prezzo": 1.595,
-          "isSelf": true,
-          "dt": "04/10/2026 21:40:40"
-        },
-        "diesel_self": {
-          "prezzo": 1.594,
-          "isSelf": true,
-          "dt": "04/10/2026 21:40:40"
         }
       }
     }

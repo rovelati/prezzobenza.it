@@ -55,8 +55,8 @@
         "name": "Palma di Montechiaro",
         "slug": "palma-di-montechiaro",
         "stationsCount": 4,
-        "minBenzina": 1.939,
-        "minDiesel": 2.199
+        "minBenzina": 1.93,
+        "minDiesel": 2.19
       },
       {
         "name": "Porto Empedocle",
@@ -70,7 +70,7 @@
         "slug": "raffadali",
         "stationsCount": 4,
         "minBenzina": 1.979,
-        "minDiesel": 2.209
+        "minDiesel": 2.199
       },
       {
         "name": "Lampedusa e Linosa",
@@ -83,8 +83,8 @@
         "name": "Menfi",
         "slug": "menfi",
         "stationsCount": 3,
-        "minBenzina": 1.94,
-        "minDiesel": 2.199
+        "minBenzina": 1.939,
+        "minDiesel": 2.189
       },
       {
         "name": "Naro",
@@ -111,7 +111,7 @@
         "name": "Caltabellotta",
         "slug": "caltabellotta",
         "stationsCount": 2,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.2
       },
       {
@@ -276,8 +276,8 @@
         "minDiesel": 2.299
       }
     ],
-    "avgBenzina": 1.992,
-    "avgDiesel": 2.233,
+    "avgBenzina": 1.99,
+    "avgDiesel": 2.231,
     "minBenzina": 1.879,
     "minDiesel": 2.169,
     "cheapestBenzina": {
@@ -931,7 +931,7 @@
         "slug": "sirolo",
         "stationsCount": 2,
         "minBenzina": 1.9,
-        "minDiesel": 2.239
+        "minDiesel": 2.229
       },
       {
         "name": "Agugliano",
@@ -979,7 +979,7 @@
         "name": "Maiolati Spontini",
         "slug": "maiolati-spontini",
         "stationsCount": 1,
-        "minBenzina": 1.995,
+        "minBenzina": 1.965,
         "minDiesel": 2.205
       },
       {
@@ -1046,7 +1046,7 @@
         "minDiesel": 2.299
       }
     ],
-    "avgBenzina": 1.959,
+    "avgBenzina": 1.957,
     "avgDiesel": 2.201,
     "minBenzina": 1.714,
     "minDiesel": 1.686,
@@ -1315,11 +1315,11 @@
         "name": "Villeneuve",
         "slug": "villeneuve",
         "stationsCount": 1,
-        "minBenzina": 1.989,
-        "minDiesel": 2.209
+        "minBenzina": 1.939,
+        "minDiesel": 2.189
       }
     ],
-    "avgBenzina": 1.969,
+    "avgBenzina": 1.967,
     "avgDiesel": 2.214,
     "minBenzina": 1.93,
     "minDiesel": 1.922,
@@ -1357,8 +1357,8 @@
         "name": "Cortona",
         "slug": "cortona",
         "stationsCount": 12,
-        "minBenzina": 1.929,
-        "minDiesel": 2.189
+        "minBenzina": 1.839,
+        "minDiesel": 2.19
       },
       {
         "name": "Montevarchi",
@@ -1585,15 +1585,15 @@
         "minDiesel": 2.279
       }
     ],
-    "avgBenzina": 1.957,
+    "avgBenzina": 1.956,
     "avgDiesel": 2.204,
-    "minBenzina": 1.899,
+    "minBenzina": 1.839,
     "minDiesel": 2.169,
     "cheapestBenzina": {
-      "nome": "AREZZO P.PERO",
-      "brand": "Tamoil",
-      "comune": "AREZZO",
-      "prezzo": 1.899
+      "nome": "Arezzo - Camucia",
+      "brand": "Beyfin",
+      "comune": "CORTONA",
+      "prezzo": 1.839
     },
     "cheapestDiesel": {
       "nome": "AREZZO P.PERO",
@@ -1686,8 +1686,8 @@
         "name": "Montefiore dell'Aso",
         "slug": "montefiore-dell-aso",
         "stationsCount": 2,
-        "minBenzina": 1.999,
-        "minDiesel": 2.259
+        "minBenzina": 1.979,
+        "minDiesel": 2.229
       },
       {
         "name": "Offida",
@@ -1795,7 +1795,7 @@
         "minDiesel": 2.279
       }
     ],
-    "avgBenzina": 1.961,
+    "avgBenzina": 1.96,
     "avgDiesel": 2.213,
     "minBenzina": 1.744,
     "minDiesel": 2.115,
@@ -1826,7 +1826,7 @@
         "name": "Asti",
         "slug": "asti",
         "stationsCount": 41,
-        "minBenzina": 1.889,
+        "minBenzina": 1.919,
         "minDiesel": 1.789
       },
       {
@@ -1910,8 +1910,8 @@
         "name": "Ferrere",
         "slug": "ferrere",
         "stationsCount": 2,
-        "minBenzina": 1.969,
-        "minDiesel": 2.259
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Isola d'Asti",
@@ -2197,7 +2197,7 @@
         "name": "Serino",
         "slug": "serino",
         "stationsCount": 5,
-        "minBenzina": 1.999,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -2435,8 +2435,8 @@
         "name": "Castelvetere sul Calore",
         "slug": "castelvetere-sul-calore",
         "stationsCount": 1,
-        "minBenzina": 1.999,
-        "minDiesel": 2.259
+        "minBenzina": 1.979,
+        "minDiesel": 2.179
       },
       {
         "name": "Chiusano di San Domenico",
@@ -2555,7 +2555,7 @@
         "slug": "moschiano",
         "stationsCount": 1,
         "minBenzina": 1.989,
-        "minDiesel": 2.289
+        "minDiesel": 2.189
       },
       {
         "name": "Ospedaletto d'Alpinolo",
@@ -2747,8 +2747,8 @@
         "minDiesel": 2.329
       }
     ],
-    "avgBenzina": 1.987,
-    "avgDiesel": 2.22,
+    "avgBenzina": 1.986,
+    "avgDiesel": 2.218,
     "minBenzina": 1.654,
     "minDiesel": 1.595,
     "cheapestBenzina": {
@@ -3063,7 +3063,7 @@
       }
     ],
     "avgBenzina": 1.959,
-    "avgDiesel": 2.204,
+    "avgDiesel": 2.203,
     "minBenzina": 1.769,
     "minDiesel": 1.679,
     "cheapestBenzina": {
@@ -3255,7 +3255,7 @@
         "slug": "quero-vas",
         "stationsCount": 3,
         "minBenzina": 1.94,
-        "minDiesel": 2.199
+        "minDiesel": 2.159
       },
       {
         "name": "Santa Giustina",
@@ -3282,7 +3282,7 @@
         "name": "Domegge di Cadore",
         "slug": "domegge-di-cadore",
         "stationsCount": 2,
-        "minBenzina": 1.989,
+        "minBenzina": 1.979,
         "minDiesel": 2.199
       },
       {
@@ -3311,7 +3311,7 @@
         "slug": "alleghe",
         "stationsCount": 1,
         "minBenzina": 1.999,
-        "minDiesel": 2.219
+        "minDiesel": 2.19
       },
       {
         "name": "Alpago",
@@ -3468,8 +3468,8 @@
         "minDiesel": 2.2
       }
     ],
-    "avgBenzina": 1.965,
-    "avgDiesel": 2.203,
+    "avgBenzina": 1.964,
+    "avgDiesel": 2.202,
     "minBenzina": 1.908,
     "minDiesel": 1.865,
     "cheapestBenzina": {
@@ -3597,8 +3597,8 @@
         "name": "Campoli del Monte Taburno",
         "slug": "campoli-del-monte-taburno",
         "stationsCount": 2,
-        "minBenzina": 2.095,
-        "minDiesel": 2.403
+        "minBenzina": 1.999,
+        "minDiesel": 2.279
       },
       {
         "name": "Castelvenere",
@@ -3674,8 +3674,8 @@
         "name": "San Nicola Manfredi",
         "slug": "san-nicola-manfredi",
         "stationsCount": 2,
-        "minBenzina": 1.989,
-        "minDiesel": 2.299
+        "minBenzina": 1.939,
+        "minDiesel": 2.259
       },
       {
         "name": "Solopaca",
@@ -3937,8 +3937,8 @@
         "minDiesel": 2.189
       }
     ],
-    "avgBenzina": 1.991,
-    "avgDiesel": 2.237,
+    "avgBenzina": 1.99,
+    "avgDiesel": 2.236,
     "minBenzina": 1.919,
     "minDiesel": 2.066,
     "cheapestBenzina": {
@@ -3959,9 +3959,9 @@
     "name": "Bergamo",
     "region": "Lombardia",
     "slug": "bergamo",
-    "lat": 45.686,
-    "lng": 9.7161,
-    "stationsCount": 325,
+    "lat": 45.6861,
+    "lng": 9.7164,
+    "stationsCount": 324,
     "comuniCount": 143,
     "comuni": [
       {
@@ -4010,7 +4010,7 @@
         "name": "Calcinate",
         "slug": "calcinate",
         "stationsCount": 6,
-        "minBenzina": 1.939,
+        "minBenzina": 1.929,
         "minDiesel": 2.179
       },
       {
@@ -4122,8 +4122,8 @@
         "name": "Castelli Calepio",
         "slug": "castelli-calepio",
         "stationsCount": 3,
-        "minBenzina": 1.959,
-        "minDiesel": 2.209
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Cisano Bergamasco",
@@ -4152,13 +4152,6 @@
         "stationsCount": 3,
         "minBenzina": 1.945,
         "minDiesel": 2.19
-      },
-      {
-        "name": "Osio Sopra",
-        "slug": "osio-sopra",
-        "stationsCount": 3,
-        "minBenzina": 1.939,
-        "minDiesel": 2.199
       },
       {
         "name": "San Giovanni Bianco",
@@ -4308,6 +4301,13 @@
         "minDiesel": 2.175
       },
       {
+        "name": "Osio Sopra",
+        "slug": "osio-sopra",
+        "stationsCount": 2,
+        "minBenzina": 1.945,
+        "minDiesel": 2.205
+      },
+      {
         "name": "Pontirolo Nuovo",
         "slug": "pontirolo-nuovo",
         "stationsCount": 2,
@@ -4361,7 +4361,7 @@
         "slug": "stezzano",
         "stationsCount": 2,
         "minBenzina": 1.945,
-        "minDiesel": 2.169
+        "minDiesel": 2.179
       },
       {
         "name": "Telgate",
@@ -4843,8 +4843,8 @@
         "name": "Scanzorosciate",
         "slug": "scanzorosciate",
         "stationsCount": 1,
-        "minBenzina": 1.994,
-        "minDiesel": 2.209
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Sedrina",
@@ -4966,8 +4966,8 @@
         "minDiesel": 2.219
       }
     ],
-    "avgBenzina": 1.947,
-    "avgDiesel": 2.203,
+    "avgBenzina": 1.946,
+    "avgDiesel": 2.202,
     "minBenzina": 1.658,
     "minDiesel": 1.578,
     "cheapestBenzina": {
@@ -5046,8 +5046,8 @@
         "name": "Cavaglià",
         "slug": "cavaglia",
         "stationsCount": 2,
-        "minBenzina": 1.999,
-        "minDiesel": 2.209
+        "minBenzina": 1.979,
+        "minDiesel": 2.199
       },
       {
         "name": "Cerrione",
@@ -5529,8 +5529,8 @@
         "name": "Castel del Rio",
         "slug": "castel-del-rio",
         "stationsCount": 1,
-        "minBenzina": 2.299,
-        "minDiesel": 2.399
+        "minBenzina": 1.997,
+        "minDiesel": 2.298
       },
       {
         "name": "Castel di Casio",
@@ -5543,8 +5543,8 @@
         "name": "Fontanelice",
         "slug": "fontanelice",
         "stationsCount": 1,
-        "minBenzina": 1.975,
-        "minDiesel": 2.32
+        "minBenzina": 1.905,
+        "minDiesel": 2.194
       },
       {
         "name": "Lizzano in Belvedere",
@@ -5557,8 +5557,8 @@
         "name": "Loiano",
         "slug": "loiano",
         "stationsCount": 1,
-        "minBenzina": 1.999,
-        "minDiesel": 2.329
+        "minBenzina": 1.979,
+        "minDiesel": 2.299
       },
       {
         "name": "Marzabotto",
@@ -5589,8 +5589,8 @@
         "minDiesel": 2.178
       }
     ],
-    "avgBenzina": 1.953,
-    "avgDiesel": 2.21,
+    "avgBenzina": 1.952,
+    "avgDiesel": 2.209,
     "minBenzina": 1.786,
     "minDiesel": 1.785,
     "cheapestBenzina": {
@@ -5641,7 +5641,7 @@
         "name": "Bressanone",
         "slug": "bressanone",
         "stationsCount": 5,
-        "minBenzina": 1.949,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -5690,7 +5690,7 @@
         "name": "Egna",
         "slug": "egna",
         "stationsCount": 3,
-        "minBenzina": 1.945,
+        "minBenzina": 1.939,
         "minDiesel": 2.189
       },
       {
@@ -5774,8 +5774,8 @@
         "name": "Laives",
         "slug": "laives",
         "stationsCount": 2,
-        "minBenzina": 1.939,
-        "minDiesel": 2.179
+        "minBenzina": 1.929,
+        "minDiesel": 1.979
       },
       {
         "name": "Lasa",
@@ -6089,7 +6089,7 @@
         "name": "Termeno sulla Strada del Vino",
         "slug": "termeno-sulla-strada-del-vino",
         "stationsCount": 1,
-        "minBenzina": 1.959,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -6117,7 +6117,7 @@
         "name": "Trodena Nel Parco Naturale",
         "slug": "trodena-nel-parco-naturale",
         "stationsCount": 1,
-        "minBenzina": 1.979,
+        "minBenzina": 1.939,
         "minDiesel": 2.189
       },
       {
@@ -6163,8 +6163,8 @@
         "minDiesel": 2.187
       }
     ],
-    "avgBenzina": 1.971,
-    "avgDiesel": 2.214,
+    "avgBenzina": 1.969,
+    "avgDiesel": 2.212,
     "minBenzina": 1.899,
     "minDiesel": 1.714,
     "cheapestBenzina": {
@@ -6286,7 +6286,7 @@
         "slug": "erbusco",
         "stationsCount": 6,
         "minBenzina": 1.939,
-        "minDiesel": 2.18
+        "minDiesel": 2.179
       },
       {
         "name": "Leno",
@@ -6299,8 +6299,8 @@
         "name": "Manerba del Garda",
         "slug": "manerba-del-garda",
         "stationsCount": 6,
-        "minBenzina": 1.99,
-        "minDiesel": 2.23
+        "minBenzina": 1.94,
+        "minDiesel": 2.2
       },
       {
         "name": "Roncadelle",
@@ -6467,8 +6467,8 @@
         "name": "Castrezzato",
         "slug": "castrezzato",
         "stationsCount": 3,
-        "minBenzina": 1.959,
-        "minDiesel": 2.2
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Cellatica",
@@ -6481,7 +6481,7 @@
         "name": "Cologne",
         "slug": "cologne",
         "stationsCount": 3,
-        "minBenzina": 1.939,
+        "minBenzina": 1.929,
         "minDiesel": 2.189
       },
       {
@@ -6579,7 +6579,7 @@
         "name": "Borgosatollo",
         "slug": "borgosatollo",
         "stationsCount": 2,
-        "minBenzina": 1.985,
+        "minBenzina": 1.939,
         "minDiesel": 2.195
       },
       {
@@ -6692,7 +6692,7 @@
         "slug": "isorella",
         "stationsCount": 2,
         "minBenzina": 1.949,
-        "minDiesel": 2.209
+        "minDiesel": 2.199
       },
       {
         "name": "Lograto",
@@ -6775,8 +6775,8 @@
         "name": "Pontevico",
         "slug": "pontevico",
         "stationsCount": 2,
-        "minBenzina": 1.94,
-        "minDiesel": 2.18
+        "minBenzina": 1.929,
+        "minDiesel": 2.179
       },
       {
         "name": "Pralboino",
@@ -6824,7 +6824,7 @@
         "name": "Torbole Casaglia",
         "slug": "torbole-casaglia",
         "stationsCount": 2,
-        "minBenzina": 1.949,
+        "minBenzina": 1.945,
         "minDiesel": 2.199
       },
       {
@@ -6999,7 +6999,7 @@
         "name": "Comezzano-cizzago",
         "slug": "comezzano-cizzago",
         "stationsCount": 1,
-        "minBenzina": 1.949,
+        "minBenzina": 1.939,
         "minDiesel": 2.189
       },
       {
@@ -7041,8 +7041,8 @@
         "name": "Maclodio",
         "slug": "maclodio",
         "stationsCount": 1,
-        "minBenzina": 1.959,
-        "minDiesel": 2.18
+        "minBenzina": 1.939,
+        "minDiesel": 2.179
       },
       {
         "name": "Malonno",
@@ -7174,7 +7174,7 @@
         "name": "San Felice del Benaco",
         "slug": "san-felice-del-benaco",
         "stationsCount": 1,
-        "minBenzina": 2.099,
+        "minBenzina": 1.999,
         "minDiesel": 2.279
       },
       {
@@ -7209,8 +7209,8 @@
         "name": "Tavernole sul Mella",
         "slug": "tavernole-sul-mella",
         "stationsCount": 1,
-        "minBenzina": 1.99,
-        "minDiesel": 2.23
+        "minBenzina": 1.94,
+        "minDiesel": 2.2
       },
       {
         "name": "Tignale",
@@ -7251,8 +7251,8 @@
         "name": "Visano",
         "slug": "visano",
         "stationsCount": 1,
-        "minBenzina": 1.988,
-        "minDiesel": 2.284
+        "minBenzina": 1.968,
+        "minDiesel": 2.234
       },
       {
         "name": "Zone",
@@ -7262,8 +7262,8 @@
         "minDiesel": 2.267
       }
     ],
-    "avgBenzina": 1.96,
-    "avgDiesel": 2.209,
+    "avgBenzina": 1.958,
+    "avgDiesel": 2.208,
     "minBenzina": 1.714,
     "minDiesel": 1.859,
     "cheapestBenzina": {
@@ -7315,7 +7315,7 @@
         "slug": "francavilla-fontana",
         "stationsCount": 13,
         "minBenzina": 1.934,
-        "minDiesel": 2.189
+        "minDiesel": 2.187
       },
       {
         "name": "Ceglie Messapica",
@@ -7431,7 +7431,7 @@
       }
     ],
     "avgBenzina": 1.966,
-    "avgDiesel": 2.206,
+    "avgDiesel": 2.205,
     "minBenzina": 1.919,
     "minDiesel": 2.059,
     "cheapestBenzina": {
@@ -7518,7 +7518,7 @@
         "slug": "monserrato",
         "stationsCount": 4,
         "minBenzina": 1.939,
-        "minDiesel": 2.199
+        "minDiesel": 2.189
       },
       {
         "name": "Settimo San Pietro",
@@ -8141,7 +8141,7 @@
         "slug": "marcianise",
         "stationsCount": 15,
         "minBenzina": 1.89,
-        "minDiesel": 2.189
+        "minDiesel": 2.179
       },
       {
         "name": "Capua",
@@ -8315,14 +8315,14 @@
         "name": "San Cipriano d'Aversa",
         "slug": "san-cipriano-d-aversa",
         "stationsCount": 4,
-        "minBenzina": 1.899,
-        "minDiesel": 2.199
+        "minBenzina": 1.855,
+        "minDiesel": 2.155
       },
       {
         "name": "Sant'Arpino",
         "slug": "sant-arpino",
         "stationsCount": 4,
-        "minBenzina": 1.939,
+        "minBenzina": 1.929,
         "minDiesel": 2.169
       },
       {
@@ -8560,7 +8560,7 @@
         "name": "Casapesenna",
         "slug": "casapesenna",
         "stationsCount": 1,
-        "minBenzina": 1.919,
+        "minBenzina": 1.909,
         "minDiesel": 2.229
       },
       {
@@ -8651,8 +8651,8 @@
         "name": "Raviscanina",
         "slug": "raviscanina",
         "stationsCount": 1,
-        "minBenzina": 1.994,
-        "minDiesel": 2.259
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Rocca d'Evandro",
@@ -8683,8 +8683,8 @@
         "minDiesel": 2.198
       }
     ],
-    "avgBenzina": 1.961,
-    "avgDiesel": 2.208,
+    "avgBenzina": 1.959,
+    "avgDiesel": 2.207,
     "minBenzina": 1.624,
     "minDiesel": 1.564,
     "cheapestBenzina": {
@@ -8742,7 +8742,7 @@
         "name": "Caltagirone",
         "slug": "caltagirone",
         "stationsCount": 17,
-        "minBenzina": 1.914,
+        "minBenzina": 1.899,
         "minDiesel": 2.199
       },
       {
@@ -8820,7 +8820,7 @@
         "slug": "motta-sant-anastasia",
         "stationsCount": 6,
         "minBenzina": 1.94,
-        "minDiesel": 2.2
+        "minDiesel": 2.199
       },
       {
         "name": "Ramacca",
@@ -8848,7 +8848,7 @@
         "slug": "castiglione-di-sicilia",
         "stationsCount": 5,
         "minBenzina": 1.929,
-        "minDiesel": 2.199
+        "minDiesel": 2.189
       },
       {
         "name": "Mascali",
@@ -9037,7 +9037,7 @@
         "slug": "camporotondo-etneo",
         "stationsCount": 1,
         "minBenzina": 1.949,
-        "minDiesel": 2.189
+        "minDiesel": 2.179
       },
       {
         "name": "Mazzarrone",
@@ -9064,8 +9064,8 @@
         "name": "Mirabella Imbaccari",
         "slug": "mirabella-imbaccari",
         "stationsCount": 1,
-        "minBenzina": 1.994,
-        "minDiesel": 2.209
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Raddusa",
@@ -9110,8 +9110,8 @@
         "minDiesel": 2.229
       }
     ],
-    "avgBenzina": 1.961,
-    "avgDiesel": 2.211,
+    "avgBenzina": 1.959,
+    "avgDiesel": 2.209,
     "minBenzina": 1.505,
     "minDiesel": 1.959,
     "cheapestBenzina": {
@@ -9393,7 +9393,7 @@
         "name": "Petrizzi",
         "slug": "petrizzi",
         "stationsCount": 1,
-        "minBenzina": 2.006,
+        "minBenzina": 1.966,
         "minDiesel": 2.206
       },
       {
@@ -9429,7 +9429,7 @@
         "slug": "san-pietro-apostolo",
         "stationsCount": 1,
         "minBenzina": 1.999,
-        "minDiesel": 2.239
+        "minDiesel": 2.219
       },
       {
         "name": "San Vito Sullo Ionio",
@@ -9467,8 +9467,8 @@
         "minDiesel": 2.459
       }
     ],
-    "avgBenzina": 1.973,
-    "avgDiesel": 2.224,
+    "avgBenzina": 1.971,
+    "avgDiesel": 2.223,
     "minBenzina": 1.839,
     "minDiesel": 2.159,
     "cheapestBenzina": {
@@ -9596,7 +9596,7 @@
         "name": "Guardiagrele",
         "slug": "guardiagrele",
         "stationsCount": 3,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.2
       },
       {
@@ -9929,8 +9929,8 @@
         "minDiesel": 2.167
       }
     ],
-    "avgBenzina": 1.978,
-    "avgDiesel": 2.221,
+    "avgBenzina": 1.976,
+    "avgDiesel": 2.22,
     "minBenzina": 1.897,
     "minDiesel": 2.148,
     "cheapestBenzina": {
@@ -10072,7 +10072,7 @@
         "name": "Fenegrò",
         "slug": "fenegro",
         "stationsCount": 2,
-        "minBenzina": 1.959,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -10080,7 +10080,7 @@
         "slug": "novedrate",
         "stationsCount": 2,
         "minBenzina": 1.939,
-        "minDiesel": 2.209
+        "minDiesel": 2.17
       },
       {
         "name": "Solbiate con Cagno",
@@ -10342,8 +10342,8 @@
         "minDiesel": null
       }
     ],
-    "avgBenzina": 1.944,
-    "avgDiesel": 2.208,
+    "avgBenzina": 1.943,
+    "avgDiesel": 2.207,
     "minBenzina": 1.799,
     "minDiesel": 2.089,
     "cheapestBenzina": {
@@ -10598,7 +10598,7 @@
         "slug": "fuscaldo",
         "stationsCount": 2,
         "minBenzina": 1.94,
-        "minDiesel": 2.2
+        "minDiesel": 2.209
       },
       {
         "name": "Lattarico",
@@ -10688,7 +10688,7 @@
         "name": "Belmonte Calabro",
         "slug": "belmonte-calabro",
         "stationsCount": 1,
-        "minBenzina": 1.999,
+        "minBenzina": 1.959,
         "minDiesel": 2.259
       },
       {
@@ -10892,7 +10892,7 @@
         "slug": "orsomarso",
         "stationsCount": 1,
         "minBenzina": 1.969,
-        "minDiesel": 2.459
+        "minDiesel": 2.269
       },
       {
         "name": "Panettieri",
@@ -11071,7 +11071,7 @@
       }
     ],
     "avgBenzina": 1.973,
-    "avgDiesel": 2.223,
+    "avgDiesel": 2.222,
     "minBenzina": 1.899,
     "minDiesel": 2.099,
     "cheapestBenzina": {
@@ -11164,7 +11164,7 @@
         "name": "Castelverde",
         "slug": "castelverde",
         "stationsCount": 3,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.148
       },
       {
@@ -11185,8 +11185,8 @@
         "name": "Bagnolo Cremasco",
         "slug": "bagnolo-cremasco",
         "stationsCount": 2,
-        "minBenzina": 1.919,
-        "minDiesel": 2.189
+        "minBenzina": 1.889,
+        "minDiesel": 2.169
       },
       {
         "name": "Grumello Cremonese ed Uniti",
@@ -11199,7 +11199,7 @@
         "name": "Gussola",
         "slug": "gussola",
         "stationsCount": 2,
-        "minBenzina": 1.899,
+        "minBenzina": 1.879,
         "minDiesel": 2.179
       },
       {
@@ -11347,7 +11347,7 @@
         "slug": "offanengo",
         "stationsCount": 1,
         "minBenzina": 1.945,
-        "minDiesel": 2.205
+        "minDiesel": 2.225
       },
       {
         "name": "Ostiano",
@@ -11448,7 +11448,7 @@
         "minDiesel": 2.185
       }
     ],
-    "avgBenzina": 1.954,
+    "avgBenzina": 1.953,
     "avgDiesel": 2.201,
     "minBenzina": 1.879,
     "minDiesel": 2.148,
@@ -11668,8 +11668,8 @@
         "name": "Fossano",
         "slug": "fossano",
         "stationsCount": 15,
-        "minBenzina": 1.899,
-        "minDiesel": 2.169
+        "minBenzina": 1.919,
+        "minDiesel": 2.188
       },
       {
         "name": "Bra",
@@ -11690,7 +11690,7 @@
         "slug": "savigliano",
         "stationsCount": 11,
         "minBenzina": 1.898,
-        "minDiesel": 2.159
+        "minDiesel": 2.178
       },
       {
         "name": "Borgo San Dalmazzo",
@@ -11752,7 +11752,7 @@
         "name": "Carrù",
         "slug": "carru",
         "stationsCount": 3,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.195
       },
       {
@@ -12355,7 +12355,7 @@
         "slug": "rodello",
         "stationsCount": 1,
         "minBenzina": 1.929,
-        "minDiesel": 2.279
+        "minDiesel": 2.249
       },
       {
         "name": "Sale delle Langhe",
@@ -12579,7 +12579,7 @@
         "slug": "leonforte",
         "stationsCount": 3,
         "minBenzina": 1.945,
-        "minDiesel": 2.205
+        "minDiesel": 2.179
       },
       {
         "name": "Valguarnera Caropepe",
@@ -12653,7 +12653,7 @@
       }
     ],
     "avgBenzina": 1.975,
-    "avgDiesel": 2.215,
+    "avgDiesel": 2.213,
     "minBenzina": 1.849,
     "minDiesel": 2.099,
     "cheapestBenzina": {
@@ -12810,7 +12810,7 @@
         "slug": "monte-vidon-combatte",
         "stationsCount": 1,
         "minBenzina": 1.939,
-        "minDiesel": 2.19
+        "minDiesel": 2.189
       },
       {
         "name": "Monte Vidon Corrado",
@@ -12858,8 +12858,8 @@
         "name": "Servigliano",
         "slug": "servigliano",
         "stationsCount": 1,
-        "minBenzina": 2.029,
-        "minDiesel": 2.229
+        "minBenzina": null,
+        "minDiesel": 2.199
       },
       {
         "name": "Smerillo",
@@ -12869,8 +12869,8 @@
         "minDiesel": 2.159
       }
     ],
-    "avgBenzina": 1.968,
-    "avgDiesel": 2.216,
+    "avgBenzina": 1.967,
+    "avgDiesel": 2.215,
     "minBenzina": 1.934,
     "minDiesel": 2.159,
     "cheapestBenzina": {
@@ -13090,7 +13090,7 @@
         "slug": "empoli",
         "stationsCount": 18,
         "minBenzina": 1.927,
-        "minDiesel": 2.187
+        "minDiesel": 2.189
       },
       {
         "name": "Sesto Fiorentino",
@@ -13215,7 +13215,7 @@
         "name": "Pontassieve",
         "slug": "pontassieve",
         "stationsCount": 5,
-        "minBenzina": 1.945,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -13292,7 +13292,7 @@
         "name": "Impruneta",
         "slug": "impruneta",
         "stationsCount": 2,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -13349,7 +13349,7 @@
         "slug": "pelago",
         "stationsCount": 1,
         "minBenzina": 1.979,
-        "minDiesel": 2.219
+        "minDiesel": 2.199
       },
       {
         "name": "Tavarnelle Val di Pesa",
@@ -13366,7 +13366,7 @@
         "minDiesel": 2.189
       }
     ],
-    "avgBenzina": 1.948,
+    "avgBenzina": 1.947,
     "avgDiesel": 2.201,
     "minBenzina": 1.765,
     "minDiesel": 2.039,
@@ -13447,7 +13447,7 @@
         "slug": "orta-nova",
         "stationsCount": 6,
         "minBenzina": 1.934,
-        "minDiesel": 1.5
+        "minDiesel": 2.189
       },
       {
         "name": "Vieste",
@@ -13765,10 +13765,10 @@
         "minDiesel": 2.249
       }
     ],
-    "avgBenzina": 1.978,
-    "avgDiesel": 2.23,
+    "avgBenzina": 1.976,
+    "avgDiesel": 2.233,
     "minBenzina": 1.729,
-    "minDiesel": 1.5,
+    "minDiesel": 1.689,
     "cheapestBenzina": {
       "nome": "goil",
       "brand": "Pompa Bianca",
@@ -13776,10 +13776,10 @@
       "prezzo": 1.729
     },
     "cheapestDiesel": {
-      "nome": "Stazione di servizio ENI N°9285",
+      "nome": "AdS Agip - Candela Casello A16",
       "brand": "Eni",
-      "comune": "ORTA NOVA",
-      "prezzo": 1.5
+      "comune": "CANDELA",
+      "prezzo": 1.689
     }
   },
   {
@@ -13803,7 +13803,7 @@
         "name": "Cesena",
         "slug": "cesena",
         "stationsCount": 43,
-        "minBenzina": 1.895,
+        "minBenzina": 1.898,
         "minDiesel": 2.165
       },
       {
@@ -13915,8 +13915,8 @@
         "name": "Civitella di Romagna",
         "slug": "civitella-di-romagna",
         "stationsCount": 1,
-        "minBenzina": 1.925,
-        "minDiesel": 2.176
+        "minBenzina": 1.897,
+        "minDiesel": 2.188
       },
       {
         "name": "Dovadola",
@@ -14125,8 +14125,8 @@
         "name": "Castrocielo",
         "slug": "castrocielo",
         "stationsCount": 4,
-        "minBenzina": 1.94,
-        "minDiesel": 2.2
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Paliano",
@@ -14272,8 +14272,8 @@
         "name": "San Giovanni Incarico",
         "slug": "san-giovanni-incarico",
         "stationsCount": 2,
-        "minBenzina": 1.945,
-        "minDiesel": 2.205
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Sant'Elia Fiumerapido",
@@ -14452,7 +14452,7 @@
       }
     ],
     "avgBenzina": 1.951,
-    "avgDiesel": 2.199,
+    "avgDiesel": 2.198,
     "minBenzina": 1.624,
     "minDiesel": 1.544,
     "cheapestBenzina": {
@@ -14706,7 +14706,7 @@
         "name": "Orero",
         "slug": "orero",
         "stationsCount": 1,
-        "minBenzina": 1.999,
+        "minBenzina": 1.949,
         "minDiesel": 2.199
       },
       {
@@ -14755,7 +14755,7 @@
         "name": "Torriglia",
         "slug": "torriglia",
         "stationsCount": 1,
-        "minBenzina": 2.009,
+        "minBenzina": 1.999,
         "minDiesel": 2.279
       },
       {
@@ -14766,8 +14766,8 @@
         "minDiesel": 2.197
       }
     ],
-    "avgBenzina": 1.953,
-    "avgDiesel": 2.204,
+    "avgBenzina": 1.952,
+    "avgDiesel": 2.203,
     "minBenzina": 1.797,
     "minDiesel": 1.897,
     "cheapestBenzina": {
@@ -14804,7 +14804,7 @@
         "name": "Gorizia",
         "slug": "gorizia",
         "stationsCount": 9,
-        "minBenzina": 1.939,
+        "minBenzina": 1.919,
         "minDiesel": 2.199
       },
       {
@@ -14892,15 +14892,15 @@
         "minDiesel": 2.189
       }
     ],
-    "avgBenzina": 1.952,
+    "avgBenzina": 1.95,
     "avgDiesel": 2.211,
-    "minBenzina": 1.929,
+    "minBenzina": 1.919,
     "minDiesel": 2.187,
     "cheapestBenzina": {
-      "nome": "STAZIONE DI SERVIZIO ESSO F.LLI MININEL",
+      "nome": "Stazione Esso di Lovisini Fulvio",
       "brand": "Esso",
-      "comune": "MONFALCONE",
-      "prezzo": 1.929
+      "comune": "GORIZIA",
+      "prezzo": 1.919
     },
     "cheapestDiesel": {
       "nome": "Cormons Azzalini Energie",
@@ -15134,7 +15134,7 @@
         "slug": "sanremo",
         "stationsCount": 13,
         "minBenzina": 1.939,
-        "minDiesel": 2.179
+        "minDiesel": 2.169
       },
       {
         "name": "Bordighera",
@@ -15270,7 +15270,7 @@
         "minDiesel": 2.219
       }
     ],
-    "avgBenzina": 1.963,
+    "avgBenzina": 1.962,
     "avgDiesel": 2.214,
     "minBenzina": 1.895,
     "minDiesel": 2.145,
@@ -15336,7 +15336,7 @@
         "name": "Colli A Volturno",
         "slug": "colli-a-volturno",
         "stationsCount": 2,
-        "minBenzina": 1.945,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -15452,7 +15452,7 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.971,
+    "avgBenzina": 1.969,
     "avgDiesel": 2.203,
     "minBenzina": 1.839,
     "minDiesel": 1.734,
@@ -15693,8 +15693,8 @@
         "name": "Campo di Giove",
         "slug": "campo-di-giove",
         "stationsCount": 1,
-        "minBenzina": 2.149,
-        "minDiesel": 2.459
+        "minBenzina": 1.939,
+        "minDiesel": 2.279
       },
       {
         "name": "Capestrano",
@@ -15844,8 +15844,8 @@
         "minDiesel": 2.269
       }
     ],
-    "avgBenzina": 1.972,
-    "avgDiesel": 2.226,
+    "avgBenzina": 1.97,
+    "avgDiesel": 2.225,
     "minBenzina": 1.759,
     "minDiesel": 2.139,
     "cheapestBenzina": {
@@ -15953,7 +15953,7 @@
         "slug": "varese-ligure",
         "stationsCount": 2,
         "minBenzina": 1.999,
-        "minDiesel": 2.239
+        "minDiesel": 2.199
       },
       {
         "name": "Ameglia",
@@ -16006,7 +16006,7 @@
       }
     ],
     "avgBenzina": 1.957,
-    "avgDiesel": 2.208,
+    "avgDiesel": 2.207,
     "minBenzina": 1.895,
     "minDiesel": 2.165,
     "cheapestBenzina": {
@@ -16155,8 +16155,8 @@
         "name": "Sermoneta",
         "slug": "sermoneta",
         "stationsCount": 3,
-        "minBenzina": 1.979,
-        "minDiesel": 2.189
+        "minBenzina": 1.977,
+        "minDiesel": 2.187
       },
       {
         "name": "Ponza",
@@ -16243,8 +16243,8 @@
         "minDiesel": null
       }
     ],
-    "avgBenzina": 1.956,
-    "avgDiesel": 2.198,
+    "avgBenzina": 1.955,
+    "avgDiesel": 2.197,
     "minBenzina": 1.666,
     "minDiesel": 1.605,
     "cheapestBenzina": {
@@ -16274,8 +16274,8 @@
         "name": "Lecce",
         "slug": "lecce",
         "stationsCount": 53,
-        "minBenzina": 1.934,
-        "minDiesel": 2.185
+        "minBenzina": 1.925,
+        "minDiesel": 2.178
       },
       {
         "name": "Galatina",
@@ -16611,14 +16611,14 @@
         "slug": "san-donato-di-lecce",
         "stationsCount": 3,
         "minBenzina": 1.949,
-        "minDiesel": 2.229
+        "minDiesel": 2.198
       },
       {
         "name": "Seclì",
         "slug": "secli",
         "stationsCount": 3,
         "minBenzina": 1.939,
-        "minDiesel": 2.19
+        "minDiesel": 2.189
       },
       {
         "name": "Soleto",
@@ -16744,7 +16744,7 @@
         "slug": "santa-cesarea-terme",
         "stationsCount": 2,
         "minBenzina": 1.999,
-        "minDiesel": 2.259
+        "minDiesel": 2.209
       },
       {
         "name": "Scorrano",
@@ -16779,7 +16779,7 @@
         "slug": "tuglie",
         "stationsCount": 2,
         "minBenzina": 1.998,
-        "minDiesel": 2.239
+        "minDiesel": 2.238
       },
       {
         "name": "Uggiano La Chiesa",
@@ -16930,7 +16930,7 @@
       }
     ],
     "avgBenzina": 1.973,
-    "avgDiesel": 2.215,
+    "avgDiesel": 2.214,
     "minBenzina": 1.898,
     "minDiesel": 2.149,
     "cheapestBenzina": {
@@ -17093,7 +17093,7 @@
         "name": "Barzio",
         "slug": "barzio",
         "stationsCount": 1,
-        "minBenzina": 1.999,
+        "minBenzina": 1.949,
         "minDiesel": 2.239
       },
       {
@@ -17265,7 +17265,7 @@
         "minDiesel": 2.206
       }
     ],
-    "avgBenzina": 1.949,
+    "avgBenzina": 1.948,
     "avgDiesel": 2.209,
     "minBenzina": 1.88,
     "minDiesel": 2.109,
@@ -17644,7 +17644,7 @@
       }
     ],
     "avgBenzina": 1.95,
-    "avgDiesel": 2.198,
+    "avgDiesel": 2.197,
     "minBenzina": 1.909,
     "minDiesel": 2.139,
     "cheapestBenzina": {
@@ -17853,7 +17853,7 @@
         "minDiesel": 1.689
       }
     ],
-    "avgBenzina": 1.955,
+    "avgBenzina": 1.954,
     "avgDiesel": 2.2,
     "minBenzina": 1.898,
     "minDiesel": 1.689,
@@ -17961,7 +17961,7 @@
         "name": "Pollenza",
         "slug": "pollenza",
         "stationsCount": 4,
-        "minBenzina": 1.939,
+        "minBenzina": 1.94,
         "minDiesel": 2.189
       },
       {
@@ -18332,7 +18332,7 @@
         "name": "Marmirolo",
         "slug": "marmirolo",
         "stationsCount": 3,
-        "minBenzina": 1.949,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -18542,7 +18542,7 @@
         "name": "Motteggiana",
         "slug": "motteggiana",
         "stationsCount": 1,
-        "minBenzina": 1.969,
+        "minBenzina": 1.959,
         "minDiesel": 2.199
       },
       {
@@ -18609,7 +18609,7 @@
         "minDiesel": 2.2
       }
     ],
-    "avgBenzina": 1.952,
+    "avgBenzina": 1.951,
     "avgDiesel": 2.209,
     "minBenzina": 1.799,
     "minDiesel": 2.099,
@@ -18668,7 +18668,7 @@
         "name": "Fivizzano",
         "slug": "fivizzano",
         "stationsCount": 4,
-        "minBenzina": 1.969,
+        "minBenzina": 1.949,
         "minDiesel": 2.199
       },
       {
@@ -18729,7 +18729,7 @@
       }
     ],
     "avgBenzina": 1.956,
-    "avgDiesel": 2.209,
+    "avgDiesel": 2.21,
     "minBenzina": 1.899,
     "minDiesel": 2.169,
     "cheapestBenzina": {
@@ -18815,7 +18815,7 @@
         "name": "Ferrandina",
         "slug": "ferrandina",
         "stationsCount": 2,
-        "minBenzina": 1.999,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -18931,7 +18931,7 @@
         "minDiesel": 2.299
       }
     ],
-    "avgBenzina": 1.989,
+    "avgBenzina": 1.987,
     "avgDiesel": 2.242,
     "minBenzina": 1.908,
     "minDiesel": 2.179,
@@ -18983,7 +18983,7 @@
         "name": "Capo d'Orlando",
         "slug": "capo-d-orlando",
         "stationsCount": 6,
-        "minBenzina": 1.945,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -19081,7 +19081,7 @@
         "name": "Torrenova",
         "slug": "torrenova",
         "stationsCount": 3,
-        "minBenzina": 1.967,
+        "minBenzina": 1.959,
         "minDiesel": 2.197
       },
       {
@@ -19193,8 +19193,8 @@
         "name": "Alì",
         "slug": "ali",
         "stationsCount": 1,
-        "minBenzina": 1.999,
-        "minDiesel": 2.276
+        "minBenzina": 1.959,
+        "minDiesel": 2.199
       },
       {
         "name": "Alì Terme",
@@ -19242,8 +19242,8 @@
         "name": "Castroreale",
         "slug": "castroreale",
         "stationsCount": 1,
-        "minBenzina": 2.159,
-        "minDiesel": 2.359
+        "minBenzina": 2.149,
+        "minDiesel": 2.349
       },
       {
         "name": "Cesarò",
@@ -19460,14 +19460,14 @@
         "slug": "santa-lucia-del-mela",
         "stationsCount": 1,
         "minBenzina": 1.999,
-        "minDiesel": 2.289
+        "minDiesel": 2.269
       },
       {
         "name": "Santa Marina Salina",
         "slug": "santa-marina-salina",
         "stationsCount": 1,
         "minBenzina": 2.299,
-        "minDiesel": 2.499
+        "minDiesel": 1.959
       },
       {
         "name": "Santo Stefano di Camastra",
@@ -19512,10 +19512,10 @@
         "minDiesel": 2.259
       }
     ],
-    "avgBenzina": 1.979,
-    "avgDiesel": 2.229,
+    "avgBenzina": 1.978,
+    "avgDiesel": 2.226,
     "minBenzina": 1.889,
-    "minDiesel": 1.999,
+    "minDiesel": 1.959,
     "cheapestBenzina": {
       "nome": "GIAMBO RICCARDO",
       "brand": "Eni",
@@ -19523,10 +19523,10 @@
       "prezzo": 1.889
     },
     "cheapestDiesel": {
-      "nome": "GIAMBO RICCARDO",
-      "brand": "Eni",
-      "comune": "PACE DEL MELA",
-      "prezzo": 1.999
+      "nome": "Rifornimento carburanti di Denis Prepeleag",
+      "brand": "IP",
+      "comune": "SANTA MARINA SALINA",
+      "prezzo": 1.959
     }
   },
   {
@@ -19830,8 +19830,8 @@
         "name": "Carpiano",
         "slug": "carpiano",
         "stationsCount": 4,
-        "minBenzina": 1.899,
-        "minDiesel": 2.159
+        "minBenzina": 1.929,
+        "minDiesel": 2.189
       },
       {
         "name": "Castano Primo",
@@ -19984,7 +19984,7 @@
         "name": "Cerro al Lambro",
         "slug": "cerro-al-lambro",
         "stationsCount": 2,
-        "minBenzina": 1.945,
+        "minBenzina": 1.939,
         "minDiesel": 2.205
       },
       {
@@ -20306,7 +20306,7 @@
         "name": "Vanzago",
         "slug": "vanzago",
         "stationsCount": 1,
-        "minBenzina": 1.999,
+        "minBenzina": 1.949,
         "minDiesel": 2.199
       },
       {
@@ -20362,7 +20362,7 @@
         "name": "Carpi",
         "slug": "carpi",
         "stationsCount": 21,
-        "minBenzina": 1.899,
+        "minBenzina": 1.925,
         "minDiesel": 2.175
       },
       {
@@ -20488,7 +20488,7 @@
         "name": "San Cesario sul Panaro",
         "slug": "san-cesario-sul-panaro",
         "stationsCount": 4,
-        "minBenzina": 1.899,
+        "minBenzina": 1.909,
         "minDiesel": 2.159
       },
       {
@@ -20544,7 +20544,7 @@
         "name": "Castelvetro di Modena",
         "slug": "castelvetro-di-modena",
         "stationsCount": 2,
-        "minBenzina": 1.899,
+        "minBenzina": 1.925,
         "minDiesel": 2.179
       },
       {
@@ -20649,8 +20649,8 @@
         "name": "Polinago",
         "slug": "polinago",
         "stationsCount": 1,
-        "minBenzina": 2.079,
-        "minDiesel": 2.299
+        "minBenzina": 2.019,
+        "minDiesel": 2.259
       },
       {
         "name": "Prignano sulla Secchia",
@@ -20782,8 +20782,8 @@
         "name": "Agrate Brianza",
         "slug": "agrate-brianza",
         "stationsCount": 5,
-        "minBenzina": 1.899,
-        "minDiesel": 2.179
+        "minBenzina": 1.94,
+        "minDiesel": 2.199
       },
       {
         "name": "Bovisio-masciago",
@@ -20853,7 +20853,7 @@
         "slug": "besana-in-brianza",
         "stationsCount": 3,
         "minBenzina": 1.946,
-        "minDiesel": 2.196
+        "minDiesel": 2.206
       },
       {
         "name": "Caponago",
@@ -21105,7 +21105,7 @@
         "slug": "pompei",
         "stationsCount": 12,
         "minBenzina": 1.934,
-        "minDiesel": 2.179
+        "minDiesel": 2.169
       },
       {
         "name": "Quarto",
@@ -21132,8 +21132,8 @@
         "name": "San Giuseppe Vesuviano",
         "slug": "san-giuseppe-vesuviano",
         "stationsCount": 11,
-        "minBenzina": 1.909,
-        "minDiesel": 2.189
+        "minBenzina": 1.899,
+        "minDiesel": 2.149
       },
       {
         "name": "Arzano",
@@ -21189,7 +21189,7 @@
         "slug": "casalnuovo-di-napoli",
         "stationsCount": 9,
         "minBenzina": 1.899,
-        "minDiesel": 2.188
+        "minDiesel": 2.15
       },
       {
         "name": "Marigliano",
@@ -21272,7 +21272,7 @@
         "name": "Piano di Sorrento",
         "slug": "piano-di-sorrento",
         "stationsCount": 6,
-        "minBenzina": 1.93,
+        "minBenzina": 1.927,
         "minDiesel": 2.19
       },
       {
@@ -21371,7 +21371,7 @@
         "slug": "castello-di-cisterna",
         "stationsCount": 4,
         "minBenzina": 1.899,
-        "minDiesel": 2.19
+        "minDiesel": 2.15
       },
       {
         "name": "Ischia",
@@ -21405,7 +21405,7 @@
         "name": "Scisciano",
         "slug": "scisciano",
         "stationsCount": 4,
-        "minBenzina": 1.879,
+        "minBenzina": 1.899,
         "minDiesel": 2.169
       },
       {
@@ -21448,13 +21448,13 @@
         "slug": "portici",
         "stationsCount": 3,
         "minBenzina": 1.899,
-        "minDiesel": 2.19
+        "minDiesel": 2.15
       },
       {
         "name": "Sant'Agnello",
         "slug": "sant-agnello",
         "stationsCount": 3,
-        "minBenzina": 1.928,
+        "minBenzina": 1.926,
         "minDiesel": 2.198
       },
       {
@@ -21566,7 +21566,7 @@
         "name": "Barano d'Ischia",
         "slug": "barano-d-ischia",
         "stationsCount": 1,
-        "minBenzina": 2.055,
+        "minBenzina": 2.045,
         "minDiesel": 2.37
       },
       {
@@ -21615,15 +21615,15 @@
         "name": "Pimonte",
         "slug": "pimonte",
         "stationsCount": 1,
-        "minBenzina": 2.399,
-        "minDiesel": 2.649
+        "minBenzina": 2.229,
+        "minDiesel": 2.609
       },
       {
         "name": "Procida",
         "slug": "procida",
         "stationsCount": 1,
-        "minBenzina": 2.13,
-        "minDiesel": 2.51
+        "minBenzina": 2.1,
+        "minDiesel": 2.48
       },
       {
         "name": "Serrara Fontana",
@@ -21647,8 +21647,8 @@
         "minDiesel": 2.189
       }
     ],
-    "avgBenzina": 1.958,
-    "avgDiesel": 2.206,
+    "avgBenzina": 1.956,
+    "avgDiesel": 2.204,
     "minBenzina": 1.659,
     "minDiesel": 1.639,
     "cheapestBenzina": {
@@ -21741,8 +21741,8 @@
         "name": "Bellinzago Novarese",
         "slug": "bellinzago-novarese",
         "stationsCount": 3,
-        "minBenzina": 1.939,
-        "minDiesel": 2.189
+        "minBenzina": 1.937,
+        "minDiesel": 2.187
       },
       {
         "name": "Ghemme",
@@ -22036,7 +22036,7 @@
         "slug": "dorgali",
         "stationsCount": 4,
         "minBenzina": 1.994,
-        "minDiesel": 2.254
+        "minDiesel": 2.199
       },
       {
         "name": "Macomer",
@@ -22327,7 +22327,7 @@
       }
     ],
     "avgBenzina": 1.995,
-    "avgDiesel": 2.245,
+    "avgDiesel": 2.244,
     "minBenzina": 1.927,
     "minDiesel": 2.187,
     "cheapestBenzina": {
@@ -22714,7 +22714,7 @@
         "name": "Piazzola sul Brenta",
         "slug": "piazzola-sul-brenta",
         "stationsCount": 5,
-        "minBenzina": 1.949,
+        "minBenzina": 1.94,
         "minDiesel": 2.198
       },
       {
@@ -23330,7 +23330,7 @@
         "name": "Termini Imerese",
         "slug": "termini-imerese",
         "stationsCount": 14,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.197
       },
       {
@@ -23449,7 +23449,7 @@
         "name": "Trabia",
         "slug": "trabia",
         "stationsCount": 3,
-        "minBenzina": 1.959,
+        "minBenzina": 1.949,
         "minDiesel": 2.189
       },
       {
@@ -23596,8 +23596,8 @@
         "name": "Camporeale",
         "slug": "camporeale",
         "stationsCount": 1,
-        "minBenzina": 1.999,
-        "minDiesel": 2.249
+        "minBenzina": 1.949,
+        "minDiesel": 2.209
       },
       {
         "name": "Castellana Sicula",
@@ -23653,7 +23653,7 @@
         "slug": "geraci-siculo",
         "stationsCount": 1,
         "minBenzina": 1.999,
-        "minDiesel": 2.299
+        "minDiesel": 2.199
       },
       {
         "name": "Giardinello",
@@ -23817,8 +23817,8 @@
         "minDiesel": null
       }
     ],
-    "avgBenzina": 1.971,
-    "avgDiesel": 2.212,
+    "avgBenzina": 1.97,
+    "avgDiesel": 2.211,
     "minBenzina": 1.917,
     "minDiesel": 1.917,
     "cheapestBenzina": {
@@ -24118,7 +24118,7 @@
         "minDiesel": 2.418
       }
     ],
-    "avgBenzina": 1.96,
+    "avgBenzina": 1.959,
     "avgDiesel": 2.211,
     "minBenzina": 1.814,
     "minDiesel": 1.884,
@@ -24163,7 +24163,7 @@
         "name": "Voghera",
         "slug": "voghera",
         "stationsCount": 14,
-        "minBenzina": 1.934,
+        "minBenzina": 1.929,
         "minDiesel": 2.179
       },
       {
@@ -24352,7 +24352,7 @@
         "name": "Bereguardo",
         "slug": "bereguardo",
         "stationsCount": 1,
-        "minBenzina": 1.929,
+        "minBenzina": 1.949,
         "minDiesel": 2.199
       },
       {
@@ -24597,8 +24597,8 @@
         "name": "Sant'Alessio con Vialone",
         "slug": "sant-alessio-con-vialone",
         "stationsCount": 1,
-        "minBenzina": 1.999,
-        "minDiesel": 2.229
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Sartirana Lomellina",
@@ -24807,7 +24807,7 @@
         "name": "San Giustino",
         "slug": "san-giustino",
         "stationsCount": 5,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.187
       },
       {
@@ -24842,7 +24842,7 @@
         "name": "Spello",
         "slug": "spello",
         "stationsCount": 4,
-        "minBenzina": 1.949,
+        "minBenzina": 1.945,
         "minDiesel": 2.205
       },
       {
@@ -24926,7 +24926,7 @@
         "name": "Piegaro",
         "slug": "piegaro",
         "stationsCount": 2,
-        "minBenzina": 1.979,
+        "minBenzina": 1.939,
         "minDiesel": 2.159
       },
       {
@@ -25035,7 +25035,7 @@
         "minDiesel": 2.319
       }
     ],
-    "avgBenzina": 1.966,
+    "avgBenzina": 1.965,
     "avgDiesel": 2.206,
     "minBenzina": 1.636,
     "minDiesel": 1.624,
@@ -25347,7 +25347,7 @@
         "slug": "tavullia",
         "stationsCount": 1,
         "minBenzina": 1.968,
-        "minDiesel": 2.277
+        "minDiesel": 2.257
       }
     ],
     "avgBenzina": 1.952,
@@ -25423,8 +25423,8 @@
         "name": "Penne",
         "slug": "penne",
         "stationsCount": 4,
-        "minBenzina": 1.939,
-        "minDiesel": 2.199
+        "minBenzina": 1.938,
+        "minDiesel": 2.188
       },
       {
         "name": "Loreto Aprutino",
@@ -25661,7 +25661,7 @@
         "name": "Borgonovo Val Tidone",
         "slug": "borgonovo-val-tidone",
         "stationsCount": 4,
-        "minBenzina": 1.945,
+        "minBenzina": 1.939,
         "minDiesel": 2.179
       },
       {
@@ -26180,14 +26180,14 @@
         "slug": "pistoia",
         "stationsCount": 32,
         "minBenzina": 1.899,
-        "minDiesel": 2.159
+        "minDiesel": 2.169
       },
       {
         "name": "Quarrata",
         "slug": "quarrata",
         "stationsCount": 10,
         "minBenzina": 1.927,
-        "minDiesel": 2.167
+        "minDiesel": 2.177
       },
       {
         "name": "Monsummano Terme",
@@ -26323,10 +26323,10 @@
         "minDiesel": 2.249
       }
     ],
-    "avgBenzina": 1.952,
-    "avgDiesel": 2.201,
+    "avgBenzina": 1.953,
+    "avgDiesel": 2.202,
     "minBenzina": 1.89,
-    "minDiesel": 2.159,
+    "minDiesel": 2.169,
     "cheapestBenzina": {
       "nome": "Area di servizio IP Baldasseroni Alessandro",
       "brand": "IP",
@@ -26334,10 +26334,10 @@
       "prezzo": 1.89
     },
     "cheapestDiesel": {
-      "nome": "SOMMARIVA",
-      "brand": "Q8",
-      "comune": "PISTOIA",
-      "prezzo": 2.159
+      "nome": "MASSA E COZZILE",
+      "brand": "Economy",
+      "comune": "MASSA E COZZILE",
+      "prezzo": 2.169
     }
   },
   {
@@ -26697,7 +26697,7 @@
         "name": "Latronico",
         "slug": "latronico",
         "stationsCount": 3,
-        "minBenzina": 1.949,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -26998,7 +26998,7 @@
         "name": "Pignola",
         "slug": "pignola",
         "stationsCount": 1,
-        "minBenzina": 1.99,
+        "minBenzina": 1.94,
         "minDiesel": 2.19
       },
       {
@@ -27117,12 +27117,12 @@
         "name": "Viggianello",
         "slug": "viggianello",
         "stationsCount": 1,
-        "minBenzina": 1.888,
-        "minDiesel": 2.188
+        "minBenzina": 1.939,
+        "minDiesel": 2.229
       }
     ],
-    "avgBenzina": 1.991,
-    "avgDiesel": 2.23,
+    "avgBenzina": 1.99,
+    "avgDiesel": 2.231,
     "minBenzina": 1.598,
     "minDiesel": 1.594,
     "cheapestBenzina": {
@@ -27457,7 +27457,7 @@
         "minDiesel": 2.179
       }
     ],
-    "avgBenzina": 1.954,
+    "avgBenzina": 1.953,
     "avgDiesel": 2.207,
     "minBenzina": 1.674,
     "minDiesel": 2.034,
@@ -27705,7 +27705,7 @@
         "name": "Sant'Eufemia d'Aspromonte",
         "slug": "sant-eufemia-d-aspromonte",
         "stationsCount": 2,
-        "minBenzina": 1.96,
+        "minBenzina": 1.945,
         "minDiesel": 2.2
       },
       {
@@ -27849,7 +27849,7 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.966,
+    "avgBenzina": 1.965,
     "avgDiesel": 2.214,
     "minBenzina": 1.898,
     "minDiesel": 2.175,
@@ -27901,7 +27901,7 @@
         "name": "Scandiano",
         "slug": "scandiano",
         "stationsCount": 8,
-        "minBenzina": 1.899,
+        "minBenzina": 1.925,
         "minDiesel": 2.199
       },
       {
@@ -27999,7 +27999,7 @@
         "name": "Quattro Castella",
         "slug": "quattro-castella",
         "stationsCount": 4,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -28048,7 +28048,7 @@
         "name": "Rubiera",
         "slug": "rubiera",
         "stationsCount": 3,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.189
       },
       {
@@ -28164,8 +28164,8 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.954,
-    "avgDiesel": 2.204,
+    "avgBenzina": 1.953,
+    "avgDiesel": 2.203,
     "minBenzina": 1.595,
     "minDiesel": 1.594,
     "cheapestBenzina": {
@@ -28287,7 +28287,7 @@
         "slug": "cantalice",
         "stationsCount": 1,
         "minBenzina": 1.999,
-        "minDiesel": 2.249
+        "minDiesel": 2.229
       },
       {
         "name": "Cantalupo in Sabina",
@@ -28605,8 +28605,8 @@
         "minDiesel": 2.359
       }
     ],
-    "avgBenzina": 1.961,
-    "avgDiesel": 2.209,
+    "avgBenzina": 1.96,
+    "avgDiesel": 2.208,
     "minBenzina": 1.898,
     "minDiesel": 2.169,
     "cheapestBenzina": {
@@ -28627,9 +28627,9 @@
     "name": "Roma",
     "region": "Lazio",
     "slug": "roma",
-    "lat": 41.8742,
-    "lng": 12.5164,
-    "stationsCount": 1293,
+    "lat": 41.874,
+    "lng": 12.5163,
+    "stationsCount": 1292,
     "comuniCount": 78,
     "comuni": [
       {
@@ -28717,18 +28717,18 @@
         "minDiesel": 2.189
       },
       {
-        "name": "Fiano Romano",
-        "slug": "fiano-romano",
-        "stationsCount": 12,
-        "minBenzina": 1.929,
-        "minDiesel": 2.189
-      },
-      {
         "name": "Marino",
         "slug": "marino",
         "stationsCount": 12,
         "minBenzina": 1.929,
         "minDiesel": 2.169
+      },
+      {
+        "name": "Fiano Romano",
+        "slug": "fiano-romano",
+        "stationsCount": 11,
+        "minBenzina": 1.929,
+        "minDiesel": 2.189
       },
       {
         "name": "Bracciano",
@@ -29015,7 +29015,7 @@
         "slug": "rocca-di-papa",
         "stationsCount": 2,
         "minBenzina": 1.939,
-        "minDiesel": 2.199
+        "minDiesel": 2.197
       },
       {
         "name": "Rocca Priora",
@@ -29179,7 +29179,7 @@
         "minDiesel": 2.205
       }
     ],
-    "avgBenzina": 1.952,
+    "avgBenzina": 1.951,
     "avgDiesel": 2.197,
     "minBenzina": 1.569,
     "minDiesel": 1.603,
@@ -29201,9 +29201,9 @@
     "name": "Rovigo",
     "region": "Veneto",
     "slug": "rovigo",
-    "lat": 45.0294,
-    "lng": 11.8555,
-    "stationsCount": 132,
+    "lat": 45.0293,
+    "lng": 11.8514,
+    "stationsCount": 133,
     "comuniCount": 45,
     "comuni": [
       {
@@ -29231,8 +29231,8 @@
         "name": "Porto Tolle",
         "slug": "porto-tolle",
         "stationsCount": 7,
-        "minBenzina": 1.94,
-        "minDiesel": 2.199
+        "minBenzina": 1.939,
+        "minDiesel": 2.189
       },
       {
         "name": "Rosolina",
@@ -29263,6 +29263,13 @@
         "minDiesel": 2.199
       },
       {
+        "name": "Castelmassa",
+        "slug": "castelmassa",
+        "stationsCount": 4,
+        "minBenzina": 1.94,
+        "minDiesel": 2.185
+      },
+      {
         "name": "Lendinara",
         "slug": "lendinara",
         "stationsCount": 4,
@@ -29291,13 +29298,6 @@
         "minDiesel": 2.199
       },
       {
-        "name": "Castelmassa",
-        "slug": "castelmassa",
-        "stationsCount": 3,
-        "minBenzina": 1.94,
-        "minDiesel": 2.185
-      },
-      {
         "name": "Stienta",
         "slug": "stienta",
         "stationsCount": 3,
@@ -29322,7 +29322,7 @@
         "name": "Melara",
         "slug": "melara",
         "stationsCount": 2,
-        "minBenzina": 1.979,
+        "minBenzina": 2.019,
         "minDiesel": 2.19
       },
       {
@@ -29470,7 +29470,7 @@
         "slug": "loreo",
         "stationsCount": 1,
         "minBenzina": 1.919,
-        "minDiesel": 2.189
+        "minDiesel": 2.179
       },
       {
         "name": "Lusia",
@@ -29523,7 +29523,7 @@
       }
     ],
     "avgBenzina": 1.938,
-    "avgDiesel": 2.174,
+    "avgDiesel": 2.175,
     "minBenzina": 1.627,
     "minDiesel": 1.552,
     "cheapestBenzina": {
@@ -29924,7 +29924,7 @@
         "name": "San Mango Piemonte",
         "slug": "san-mango-piemonte",
         "stationsCount": 2,
-        "minBenzina": 1.99,
+        "minBenzina": 1.94,
         "minDiesel": 2.2
       },
       {
@@ -29980,8 +29980,8 @@
         "name": "Bellosguardo",
         "slug": "bellosguardo",
         "stationsCount": 1,
-        "minBenzina": 2.049,
-        "minDiesel": 2.349
+        "minBenzina": 1.899,
+        "minDiesel": 2.249
       },
       {
         "name": "Bracigliano",
@@ -30148,8 +30148,8 @@
         "name": "Piaggine",
         "slug": "piaggine",
         "stationsCount": 1,
-        "minBenzina": 2.099,
-        "minDiesel": 2.399
+        "minBenzina": 1.949,
+        "minDiesel": 2.299
       },
       {
         "name": "Pollica",
@@ -30190,8 +30190,8 @@
         "name": "Roccagloriosa",
         "slug": "roccagloriosa",
         "stationsCount": 1,
-        "minBenzina": 2.099,
-        "minDiesel": 2.399
+        "minBenzina": 2.049,
+        "minDiesel": 2.349
       },
       {
         "name": "Rofrano",
@@ -30278,8 +30278,8 @@
         "minDiesel": 2.189
       }
     ],
-    "avgBenzina": 1.975,
-    "avgDiesel": 2.228,
+    "avgBenzina": 1.973,
+    "avgDiesel": 2.226,
     "minBenzina": 1.675,
     "minDiesel": 1.574,
     "cheapestBenzina": {
@@ -30386,7 +30386,7 @@
         "name": "Santa Teresa Gallura",
         "slug": "santa-teresa-gallura",
         "stationsCount": 3,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -30526,7 +30526,7 @@
         "name": "Uri",
         "slug": "uri",
         "stationsCount": 2,
-        "minBenzina": 1.979,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -30652,8 +30652,8 @@
         "name": "Pattada",
         "slug": "pattada",
         "stationsCount": 1,
-        "minBenzina": 1.989,
-        "minDiesel": 2.199
+        "minBenzina": 1.939,
+        "minDiesel": 2.189
       },
       {
         "name": "Perfugas",
@@ -30708,7 +30708,7 @@
         "name": "Telti",
         "slug": "telti",
         "stationsCount": 1,
-        "minBenzina": 1.989,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -30740,7 +30740,7 @@
         "minDiesel": 2.259
       }
     ],
-    "avgBenzina": 1.972,
+    "avgBenzina": 1.971,
     "avgDiesel": 2.215,
     "minBenzina": 1.878,
     "minDiesel": 2.169,
@@ -31307,8 +31307,8 @@
         "minDiesel": 2.229
       }
     ],
-    "avgBenzina": 1.966,
-    "avgDiesel": 2.214,
+    "avgBenzina": 1.965,
+    "avgDiesel": 2.213,
     "minBenzina": 1.899,
     "minDiesel": 2.169,
     "cheapestBenzina": {
@@ -31381,7 +31381,7 @@
         "slug": "pachino",
         "stationsCount": 8,
         "minBenzina": 1.937,
-        "minDiesel": 2.187
+        "minDiesel": 1.998
       },
       {
         "name": "Francofonte",
@@ -31443,8 +31443,8 @@
         "name": "Portopalo di Capo Passero",
         "slug": "portopalo-di-capo-passero",
         "stationsCount": 2,
-        "minBenzina": 2.019,
-        "minDiesel": 2.279
+        "minBenzina": 2.039,
+        "minDiesel": 2.299
       },
       {
         "name": "Solarino",
@@ -31482,8 +31482,8 @@
         "minDiesel": 2.259
       }
     ],
-    "avgBenzina": 1.961,
-    "avgDiesel": 2.211,
+    "avgBenzina": 1.96,
+    "avgDiesel": 2.21,
     "minBenzina": 1.899,
     "minDiesel": 1.799,
     "cheapestBenzina": {
@@ -31639,14 +31639,14 @@
         "name": "Colorina",
         "slug": "colorina",
         "stationsCount": 1,
-        "minBenzina": 1.975,
+        "minBenzina": 1.895,
         "minDiesel": 2.195
       },
       {
         "name": "Cosio Valtellino",
         "slug": "cosio-valtellino",
         "stationsCount": 1,
-        "minBenzina": 1.799,
+        "minBenzina": 1.859,
         "minDiesel": 2.099
       },
       {
@@ -31762,7 +31762,7 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.878,
+    "avgBenzina": 1.877,
     "avgDiesel": 2.091,
     "minBenzina": 1.553,
     "minDiesel": 1.34,
@@ -32150,8 +32150,8 @@
         "name": "Pabillonis",
         "slug": "pabillonis",
         "stationsCount": 1,
-        "minBenzina": 1.999,
-        "minDiesel": 2.269
+        "minBenzina": 1.949,
+        "minDiesel": 2.209
       },
       {
         "name": "Portoscuso",
@@ -32171,8 +32171,8 @@
         "name": "Sant'Andrea Frius",
         "slug": "sant-andrea-frius",
         "stationsCount": 1,
-        "minBenzina": 1.994,
-        "minDiesel": 2.259
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Sant'Anna Arresi",
@@ -32185,7 +32185,7 @@
         "name": "Seui",
         "slug": "seui",
         "stationsCount": 1,
-        "minBenzina": 2.017,
+        "minBenzina": 1.997,
         "minDiesel": 2.257
       },
       {
@@ -32241,8 +32241,8 @@
         "name": "Villamar",
         "slug": "villamar",
         "stationsCount": 1,
-        "minBenzina": 1.994,
-        "minDiesel": 2.259
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Villamassargia",
@@ -32287,8 +32287,8 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.965,
-    "avgDiesel": 2.207,
+    "avgBenzina": 1.963,
+    "avgDiesel": 2.206,
     "minBenzina": 1.897,
     "minDiesel": 2.099,
     "cheapestBenzina": {
@@ -32458,7 +32458,7 @@
         "name": "Maruggio",
         "slug": "maruggio",
         "stationsCount": 2,
-        "minBenzina": 1.99,
+        "minBenzina": 1.94,
         "minDiesel": 2.2
       },
       {
@@ -32486,8 +32486,8 @@
         "name": "Leporano",
         "slug": "leporano",
         "stationsCount": 1,
-        "minBenzina": 1.99,
-        "minDiesel": 2.23
+        "minBenzina": 1.94,
+        "minDiesel": 2.2
       },
       {
         "name": "Monteiasi",
@@ -32511,7 +32511,7 @@
         "minDiesel": 2.189
       }
     ],
-    "avgBenzina": 1.968,
+    "avgBenzina": 1.967,
     "avgDiesel": 2.208,
     "minBenzina": 1.829,
     "minDiesel": 1.729,
@@ -32626,7 +32626,7 @@
         "name": "Sant'Egidio alla Vibrata",
         "slug": "sant-egidio-alla-vibrata",
         "stationsCount": 4,
-        "minBenzina": 1.94,
+        "minBenzina": 1.939,
         "minDiesel": 2.183
       },
       {
@@ -32787,8 +32787,8 @@
         "name": "Torricella Sicura",
         "slug": "torricella-sicura",
         "stationsCount": 1,
-        "minBenzina": 2.069,
-        "minDiesel": 2.429
+        "minBenzina": 1.979,
+        "minDiesel": 2.359
       },
       {
         "name": "Valle Castellana",
@@ -32798,8 +32798,8 @@
         "minDiesel": 2.29
       }
     ],
-    "avgBenzina": 1.967,
-    "avgDiesel": 2.216,
+    "avgBenzina": 1.966,
+    "avgDiesel": 2.215,
     "minBenzina": 1.859,
     "minDiesel": 1.809,
     "cheapestBenzina": {
@@ -33036,7 +33036,7 @@
         "minDiesel": 2.349
       }
     ],
-    "avgBenzina": 1.964,
+    "avgBenzina": 1.963,
     "avgDiesel": 2.204,
     "minBenzina": 1.929,
     "minDiesel": 2.164,
@@ -33284,8 +33284,8 @@
         "name": "Riva Presso Chieri",
         "slug": "riva-presso-chieri",
         "stationsCount": 4,
-        "minBenzina": 1.939,
-        "minDiesel": 2.169
+        "minBenzina": 1.949,
+        "minDiesel": 2.19
       },
       {
         "name": "Rivarolo Canavese",
@@ -33333,7 +33333,7 @@
         "name": "Bardonecchia",
         "slug": "bardonecchia",
         "stationsCount": 3,
-        "minBenzina": 1.989,
+        "minBenzina": 1.94,
         "minDiesel": 1.619
       },
       {
@@ -33550,7 +33550,7 @@
         "name": "Oulx",
         "slug": "oulx",
         "stationsCount": 2,
-        "minBenzina": 1.899,
+        "minBenzina": 1.925,
         "minDiesel": 2.279
       },
       {
@@ -33746,8 +33746,8 @@
         "name": "Bosconero",
         "slug": "bosconero",
         "stationsCount": 1,
-        "minBenzina": 1.979,
-        "minDiesel": 2.199
+        "minBenzina": 1.969,
+        "minDiesel": 2.189
       },
       {
         "name": "Brandizzo",
@@ -34306,8 +34306,8 @@
         "name": "Villarbasse",
         "slug": "villarbasse",
         "stationsCount": 1,
-        "minBenzina": 1.999,
-        "minDiesel": 2.299
+        "minBenzina": 1.969,
+        "minDiesel": 2.209
       },
       {
         "name": "Vistrorio",
@@ -34320,11 +34320,11 @@
         "name": "Viù",
         "slug": "viu",
         "stationsCount": 1,
-        "minBenzina": 2.099,
-        "minDiesel": 2.399
+        "minBenzina": 1.979,
+        "minDiesel": 2.259
       }
     ],
-    "avgBenzina": 1.955,
+    "avgBenzina": 1.954,
     "avgDiesel": 2.208,
     "minBenzina": 1.629,
     "minDiesel": 1.305,
@@ -34446,8 +34446,8 @@
         "name": "Petrosino",
         "slug": "petrosino",
         "stationsCount": 4,
-        "minBenzina": 1.809,
-        "minDiesel": 2.129
+        "minBenzina": 1.899,
+        "minDiesel": 2.199
       },
       {
         "name": "Calatafimi-segesta",
@@ -34521,14 +34521,14 @@
       }
     ],
     "avgBenzina": 1.96,
-    "avgDiesel": 2.21,
-    "minBenzina": 1.809,
+    "avgDiesel": 2.211,
+    "minBenzina": 1.885,
     "minDiesel": 1.999,
     "cheapestBenzina": {
-      "nome": "mmgroup",
-      "brand": "Pompa Bianca",
-      "comune": "PETROSINO",
-      "prezzo": 1.809
+      "nome": "SICILPETROLI MARSALA FORNARA",
+      "brand": "Sicilpetroli",
+      "comune": "MARSALA",
+      "prezzo": 1.885
     },
     "cheapestDiesel": {
       "nome": "ECOLGAS PACECO",
@@ -34594,7 +34594,7 @@
         "slug": "ala",
         "stationsCount": 4,
         "minBenzina": 1.939,
-        "minDiesel": 2.199
+        "minDiesel": 2.189
       },
       {
         "name": "Castelnuovo",
@@ -35139,8 +35139,8 @@
         "name": "Soraga di Fassa",
         "slug": "soraga-di-fassa",
         "stationsCount": 1,
-        "minBenzina": 1.94,
-        "minDiesel": 2.2
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Spiazzo",
@@ -35216,11 +35216,11 @@
         "name": "Zuclo",
         "slug": "zuclo",
         "stationsCount": 1,
-        "minBenzina": 1.99,
-        "minDiesel": 2.23
+        "minBenzina": 1.94,
+        "minDiesel": 2.2
       }
     ],
-    "avgBenzina": 1.961,
+    "avgBenzina": 1.96,
     "avgDiesel": 2.212,
     "minBenzina": 1.889,
     "minDiesel": 2.071,
@@ -35242,9 +35242,9 @@
     "name": "Treviso",
     "region": "Veneto",
     "slug": "treviso",
-    "lat": 45.7666,
-    "lng": 12.2117,
-    "stationsCount": 322,
+    "lat": 45.7661,
+    "lng": 12.2114,
+    "stationsCount": 321,
     "comuniCount": 91,
     "comuni": [
       {
@@ -35255,18 +35255,18 @@
         "minDiesel": 2.179
       },
       {
-        "name": "Conegliano",
-        "slug": "conegliano",
-        "stationsCount": 15,
-        "minBenzina": 1.909,
-        "minDiesel": 2.179
-      },
-      {
         "name": "Castelfranco Veneto",
         "slug": "castelfranco-veneto",
         "stationsCount": 14,
         "minBenzina": 1.933,
         "minDiesel": 1.999
+      },
+      {
+        "name": "Conegliano",
+        "slug": "conegliano",
+        "stationsCount": 14,
+        "minBenzina": 1.909,
+        "minDiesel": 2.179
       },
       {
         "name": "Montebelluna",
@@ -35293,7 +35293,7 @@
         "name": "Casale sul Sile",
         "slug": "casale-sul-sile",
         "stationsCount": 8,
-        "minBenzina": 1.919,
+        "minBenzina": 1.899,
         "minDiesel": 2.179
       },
       {
@@ -35447,7 +35447,7 @@
         "name": "Susegana",
         "slug": "susegana",
         "stationsCount": 4,
-        "minBenzina": 1.934,
+        "minBenzina": 1.919,
         "minDiesel": 2.188
       },
       {
@@ -35538,7 +35538,7 @@
         "name": "Codognè",
         "slug": "codogne",
         "stationsCount": 2,
-        "minBenzina": 1.939,
+        "minBenzina": 1.929,
         "minDiesel": 2.169
       },
       {
@@ -35559,7 +35559,7 @@
         "name": "Follina",
         "slug": "follina",
         "stationsCount": 2,
-        "minBenzina": 1.949,
+        "minBenzina": 1.945,
         "minDiesel": 2.199
       },
       {
@@ -35885,8 +35885,8 @@
         "minDiesel": 2.23
       }
     ],
-    "avgBenzina": 1.951,
-    "avgDiesel": 2.201,
+    "avgBenzina": 1.95,
+    "avgDiesel": 2.2,
     "minBenzina": 1.644,
     "minDiesel": 1.574,
     "cheapestBenzina": {
@@ -35970,9 +35970,9 @@
     "name": "Udine",
     "region": "Friuli Venezia Giulia",
     "slug": "udine",
-    "lat": 46.0615,
-    "lng": 13.1711,
-    "stationsCount": 262,
+    "lat": 46.062,
+    "lng": 13.1709,
+    "stationsCount": 263,
     "comuniCount": 89,
     "comuni": [
       {
@@ -36085,7 +36085,14 @@
         "slug": "campoformido",
         "stationsCount": 4,
         "minBenzina": 1.909,
-        "minDiesel": 2.199
+        "minDiesel": 2.189
+      },
+      {
+        "name": "Colloredo di Monte Albano",
+        "slug": "colloredo-di-monte-albano",
+        "stationsCount": 4,
+        "minBenzina": 1.94,
+        "minDiesel": 2.2
       },
       {
         "name": "Fagagna",
@@ -36137,13 +36144,6 @@
         "minDiesel": 2.199
       },
       {
-        "name": "Colloredo di Monte Albano",
-        "slug": "colloredo-di-monte-albano",
-        "stationsCount": 3,
-        "minBenzina": 1.94,
-        "minDiesel": 2.2
-      },
-      {
         "name": "Majano",
         "slug": "majano",
         "stationsCount": 3,
@@ -36161,7 +36161,7 @@
         "name": "Reana del Rojale",
         "slug": "reana-del-rojale",
         "stationsCount": 3,
-        "minBenzina": 1.969,
+        "minBenzina": 1.939,
         "minDiesel": 2.189
       },
       {
@@ -36204,7 +36204,7 @@
         "slug": "dignano",
         "stationsCount": 2,
         "minBenzina": 1.939,
-        "minDiesel": 2.229
+        "minDiesel": 2.199
       },
       {
         "name": "Fiumicello Villa Vicentina",
@@ -36252,8 +36252,8 @@
         "name": "Pagnacco",
         "slug": "pagnacco",
         "stationsCount": 2,
-        "minBenzina": 1.989,
-        "minDiesel": 2.259
+        "minBenzina": 1.939,
+        "minDiesel": 2.199
       },
       {
         "name": "Paluzza",
@@ -36599,8 +36599,8 @@
         "minDiesel": 2.2
       }
     ],
-    "avgBenzina": 1.963,
-    "avgDiesel": 2.214,
+    "avgBenzina": 1.962,
+    "avgDiesel": 2.213,
     "minBenzina": 1.633,
     "minDiesel": 1.564,
     "cheapestBenzina": {
@@ -36621,9 +36621,9 @@
     "name": "Varese",
     "region": "Lombardia",
     "slug": "varese",
-    "lat": 45.7159,
+    "lat": 45.7161,
     "lng": 8.8194,
-    "stationsCount": 241,
+    "stationsCount": 242,
     "comuniCount": 75,
     "comuni": [
       {
@@ -36637,8 +36637,8 @@
         "name": "Busto Arsizio",
         "slug": "busto-arsizio",
         "stationsCount": 23,
-        "minBenzina": 1.897,
-        "minDiesel": 2.177
+        "minBenzina": 1.917,
+        "minDiesel": 2.189
       },
       {
         "name": "Gallarate",
@@ -36686,7 +36686,7 @@
         "name": "Vergiate",
         "slug": "vergiate",
         "stationsCount": 6,
-        "minBenzina": 1.945,
+        "minBenzina": 1.939,
         "minDiesel": 2.197
       },
       {
@@ -36728,7 +36728,7 @@
         "name": "Caronno Pertusella",
         "slug": "caronno-pertusella",
         "stationsCount": 4,
-        "minBenzina": 1.939,
+        "minBenzina": 1.929,
         "minDiesel": 2.164
       },
       {
@@ -36842,6 +36842,13 @@
         "stationsCount": 2,
         "minBenzina": 1.937,
         "minDiesel": 2.197
+      },
+      {
+        "name": "Castronno",
+        "slug": "castronno",
+        "stationsCount": 2,
+        "minBenzina": 2.079,
+        "minDiesel": 2.279
       },
       {
         "name": "Cittiglio",
@@ -36991,13 +36998,6 @@
         "minDiesel": 2.219
       },
       {
-        "name": "Castronno",
-        "slug": "castronno",
-        "stationsCount": 1,
-        "minBenzina": 2.079,
-        "minDiesel": 2.279
-      },
-      {
         "name": "Cavaria con Premezzo",
         "slug": "cavaria-con-premezzo",
         "stationsCount": 1,
@@ -37106,7 +37106,7 @@
         "name": "Mornago",
         "slug": "mornago",
         "stationsCount": 1,
-        "minBenzina": 1.947,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -37153,14 +37153,14 @@
       }
     ],
     "avgBenzina": 1.952,
-    "avgDiesel": 2.205,
-    "minBenzina": 1.897,
+    "avgDiesel": 2.206,
+    "minBenzina": 1.917,
     "minDiesel": 2.164,
     "cheapestBenzina": {
       "nome": "GEMAS",
       "brand": "Pompa Bianca",
       "comune": "BUSTO ARSIZIO",
-      "prezzo": 1.897
+      "prezzo": 1.917
     },
     "cheapestDiesel": {
       "nome": "G. Gabanelli",
@@ -37190,7 +37190,7 @@
         "name": "Chioggia",
         "slug": "chioggia",
         "stationsCount": 18,
-        "minBenzina": 1.93,
+        "minBenzina": 1.919,
         "minDiesel": 2.17
       },
       {
@@ -37226,7 +37226,7 @@
         "slug": "mirano",
         "stationsCount": 9,
         "minBenzina": 1.939,
-        "minDiesel": 2.197
+        "minDiesel": 2.188
       },
       {
         "name": "Dolo",
@@ -37337,7 +37337,7 @@
         "name": "Campagna Lupia",
         "slug": "campagna-lupia",
         "stationsCount": 3,
-        "minBenzina": 1.939,
+        "minBenzina": 1.919,
         "minDiesel": 2.179
       },
       {
@@ -37379,7 +37379,7 @@
         "name": "Concordia Sagittaria",
         "slug": "concordia-sagittaria",
         "stationsCount": 2,
-        "minBenzina": 1.929,
+        "minBenzina": 1.919,
         "minDiesel": 2.189
       },
       {
@@ -37393,7 +37393,7 @@
         "name": "Gruaro",
         "slug": "gruaro",
         "stationsCount": 2,
-        "minBenzina": 1.949,
+        "minBenzina": 1.939,
         "minDiesel": 2.199
       },
       {
@@ -37471,7 +37471,7 @@
         "slug": "pramaggiore",
         "stationsCount": 1,
         "minBenzina": 1.994,
-        "minDiesel": 2.209
+        "minDiesel": 2.199
       },
       {
         "name": "Torre di Mosto",
@@ -37481,8 +37481,8 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.956,
-    "avgDiesel": 2.202,
+    "avgBenzina": 1.955,
+    "avgDiesel": 2.201,
     "minBenzina": 1.898,
     "minDiesel": 1.769,
     "cheapestBenzina": {
@@ -37947,7 +37947,7 @@
         "slug": "verona",
         "stationsCount": 91,
         "minBenzina": 1.928,
-        "minDiesel": 2.17
+        "minDiesel": 2.169
       },
       {
         "name": "Legnago",
@@ -38094,7 +38094,7 @@
         "slug": "oppeano",
         "stationsCount": 4,
         "minBenzina": 1.935,
-        "minDiesel": 2.179
+        "minDiesel": 2.199
       },
       {
         "name": "Pescantina",
@@ -38303,7 +38303,7 @@
         "name": "Ronco All'Adige",
         "slug": "ronco-all-adige",
         "stationsCount": 2,
-        "minBenzina": 1.939,
+        "minBenzina": 1.949,
         "minDiesel": 2.179
       },
       {
@@ -38380,7 +38380,7 @@
         "name": "Bonavigo",
         "slug": "bonavigo",
         "stationsCount": 1,
-        "minBenzina": 1.987,
+        "minBenzina": 1.944,
         "minDiesel": 2.204
       },
       {
@@ -38506,7 +38506,7 @@
         "name": "San Zeno di Montagna",
         "slug": "san-zeno-di-montagna",
         "stationsCount": 1,
-        "minBenzina": 1.999,
+        "minBenzina": 1.949,
         "minDiesel": 2.199
       },
       {
@@ -38552,8 +38552,8 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.953,
-    "avgDiesel": 2.206,
+    "avgBenzina": 1.952,
+    "avgDiesel": 2.205,
     "minBenzina": 1.739,
     "minDiesel": 1.689,
     "cheapestBenzina": {
@@ -38741,8 +38741,8 @@
         "minDiesel": 2.249
       }
     ],
-    "avgBenzina": 1.967,
-    "avgDiesel": 2.227,
+    "avgBenzina": 1.965,
+    "avgDiesel": 2.226,
     "minBenzina": 1.919,
     "minDiesel": 2.179,
     "cheapestBenzina": {
@@ -38773,7 +38773,7 @@
         "slug": "vicenza",
         "stationsCount": 52,
         "minBenzina": 1.914,
-        "minDiesel": 2.174
+        "minDiesel": 2.169
       },
       {
         "name": "Bassano del Grappa",
@@ -38905,7 +38905,7 @@
         "name": "Chiampo",
         "slug": "chiampo",
         "stationsCount": 4,
-        "minBenzina": 1.939,
+        "minBenzina": 1.929,
         "minDiesel": 2.199
       },
       {
@@ -39304,8 +39304,8 @@
         "name": "Monte di Malo",
         "slug": "monte-di-malo",
         "stationsCount": 1,
-        "minBenzina": 1.99,
-        "minDiesel": 2.2
+        "minBenzina": 1.94,
+        "minDiesel": 2.199
       },
       {
         "name": "Montegalda",
@@ -39483,7 +39483,7 @@
         "minDiesel": 2.199
       }
     ],
-    "avgBenzina": 1.95,
+    "avgBenzina": 1.949,
     "avgDiesel": 2.202,
     "minBenzina": 1.644,
     "minDiesel": 1.574,
@@ -39605,8 +39605,8 @@
         "name": "Bagnoregio",
         "slug": "bagnoregio",
         "stationsCount": 3,
-        "minBenzina": 1.939,
-        "minDiesel": 2.197
+        "minBenzina": 1.937,
+        "minDiesel": 2.187
       },
       {
         "name": "Bolsena",
@@ -39878,11 +39878,11 @@
         "name": "Villa San Giovanni in Tuscia",
         "slug": "villa-san-giovanni-in-tuscia",
         "stationsCount": 1,
-        "minBenzina": 2.049,
-        "minDiesel": 2.279
+        "minBenzina": 2.039,
+        "minDiesel": 2.269
       }
     ],
-    "avgBenzina": 1.94,
+    "avgBenzina": 1.939,
     "avgDiesel": 2.171,
     "minBenzina": 1.564,
     "minDiesel": 1.585,

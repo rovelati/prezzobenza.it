@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T00:47:08.265Z",
+  "updatedAt": "2026-11-17T16:52:13.588Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -80,22 +80,22 @@
         "benzina_servito": {
           "prezzo": 2.774,
           "isSelf": false,
-          "dt": "14/11/2026 07:37:39"
+          "dt": "16/11/2026 07:38:58"
         },
         "benzina_self": {
           "prezzo": 1.956,
           "isSelf": true,
-          "dt": "14/11/2026 07:37:39"
+          "dt": "16/11/2026 07:38:58"
         },
         "diesel_self": {
           "prezzo": 2.206,
           "isSelf": true,
-          "dt": "14/11/2026 07:37:39"
+          "dt": "16/11/2026 07:38:58"
         },
         "gpl": {
           "prezzo": 0.826,
           "isSelf": false,
-          "dt": "14/11/2026 07:37:39"
+          "dt": "16/11/2026 07:38:58"
         }
       },
       "prezzo": 2.774,
@@ -338,7 +338,7 @@
         "benzina_servito": {
           "prezzo": 2.75,
           "isSelf": false,
-          "dt": "07/11/2026 10:43:33"
+          "dt": "15/11/2026 11:47:20"
         }
       },
       "prezzo": 2.75,
@@ -388,27 +388,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "14/11/2026 07:33:41"
+          "dt": "15/11/2026 08:01:06"
         },
         "benzina_self": {
           "prezzo": 2.019,
           "isSelf": true,
-          "dt": "14/11/2026 07:33:41"
+          "dt": "15/11/2026 08:01:06"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "14/11/2026 07:33:41"
+          "dt": "15/11/2026 08:01:06"
         },
         "diesel_self": {
           "prezzo": 2.309,
           "isSelf": true,
-          "dt": "14/11/2026 07:33:41"
+          "dt": "15/11/2026 08:01:06"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "14/11/2026 07:33:41"
+          "dt": "15/11/2026 08:01:06"
         }
       },
       "prezzo": 2.799,
@@ -437,7 +437,7 @@
         "benzina_self": {
           "prezzo": 2.199,
           "isSelf": true,
-          "dt": "13/11/2026 08:03:04"
+          "dt": "16/11/2026 00:03:04"
         },
         "diesel_servito": {
           "prezzo": 2.799,
@@ -447,46 +447,7 @@
         "diesel_self": {
           "prezzo": 2.399,
           "isSelf": true,
-          "dt": "13/11/2026 22:53:02"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "38843",
-      "gestore": "AMORE S.A.S. DI AMORE ROSA E C.",
-      "brand": "IP",
-      "bandieraRaw": "Api-Ip",
-      "tipo": "Stradale",
-      "nome": "IP PIMONTE",
-      "indirizzo": "VIA MADONNINA S.N.C. SNC 80050",
-      "comune": "PIMONTE",
-      "provincia": "NA",
-      "lat": 40.673311,
-      "lng": 14.514061,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.549,
-          "isSelf": false,
-          "dt": "13/11/2026 06:50:32"
-        },
-        "benzina_self": {
-          "prezzo": 2.399,
-          "isSelf": true,
-          "dt": "13/11/2026 06:50:32"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "13/11/2026 06:50:32"
-        },
-        "diesel_self": {
-          "prezzo": 2.649,
-          "isSelf": true,
-          "dt": "13/11/2026 06:50:32"
+          "dt": "16/11/2026 00:03:04"
         }
       },
       "prezzo": 2.799,
@@ -681,7 +642,7 @@
     },
     {
       "id": "58516",
-      "gestore": "Italiana Carburanti - Allis BAR di Ciura Alessandro",
+      "gestore": "CIURA ALESSANDRO",
       "brand": "Italiana Carburanti",
       "bandieraRaw": "Italiana Carburanti",
       "tipo": "Stradale",
@@ -695,28 +656,67 @@
         "benzina_servito": {
           "prezzo": 2.569,
           "isSelf": false,
-          "dt": "30/10/2026 13:00:40"
+          "dt": "15/11/2026 12:44:40"
         },
         "benzina_self": {
           "prezzo": 2.199,
           "isSelf": true,
-          "dt": "30/10/2026 13:00:40"
+          "dt": "15/11/2026 12:44:40"
         },
         "diesel_servito": {
           "prezzo": 2.795,
           "isSelf": false,
-          "dt": "30/10/2026 13:00:40"
+          "dt": "15/11/2026 12:44:40"
         },
         "diesel_self": {
           "prezzo": 2.445,
           "isSelf": true,
-          "dt": "30/10/2026 13:00:40"
+          "dt": "15/11/2026 12:44:40"
         }
       },
       "prezzo": 2.795,
       "service": "servito",
       "fuel": "Diesel",
       "fullTankCost": 139.75
+    },
+    {
+      "id": "43485",
+      "gestore": "CIAVATTA SERVICE DI CIAVATTA TOMMASO & C. S.N.C.",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "fratta",
+      "indirizzo": "STRADA REGIONALE 521 02016",
+      "comune": "LEONESSA",
+      "provincia": "RI",
+      "lat": 42.572684,
+      "lng": 12.956411,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.589,
+          "isSelf": false,
+          "dt": "09/11/2026 19:33:10"
+        },
+        "benzina_self": {
+          "prezzo": 2.189,
+          "isSelf": true,
+          "dt": "09/11/2026 19:33:10"
+        },
+        "diesel_servito": {
+          "prezzo": 2.789,
+          "isSelf": false,
+          "dt": "09/11/2026 19:33:10"
+        },
+        "diesel_self": {
+          "prezzo": 2.389,
+          "isSelf": true,
+          "dt": "09/11/2026 19:33:10"
+        }
+      },
+      "prezzo": 2.789,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 139.45
     }
   ]
 }

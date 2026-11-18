@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T23:50:42.384Z",
+  "updatedAt": "2026-11-18T16:25:59.622Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -80,22 +80,22 @@
         "benzina_servito": {
           "prezzo": 2.774,
           "isSelf": false,
-          "dt": "16/11/2026 07:38:58"
+          "dt": "17/11/2026 07:56:15"
         },
         "benzina_self": {
           "prezzo": 1.956,
           "isSelf": true,
-          "dt": "16/11/2026 07:38:58"
+          "dt": "17/11/2026 07:56:15"
         },
         "diesel_self": {
           "prezzo": 2.206,
           "isSelf": true,
-          "dt": "16/11/2026 07:38:58"
+          "dt": "17/11/2026 07:56:15"
         },
         "gpl": {
           "prezzo": 0.826,
           "isSelf": false,
-          "dt": "16/11/2026 07:38:58"
+          "dt": "17/11/2026 07:56:15"
         }
       },
       "prezzo": 2.774,
@@ -158,17 +158,17 @@
         "benzina_servito": {
           "prezzo": 2.76,
           "isSelf": false,
-          "dt": "13/11/2026 16:21:35"
+          "dt": "16/11/2026 09:45:39"
         },
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "13/11/2026 16:21:35"
+          "dt": "16/11/2026 09:45:39"
         },
         "diesel_self": {
           "prezzo": 2.229,
           "isSelf": true,
-          "dt": "13/11/2026 16:21:35"
+          "dt": "16/11/2026 09:45:39"
         }
       },
       "prezzo": 2.76,
@@ -192,22 +192,22 @@
         "benzina_servito": {
           "prezzo": 2.76,
           "isSelf": false,
-          "dt": "12/11/2026 10:00:41"
+          "dt": "16/11/2026 09:45:20"
         },
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "12/11/2026 10:00:41"
+          "dt": "16/11/2026 09:45:20"
         },
         "diesel_self": {
           "prezzo": 2.229,
           "isSelf": true,
-          "dt": "12/11/2026 10:00:41"
+          "dt": "16/11/2026 09:45:20"
         },
         "gpl": {
           "prezzo": 0.847,
           "isSelf": false,
-          "dt": "12/11/2026 10:00:41"
+          "dt": "16/11/2026 09:45:20"
         }
       },
       "prezzo": 2.76,
@@ -231,22 +231,22 @@
         "benzina_servito": {
           "prezzo": 2.76,
           "isSelf": false,
-          "dt": "12/11/2026 11:02:21"
+          "dt": "16/11/2026 09:45:10"
         },
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "12/11/2026 11:02:21"
+          "dt": "16/11/2026 09:45:10"
         },
         "diesel_self": {
           "prezzo": 2.229,
           "isSelf": true,
-          "dt": "12/11/2026 11:02:21"
+          "dt": "16/11/2026 09:45:11"
         },
         "gpl": {
           "prezzo": 0.867,
           "isSelf": false,
-          "dt": "12/11/2026 11:02:21"
+          "dt": "16/11/2026 09:45:11"
         }
       },
       "prezzo": 2.76,
@@ -270,17 +270,17 @@
         "benzina_servito": {
           "prezzo": 2.76,
           "isSelf": false,
-          "dt": "14/11/2026 08:06:49"
+          "dt": "16/11/2026 09:47:15"
         },
         "benzina_self": {
           "prezzo": 1.999,
           "isSelf": true,
-          "dt": "14/11/2026 08:06:49"
+          "dt": "16/11/2026 09:47:15"
         },
         "diesel_self": {
           "prezzo": 2.229,
           "isSelf": true,
-          "dt": "14/11/2026 08:06:49"
+          "dt": "16/11/2026 09:47:15"
         }
       },
       "prezzo": 2.76,
@@ -304,17 +304,17 @@
         "benzina_servito": {
           "prezzo": 2.76,
           "isSelf": false,
-          "dt": "12/11/2026 09:50:26"
+          "dt": "16/11/2026 09:45:32"
         },
         "benzina_self": {
           "prezzo": 1.989,
           "isSelf": true,
-          "dt": "12/11/2026 09:50:26"
+          "dt": "16/11/2026 09:45:32"
         },
         "diesel_self": {
           "prezzo": 2.219,
           "isSelf": true,
-          "dt": "12/11/2026 09:50:26"
+          "dt": "16/11/2026 09:45:32"
         }
       },
       "prezzo": 2.76,
@@ -364,7 +364,7 @@
         "diesel_servito": {
           "prezzo": 2.8,
           "isSelf": false,
-          "dt": "06/11/2026 09:25:54"
+          "dt": "16/11/2026 11:01:19"
         }
       },
       "prezzo": 2.8,
@@ -388,66 +388,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "15/11/2026 08:01:06"
+          "dt": "16/11/2026 20:10:24"
         },
         "benzina_self": {
           "prezzo": 2.019,
           "isSelf": true,
-          "dt": "15/11/2026 08:01:06"
+          "dt": "16/11/2026 20:10:24"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "15/11/2026 08:01:06"
+          "dt": "16/11/2026 20:10:24"
         },
         "diesel_self": {
           "prezzo": 2.309,
           "isSelf": true,
-          "dt": "15/11/2026 08:01:06"
+          "dt": "16/11/2026 20:10:24"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "15/11/2026 08:01:06"
-        }
-      },
-      "prezzo": 2.799,
-      "service": "servito",
-      "fuel": "Diesel",
-      "fullTankCost": 139.95
-    },
-    {
-      "id": "56474",
-      "gestore": "TIGER S.R.L.",
-      "brand": "Esso",
-      "bandieraRaw": "Esso",
-      "tipo": "Autostradale",
-      "nome": "LAIMBURG OVEST",
-      "indirizzo": "Autostrada A22 BRENNERO-MODENA, dir. SUD",
-      "comune": "VADENA",
-      "provincia": "BZ",
-      "lat": 46.359542,
-      "lng": 11.288291,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.599,
-          "isSelf": false,
-          "dt": "15/11/2026 06:17:05"
-        },
-        "benzina_self": {
-          "prezzo": 2.199,
-          "isSelf": true,
-          "dt": "16/11/2026 00:03:04"
-        },
-        "diesel_servito": {
-          "prezzo": 2.799,
-          "isSelf": false,
-          "dt": "15/11/2026 06:17:05"
-        },
-        "diesel_self": {
-          "prezzo": 2.399,
-          "isSelf": true,
-          "dt": "16/11/2026 00:03:04"
+          "dt": "16/11/2026 20:10:24"
         }
       },
       "prezzo": 2.799,
@@ -510,22 +471,22 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "12/11/2026 12:30:56"
+          "dt": "16/11/2026 16:40:07"
         },
         "benzina_self": {
           "prezzo": 2.299,
           "isSelf": true,
-          "dt": "12/11/2026 12:30:56"
+          "dt": "16/11/2026 16:40:07"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "12/11/2026 12:30:56"
+          "dt": "16/11/2026 16:40:07"
         },
         "diesel_self": {
           "prezzo": 2.499,
           "isSelf": true,
-          "dt": "12/11/2026 12:30:56"
+          "dt": "16/11/2026 16:40:07"
         }
       },
       "prezzo": 2.799,
@@ -549,22 +510,22 @@
         "benzina_servito": {
           "prezzo": 2.659,
           "isSelf": false,
-          "dt": "14/11/2026 09:34:22"
+          "dt": "16/11/2026 08:09:59"
         },
         "benzina_self": {
           "prezzo": 2.659,
           "isSelf": true,
-          "dt": "14/11/2026 09:34:22"
+          "dt": "16/11/2026 08:09:59"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "14/11/2026 09:34:22"
+          "dt": "16/11/2026 08:09:59"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "14/11/2026 09:34:22"
+          "dt": "16/11/2026 08:09:59"
         }
       },
       "prezzo": 2.799,
@@ -695,28 +656,67 @@
         "benzina_servito": {
           "prezzo": 2.589,
           "isSelf": false,
-          "dt": "09/11/2026 19:33:10"
+          "dt": "17/11/2026 00:01:05"
         },
         "benzina_self": {
           "prezzo": 2.189,
           "isSelf": true,
-          "dt": "09/11/2026 19:33:10"
+          "dt": "17/11/2026 00:01:05"
         },
         "diesel_servito": {
           "prezzo": 2.789,
           "isSelf": false,
-          "dt": "09/11/2026 19:33:10"
+          "dt": "17/11/2026 00:01:05"
         },
         "diesel_self": {
           "prezzo": 2.389,
           "isSelf": true,
-          "dt": "09/11/2026 19:33:10"
+          "dt": "17/11/2026 00:01:05"
         }
       },
       "prezzo": 2.789,
       "service": "servito",
       "fuel": "Diesel",
       "fullTankCost": 139.45
+    },
+    {
+      "id": "3898",
+      "gestore": "DUINO SUD PETROLI S.A.S. DI ZORZIN SILVANA & C.",
+      "brand": "Kerotris",
+      "bandieraRaw": "Kerotris",
+      "tipo": "Autostradale",
+      "nome": "DUINO SUD",
+      "indirizzo": "Autostrada A4 VENEZIA-TRIESTE,  Km. 122.9, dir. Est - 34013",
+      "comune": "DUINO-AURISINA",
+      "provincia": "TS",
+      "lat": 45.776672,
+      "lng": 13.608472,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.395,
+          "isSelf": false,
+          "dt": "16/11/2026 06:07:22"
+        },
+        "benzina_self": {
+          "prezzo": 2.145,
+          "isSelf": true,
+          "dt": "16/11/2026 21:46:02"
+        },
+        "diesel_servito": {
+          "prezzo": 2.769,
+          "isSelf": false,
+          "dt": "16/11/2026 06:07:22"
+        },
+        "diesel_self": {
+          "prezzo": 2.519,
+          "isSelf": true,
+          "dt": "16/11/2026 21:46:02"
+        }
+      },
+      "prezzo": 2.769,
+      "service": "servito",
+      "fuel": "Diesel",
+      "fullTankCost": 138.45
     }
   ]
 }

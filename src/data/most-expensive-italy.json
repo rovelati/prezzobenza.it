@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T23:23:30.118Z",
+  "updatedAt": "2026-11-19T16:32:04.845Z",
   "topExpensiveBenzina": [
     {
       "id": "15315",
@@ -80,22 +80,22 @@
         "benzina_servito": {
           "prezzo": 2.774,
           "isSelf": false,
-          "dt": "17/11/2026 07:56:15"
+          "dt": "18/11/2026 07:36:10"
         },
         "benzina_self": {
           "prezzo": 1.956,
           "isSelf": true,
-          "dt": "17/11/2026 07:56:15"
+          "dt": "18/11/2026 07:36:10"
         },
         "diesel_self": {
           "prezzo": 2.206,
           "isSelf": true,
-          "dt": "17/11/2026 07:56:15"
+          "dt": "18/11/2026 07:36:10"
         },
         "gpl": {
           "prezzo": 0.826,
           "isSelf": false,
-          "dt": "17/11/2026 07:56:15"
+          "dt": "18/11/2026 07:36:10"
         }
       },
       "prezzo": 2.774,
@@ -216,6 +216,40 @@
       "fullTankCost": 138
     },
     {
+      "id": "11390",
+      "gestore": "VINAI CINZIA",
+      "brand": "IP",
+      "bandieraRaw": "Api-Ip",
+      "tipo": "Stradale",
+      "nome": "stazione di servizio IP",
+      "indirizzo": "Statale 28 del Colle di Nava, Km. 72+540, dir. imperia - 12070",
+      "comune": "PRIOLA",
+      "provincia": "CN",
+      "lat": 44.244035,
+      "lng": 8.021801,
+      "prices": {
+        "benzina_servito": {
+          "prezzo": 2.76,
+          "isSelf": false,
+          "dt": "18/11/2026 06:48:37"
+        },
+        "benzina_self": {
+          "prezzo": 1.999,
+          "isSelf": true,
+          "dt": "18/11/2026 06:48:37"
+        },
+        "diesel_self": {
+          "prezzo": 2.229,
+          "isSelf": true,
+          "dt": "18/11/2026 06:48:37"
+        }
+      },
+      "prezzo": 2.76,
+      "service": "servito",
+      "fuel": "Benzina",
+      "fullTankCost": 138
+    },
+    {
       "id": "21782",
       "gestore": "GONELLA & SOMA' S.R.L.",
       "brand": "IP",
@@ -321,30 +355,6 @@
       "service": "servito",
       "fuel": "Benzina",
       "fullTankCost": 138
-    },
-    {
-      "id": "40521",
-      "gestore": "CLUB DELLA SOFFERENZA DI SANTORO ARTURO",
-      "brand": "Pompa Bianca",
-      "bandieraRaw": "Pompe Bianche",
-      "tipo": "Stradale",
-      "nome": "carburanti di santoro arturo",
-      "indirizzo": "loc. punta secca  71040",
-      "comune": "ISOLE TREMITI",
-      "provincia": "FG",
-      "lat": 42.112664,
-      "lng": 15.476004,
-      "prices": {
-        "benzina_servito": {
-          "prezzo": 2.75,
-          "isSelf": false,
-          "dt": "15/11/2026 11:47:20"
-        }
-      },
-      "prezzo": 2.75,
-      "service": "servito",
-      "fuel": "Benzina",
-      "fullTankCost": 137.5
     }
   ],
   "topExpensiveDiesel": [
@@ -388,27 +398,27 @@
         "benzina_servito": {
           "prezzo": 2.599,
           "isSelf": false,
-          "dt": "16/11/2026 20:10:24"
+          "dt": "17/11/2026 19:06:08"
         },
         "benzina_self": {
           "prezzo": 2.019,
           "isSelf": true,
-          "dt": "16/11/2026 20:10:24"
+          "dt": "17/11/2026 19:06:08"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "16/11/2026 20:10:24"
+          "dt": "17/11/2026 19:06:08"
         },
         "diesel_self": {
           "prezzo": 2.309,
           "isSelf": true,
-          "dt": "16/11/2026 20:10:24"
+          "dt": "17/11/2026 19:06:08"
         },
         "gpl": {
           "prezzo": 0.999,
           "isSelf": false,
-          "dt": "16/11/2026 20:10:24"
+          "dt": "17/11/2026 19:06:08"
         }
       },
       "prezzo": 2.799,
@@ -510,22 +520,22 @@
         "benzina_servito": {
           "prezzo": 2.659,
           "isSelf": false,
-          "dt": "16/11/2026 08:09:59"
+          "dt": "17/11/2026 08:03:13"
         },
         "benzina_self": {
           "prezzo": 2.659,
           "isSelf": true,
-          "dt": "16/11/2026 08:09:59"
+          "dt": "17/11/2026 08:03:13"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "16/11/2026 08:09:59"
+          "dt": "17/11/2026 08:03:13"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "16/11/2026 08:09:59"
+          "dt": "17/11/2026 08:03:13"
         }
       },
       "prezzo": 2.799,
@@ -549,22 +559,22 @@
         "benzina_servito": {
           "prezzo": 2.659,
           "isSelf": false,
-          "dt": "10/11/2026 12:39:04"
+          "dt": "17/11/2026 12:39:08"
         },
         "benzina_self": {
           "prezzo": 2.659,
           "isSelf": true,
-          "dt": "10/11/2026 12:39:04"
+          "dt": "17/11/2026 12:39:08"
         },
         "diesel_servito": {
           "prezzo": 2.799,
           "isSelf": false,
-          "dt": "10/11/2026 12:39:04"
+          "dt": "17/11/2026 12:39:08"
         },
         "diesel_self": {
           "prezzo": 2.799,
           "isSelf": true,
-          "dt": "10/11/2026 12:39:04"
+          "dt": "17/11/2026 12:39:08"
         }
       },
       "prezzo": 2.799,
